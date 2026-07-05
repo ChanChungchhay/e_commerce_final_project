@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Chenla&family=Content:wght@400;700&family=Hanuman:wght@100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Moul&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: "Battambang", "Roboto", sans-serif !important;
+}
+.sec-forgot_pw{
+    background-image: radial-gradient(circle at top,#d1fae5,transparent), radial-gradient(circle at bottom,#dbeafe,transparent);
+    padding: 20px 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-wrapper{
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px #c0c0c0;
+}
+
+.card{
+    box-shadow: none;
+    border-radius: 0 !important;
+    height: 600px !important;
+}
+
+.logo-img{
+    display: block;
+    width: 240px;
+    object-fit: cover;
+    margin: auto !important;
+}
+.banner-img{
+    width: 100%;
+    height: 315px !important;
+    object-fit: contain;
+    animation: float 3s ease-in-out infinite;
+}
+/* floating animation */
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+.card-body{
+    text-align:center;
+}
+.title{
+    font-size:38px;
+    color:#0b7335;
+    font-weight:700;
+    line-height:1.6;
+}
+.sub-title{
+    color:#64748b;
+    font-size:18px;
+    margin-top:5px;
+    line-height:1.8;
+}
+.seller-info{
+    margin-top: 10px;
+}
+.detail{
+    margin:12px 0;
+    color:#334155;
+    font-size:17px;
+    font-weight:500;
+}
+.form-side{
+    height:100%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px;
+}
+
+.form-wrapper{
+    width:100%;
+    max-width:500px;
+    /* margin-top: 200px; */
+}
+
+.welcome{
+    color:#64748b !important;
+    font-size:18px;
+    margin-bottom:35px;
+}
+.otp-input{
+    width:55px;
+    height:55px;
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+    border:1px solid #dbe2ea;
+    border-radius:12px;
+}
+
+.otp-input:focus{
+    outline:none;
+    border-color:#198754;
+    box-shadow:0 0 0 4px rgba(25,135,84,.15);
+}
+/* =========================
+   FORM
+========================= */
+
+.form-label{
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+.form-control{
+    height: 48px;
+    border-radius: 10px !important;
+    border:1px solid #dbe2ea !important;
+    padding-left:18px;
+    font-size:16px !important;
+}
+
+.form-control:focus{
+    border-color:#198754 !important;
+    box-shadow: 0 0 0 4px rgba(25,135,84,.15) !important;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-login{
+    height:48px;
+    border:none;
+    border-radius:15px !important;
+    font-size:18px;
+    font-weight:600;
+    color:white !important;
+    background: linear-gradient(135deg, #198754, #20c997);
+    transition:.3s !important;
+}
+
+.btn-login:hover{
+    transform:translateY(-3px);
+    background-image: linear-gradient(135deg, #157347, #198754);
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.link{
+    text-decoration:none;
+}
+
+.register-section{
+    text-align:center;
+    margin-top:20px;
+}
+
+.register-section a{
+    text-decoration:none;
+    font-weight:600;
+    margin-left:5px;
+}
+.social-login{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.social-btn{
+    width:100%;
+    height:56px;
+    border:1px solid #dbe2ea;
+    border-radius:15px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.social-btn img{
+    width:24px;
+    height:24px;
+}
+
+.social-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.facebook-btn, .google-btn{
+    color:#1877f2;
+}
+@media (max-width:576px){
+    .login-wrapper{
+        border-radius: 0px;
+    }
+}
+@media (min-width:992px){
+    .title{
+        font-size:30px;
+    }
+}
+@media (min-width:1200px){
+    .title{
+        font-size:38px;
+    }
+}
