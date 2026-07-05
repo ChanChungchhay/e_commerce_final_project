@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller's register</title>
+    <link rel="stylesheet" href="assets/css/seller_regiter.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- Bootstrap icon link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <section class="sec-register py-0 py-md-4">
+        <div class="container px-0">
+            <div class="login-wrapper">
+                <div class="row g-0">
+                    <div class="col-12 col-lg-6 d-none d-lg-block">
+                        <div class="card border-0">
+                            <div class="card-img text-center">
+                                <img src="assets/images/seller_images/logo.jpg" class="logo-img" alt="">
+                                <img src="assets/images/seller_images/seller_register.png" class="banner-img" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h1 class="title">
+                                    ក្លាយជាដៃគូលក់ជាមួយយើង
+                                </h1>
+
+                                <p class="sub-title">
+                                    Khmer Bazzar ជាវេទិកាអនឡាញដែលគាំទ្រអាជីវកម្មក្នុងស្រុក ដោយភ្ជាប់អ្នកលក់ខ្មែរជាមួយអតិថិជនទូទាំងប្រទេស។
+                                </p>
+
+                                <div class="seller-info">
+                                    <div class="detail"><i class="bi bi-check"></i>គាំទ្រផលិតផល និងសិប្បកម្មខ្មែរ</div>
+                                    <div class="detail"><i class="bi bi-check"></i>បង្កើតហាងអនឡាញបានក្នុងរយៈពេលប៉ុន្មាននាទី</div>
+                                    <div class="detail"><i class="bi bi-check"></i>ពង្រីកទីផ្សារលក់របស់អ្នកឱ្យកាន់តែទូលំទូលាយ</div>
+                                    <div class="detail"><i class="bi bi-check"></i>រីកចម្រើនជាមួយសហគមន៍អាជីវកម្មខ្មែរ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="card border-0">
+                            <div class="form-side">
+                                <div class="form-wrapper">
+                                    <img src="assets/images/seller_images/logo.jpg" class="logo-img d-block d-lg-none mx-auto" alt="">
+                                    <h2 class="text-center fw-bold">
+                                        បង្កើតគណនីអ្នកលក់
+                                    </h2>
+                                    <p class="welcome text-center">
+                                        ចូលរួមជាមួយ Khmer Bazzar និងចាប់ផ្តើមលក់ទំនិញស្រុកខ្មែរ
+                                    </p>
+                                    <form action="seller_login.html" method="get">
+                                        <div class="row">
+                                            <!-- Full Name -->
+                                            <div class="col-md-6 mb-4">
+                                                <label class="form-label">
+                                                    ឈ្មោះពេញ
+                                                </label>
+                                                <input type="text" class="form-control" placeholder="បញ្ចូលឈ្មោះពេញ"
+                                                    required>
+                                            </div>
+                                            <!-- Phone -->
+                                            <div class="col-md-6 mb-4">
+                                                <label class="form-label">
+                                                    លេខទូរសព្ទ
+                                                </label>
+                                                <input type="tel" class="form-control" placeholder="បញ្ចូលលេខទូរសព្ទ"
+                                                    required>
+                                            </div>
+                                            <!-- Email -->
+                                            <div class="col-md-6 mb-4">
+                                                <label class="form-label">
+                                                    អ៊ីមែល
+                                                </label>
+                                                <input type="email" class="form-control" placeholder="example@gmail.com"
+                                                    required>
+                                            </div>
+                                            <!-- Store Name -->
+                                            <div class="col-md-6 mb-4">
+                                                <label class="form-label">
+                                                    ឈ្មោះហាង
+                                                </label>
+                                                <input type="text" class="form-control" placeholder="បញ្ចូលឈ្មោះហាង"
+                                                    >
+                                            </div>
+                                            <!-- Business Category -->
+                                            <div class="col-md-6 mb-4">
+                                                <label class="form-label">
+                                                    ប្រភេទអាជីវកម្ម
+                                                </label>
+                                                <select class="form-control" required>
+                                                    <option value="">ជ្រើសរើសប្រភេទ</option>
+                                                    <option>សម្លៀកបំពាក់</option>
+                                                    <option>គ្រឿងអេឡិចត្រូនិក</option>
+                                                    <option>គ្រឿងសំអាង</option>
+                                                    <option>អាហារ និងភេសជ្ជៈ</option>
+                                                    <option>សិប្បកម្មខ្មែរ</option>
+                                                    <option>ផ្សេងៗ</option>
+                                                </select>
+                                            </div>
+                                            <!-- Province -->
+                                            <div class="col-md-6 mb-4">
+                                                <label class="form-label">
+                                                    ខេត្ត / ក្រុង
+                                                </label>
+                                                <select class="form-control" required>
+                                                    <option value="">ជ្រើសរើសខេត្ត/ក្រុង</option>
+                                                    <option>ភ្នំពេញ</option>
+                                                    <option>សៀមរាប</option>
+                                                    <option>បាត់ដំបង</option>
+                                                    <option>កំពត</option>
+                                                    <option>កំពង់ចាម</option>
+                                                    <option>ព្រះសីហនុ</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- Address -->
+                                        <div class="mb-4">
+                                            <label class="form-label">
+                                                អាសយដ្ឋាន
+                                            </label>
+                                            <textarea class="form-control" rows="3" placeholder="បញ្ចូលអាសយដ្ឋានលម្អិត"
+                                                required></textarea>
+                                        </div>
+                                        <!-- Store Logo -->
+                                        <div class="mb-4">
+                                            <label class="form-label">
+                                                រូបសញ្ញាហាង (Store Logo)
+                                            </label>
+                                            <input type="file" class="form-control" accept="image/*">
+                                        </div>
+                                        <div class="row">
+                                            <!-- Password -->
+                                            <div class="col-md-6 mb-4">
+                                                <label class="form-label">
+                                                    ពាក្យសម្ងាត់
+                                                </label>
+                                                <input type="password" class="form-control"
+                                                    placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
+                                            </div>
+                                            <!-- Confirm Password -->
+                                            <div class="col-md-6 mb-4">
+                                                <label class="form-label">
+                                                    បញ្ជាក់ពាក្យសម្ងាត់
+                                                </label>
+                                                <input type="password" class="form-control"
+                                                    placeholder="បញ្ចូលពាក្យសម្ងាត់ម្ដងទៀត" required>
+                                            </div>
+                                        </div>
+                                        <!-- Terms -->
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="checkbox" id="agree" required>
+                                            <label class="form-check-label" for="agree">
+                                                ខ្ញុំយល់ព្រមតាម
+                                                <a href="#" class="link">
+                                                    លក្ខខណ្ឌប្រើប្រាស់
+                                                </a>
+                                                និង
+                                                <a href="#" class="link">
+                                                    គោលការណ៍ឯកជនភាព
+                                                </a>
+                                            </label>
+                                        </div>
+                                        <!-- Register Button -->
+                                        <button type="submit" class="btn btn-login w-100">
+                                            បង្កើតគណនីអ្នកលក់
+                                        </button>
+                                        <!-- Login Link -->
+                                        <div class="register-section">
+                                            <span>
+                                                មានគណនីរួចហើយ?
+                                            </span>
+
+                                            <a href="seller_login.html">
+                                                ចូលគណនី
+                                            </a>
+                                        </div>
+                                        <!-- Social Register -->
+                                        <div class="social-login">
+                                            <button type="button" class="social-btn google-btn">
+
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+                                                    alt="Google">
+
+                                                បន្តជាមួយ Google
+
+                                            </button>
+                                            <button type="button" class="social-btn facebook-btn">
+
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg"
+                                                    alt="Facebook">
+
+                                                បន្តជាមួយ Facebook
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
