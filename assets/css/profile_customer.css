@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-white:rgba(26, 9, 9, 0.673);
+    --color-gray:rgba(128, 128, 128, 0.782);
+    --color-green-tittle:green;
+    --color-green:rgba(29, 180, 77);
+    --btn-hover-color:rgb(18, 57, 22);
+    --color-active:rgba(141, 184, 141, 0.434);
+    --color-white:white;
+    --box-shadow: 0.1px 0.1px 5px rgb(29, 180, 77);
+    --box-shadow-product:0px 2px 5px rgb(29, 180, 77);
+    --footer-bg:rgba(48, 137, 50, 0.525);
+}
+body{
+    font-family: "Roboto Condensed","Battambang", serif !important;
+}
+a{
+    text-decoration: none !important;
+    color: black  !important;
+}
+
+/* =======sect-1====== */
+
+.sect-1 .card-head{
+    transform: none !important;
+    box-shadow: none !important;
+    border: none;
+}
+.sect-1 .nav-link{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    padding: 0px 10px;
+    border-radius: 30px;
+}
+.sect-1 .nav-link:hover{
+    background-color:var(--color-green);
+    color: white !important;
+}
+.sect-1 .nav-link:focus{
+    background-color:var(--color-green);
+    color: white !important;
+}
+.sect-1 .nav-link.active{
+    background-color:rgba(22, 132, 22, 0.668);
+    color: white !important;
+}
+
+/* =======footer====== */
+.footer .card{
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+
+}
+.footer .tittle{
+    font-size: 20px;
+}
+.footer .link{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--color-white) !important;
+}
+.footer .link:hover{
+    color: black !important;
+    transition: .2s linear;
+}
+.footer .icon{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--color-gray);
+   color: white !important;
+}
+.footer .payment img{
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+/* xs */
+@media screen and (max-width:576px) {
+    .footer img{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    }
+
+}
+@media screen and (min-width:576px) {
+
+}
+@media screen and (min-width:786px) {
+
+}
+@media screen and (min-width:992px) {
+
+}
+@media screen and (min-width:1200px) {
+  
+}
+@media screen and (min-width:1400px) {
+
+} 

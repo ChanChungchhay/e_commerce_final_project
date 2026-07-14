@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/customer.css">
+    <link rel="stylesheet" href="/assets/css/product.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Product</title>
+</head>
+<body>
+    <div class="header py-2 br-s bg-success">
+        <div class="container d-flex justify-content-between  align-items-center ">
+            <div class="head-link d-flex gap-3 ">
+                <a class=" body-link" href="#"><i class="fa-regular fa-envelope me-1 fs-6"
+                        style="color: rgb(255, 255, 255);"></i>contact@example.com</a>
+                <a class=" body-link" href="#"><i class="fa-solid fa-mobile-screen me-1 fs-6"
+                        style="color: rgb(255, 255, 255);"></i> +885 096300600</a>
+            </div>
+            <button type="button" class="head-icon d-flex gap-3 d-md-block d-none border-0 bg-transparent ">
+                <a href="#"><i class="fa-brands fa-twitter  fs-6"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook fs-6"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram fs-6"></i></a>
+                <a href="#"><i class="fa-brands fa-invision fs-6"></i></a>
+            </button>
+        </div>
+    </div>
+    <nav class="nav pt-2 shadow position-sticky top-0 z-3 bg-white">
+        <div class="container mb-0 d-flex justify-content-between align-items-center ">
+            <a href="/customer/home.html" class="navbar-brand"><img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
+            <ul class="navbar-nav d-flex gap-1 flex-row d-lg-block d-none d-lg-flex">
+                <li class="nav-item"><a class="nav-link " href="/customer/home.html">ទំព័រដើម</a></li>
+                <li class="nav-item"><a class="nav-link "  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ប្រភេទទំនិញ<i class="fa-solid fa-angle-down" style="color: var(--color-gray);"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/customer/product.html">សម្លៀកបំពាក់</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">គ្រឿងសម្អាង</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">ផលិតផលសិប្បកម្មខ្មែរ</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">អាហារ និងគ្រឿងទេស</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">សម្ភារៈកីឡា</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">សៀវភៅ និងសម្ភារៈសិក្សា</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">គ្រឿងអេឡិចត្រូនិក</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link active" href="/customer/product.html">ផលិតផល</a></li>
+                <li class="nav-item"><a class="nav-link " href="/customer/discount.html">បញ្ចុះតម្លៃ</a></li>
+                <li class="nav-item"><a class="nav-link " href="#">អំពីយើង</a></li>
+                <li class="nav-item"><a class="nav-link " href="#">ទំនាក់ទំនង</a></li>
+            </ul>
+            <div class="d-flex gap-2">
+                <a href="/customer/shop.html" class="btn border shadow rounded-circle d-flex justify-content-center align-items-center position-relative" style="width: 35px;height: 35px;">
+                    <i class="fa-solid fa-store text-primary"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px;">2</span>
+                </a>
+                <a href="#" class="btn border shadow rounded-circle d-flex justify-content-center align-items-center position-relative" style="width: 35px;height: 35px;">
+                    <i class="fa-regular fa-heart text-danger"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px;">3</span>
+                </a>
+                <a href="#" class="btn border shadow rounded-circle d-flex justify-content-center align-items-center position-relative" style="width: 35px;height: 35px;"">
+                    <i class="fa-solid fa-cart-shopping text-success" ></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px;">4</span>
+                </a>
+                <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 <img src="../assets/img/profile_customer/img-2.jpg" class="img-fluid object-fit-cover rounded-circle " style="width: 35px;" alt="">
+                 <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./profile.html">ប្រវត្តិរូប</a></li>
+                        <li><a class="dropdown-item" href="#">privacy</a></li>
+                        <li><a class="dropdown-item" href="#">Dark mode</a></li>
+                        <li><a class="dropdown-item active" href="../index.html">ចាកចេញ</a></li>
+                        <li><a class="dropdown-item" href="#"></a></li>
+                    </ul>
+                </a>
+                <button type="button" class="btn border shadow d-lg-none d-block  d-flex justify-content-center align-items-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="width: 35px;height: 35px;"><i class="fa-solid fa-bars" ></i></button>
+
+            </div>
+        </div>
+    </nav>
+    <!-- ======offcanvas========== -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 350px;">
+        <div class="offcanvas-header">
+            <img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt="">
+            <button type="button" class="btn-close shadow-none " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav d-flex gap-3 justify-content-center align-items-center flex-column gap-1">
+                <li class="nav-item"><a class="nav-link shadow " href="./home.html">ទំព័រដើម</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រភេទទំនិញ<i class="fa-solid fa-angle-down" style="color: var(--color-gray);"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./product.html">សម្លៀកបំពាក់</a></li>
+                        <li><a class="dropdown-item" href="./product.html">គ្រឿងសម្អាង</a></li>
+                        <li><a class="dropdown-item" href="./product.html">ផលិតផលសិប្បកម្មខ្មែរ</a></li>
+                        <li><a class="dropdown-item" href="./product.html">អាហារ និងគ្រឿងទេស</a></li>
+                        <li><a class="dropdown-item" href="./product.html">សម្ភារៈកីឡា</a></li>
+                        <li><a class="dropdown-item" href="./product.html">សៀវភៅ និងសម្ភារៈសិក្សា</a></li>
+                        <li><a class="dropdown-item" href="./product.html">គ្រឿងអេឡិចត្រូនិក</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link shadow " href="./product.html">ផលិតផល</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="./discount.html">បញ្ចុះតម្លៃ</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="">អំពីយើង</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="">ទំនាក់ទំនង</a></li>
+                <!-- <div class="d-lg-block d-none">
+                    <a href="./customer/home.html" class="btn border shadow">Login</a>
+                    <a href="./customer/home.html" class="btn border shadow">Register</a>
+                </div> -->
+                <!-- <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>ក្លាយជាអ្នកលក់</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link shadow text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a></li> -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============Fliter-product=========== -->
+    <!-- ===================================== -->
+    <section class="fliter-product my-5">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-xl-3 col-12 ">
+                    <div class="card card-head shadow border-0 " style="position: sticky;top: 9%;" >
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div class="text-success fs-5 fw-bold">ចម្រោះទំនិញ</div>
+                                <a href="#" role="button" class="btn btn-danger text-white">សម្អាត</a>
+                            </div>
+                            
+                            <div class="wrapper shadow mt-4 ">
+                                <div class="card-header border-0 w-100 fs-5 text-success fw-bold ">Fliter by price</div>
+                                <fieldset class="filter-price">
+                                    <div class="price-field d-flex justify-content-center align-items-center ">
+                                        <input type="range"  min="0" max="500" value="100" id="lower">
+                                        <input type="range" min="0" max="500" value="500" id="upper">
+                                    </div>
+                                    <div class="price-wrap mt-2 d-flex justify-content-start align-items-center w-100">
+                                        <div class="">Price :</div>
+                                        <div class="price-wrap-1">
+                                            <input id="one">
+                                            <label for="one">$</label>
+                                        </div>
+                                        <div class="price-wrap_line ms-2 bg-secondary mt-1 rounded-pill" style="width: 10px;height: 3px;"></div>
+                                        <div class="price-wrap-2">
+                                            <input id="two">
+                                            <label for="two">$</label>
+                                        </div>
+                                    </div>
+                                </fieldset> 
+                            </div>
+                            <div class="mt-5 shadow">
+                                <div class="card-header border-0 fs-5 text-success fw-bold">Fliter by Category</div>
+                                <select class="form-select btn-outline-success shadow-none rounded-0 py-2 " style="outline: none;border: none;" aria-label="Default select example" >
+                                    <option selected  class="" >Category</option>
+                                    <option value="1" class="">សម្លៀកបំពាក់</option>
+                                    <option value="2" class="">គ្រឿងសម្អាង</option>
+                                    <option value="3" class="">ផលិតផលសិប្បកម្មខ្មែរ</option>
+                                    <option value="3" class="">អាហារ និងគ្រឿងទេស</option>
+                                    <option value="3" class="">សម្ភារៈកីឡា</option>
+                                    <option value="3" class="">សៀវភៅ និងសម្ភារៈសិក្សា</option>
+                                    <option value="3" class="">គ្រឿងអេឡិចត្រូនិក</option>
+                                </select>
+                            </div>
+                            <div class="mt-5 shadow">
+                                <div class="card-header border-0 fs-5 text-success fw-bold">Fliter by Area</div>
+                                <select class="form-select btn-outline-success shadow-none rounded-0 py-2 " style="outline: none;border: none;" aria-label="Default select example" >
+                                    <option selected  class="" >Area</option>
+                                    <option value="1" class="">Kandal - ខេត្តកណ្តាល</option>
+                                    <option value="2" class="">Koh Kong - ខេត្តកោះកុង</option>
+                                    <option value="3" class="">Takeo - ខេត្តតាកែវ</option>
+                                    <option value="3" class="">Phnom Penh - រាជធានីភ្នំពេញ</option>
+                                    <option value="3" class="">Mondulkiri - ខេត្តមណ្ឌលគិរី</option>
+                                </select>
+                            </div>
+                            <div class="btn btn-success w-100 shadow mt-3">Fliter</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-9 col-12">
+                    <div class="">
+                    <div class="card card-head border-0">
+                        <div class="card-body">
+                            <div class=" border-0 fs-2 text-success fw-bold">ផលិតផល</div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="">Showing all product</div>
+                                <div class="d-flex justify-content-between gap-3">
+                                    <form class="d-flex w-75" role="search">
+                                        <input class="form-control me-2 border border-success shadow-none" type="search" placeholder="Search" aria-label="Search"/>
+                                        <button class="btn btn-outline-success" type="submit">Search</button>
+                                    </form>
+                                    <select class="form-select btn-outline-success shadow-none rounded-0 py-2 border " style="width: 130px;" aria-label="Default select example" >
+                                        <option selected  class="" >Default</option>
+                                        <option value="1" class="">ថ្មីបំផុត</option>
+                                        <option value="2" class="">ពេញនិយម</option>
+                                        <option value="3" class="">ការវាយតម្លៃខ្ពស់</option>
+                                        <option value="3" class="">តម្លៃ៖ ទាបទៅខ្ពស់</option>
+                                        <option value="3" class="">តម្លៃ៖ ខ្ពស់ទៅទាប</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <ul class="nav nav-pills mt-4 py-3 d-flex gap-2 flex-nowrap overflow-x-scroll hide-scroll " id="pills-tab" role="tablist">
+                      <li class="col-lg-2 col-sm-6 col-12 nav-item " role="presentation">
+                        <div class="card">
+                            <button class="nav-link active" id="pills-all-product-tab" data-bs-toggle="pill" data-bs-target="#pills-all-product" type="button" role="tab" aria-controls="pills-all-product" aria-selected="true">All product</button>
+                        </div>
+                      </li>
+                      <li class="col-lg-2 col-sm-6 col-12 nav-item" role="presentation">
+                        <div class="card">
+                            <button class="nav-link " id="pills-clothes-tab" data-bs-toggle="pill" data-bs-target="#pills-clothes" type="button" role="tab" aria-controls="pills-clothes" aria-selected="false">សម្លៀកបំពាក់</button>
+                        </div>
+                      </li>
+                      <li class="col-lg-2 col-sm-6 col-12 nav-item" role="presentation">
+                        <div class="card">
+                            <button class="nav-link " id="pills-beauty-tab" data-bs-toggle="pill" data-bs-target="#pills-beauty" type="button" role="tab" aria-controls="pills-beauty" aria-selected="false">គ្រឿងសម្អាង</button>
+                        </div>
+                      </li>
+                      <li class="col-lg-2 col-sm-6 col-12 nav-item" role="presentation">
+                        <div class="card">
+                            <button class="nav-link text-nowrap" id="pills-handicraft-tab" data-bs-toggle="pill" data-bs-target="#pills-handicraft" type="button" role="tab" aria-controls="pills-handicraft" aria-selected="false">ផលិតផលសិប្បកម្មខ្មែរ</button>
+                        </div>
+                      </li>
+                      <li class="col-lg-2 col-sm-6 col-12 nav-item" role="presentation">
+                        <div class="card">
+                            <button class="nav-link text-nowrap" id="pills-food-tab" data-bs-toggle="pill" data-bs-target="#pills-food" type="button" role="tab" aria-controls="pills-food" aria-selected="false">អាហារ និងគ្រឿងទេស</button>
+                        </div>
+                      </li>
+                      <li class="col-lg-2 col-sm-6 col-12 nav-item" role="presentation">
+                        <div class="card">
+                            <button class="nav-link " id="pills-sport-tab" data-bs-toggle="pill" data-bs-target="#pills-sport" type="button" role="tab" aria-controls="pills-sport" aria-selected="false">សម្ភារៈកីឡា</button>
+                        </div>
+                      </li>
+                      <li class="col-lg-2 col-sm-6 col-12 nav-item" role="presentation">
+                        <div class="card">
+                            <button class="nav-link " id="pills-book-tab" data-bs-toggle="pill" data-bs-target="#pills-book" type="button" role="tab" aria-controls="pills-book" aria-selected="false">សៀវភៅ</button>
+                        </div>
+                      </li>
+                      <li class="col-lg-2 col-sm-6 col-12 nav-item" role="presentation">
+                        <div class="card">
+                            <button class="nav-link " id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">គ្រឿងអេឡិចត្រូនិក</button>
+                        </div>
+                      </li>
+                    </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-all-product" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                                <div class="row g-3 mt-3">
+                                    <div class="col-lg-4 col-sm-6 col-12 ">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/sport_shose.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status rounded-pill px-2 text-white border-0" style="background-color: var(--color-green);">New</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">ស្បែកជើងកីឡា</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">ស្បែកជើងរត់ adidas Duramo SL 2.0 សម្រាប់បុរស</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">50$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/skincare.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-warning rounded-pill px-2 text-white border-0">Bestseller
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">សេរ៉ូម</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">សេរ៉ូមរឹតបន្តឹងស្បែក | សេរ៉ូមរឹតបន្តឹងមុខ និងក</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">18$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/curry.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-warning rounded-pill px-2 text-white border-0">Bestseller</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">គ្រឿងហ្លួង</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">គ្រឿងហ្លួង ជាម៉ាកសញ្ញាសិប្បកម្មគ្រឿងផ្សំអាហារ </div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">5$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/skincare-discount.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-danger rounded-pill px-2 text-white border-0">-15%</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-danger fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">Discount</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">Skin care</div>
+                                                <div class="text text-secondary" style="font-size: 13px;">ម៉ាសបិទមុខBIOAQUA វីតាមីនC បំប៉នស្បែកមុខ ផ្ដល់សំណើម</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">5.5$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/clothes-discount.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-danger rounded-pill px-2 text-white border-0">-10%</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-danger fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">Discount</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">សម្លៀកបំពាក់</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">សម្លៀកបំពាក់ អាវក្រៅឆ្លងព្រំដែន រដូវស្លឹកឈើជ្រុះ ស្ទីលថ្មី</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">12$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/book-discount.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-danger rounded-pill px-2 text-white border-0">-20%</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-danger fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">Discount</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">សៀវភៅ</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">សៀវភៅសិក្សាគោល (ភាសាខ្មែរ/គណិត….) សំរាប់ថ្នាក់ទី 7</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">3$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/clothes-bayern.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-primary rounded-pill px-2 text-white border-0">New Arrival</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">សម្លៀកបំពាក់</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">អាវក្រុម Bayern សម្រាប់ប្រកួតក្នុងផ្ទះ រដូវកាល 2025-2026</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">3$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/ចានស្រាក.png" style="width: 350px;" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-danger rounded-pill px-2 text-white border-0">-20%</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-danger fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">Discount</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">ចាន​ស្រាក់​</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">ចាន​ស្រាក់​ឫស្សី</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">3$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/ម្រេច.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-warning rounded-pill px-2 text-white border-0">Bestseller</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">ម្រេច</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">ផលិតផលសរីរាង្គ: ប្រភពដើមពីខេត្តព្រះវិហារ</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">3$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/zinvo-1.webp" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-primary rounded-pill px-2 text-white border-0">New Arrival</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="../customer/product-detail/zinvo-women.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">នាឡិកា</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">ពណ៌​ខ្សាច់​ទន់​ប៉ះ​នឹង​ពណ៌​មាស​លឿង​ភ្ក្នុង​នាឡិកា​ស្ត្រី​នេះ</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">285$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/hair-machin.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-danger rounded-pill px-2 text-white border-0">-10%</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4 rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-danger fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">Discount</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">ម៉ាស៊ីនសម្ងួតសក់</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">ម៉ាស៊ីនសម្ងួតសក់ Mijia H101 (ទំហំតូច) ពណ៌ផ្កាឈូក/ស</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold"> <del class="text-secondary">5.5$</del> 3$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/book.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status rounded-pill px-2 text-white border-0" style="background-color: var(--color-green);">New</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">សៀវភៅ</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">សេដ្ឋកិច្ចកម្ពុជា មាគាឆ្ពោះទៅរកអនាគតដ៏ភ្លឺស្វាង</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">10$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-clothes" role="tabpanel" aria-labelledby="pills-clothes-tab" tabindex="0">
+                                <div class="row g-3 mt-3">
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/clothes.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-warning rounded-pill px-2 text-white border-0">Bestseller</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">អាវកីឡា</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">អាវកីឡាបាល់ទាត់កម្ពុជាផ្ទាល់ខ្លួន លេខផ្ទាល់ខ្លួន អាវអ្នកគាំទ្រ</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">29.99$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/clothes-discount.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-danger rounded-pill px-2 text-white border-0">-10%</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-danger fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">Discount</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">សម្លៀកបំពាក់</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">សម្លៀកបំពាក់ អាវក្រៅឆ្លងព្រំដែន រដូវស្លឹកឈើជ្រុះ ស្ទីលថ្មី</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">12$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/clothes-bayern.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-primary rounded-pill px-2 text-white border-0">New Arrival</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">សម្លៀកបំពាក់</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">អាវក្រុម Bayern សម្រាប់ប្រកួតក្នុងផ្ទះ រដូវកាល 2025-2026</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">3$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-beauty" role="tabpanel" aria-labelledby="pills-beauty-tab" tabindex="0">
+                                <div class="row g-3 mt-3">
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/skincare.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-warning rounded-pill px-2 text-white border-0">Bestseller
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">សេរ៉ូម</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">សេរ៉ូមរឹតបន្តឹងស្បែក | សេរ៉ូមរឹតបន្តឹងមុខ និងក</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">18$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/skincare-discount.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-danger rounded-pill px-2 text-white border-0">-15%</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-danger fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">Discount</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">Skin care</div>
+                                                <div class="text text-secondary" style="font-size: 13px;">ម៉ាសបិទមុខBIOAQUA វីតាមីនC បំប៉នស្បែកមុខ ផ្ដល់សំណើម</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">5.5$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-handicraft" role="tabpanel" aria-labelledby="pills-handicraft-tab" tabindex="0">
+                                <div class="row g-3 mt-3">
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card ">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/krma.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status rounded-pill px-2  border-0" style="background-color: var(--color-green);">new</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-danger fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">Low in stock, only 1 left</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">ក្រមាខ្មែរ</div>
+                                                <div class="text text-secondary" style="font-size: 13px;">ក្រមាក៏ត្រូវបានប្រើប្រាស់ដើម្បីតំណាងឲ្យអត្តសញ្ញាណខ្មែរ</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">12.50$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/ចានស្រាក.png" style="width: 350px;" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-danger rounded-pill px-2 text-white border-0">-20%</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-danger fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">Discount</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">ចាន​ស្រាក់​</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">ចាន​ស្រាក់​ឫស្សី</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">3$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-food" role="tabpanel" aria-labelledby="pills-food-tab" tabindex="0">
+                                <div class="row g-3 mt-3">
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/curry.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-warning rounded-pill px-2 text-white border-0">Bestseller</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">គ្រឿងហ្លួង</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">គ្រឿងហ្លួង ជាម៉ាកសញ្ញាសិប្បកម្មគ្រឿងផ្សំអាហារ </div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">5$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/ម្រេច.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-warning rounded-pill px-2 text-white border-0">Bestseller</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">ម្រេច</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">ផលិតផលសរីរាង្គ: ប្រភពដើមពីខេត្តព្រះវិហារ</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">3$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-sport" role="tabpanel" aria-labelledby="pills-sport-tab" tabindex="0">
+                                <div class="row g-3 mt-3">
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/sport_shose.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status rounded-pill px-2 text-white border-0" style="background-color: var(--color-green);">New</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">ស្បែកជើងកីឡា</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">ស្បែកជើងរត់ adidas Duramo SL 2.0 សម្រាប់បុរស</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">50$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-book" role="tabpanel" aria-labelledby="pills-book-tab" tabindex="0">
+                                <div class="row g-3 mt-3">
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/book.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status rounded-pill px-2 text-white border-0" style="background-color: var(--color-green);">New</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">សៀវភៅ</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">សេដ្ឋកិច្ចកម្ពុជា មាគាឆ្ពោះទៅរកអនាគតដ៏ភ្លឺស្វាង</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">10$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/book-discount.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-danger rounded-pill px-2 text-white border-0">-20%</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-danger fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">Discount</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">សៀវភៅ</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">សៀវភៅសិក្សាគោល (ភាសាខ្មែរ/គណិត….) សំរាប់ថ្នាក់ទី 7</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">3$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">
+                                <div class="row g-3 mt-3">
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/zinvo.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status rounded-pill px-2 text-white border-0" style="background-color: var(--color-green);">New</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">នាឡិកា</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">ការសហការផ្តាច់មុខនាឡិកា ZINVO x JUMBO VD ROSE</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">500$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/zinvo-1.webp" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-primary rounded-pill px-2 text-white border-0">New Arrival</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="../customer/product-detail/zinvo-women.html" type="button" class="view px-4  rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-success fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">in stock</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">នាឡិកា</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">ពណ៌​ខ្សាច់​ទន់​ប៉ះ​នឹង​ពណ៌​មាស​លឿង​ភ្ក្នុង​នាឡិកា​ស្ត្រី​នេះ</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold">285$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-12">
+                                        <div class="card">
+                                            <div class="card-img rounded-bottom-0">
+                                                <img src="../assets/img/product/hair-machin.png" class="img-fluid object-fit-cover " alt="">
+                                                <button type="button" class="status bg-danger rounded-pill px-2 text-white border-0">-10%</button>
+                                                <button type="button" class="favo rounded-pill bg-transparent border-0" style="position: absolute;top: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-regular fa-heart"></i></button>
+                                                <a href="./product-detail/hair-dryer-detail.html" type="button" class="view px-4 rounded-2 bg-success border-0 d-flex justify-content-center align-items-center" style="position: absolute;bottom: 5%;right: 5%;width: 30px;height: 30px;"><i class="fa-solid fa-arrows-to-eye text-white " ></i></a>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-danger fw-bold bg-light shadow text-center rounded-pill " style="font-size: 10px;width:40%;">Discount</div>
+                                                <div class="tittle fs-5 fw-bold py-2 text-success">ម៉ាស៊ីនសម្ងួតសក់</div>
+                                                <div class="text text-secondary  " style="font-size: 13px;">ម៉ាស៊ីនសម្ងួតសក់ Mijia H101 (ទំហំតូច) ពណ៌ផ្កាឈូក/ស</div>
+                                                <div class="py-2 d-flex  justify-content-start align-items-center">
+                                                    <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="price text-success fw-bold"> <del class="text-secondary">5.5$</del> 3$/ <span class="text-black fw-normal " style="font-size: 12px; ">In stock</span></div>
+                                                    <button  type="button" class="btn movetostock bg-success text-white">Add cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <a href="#" class="d-block text-center py-3"><span class="text-success border rounded-2 p-2">View All Product <i class="fa-solid fa-angle-right"></i></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sect-3 text-bg-light">
+        <div class="container">
+            <div class="tittle fs-4 fw-bold mt-2">ដៃគូរសហការ</div>
+            <div class="row g-3 py-3">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="card border-0 shadow">
+                        <img src="../assets/img/sponser/J&T.png" class="img-fluid object-fit-cover" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="card border-0 shadow">
+                        <img src="../assets/img/sponser/bc.png" class="img-fluid object-fit-cover" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="card border-0 shadow">
+                        <img src="../assets/img/sponser/canada_bank.png" class="img-fluid object-fit-cover" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="card border-0 shadow">
+                        <img src="../assets/img/sponser/VBT.png" class="img-fluid object-fit-cover" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="card border-0 shadow">
+                        <img src="../assets/img/sponser/MPTC-MRD.png" class="img-fluid object-fit-cover" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="card border-0 shadow">
+                        <img src="../assets/img/sponser/Mb.png" class="img-fluid object-fit-cover" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section class="sect-5 py-5 text-bg-light">
+        <div class="container">
+            <div class="tittle fs-4 fw-bold mb-2">ហាងលក់ដាច់បំផុត</div>
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center gap-3">
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="border border-success rounded-circle"><img src="../assets/img/shop-logo/store-logo.png" class="img-fluid object-fit-cover rounded-circle p-1" style="width: 45px;height: 45px;" alt=""></a>
+                                    <div class="d-flex flex-column justify-content-center align-items-start">
+                                        <div class="fw-bold fs-5">ហាង​ សម្លៀកបំពាក់</div>
+                                        <div class=" text-secondary" style="font-size: 13px;">(250 Followers)</div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-follow btn-light border rounded-2 px-2 py-0">Follow</button>
+                            </div>
+                            <div class="py-2 d-flex  justify-content-start align-items-center fs-6">Rate :
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                            </div>
+                            <div class="w-100 d-flex gap-2 justify-content-center align-items-center " style="height: 80px;">
+                                <div class="w-50 h-100 shadow d-flex justify-content-center align-items-center  fs-4 rounded-2">300 <span class="text-success fw-bold px-2">Products</span></div>
+                                <div class="w-50 h-100 shadow d-flex justify-content-center align-items-center  fs-4 rounded-2">1000 <span class="text-success fw-bold px-2">Solds</span></div>
+                            </div>
+                            <a href="/seller_dashboard/shop_seller.html" class="btn btn-success mt-3 text-white">ចូលមើលហាង</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center gap-3">
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="border border-success rounded-circle"><img src="../assets/img/shop-logo/beauty-shop.png" class="img-fluid object-fit-cover rounded-circle p-1" style="width: 45px;height: 45px;" alt=""></a>
+                                    <div class="d-flex flex-column justify-content-center align-items-start">
+                                        <div class="fw-bold fs-5">ហាង​ គ្រឿងសម្អាង</div>
+                                        <div class=" text-secondary"style="font-size: 13px;" >(200 Followers)</div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-follow btn-light border rounded-2 px-2 py-0">Follow</button>
+                            </div>
+                            <div class="py-2 d-flex  justify-content-start align-items-center fs-6">Rate :
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                            </div>
+                            <div class="w-100  d-flex gap-2 justify-content-center align-items-center " style="height: 80px;">
+                                <div class="w-50 h-100 shadow d-flex justify-content-center align-items-center  fs-4 rounded-2">250 <span class="text-success fw-bold px-2">Products</span></div>
+                                <div class="w-50 h-100 shadow d-flex justify-content-center align-items-center  fs-4 rounded-2">900 <span class="text-success fw-bold px-2">Solds</span></div>
+                            </div>
+                            <a href="/seller_dashboard/shop_seller.html" class="btn btn-success mt-3 text-white">ចូលមើលហាង</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center gap-3">
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="border-success border rounded-circle"><img src="../assets/img/shop-logo/electronic-shop.png" class="img-fluid object-fit-cover rounded-circle p-1" style="width: 45px;height: 45px;" alt=""></a>
+                                    <div class="d-flex flex-column justify-content-center align-items-start">
+                                        <div class="fw-bold fs-5">​ហាង អេឡិចត្រូនិក</div>
+                                        <div class=" text-secondary" style="font-size: 13px;">(180 Followers)</div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-follow btn-light border rounded-2 px-2 py-0">Follow</button>
+                            </div>
+                            <div class="py-2 d-flex  justify-content-start align-items-center fs-6">Rate :
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                            </div>
+                            <div class="w-100  d-flex gap-2 justify-content-center align-items-center " style="height: 80px;">
+                                <div class="w-50 h-100 shadow d-flex justify-content-center align-items-center  fs-4 rounded-2">200 <span class="text-success fw-bold px-2">Products</span></div>
+                                <div class="w-50 h-100 shadow d-flex justify-content-center align-items-center  fs-4 rounded-2">750 <span class="text-success fw-bold px-2">Solds</span></div>
+                            </div>
+                            <a href="/seller_dashboard/shop_seller.html" class="btn btn-success mt-3 text-white">ចូលមើលហាង</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===========footer========== -->
+    <!-- =========================== -->
+    <section class="footer pt-4 " style="background-color: var(--footer-bg);">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" class="navbar-brand"><img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
+                            <div class="tittie text-white">ផ្សារអនឡាញដែលជួយប្រជាជនកម្ពុជាទិញ និងលក់ផលិតផលដើម្បីបង្កើនចំណូល និងគាំទ្រអាជីវកម្មក្នុងស្រុក។</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="d-flex">
+                            <div class="card-body ">
+                                <div class=" tittle fw-bold">Quick Links</div>
+                                <ul class=" list-unstyled mt-3">
+                                    <li><a class="link" href="#">ទំព័រដើម</a></li>
+                                    <li><a class="link" href="#">រភេទទំនិញ</a></li>
+                                    <li><a class="link" href="#">ផលិតផល</a></li>
+                                    <li><a class="link" href="#">បញ្ចុះតម្លៃ</a></li>
+                                    <li><a class="link" href="#">អំពីយើង</a></li>
+                                    <li><a class="link" href="#">ទំនាក់ទំនង</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-body" >
+                                <div class=" tittle fw-bold">Customer Service</div>
+                                <ul class=" list-unstyled mt-3">
+                                    <li><a class="link" href="#">តាមដានការបញ្ជាទិញ</a></li>
+                                    <li><a class="link" href="#">ការដឹកជញ្ជូន</a></li>
+                                    <li><a class="link" href="#">លក្ខខណ្ឌប្រើប្រាស់</a></li>
+                                    <li><a class="link" href="#">គោលការណ៍ឯកជនភាព</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class=" tittle fw-bold">Contact Us</div>
+                            <div class="d-flex flex-column mt-3">
+                                <a href="#" class="link"><i class="fa-solid fa-location-dot text-secondary"></i>Steung mean chey , Phnom Penh City</a>
+                                <a href="#" class="link"><i class="fa-solid fa-phone text-secondary"></i>+855 12 345 678</a>
+                                <a href="#" class="link"><i class="fa-solid fa-envelope text-secondary"></i>support@khmerbazaar.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card">
+                            <div class="card-body" >
+                                <div class=" tittle fw-bold">Follow Us</div>
+                                <ul class="d-flex gap-2 list-unstyled mt-3">
+                                    <li><a class="icon bg-primary" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a class="icon bg-info" href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                                    <li><a class="icon bg-danger" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a class="icon bg-danger" href="#"><i class="fa-brands fa-youtube" ></i></a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card">
+                            <div class="card-body" >
+                                <div class=" tittle fw-bold">Payment Menthods</div>
+                                <ul class="d-flex justify-content-start align-items-center gap-2 list-unstyled mt-3 flex-wrap">
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/ABA.webp" class="img-fluid object-fit-cover " alt=""></a></li>
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/acleda.jpg" class="img-fluid object-fit-cover" alt=""></a></li>
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/visa.png" class="img-fluid object-fit-cover" alt=""></a></li>
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/wing.png" class="img-fluid object-fit-cover" alt=""></a></li>
+                                    <div class="payment bg-success  rounded-2 text-nowrap d-flex justify-content-center align-items-center text-white" style="height: 50px;width: 120px;">Cash on Delivery</div>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-2 bg-primary-subtle">© 2026 Khmer Bazaar. All Rights Reserved.</div>
+    </section>
+  <!-- =====modal save to cart===== -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast-1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="/assets/img/logo/img-logo.png" style="width: 40px;" class="img-fluid object-fit-cover rounded me-2" alt="...">
+                <strong class="me-auto">khmerbazaar</strong>
+                <small>just now</small>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body text-center bg-success-subtle">
+                <i class="fa-solid fa-circle-check" style="color: rgb(21, 197, 47);"></i>
+                ផលិតផលបានដាក់ទៅក្នុងកន្ត្រកទំនិញ
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/count_up_num.js"></script>
+    <script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/filter_price.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
+    <script>
+        const links = document.querySelectorAll('.nav-link');
+
+        links.forEach(link => {
+            link.addEventListener('click', function () {
+                links.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });   
+    </script>
+    <script>
+        // =====move to favo to stock====
+        const toastLiveExample1 = document.getElementById('liveToast-1')
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample1)
+        document.querySelectorAll('.movetostock').forEach(function (btn) {
+            btn.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        })
+    </script>
+   
+</body>
+</html>
