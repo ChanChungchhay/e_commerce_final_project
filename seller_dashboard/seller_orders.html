@@ -1,0 +1,489 @@
+<!-- START OF FILE seller_orders.html -->
+<!DOCTYPE html>
+<html lang="km" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>គ្រប់គ្រងការបញ្ជាទិញ - Khmer Bazaar</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700;900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Base Dashboard Style -->
+    <link rel="stylesheet" href="../assets/css/seller_dashboard.css">
+    <!-- Orders Specific Style -->
+    <link rel="stylesheet" href="../assets/css/seller_orders.css">
+</head>
+<body>
+
+    <!-- Application Layout Wrapper -->
+    <div class="dashboard-wrapper">
+        <!-- Left Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <div class="logo-icon">
+                        <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img" alt="Logo">
+                    </div>
+                    <span class="brand-name">Khmer Bazaar<span class="text-success">.</span></span>
+                </div>
+                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close" aria-label="Close"></button>
+            </div>
+            
+            <div class="sidebar-menu-wrapper">
+                <ul class="sidebar-menu">
+                    <li class="menu-item" data-page="dashboard">
+                        <a href="seller_dashboard.html" class="menu-link">
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            <span class="menu-text">ផ្ទាំងគ្រប់គ្រង</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="products">
+                        <a href="seller_products.html" class="menu-link">
+                            <i class="bi bi-box-seam-fill"></i>
+                            <span class="menu-text">ផលិតផល</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active" data-page="orders">
+                        <a href="seller_orders.html" class="menu-link">
+                            <i class="bi bi-cart-fill"></i>
+                            <span class="menu-text">ការបញ្ជាទិញ</span>
+                            <span class="badge rounded-pill bg-danger ms-auto">12</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="customers">
+                        <a href="seller_customers.html" class="menu-link">
+                            <i class="bi bi-people-fill"></i>
+                            <span class="menu-text">អតិថិជន</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="analytics">
+                        <a href="seller_analytics.html" class="menu-link">
+                            <i class="bi bi-bar-chart-line-fill"></i>
+                            <span class="menu-text">វិភាគទិន្នន័យ</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="messages">
+                        <a href="seller_messages.html" class="menu-link">
+                            <i class="bi bi-chat-left-dots-fill"></i>
+                            <span class="menu-text">សារផ្ញើ</span>
+                            <span class="badge rounded-pill bg-primary ms-auto">4</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-footer">
+                <div class="user-widget">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                        class="avatar rounded-circle" alt="User Profile">
+                    <div class="user-info">
+                        <h6 class="mb-0 text-white">ហេង សំណាង</h6>
+
+                    </div>
+                </div>
+                <button
+                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="bi bi-box-arrow-left"></i> ចាកចេញ
+                </button>
+            </div>
+        </aside>
+
+        <!-- Right Side Main Content Area -->
+        <div class="main-container">
+            <!-- Top Navbar -->
+            <header class="top-navbar">
+                <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-icon d-lg-none" id="sidebar-toggle" aria-label="Toggle Sidebar">
+                            <i class="bi bi-list fs-4"></i>
+                        </button>
+                        <div class="search-bar-wrapper">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" class="form-control" id="order-quick-search" placeholder="ស្វែងរកតាមលេខបញ្ជាទិញ ឬឈ្មោះអតិថិជន...">
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
+                            <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                        </button>
+                        <div class="header-divider"></div>
+                        <div class="dropdown">
+                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100" class="avatar-sm rounded-circle" alt="User Avatar">
+                                <span class="profile-name d-none d-lg-inline-block">ហេង សំណាង</span>
+                                <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> ប្រវត្តិរូបសង្ខេប</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i> ចាកចេញ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="content-wrapper">
+                <div class="container-fluid px-4 py-4">
+                    
+                    <!-- Title and Actions Header -->
+                    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+                        <div>
+                            <h2 class="welcome-heading mb-1 text-gradient-primary">ការបញ្ជាទិញទំនិញ</h2>
+                            <p class="text-muted text-sm mb-0">គ្រប់គ្រងដំណើរការដឹកជញ្ជូន និងការទូទាត់ប្រាក់ពីអតិថិជន</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-premium d-flex align-items-center gap-2" id="btn-export-orders">
+                                <i class="bi bi-file-earmark-excel-fill"></i> ទាញយករបាយការណ៍
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Orders Metrics Grid -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-primary text-primary">
+                                        <i class="bi bi-cart-check"></i>
+                                    </div>
+                                    <span class="badge bg-light-success text-success">+15% ធៀបម្សិលមិញ</span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">ការកុម្មង់សរុប</h6>
+                                    <h3 class="mb-0 stats-counter" id="metric-total-orders" data-target="182">10</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-warning text-warning">
+                                        <i class="bi bi-clock-history"></i>
+                                    </div>
+                                    <span class="badge bg-light-danger text-danger">បន្ទាន់</span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">រង់ចាំការបញ្ជាក់</h6>
+                                    <h3 class="mb-0 stats-counter" id="metric-pending-orders" data-target="12">0</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-info text-info">
+                                        <i class="bi bi-truck"></i>
+                                    </div>
+                                    <span class="badge bg-light-info text-info">កំពុងធ្វើដំណើរ</span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">កំពុងដឹកជញ្ជូន</h6>
+                                    <h3 class="mb-0 stats-counter" id="metric-shipping-orders" data-target="10">0</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-success text-success">
+                                        <i class="bi bi-cash-stack"></i>
+                                    </div>
+                                    <span class="badge bg-light-success text-success">ទូទាត់រួចរាល់</span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">ប្រាក់ចំណូលសរុប</h6>
+                                    <h3 class="mb-0">$<span class="stats-counter" id="metric-total-revenue" data-target="400">0</span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filters Control Block -->
+                    <div class="dashboard-card mb-4">
+                        <div class="card-body py-3">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-md-3">
+                                    <label class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្វែងរក</label>
+                                    <input type="text" class="form-control" id="filter-order-search" placeholder="លេខបញ្ជាទិញ ឬឈ្មោះអតិថិជន...">
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <label class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្ថានភាពដឹកជញ្ជូន</label>
+                                    <select class="form-select" id="filter-shipping-status">
+                                        <option value="all">ទាំងអស់</option>
+                                        <option value="pending">រង់ចាំការបញ្ជាក់ (Pending)</option>
+                                        <option value="processing">កំពុងរៀបចំ (Processing)</option>
+                                        <option value="shipping">កំពុងដឹកជញ្ជូន (Shipping)</option>
+                                        <option value="completed">បានបញ្ចប់ (Completed)</option>
+                                        <option value="cancelled">បានបោះបង់ (Cancelled)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <label class="form-label text-xs fw-bold text-muted text-uppercase mb-1">វិធីសាស្ត្រទូទាត់</label>
+                                    <select class="form-select" id="filter-payment-method">
+                                        <option value="all">ទាំងអស់</option>
+                                        <option value="ABA">ABA Bank</option>
+                                        <option value="Visa">Visa Card</option>
+                                        <option value="COD">បង់ប្រាក់ផ្ទាល់ (COD)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-3 d-flex align-items-end h-100 mt-auto">
+                                    <button class="btn btn-outline-custom w-100 d-flex justify-content-center align-items-center gap-2" id="btn-reset-order-filters">
+                                        <i class="bi bi-arrow-counterclockwise"></i> កំណត់ឡើងវិញ
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Orders Table Card -->
+                    <div class="dashboard-card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <div>
+                                <h5 class="mb-0 card-title">បញ្ជីប្រតិបត្តិការបញ្ជាទិញ</h5>
+                                <span class="text-muted text-xs">ទិន្នន័យរួមបញ្ចូលនៃការលក់ និងព័ត៌មានដឹកជញ្ជូនផ្ទាល់ខ្លួន</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            
+                            <div class="table-responsive" id="orders-table-wrapper">
+                                <table class="table table-hover align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>លេខបញ្ជាទិញ</th>
+                                            <th>អតិថិជន</th>
+                                            <th>ទំនិញបញ្ជាទិញ</th>
+                                            <th>តម្លៃសរុប</th>
+                                            <th>វិធីសាស្ត្របង់ប្រាក់</th>
+                                            <th>ស្ថានភាព</th>
+                                            <th class="text-end">សកម្មភាព</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="orders-list-rows">
+                                        <!-- បញ្ចូលដោយ JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Empty Order State Placeholder -->
+                            <div class="text-center py-5 d-none" id="orders-empty-state">
+                                <i class="bi bi-cart-x text-muted" style="font-size: 3rem;"></i>
+                                <h5 class="mt-3">រកមិនឃើញការបញ្ជាទិញទេ</h5>
+                                <p class="text-muted text-sm">សូមព្យាយាមស្វែងរកជាមួយទិន្នន័យផ្សេងទៀត។</p>
+                            </div>
+
+                            <!-- Pagination Footer -->
+                            <div class="px-4 py-3 d-flex align-items-center justify-content-between border-top">
+                                <span class="text-xs text-muted" id="order-pagination-text">កំពុងបង្ហាញ 0 ក្នុងចំណោម 0 ការបញ្ជាទិញ</span>
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination pagination-sm mb-0">
+                                        <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- Bottom Professional Footer Section -->
+            <footer class="app-footer">
+                <div class="container-fluid px-4 py-3 d-flex flex-column flex-sm-row align-items-center justify-content-between text-muted text-xs">
+                    <div>
+                        <span class="fw-semibold">Khmer Bazaar</span> Storefront Center &copy; <span>2026</span>. រក្សាសិទ្ធិគ្រប់យ៉ាង។
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Floating Scroll button -->
+    <button class="btn btn-primary scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Detailed Invoice & Status Progression Modal Dialogue -->
+    <div class="modal fade" id="orderDetailModal" tabindex="-1" aria-labelledby="orderDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-gradient-primary text-white border-0 py-3">
+                    <h5 class="modal-title fw-bold" id="orderDetailModalLabel">លម្អិតការបញ្ជាទិញ និង វិក្កយបត្រ</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    
+                    <!-- Status Progression Stepper -->
+                    <div class="order-progress-stepper mb-4 d-flex justify-content-between text-center position-relative">
+                        <div class="stepper-line"></div>
+                        <div class="stepper-step active" id="step-pending">
+                            <div class="step-icon"><i class="bi bi-file-earmark-text"></i></div>
+                            <span class="text-xs fw-semibold mt-1 d-block">ទទួលបានការកុម្មង់</span>
+                        </div>
+                        <div class="stepper-step" id="step-processing">
+                            <div class="step-icon"><i class="bi bi-box-seam"></i></div>
+                            <span class="text-xs fw-semibold mt-1 d-block">កំពុងរៀបចំ</span>
+                        </div>
+                        <div class="stepper-step" id="step-shipping">
+                            <div class="step-icon"><i class="bi bi-truck"></i></div>
+                            <span class="text-xs fw-semibold mt-1 d-block">កំពុងដឹកជញ្ជូន</span>
+                        </div>
+                        <div class="stepper-step" id="step-completed">
+                            <div class="step-icon"><i class="bi bi-check2-circle"></i></div>
+                            <span class="text-xs fw-semibold mt-1 d-block">បានបញ្ចប់</span>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Left Invoice Area (Premium Layout) -->
+                        <div class="col-12 col-md-7 border-end-md">
+                            <div class="premium-invoice-card" id="invoice-print-area">
+                                <!-- Invoice Header -->
+                                <div class="invoice-header-block mb-3 d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <h5 class="invoice-brand text-gradient-primary fw-bold mb-0">KHMER BAZAAR</h5>
+                                        <small class="text-muted tracking-wider">OFFICIAL INVOICE</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <div class="invoice-id-badge font-monospace" id="invoice-id">#ORD-0000</div>
+                                        <div class="text-xxs text-muted mt-1" id="invoice-date">កាលបរិច្ឆេទ: 12-Oct-2026</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="invoice-divider mb-3"></div>
+
+                                <!-- Customer Details Table Info -->
+                                <div class="customer-info-table mb-3">
+                                    <table class="table table-borderless table-sm mb-0 text-xs">
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-muted py-1" style="width: 28%;"><i class="bi bi-person-fill text-primary"></i> ឈ្មោះអតិថិជន:</td>
+                                                <td class="fw-bold py-1 text-dark" id="invoice-customer-name">សុខ ជា</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-muted py-1"><i class="bi bi-telephone-fill text-primary"></i> លេខទូរស័ព្ទ:</td>
+                                                <td class="fw-semibold py-1 text-dark" id="invoice-customer-phone">092 112 233</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-muted py-1"><i class="bi bi-geo-alt-fill text-primary"></i> អាសយដ្ឋាន:</td>
+                                                <td class="py-1 text-dark text-wrap-address" id="invoice-customer-address">ផ្ទះលេខ ១២ ផ្លូវ ៣១០ ភ្នំពេញ</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Items List Table -->
+                                <div class="invoice-items-table-wrapper mb-3">
+                                    <table class="table table-sm align-middle text-xs mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th class="ps-2">មុខទំនិញ</th>
+                                                <th class="text-center" style="width: 15%;">ចំនួន</th>
+                                                <th class="text-end" style="width: 25%;">តម្លៃឯកតា</th>
+                                                <th class="text-end pe-2" style="width: 25%;">សរុប</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="invoice-items-body">
+                                            <!-- បញ្ចូលដោយ JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Price Summary Block Table -->
+                                <div class="invoice-summary-table ms-auto" style="max-width: 280px;">
+                                    <table class="table table-borderless table-sm mb-0 text-xs">
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-end text-muted">សរុបរង (Subtotal):</td>
+                                                <td class="text-end fw-semibold text-dark font-monospace" id="invoice-subtotal">$0.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end text-muted">សេវាដឹកជញ្ជូន (Shipping):</td>
+                                                <td class="text-end fw-semibold text-dark font-monospace" id="invoice-shipping-fee">$2.00</td>
+                                            </tr>
+                                            <tr class="border-top-highlight">
+                                                <td class="text-end fw-bold text-primary pt-2">តម្លៃត្រូវទូទាត់ (Total):</td>
+                                                <td class="text-end fw-bold text-primary font-monospace fs-6 pt-2" id="invoice-grandtotal">$0.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <button class="btn btn-sm btn-outline-custom w-100 d-flex justify-content-center align-items-center gap-2" id="btn-print-invoice">
+                                    <i class="bi bi-printer"></i> បោះពុម្ភវិក្កយបត្រ (Print PDF)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Right Control Panel Area -->
+                        <div class="col-12 col-md-5">
+                            <h6 class="fw-bold mb-3"><i class="bi bi-sliders text-primary"></i> កែប្រែស្ថានភាពការកុម្មង់</h6>
+                            
+                            <div class="mb-3">
+                                <label class="form-label text-xs fw-bold text-uppercase text-muted">ស្ថានភាពបច្ចុប្បន្ន</label>
+                                <div class="p-3 border rounded-3 bg-light d-flex align-items-center gap-2">
+                                    <span class="status-marker" id="modal-current-status-marker"></span>
+                                    <strong id="modal-current-status-text" class="text-sm">រង់ចាំការបញ្ជាក់</strong>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="update-status-dropdown" class="form-label text-xs fw-bold text-uppercase text-muted">ផ្លាស់ប្តូរស្ថានភាពទៅកាន់</label>
+                                <select class="form-select" id="update-status-dropdown">
+                                    <option value="pending">រង់ចាំការបញ្ជាក់ (Pending)</option>
+                                    <option value="processing">កំពុងរៀបចំ (Processing)</option>
+                                    <option value="shipping">កំពុងដឹកជញ្ជូន (Shipping)</option>
+                                    <option value="completed">បានបញ្ចប់ (Completed)</option>
+                                    <option value="cancelled">បានបោះបង់ (Cancelled)</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label text-xs fw-bold text-uppercase text-muted">ចំណាំការដឹកជញ្ជូន (ព័ត៌មានបន្ថែម)</label>
+                                <textarea class="form-control text-sm" id="order-internal-note" rows="3" placeholder="បញ្ជាក់លេខកូដដឹកជញ្ជូន លេខតាក់ស៊ី ឬ J&T Express..."></textarea>
+                            </div>
+
+                            <button class="btn btn-primary w-100 text-white" id="btn-save-order-status">
+                                <i class="bi bi-save"></i> ធ្វើបច្ចុប្បន្នភាពទិន្នន័យ
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Event Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+        <div id="actionToast" class="toast align-items-center text-white bg-dark border-0 shadow" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body d-flex align-items-center gap-2">
+                    <i class="bi bi-info-circle"></i>
+                    <span id="toast-message">ប្រតិបត្តិការទទួលបានជោគជ័យ!</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core App Dashboard Engine -->
+    <script src="../assets/js/seller_dashboard.js"></script>
+    <!-- Orders Specific Controller -->
+    <script src="../assets/js/seller_orders.js"></script>
+</body>
+</html>
+<!-- END OF FILE seller_orders.html -->
