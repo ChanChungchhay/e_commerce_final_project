@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/profile_customer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Profile_customer</title>
+</head>
+<body>
+    <div class="header py-2 br-s bg-success">
+        <div class="container d-flex justify-content-between  align-items-center ">
+            <div class="head-link d-flex gap-3 ">
+                <a class=" body-link" href="#"><i class="fa-regular fa-envelope me-1 fs-6"
+                        style="color: rgb(255, 255, 255);"></i>contact@example.com</a>
+                <a class=" body-link" href="#"><i class="fa-solid fa-mobile-screen me-1 fs-6"
+                        style="color: rgb(255, 255, 255);"></i> +885 096300600</a>
+            </div>
+            <button type="button" class="head-icon d-flex gap-3 d-md-block d-none border-0 bg-transparent ">
+                <a href="#"><i class="fa-brands fa-twitter  fs-6"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook fs-6"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram fs-6"></i></a>
+                <a href="#"><i class="fa-brands fa-invision fs-6"></i></a>
+            </button>
+        </div>
+    </div>
+    <nav class="nav pt-2 shadow position-sticky top-0 z-3 bg-white">
+        <div class="container mb-0 d-flex justify-content-between align-items-center ">
+            <div class="d-flex justify-content-center align-items-center gap-2">
+                <button for="button" class="btn border-0  d-lg-none d-block  d-flex justify-content-center align-items-center"data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="width: 35px;height: 35px;"><i class="fa-solid fa-bars" ></i></button>
+                <a href="./home.html" class="navbar-brand d-flex justify-content-center align-items-center">
+                    <img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt="">
+                </a>
+            </div>
+            <div class="">
+                <a href="./home.html">ទំព័រដើម</a>
+                /
+                <a href="./product.html">ផលិតផល</a>
+            </div>
+        </div>
+    </nav>
+    <section class="sect-1 py-4">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-3 d-lg-block d-none ">
+                    <div class="shadow rounded-2">
+                    <div class="card card-head py-3">
+                        <div class="tittle fs-3 py-3 fw-bold text-success text-center">គណនី</div> 
+                        <ul class="navbar-nav d-flex gap-3 justify-content-center align-items-center flex-column gap-1">
+                            <li class="nav-item"><a class="nav-link shadow disabled bg-success-subtle" href="#"><i class="fa-solid fa-border-all" style="color: rgb(59, 255, 129);"></i>Dasboard</a></li>
+                            <li class="nav-item"><a class="nav-link shadow active"  href="./profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="./order.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="./favorite_profile.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="./change_password.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>ក្លាយជាអ្នកលក់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>ចាកចេញ</a></li>
+                        </ul> 
+                    </div>
+                    </div>
+                </div>
+                <!-- ======offcanvas========== -->
+                <div class="offcanvas offcanvas-start position-absolute" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 350px;top: -5%;">
+                    <div class="offcanvas-header">
+                        <img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt="">
+                        <button type="button" class="btn-close shadow-none " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav d-flex gap-3 justify-content-center align-items-center flex-column gap-1">
+                            <li class="nav-item"><a class="nav-link shadow disabled bg-success-subtle" href="#"><i class="fa-solid fa-border-all" style="color: rgb(59, 255, 129);"></i>Dasboard</a></li>
+                            <li class="nav-item"><a class="nav-link shadow active"  href="/customer/profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="/customer/order.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="./favorite_profile.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="./change_password.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>ក្លាយជាអ្នកលក់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-12">
+                    <div class="card card-head border-0">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="shadow rounded-2">
+                                <div class="card card-head text-bg-light">
+                                <div class="row g-3 ">
+                                    <div class="col-12">
+                                        <div class="card card-head border-0 py-3">
+                                            <div class="d-flex justify-content-center align-items-center ">
+                                                <div class="profile position-relative" style="width: 100px;">
+                                                    <label for="fileInput">
+                                                        <img  id="profile" src="../assets/img/profile_customer/img-2.jpg" class="img-fluid object-fit-cover p-1 border border-success rounded-circle" style="cursor: pointer;width: 100px;height: 100px;" alt="">
+                                                        <img src="../assets/img/icon/camera.png" class="img-fluid object-fit-cover position-absolute bg-info px-1 " style="width: 30px;height: 30ox;border-radius: 5px;top: 80%;right: 10%; cursor: pointer;" alt="">
+                                                    </label>
+                                                    <input type="file" id="fileInput" style="display: none;">
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="shadow rounded-2">
+                                <div class="card card-head text-bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class=" fs-5">កែប្រែព័តមានផ្ទាល់ខ្លួន</div>
+                                            <i class="fa-solid fa-circle-exclamation fs-5" ></i>
+                                        </div>
+                                        <div class="d-flex gap-3 mb-3">
+                                            <div class="form-floating mb-3 w-50">
+                                                <input type="text" class="form-control shadow-none border border-success" id="floatingInput" placeholder="name@example.com">
+                                                <label for="floatingInput">Full Name :</label>
+                                            </div>
+                                            <div class="form-floating mb-3 w-50">
+                                                <input type="email" class="form-control shadow-none border border-success" id="floatingInput" placeholder="name@example.com">
+                                                <label for="floatingInput">Enter email :</label>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-3 mb-3">
+                                            <div class="form-floating mb-3 w-50">
+                                                <input type="number" class="form-control shadow-none border border-success" id="floatingInput" placeholder="name@example.com">
+                                                <label for="floatingInput">Phone :</label>
+                                            </div>
+                                            <div class="form-floating mb-3 w-50 ">
+                                                <select class="form-select shadow-none border border-success bg" aria-label="Default select example">
+                                                    <option selected>Choose your gender :</option>
+                                                    <option value="1">Male</option>
+                                                    <option value="2">Female</option>
+                                                    <option value="3">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-3 mb-3">
+                                            <div class="form-floating mb-3 w-50">
+                                                <input type="date" class="form-control shadow-none border border-success" id="floatingInput" placeholder="name@example.com">
+                                                <label for="floatingInput">Birth of date :</label>
+                                            </div>
+                                            <div class="form-floating mb-3 w-50">
+                                                <input type="text" class="form-control shadow-none border border-success" id="floatingInput" placeholder="name@example.com">
+                                                <label for="floatingInput">Address : st , house , City or Province</label>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-3 justify-content-center align-items-center">
+                                            <a href="./profile.html" class="btn editpro w-25 bg-transparent border border-success p-2">ត្រឡប់</a>
+                                            <div class="btn editpro w-25 btn-success p-2">រក្សាទុក</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer pt-4 " style="background-color: var(--footer-bg);">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" class="navbar-brand"><img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
+                            <div class="tittie text-white" >ផ្សារអនឡាញដែលជួយប្រជាជនកម្ពុជាទិញ និងលក់ផលិតផលដើម្បីបង្កើនចំណូល និងគាំទ្រអាជីវកម្មក្នុងស្រុក។</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="d-flex">
+                            <div class="card-body ">
+                                <div class=" tittle fw-bold">Quick Links</div>
+                                <ul class=" list-unstyled mt-3">
+                                    <li><a class="link" href="#">ទំព័រដើម</a></li>
+                                    <li><a class="link" href="#">រភេទទំនិញ</a></li>
+                                    <li><a class="link" href="#">ផលិតផល</a></li>
+                                    <li><a class="link" href="#">បញ្ចុះតម្លៃ</a></li>
+                                    <li><a class="link" href="#">អំពីយើង</a></li>
+                                    <li><a class="link" href="#">ទំនាក់ទំនង</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-body" >
+                                <div class=" tittle fw-bold">Customer Service</div>
+                                <ul class=" list-unstyled mt-3">
+                                    <li><a class="link" href="#">តាមដានការបញ្ជាទិញ</a></li>
+                                    <li><a class="link" href="#">ការដឹកជញ្ជូន</a></li>
+                                    <li><a class="link" href="#">លក្ខខណ្ឌប្រើប្រាស់</a></li>
+                                    <li><a class="link" href="#">គោលការណ៍ឯកជនភាព</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class=" tittle fw-bold">Contact Us</div>
+                            <div class="d-flex flex-column mt-3">
+                                <a href="#" class="link"><i class="fa-solid fa-location-dot text-secondary"></i>Steung mean chey , Phnom Penh City</a>
+                                <a href="#" class="link"><i class="fa-solid fa-phone text-secondary"></i>+855 12 345 678</a>
+                                <a href="#" class="link"><i class="fa-solid fa-envelope text-secondary"></i>support@khmerbazaar.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card">
+                            <div class="card-body" >
+                                <div class=" tittle fw-bold">Follow Us</div>
+                                <ul class="d-flex gap-2 list-unstyled mt-3">
+                                    <li><a class="icon bg-primary" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a class="icon bg-info" href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                                    <li><a class="icon bg-danger" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a class="icon bg-danger" href="#"><i class="fa-brands fa-youtube" ></i></a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card">
+                            <div class="card-body" >
+                                <div class=" tittle fw-bold">Payment Menthods</div>
+                                <ul class="d-flex justify-content-start align-items-center gap-2 list-unstyled mt-3 flex-wrap">
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/ABA.webp" class="img-fluid object-fit-cover " alt=""></a></li>
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/acleda.jpg" class="img-fluid object-fit-cover" alt=""></a></li>
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/visa.png" class="img-fluid object-fit-cover" alt=""></a></li>
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/wing.png" class="img-fluid object-fit-cover" alt=""></a></li>
+                                    <div class="payment bg-success  rounded-2 text-nowrap d-flex justify-content-center align-items-center text-white" style="height: 50px;width: 120px;">Cash on Delivery</div>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-2 bg-primary-subtle">© 2026 Khmer Bazaar. All Rights Reserved.</div>
+    </section>
+     <!-- ===== update profile ===== -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast-1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="/assets/img/logo/img-logo.png" style="width: 40px;" class="img-fluid object-fit-cover rounded me-2" alt="...">
+                <strong class="me-auto">khmerbazaar</strong>
+                <small>just now</small>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body text-center bg-success-subtle text-success">
+                <i class="fa-solid fa-circle-check" style="color: rgb(21, 197, 47);"></i>
+                បានកែប្រែប្រវត្តិរូប
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/count_up_num.js"></script>
+    <script src="../assets/js/modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
+    <script>
+        // ===== change profile img =======
+        const profile = document.getElementById("profile");
+        const fileInput = document.getElementById("fileInput");
+
+        fileInput.addEventListener("change", function () {
+            const file = this.files[0];
+
+            if(file){
+                const reader = new FileReader();
+
+                reader.onload = function(e){
+                    profile.src = e.target.result;
+                }
+
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+    <script>
+        // ===== change bg-nav-link =======
+        const links = document.querySelectorAll('.nav-link');
+
+        links.forEach(link => {
+            link.addEventListener('click', function () {
+                links.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });   
+    </script>
+    <script>
+        // ===== edit profile ====
+        const toastLiveExample1 = document.getElementById('liveToast-1')
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample1)
+        document.querySelectorAll('.editpro').forEach(function (btn) {
+            btn.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        })
+    </script>
+   
+</body>
+</html>
