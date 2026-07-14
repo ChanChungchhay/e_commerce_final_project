@@ -1,0 +1,536 @@
+/* START OF FILE seller_analytics.css */
+
+/* ==========================================================================
+   1. VARIABLES & COLOR PALETTE
+   ========================================================================== */
+:root {
+    --primary: #4F46E5;
+    --primary-hover: #4338CA;
+    --secondary: #6366F1;
+    --secondary-hover: #4F46E5;
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+    --info: #06B6D4;
+    
+    /* Light Theme Color Swatches */
+    --bg-app: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --bg-sidebar: #111827;
+    --bg-sidebar-hover: #1F2937;
+    --text-main: #374151;
+    --text-muted: #6B7280;
+    --border-color: #E2E8F0;
+    --shadow-soft: 0 4px 20px -2px rgba(17, 24, 39, 0.05), 0 2px 6px -1px rgba(17, 24, 39, 0.03);
+    --shadow-hover: 0 10px 30px -10px rgba(79, 70, 229, 0.15), 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(226, 232, 240, 0.8);
+}
+
+[data-bs-theme="dark"] {
+    /* Dark Theme Color Swatches Override */
+    --bg-app: #0B0F19;
+    --bg-card: #1E293B;
+    --bg-sidebar: #0F172A;
+    --bg-sidebar-hover: #1E293B;
+    --text-main: #F1F5F9;
+    --text-muted: #94A3B8;
+    --border-color: #334155;
+    --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 10px 35px -10px rgba(99, 102, 241, 0.3);
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(51, 65, 85, 0.8);
+}
+
+/* ==========================================================================
+   2. SYSTEM GLOBAL STYLES & CUSTOM SCROLLBARS
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Condensed","Battambang", serif !important;
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar styling customization */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* Text Utilities */
+.text-xs { font-size: 0.75rem !important; }
+.text-xxs { font-size: 0.65rem !important; }
+.fw-extrabold { font-weight: 800; }
+.tracking-wider { letter-spacing: 0.05em; }
+
+.text-gradient-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 0px;
+}
+
+/* Opacity Tints background classes */
+.bg-light-primary { background-color: rgba(79, 70, 229, 0.12) !important; }
+.bg-light-success { background-color: rgba(34, 197, 94, 0.12) !important; }
+.bg-light-warning { background-color: rgba(245, 158, 11, 0.12) !important; }
+.bg-light-info { background-color: rgba(6, 182, 212, 0.12) !important; }
+
+/* ==========================================================================
+   3. LAYOUT STRUCTURE (SIDEBAR & MAIN CONTEXT)
+   ========================================================================== */
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main-container {
+    flex: 1;
+    margin-left: 280px; /* Sidebar Width offset */
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* ==========================================================================
+   4. SIDEBAR NAVIGATION CONTROLS
+   ========================================================================== */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background-color: var(--bg-sidebar);
+    color: #9CA3AF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.sidebar-header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+.logo-img {
+    width: 50px;
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+}
+
+.sidebar-menu-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem 1rem;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.menu-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #4B5563;
+    padding: 0.75rem 1rem 0.25rem;
+}
+
+.menu-item {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.75rem 1rem;
+    color: #9CA3AF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.menu-link i {
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.menu-item:hover .menu-link,
+.menu-item.active .menu-link {
+    color: #FFFFFF;
+    background-color: var(--bg-sidebar-hover);
+}
+
+.menu-item:hover .menu-link i {
+    transform: scale(1.1);
+}
+
+.menu-item.active .menu-link {
+    border-left: 3px solid var(--primary);
+    background-color: rgba(79, 70, 229, 0.1);
+}
+
+.sidebar-footer {
+    padding: 1.5rem 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.user-widget {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-info h6 {
+    font-size: 0.875rem;
+}
+
+.user-role {
+    font-size: 0.7rem;
+    color: #6B7280;
+}
+
+/* ==========================================================================
+   5. TOP NAVIGATION NAVBAR & CONTROL MENUS
+   ========================================================================== */
+.top-navbar {
+    height: 70px;
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    transition: all 0.3s ease;
+}
+
+/* Header Buttons Layout */
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+    background-color: var(--bg-app);
+    color: var(--primary);
+    transform: translateY(-1px);
+}
+
+.header-divider {
+    width: 1px;
+    background-color: var(--border-color);
+    margin: 0 5px;
+}
+
+.btn-profile {
+    border: none;
+    background: transparent;
+    text-align: left;
+}
+
+.avatar-sm {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   6. STATS & ANALYTICS INTERACTIVE CARDS
+   ========================================================================== */
+.stats-card, .dashboard-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.stats-card {
+    padding: 1.25rem;
+}
+
+.stats-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
+}
+
+.stats-card .icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+/* Dashboard Cards standard styling */
+.dashboard-card .card-header {
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.25rem 1.5rem;
+}
+
+.dashboard-card .card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   7. PURE CSS BAR CHART GRAPH
+   ========================================================================== */
+.css-bar-chart {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    height: 320px;
+    position: relative;
+}
+
+.chart-y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 24px); /* Subtracted bottom x-axis space */
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-align: right;
+}
+
+.chart-bars-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.bar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.bar-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    width: 100%;
+    height: calc(100% - 30px);
+    justify-content: center;
+}
+
+.bar {
+    width: 14px;
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    animation: bar-grow 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform-origin: bottom;
+}
+
+.bar:hover {
+    transform: scaleY(1.05);
+    opacity: 0.9;
+}
+
+.bar-revenue {
+    background: linear-gradient(to top, var(--primary), var(--secondary));
+}
+
+.bar-orders {
+    background: linear-gradient(to top, #A5B4FC, #C7D2FE);
+}
+
+[data-bs-theme="dark"] .bar-orders {
+    background: linear-gradient(to top, #312E81, #4338CA);
+}
+
+.bar-label {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.chart-legends {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-main);
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   8. PERFORMANCE TABLES & PROGRESS BARS
+   ========================================================================== */
+.table th {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-uppercase: true;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.table td {
+    padding: 1.15rem 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.product-mini-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.product-mini-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.progress {
+    background-color: var(--border-color);
+    border-radius: 30px;
+}
+
+/* ==========================================================================
+   9. APP FOOTER & GENERAL EFFECTS
+   ========================================================================== */
+.app-footer {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+@keyframes bar-grow {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+}
+
+/* ==========================================================================
+   10. RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 1440px) {
+    .main-container {
+        margin-left: 280px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .main-container {
+        margin-left: 0;
+    }
+}
+/* END OF FILE seller_analytics.css */

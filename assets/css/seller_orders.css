@@ -1,0 +1,241 @@
+/* START OF FILE seller_orders.css */
+
+/* ==========================================================================
+   PREMIUM OVERRIDE & SYSTEM COLORS
+   ========================================================================== */
+:root {
+    --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+    --premium-border: #e2e8f0;
+    --premium-bg-light: #f8fafc;
+}
+
+/* Premium Button style */
+.btn-premium {
+    background: var(--primary-gradient);
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+}
+.btn-premium:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.25);
+    color: #ffffff;
+    opacity: 0.95;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}
+.status-badge.status-pending { background-color: rgba(217, 119, 6, 0.12); color: #d97706; }
+.status-badge.status-processing { background-color: rgba(79, 70, 229, 0.12); color: #4f46e5; }
+.status-badge.status-shipping { background-color: rgba(6, 182, 212, 0.12); color: #0891b2; }
+.status-badge.status-completed { background-color: rgba(22, 163, 74, 0.12); color: #16a34a; }
+.status-badge.status-cancelled { background-color: rgba(220, 38, 38, 0.12); color: #dc2626; }
+
+/* ==========================================================================
+   ORDER STATUS PROGRESS STEPPER
+   ========================================================================== */
+.order-progress-stepper {
+    padding: 10px 0;
+}
+
+.stepper-line {
+    position: absolute;
+    top: 22px;
+    left: 5%;
+    right: 5%;
+    height: 3px;
+    background-color: var(--premium-border);
+    z-index: 1;
+}
+
+.stepper-step {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.step-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid var(--premium-border);
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stepper-step.active .step-icon {
+    background: var(--primary-gradient);
+    border-color: transparent;
+    color: #ffffff;
+    box-shadow: 0 0 0 5px rgba(79, 70, 229, 0.15);
+}
+
+.stepper-step.active span {
+    color: #1e293b !important;
+    font-weight: 600;
+}
+
+.stepper-step span {
+    font-size: 0.725rem !important;
+    color: #64748b;
+    transition: color 0.3s ease;
+}
+
+/* Status markers in detailed card */
+.status-marker {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-marker.pending { background-color: #d97706; }
+.status-marker.processing { background-color: #4f46e5; }
+.status-marker.shipping { background-color: #0891b2; }
+.status-marker.completed { background-color: #16a34a; }
+.status-marker.cancelled { background-color: #dc2626; }
+
+/* ==========================================================================
+   PREMIUM INVOICE STYLING
+   ========================================================================== */
+.premium-invoice-card {
+    background-color: #ffffff;
+    border: 1px solid var(--premium-border);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.invoice-brand {
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+}
+
+.invoice-id-badge {
+    background-color: var(--premium-bg-light);
+    color: #1e293b;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border: 1px solid var(--premium-border);
+    display: inline-block;
+}
+
+.invoice-divider {
+    height: 1px;
+    background-color: var(--premium-border);
+    width: 100%;
+}
+
+/* Customer details layout in table format */
+.customer-info-table table {
+    border-collapse: collapse;
+}
+.customer-info-table td {
+    border: none;
+}
+.text-wrap-address {
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Premium Items Table */
+.invoice-items-table-wrapper {
+    background-color: var(--premium-bg-light);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--premium-border);
+}
+.invoice-items-table-wrapper table {
+    margin-bottom: 0;
+}
+.invoice-items-table-wrapper th {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--premium-border);
+}
+.invoice-items-table-wrapper td {
+    padding: 10px 8px;
+    color: #334155;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+}
+.invoice-items-table-wrapper tr:last-child td {
+    border-bottom: none;
+}
+
+/* Summary Block */
+.border-top-highlight {
+    border-top: 1.5px solid #cbd5e1 !important;
+}
+
+/* Custom border alignment separator */
+@media (min-width: 768px) {
+    .border-end-md {
+        border-right: 1px solid var(--premium-border);
+    }
+}
+
+/* ==========================================================================
+   PRINT INVOICE SETUP (MEDIA QUERIES)
+   ========================================================================== */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #invoice-print-area, #invoice-print-area * {
+        visibility: visible;
+    }
+    #invoice-print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border: none !important;
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+    .invoice-items-table-wrapper {
+        border: 1px solid #000000 !important;
+    }
+    .invoice-items-table-wrapper th {
+        background-color: #e2e8f0 !important;
+        color: #000000 !important;
+        border-bottom: 1px solid #000000 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .invoice-items-table-wrapper td {
+        border-bottom: 1px solid #e2e8f0 !important;
+    }
+    .invoice-id-badge {
+        border: 1px solid #000000 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+/* END OF FILE seller_orders.css */
