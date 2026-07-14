@@ -1,0 +1,97 @@
+/* START OF FILE seller_products.css */
+
+/* ==========================================================================
+   PRODUCT IMAGE UPLOADER DRAG ZONE
+   ========================================================================== */
+.product-image-uploader-wrapper {
+    height: 180px;
+    background-color: var(--bg-app);
+    border: 2px dashed var(--border-color) !important;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.product-image-uploader-wrapper:hover {
+    border-color: var(--primary) !important;
+    background-color: rgba(79, 70, 229, 0.03);
+}
+
+.product-image-uploader-wrapper i {
+    transition: transform 0.2s ease;
+}
+
+.product-image-uploader-wrapper:hover i {
+    transform: translateY(-4px);
+}
+
+.image-preview-container {
+    z-index: 3;
+}
+
+.btn-remove-img {
+    z-index: 5;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* ==========================================================================
+   GRID CARD LAYOUT STYLES FOR PRODUCT CATALOGUE
+   ========================================================================== */
+.grid-view-item {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.grid-view-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.grid-product-img-wrap {
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.grid-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.grid-view-item:hover .grid-product-img {
+    transform: scale(1.05);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Custom Outlined Input Style */
+.btn-icon-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    transition: all 0.15s ease;
+}
+
+.btn-icon-sm:hover {
+    background-color: var(--bg-app);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-icon-sm.text-danger:hover {
+    color: var(--danger);
+    border-color: var(--danger);
+}

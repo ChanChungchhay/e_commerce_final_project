@@ -1,0 +1,539 @@
+<!-- START OF FILE seller_products.html -->
+<!DOCTYPE html>
+<html lang="km" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>គ្រប់គ្រងផលិតផល - Khmer Bazaar</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Base Dashboard Style -->
+    <link rel="stylesheet" href="../assets/css/seller_dashboard.css">
+    <!-- Products Specific Style -->
+    <link rel="stylesheet" href="../assets/css/seller_products.css">
+</head>
+
+<body>
+
+
+
+    <!-- Application Layout -->
+    <div class="dashboard-wrapper">
+        <!-- Left Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <div class="logo-icon">
+                        <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img" alt="Logo">
+                    </div>
+                    <span class="brand-name">Khmer Bazaar<span class="text-success">.</span></span>
+                </div>
+                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="sidebar-menu-wrapper">
+                <ul class="sidebar-menu">
+                    <li class="menu-item" data-page="dashboard">
+                        <a href="seller_dashboard.html" class="menu-link">
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            <span class="menu-text">ផ្ទាំងគ្រប់គ្រង</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active" data-page="products">
+                        <a href="seller_products.html" class="menu-link">
+                            <i class="bi bi-box-seam-fill"></i>
+                            <span class="menu-text">ផលិតផល</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="orders">
+                        <a href="seller_orders.html" class="menu-link">
+                            <i class="bi bi-cart-fill"></i>
+                            <span class="menu-text">ការបញ្ជាទិញ</span>
+                            <span class="badge rounded-pill bg-danger ms-auto">12</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="customers">
+                        <a href="seller_customers.html" class="menu-link">
+                            <i class="bi bi-people-fill"></i>
+                            <span class="menu-text">អតិថិជន</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="analytics">
+                        <a href="seller_analytics.html" class="menu-link">
+                            <i class="bi bi-bar-chart-line-fill"></i>
+                            <span class="menu-text">វិភាគទិន្នន័យ</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="messages">
+                        <a href="seller_messages.html" class="menu-link">
+                            <i class="bi bi-chat-left-dots-fill"></i>
+                            <span class="menu-text">សារផ្ញើ</span>
+                            <span class="badge rounded-pill bg-primary ms-auto">4</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="user-widget">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                        class="avatar rounded-circle" alt="User Profile">
+                    <div class="user-info">
+                        <h6 class="mb-0 text-white">ហេង សំណាង</h6>
+                    </div>
+                </div>
+                <button
+                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="bi bi-box-arrow-left"></i> ចាកចេញ
+                </button>
+            </div>
+        </aside>
+
+        <!-- Right Side Main Interface Wrap -->
+        <div class="main-container">
+
+            <!-- Top Header Navigation -->
+            <header class="top-navbar">
+                <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
+
+                    <!-- Left Toggle & Global Search -->
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-icon d-lg-none" id="sidebar-toggle" aria-label="Toggle Sidebar">
+                            <i class="bi bi-list fs-4"></i>
+                        </button>
+                        <div class="search-bar-wrapper">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" class="form-control" id="product-search-input"
+                                placeholder="ស្វែងរកផលិតផលតាមឈ្មោះ លេខកូដ SKU...">
+                        </div>
+                    </div>
+
+                    <!-- Right Controls Menu -->
+                    <div class="d-flex align-items-center gap-2 gap-md-3">
+
+                        <!-- Light/Dark Mode Switcher -->
+                        <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
+                            <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                        </button>
+
+                        <div class="header-divider h-100"></div>
+
+                        <!-- Mini profile info -->
+                        <div class="dropdown">
+                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
+                                id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                                    class="avatar-sm rounded-circle" alt="User Avatar">
+                                <span class="profile-name d-none d-lg-inline-block">ហេង សំណាង</span>
+                                <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i
+                                            class="bi bi-person-fill"></i> កម្រងព័ត៌មាន</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger d-flex align-items-center gap-2" href="#"><i
+                                            class="bi bi-box-arrow-right"></i> ចាកចេញ</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="content-wrapper">
+                <div class="container-fluid px-4 py-4">
+
+                    <!-- Title and Quick Statistics -->
+                    <div class="row align-items-center mb-4 gy-3">
+                        <div class="col-md-6 col-12">
+                            <h2 class="welcome-heading mb-1 text-gradient-primary">គ្រប់គ្រងផលិតផល</h2>
+                            <p class="text-muted text-sm mb-0">បន្ថែម កែប្រែ និងតាមដានស្តុកផលិតផលរបស់អ្នក</p>
+                        </div>
+                        <div class="col-md-6 col-12 d-flex flex-wrap justify-content-md-end gap-2">
+                            <button class="btn btn-primary d-flex align-items-center gap-2 text-white rounded-3"
+                                id="btn-open-add-modal" data-bs-toggle="modal" data-bs-target="#productManageModal">
+                                <i class="bi bi-plus-circle-fill"></i> បន្ថែមផលិតផលថ្មី
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Products Metrics Grid -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-primary text-primary">
+                                        <i class="bi bi-box-seam"></i>
+                                    </div>
+                                    <span class="badge bg-light-success text-success">+4 ខែនេះ</span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">ផលិតផលសរុប</h6>
+                                    <h3 class="mb-0 stats-counter" id="metric-total-products" data-target="32">32</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-success text-success">
+                                        <i class="bi bi-check2-circle"></i>
+                                    </div>
+                                    <span class="badge bg-light-success text-success">ដំណើរការធម្មតា</span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">កំពុងដាក់លក់</h6>
+                                    <h3 class="mb-0 stats-counter" id="metric-active-products" data-target="28">28</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-warning text-warning">
+                                        <i class="bi bi-exclamation-triangle"></i>
+                                    </div>
+                                    <span class="badge bg-light-warning text-warning">គួរតែបន្ថែម</span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">ស្ទើរអស់ពីស្តុក</h6>
+                                    <h3 class="mb-0 stats-counter" id="metric-low-stock" data-target="3">3</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-danger text-danger">
+                                        <i class="bi bi-x-circle"></i>
+                                    </div>
+                                    <span class="badge bg-light-danger text-danger">ផ្អាកលក់បណ្តោះអាសន្ន</span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">អស់ពីស្តុក</h6>
+                                    <h3 class="mb-0 stats-counter" id="metric-out-of-stock" data-target="1">1</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filter Control Panel -->
+                    <div class="dashboard-card mb-4">
+                        <div class="card-body py-3">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-md-4">
+                                    <label
+                                        class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្វែងរកលម្អិត</label>
+                                    <div class="position-relative">
+                                        <input type="text" class="form-control" id="filter-search"
+                                            placeholder="ស្វែងរកតាមឈ្មោះ ឬកូដ SKU...">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <label
+                                        class="form-label text-xs fw-bold text-muted text-uppercase mb-1">តម្រងតាមប្រភេទ</label>
+                                    <select class="form-select" id="filter-category">
+                                        <option value="all">ទាំងអស់</option>
+                                        <option value="គ្រឿងអេឡិចត្រូនិក">គ្រឿងអេឡិចត្រូនិក</option>
+                                        <option value="ឧបករណ៍ឆ្លាតវៃ">ឧបករណ៍ឆ្លាតវៃ</option>
+                                        <option value="គ្រឿងបន្លាស់">គ្រឿងបន្លាស់</option>
+                                        <option value="សម្ភារៈក្នុងផ្ទះ">សម្ភារៈក្នុងផ្ទះ</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <label
+                                        class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្ថានភាពស្តុក</label>
+                                    <select class="form-select" id="filter-stock-status">
+                                        <option value="all">ទាំងអស់</option>
+                                        <option value="instock">មានក្នុងស្តុក (ជិតបង្កើយ)</option>
+                                        <option value="lowstock">ស្ទើរអស់ពីស្តុក</option>
+                                        <option value="outofstock">អស់ពីស្តុក</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-2 d-flex align-items-end h-100 mt-auto">
+                                    <button
+                                        class="btn btn-outline-custom w-100 d-flex justify-content-center align-items-center gap-2"
+                                        id="btn-reset-filters">
+                                        <i class="bi bi-arrow-counterclockwise"></i> កំណត់ឡើងវិញ
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Products Table Card -->
+                    <div class="dashboard-card">
+                        <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+                            <div>
+                                <h5 class="mb-0 card-title">បញ្ជីទំនិញលក់</h5>
+                                <span class="text-muted text-xs">បង្ហាញព័ត៌មានលម្អិត រូបភាព និងតម្លៃនៃទំនិញនីមួយៗ</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="btn btn-icon btn-sm active" id="view-list" data-bs-toggle="tooltip"
+                                    title="ទិដ្ឋភាពបញ្ជី"><i class="bi bi-list-task"></i></button>
+                                <button class="btn btn-icon btn-sm" id="view-grid" data-bs-toggle="tooltip"
+                                    title="ទិដ្ឋភាពប្រអប់"><i class="bi bi-grid-3x3-gap"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+
+                            <!-- Table Display -->
+                            <div class="table-responsive" id="products-table-container">
+                                <table class="table table-hover align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>រូបភាព</th>
+                                            <th>ឈ្មោះផលិតផល / កូដ SKU</th>
+                                            <th>ប្រភេទ</th>
+                                            <th>តម្លៃរាយ</th>
+                                            <th>ចំនួនស្តុក</th>
+                                            <th>ស្ថានភាព</th>
+                                            <th class="text-end">សកម្មភាព</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="products-list-body">
+                                        <!-- Javascript will render initial rows here dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Empty State Display (Hidden by default) -->
+                            <div class="text-center py-5 d-none" id="empty-state">
+                                <i class="bi bi-box-seam text-muted" style="font-size: 3rem;"></i>
+                                <h5 class="mt-3">រកមិនឃើញផលិតផលទេ</h5>
+                                <p class="text-muted text-sm">សូមព្យាយាមផ្លាស់ប្តូរពាក្យគន្លឹះ
+                                    ឬតម្រងស្វែងរករបស់អ្នកឡើងវិញ។</p>
+                            </div>
+
+                            <!-- Table Pagination Footer -->
+                            <div class="px-4 py-3 d-flex align-items-center justify-content-between border-top">
+                                <span class="text-xs text-muted" id="pagination-status">កំពុងបង្ហាញផលិតផល 4 ក្នុងចំណោម
+                                    4</span>
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination pagination-sm mb-0">
+                                        <li class="page-item disabled"><a class="page-link" href="#"><i
+                                                    class="bi bi-chevron-left"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i
+                                                    class="bi bi-chevron-right"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- Bottom Professional Footer Section -->
+            <footer class="app-footer">
+                <div
+                    class="container-fluid px-4 py-3 d-flex flex-column flex-sm-row align-items-center justify-content-between text-muted text-xs">
+                    <div>
+                        <span class="fw-semibold">Khmer Bazaar</span> Storefront Center &copy; <span
+                            id="current-year">2026</span>. រក្សាសិទ្ធិគ្រប់យ៉ាង។
+                    </div>
+                    <div class="d-flex gap-3 mt-2 mt-sm-0">
+                        <a href="#" class="footer-link">ជំនួយបច្ចេកទេស</a>
+                        <a href="#" class="footer-link">លក្ខខណ្ឌឯកជនភាព</a>
+                        <span class="badge bg-light text-dark py-1 px-2 border">កំណែទម្រង់ ២.៤.០</span>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Floating action to Top -->
+    <button class="btn btn-primary scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Unified Modal for Add / Edit Product -->
+    <div class="modal fade" id="productManageModal" tabindex="-1" aria-labelledby="productManageModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-gradient-primary text-white border-0 py-3">
+                    <h5 class="modal-title fw-bold" id="productManageModalLabel">បន្ថែមព័ត៌មានផលិតផលលម្អិត</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="productForm" class="needs-validation" novalidate>
+                        <input type="hidden" id="edit-product-id">
+                        <div class="row g-3">
+                            <!-- Image Upload Zone -->
+                            <div class="col-12 col-md-4">
+                                <label
+                                    class="form-label text-xs fw-bold text-uppercase text-muted d-block">រូបភាពផលិតផល</label>
+                                <div class="product-image-uploader-wrapper text-center p-3 border rounded-3 position-relative"
+                                    id="drop-zone">
+                                    <i class="bi bi-cloud-arrow-up text-primary fs-2"></i>
+                                    <p class="text-xs text-muted mt-2 mb-0">អូស & ទម្លាក់ រូបភាព ឬ ចុចទីនេះ</p>
+                                    <input type="file"
+                                        class="opacity-0 position-absolute w-100 h-100 top-0 start-0 cursor-pointer"
+                                        id="product-img-file" accept="image/*">
+                                    <div
+                                        class="image-preview-container d-none position-absolute w-100 h-100 top-0 start-0 bg-white rounded-3 overflow-hidden p-1">
+                                        <img src="" class="img-preview w-100 h-100 object-fit-cover rounded-3"
+                                            id="product-img-preview" alt="Preview">
+                                        <button type="button"
+                                            class="btn btn-sm btn-danger btn-remove-img position-absolute top-2 end-2"><i
+                                                class="bi bi-trash"></i></button>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="product-img-base64">
+                            </div>
+
+                            <!-- Name & Category -->
+                            <div class="col-12 col-md-8">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="productName"
+                                            class="form-label text-xs fw-bold text-uppercase">ឈ្មោះផលិតផល <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="productName"
+                                            placeholder="ឧ. កាសស្តាប់ត្រចៀក UltraBass" required>
+                                        <div class="invalid-feedback">សូមបំពេញឈ្មោះផលិតផលឱ្យបានត្រឹមត្រូវ។</div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="productCategory"
+                                            class="form-label text-xs fw-bold text-uppercase">ប្រភេទផលិតផល <span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" id="productCategory" required>
+                                            <option value="" selected disabled>ជ្រើសរើសប្រភេទ</option>
+                                            <option value="គ្រឿងអេឡិចត្រូនិក">គ្រឿងអេឡិចត្រូនិក</option>
+                                            <option value="ឧបករណ៍ឆ្លាតវៃ">ឧបករណ៍ឆ្លាតវៃ</option>
+                                            <option value="គ្រឿងបន្លាស់">គ្រឿងបន្លាស់</option>
+                                            <option value="សម្ភារៈក្នុងផ្ទះ">សម្ភារៈក្នុងផ្ទះ</option>
+                                        </select>
+                                        <div class="invalid-feedback">សូមជ្រើសរើសប្រភេទផលិតផល។</div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="productSKU"
+                                            class="form-label text-xs fw-bold text-uppercase">លេខកូដសម្គាល់ (SKU) <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="productSKU"
+                                            placeholder="ឧ. SKU-1002" required>
+                                        <div class="invalid-feedback">សូមបំពេញកូដ SKU ផលិតផល។</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Stock & Price details -->
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <label for="productPrice" class="form-label text-xs fw-bold text-uppercase">តម្លៃលក់រាយ
+                                    ($) <span class="text-danger">*</span></label>
+                                <input type="number" step="0.01" class="form-control" id="productPrice"
+                                    placeholder="0.00" required>
+                                <div class="invalid-feedback">សូមបំពេញតម្លៃលក់ត្រឹមត្រូវ។</div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <label for="productStock"
+                                    class="form-label text-xs fw-bold text-uppercase">ចំនួនក្នុងស្តុក <span
+                                        class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="productStock" placeholder="0" required>
+                                <div class="invalid-feedback">សូមបំពេញចំនួនស្តុក។</div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <label for="stockThreshold"
+                                    class="form-label text-xs fw-bold text-uppercase">កម្រិតជូនដំណឹងស្តុកទាប</label>
+                                <input type="number" class="form-control" id="stockThreshold" value="5"
+                                    placeholder="ឧ. 5">
+                            </div>
+
+                            <!-- Description -->
+                            <div class="col-12">
+                                <label for="productDesc"
+                                    class="form-label text-xs fw-bold text-uppercase">ការពិពណ៌នាផលិតផល</label>
+                                <textarea class="form-control" id="productDesc" rows="3"
+                                    placeholder="ពិពណ៌នាដោយសង្ខេបពីផលិតផលរបស់អ្នក..."></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-top-0 p-3">
+                    <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">បោះបង់</button>
+                    <button type="button" class="btn btn-primary px-4 text-white"
+                        id="saveProductBtn">រក្សាទុកទិន្នន័យ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirm Delete Modal Dialogue -->
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content border-0">
+                <div class="modal-body p-4 text-center">
+                    <i class="bi bi-exclamation-octagon-fill text-danger mb-3" style="font-size: 3rem;"></i>
+                    <h5 class="fw-bold">តើអ្នកពិតជាចង់លុបមែនទេ?</h5>
+                    <p class="text-muted text-sm mb-0">ទិន្នន័យផលិតផលនេះនឹងត្រូវបាត់បង់ជារៀងរហូត។</p>
+                </div>
+                <div class="modal-footer border-0 d-flex justify-content-center gap-2 pb-4 pt-0">
+                    <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">បោះបង់</button>
+                    <button type="button" class="btn btn-danger text-white px-3" id="confirmDeleteBtn">លុបចេញ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Event Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+        <div id="actionToast" class="toast align-items-center text-white bg-dark border-0 shadow" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body d-flex align-items-center gap-2">
+                    <i class="bi bi-info-circle" id="toast-icon"></i>
+                    <span id="toast-message">ប្រតិបត្តិការទទួលបានជោគជ័យ!</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-body p-4 text-center">
+                    <i class="bi bi-exclamation-octagon-fill text-danger mb-3" style="font-size: 3rem;"></i>
+                    <h5 class="fw-bold">តើអ្នកពិតជាចង់ចាកចេញពីប្រព័ន្ធមែនទេ?</h5>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">បោះបង់</button>
+                    <button type="button" class="btn btn-primary" id="logoutBtn" data-bs-target="#staticBackdrop1"><a
+                            href="seller_login.html" class="text-white text-decoration-none">បាទ/ចាស
+                            យល់ព្រម</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core App JS -->
+    <script src="../assets/js/seller_dashboard.js"></script>
+    <!-- Product Page Controller Logic -->
+    <script src="../assets/js/seller_products.js"></script>
+</body>
+
+</html>
