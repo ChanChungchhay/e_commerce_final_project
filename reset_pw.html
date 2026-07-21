@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/forgot-pw.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icon link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="sec-authentication py-3 py-lg-5 p-lg-5">
+        <!-- Background -->
+        <div class="background">
+            <div class="blur blur-1"></div>
+            <div class="blur blur-2"></div>
+            <div class="blur blur-3"></div>
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+        <div class="container mb-5">
+            <div class="brand-logo text-center mb-2">
+                <img src="assets/img/logo-removebg-preview.png" class="img-logo" style="width: 350px;" alt="">
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                    <div class="card border-0 shadow-lg mx-auto">
+                        <div class="card-body">
+                            <h2 class="text-center bazaar fw-bold mb-4">​​បង្កើតពាក្យសម្ងាត់ថ្មី</h2>
+                            <p class="text-center text-secondary">
+                                សុវត្ថិភាពគណនីគឺសំខាន់ សូមប្រើពាក្យសម្ងាត់ដែលមានភាពរឹងមាំ។</p>
+                            <form action="success.html" method="GET" class="needs-validation" novalidate>
+                                <div class="form-floating mb-4">
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="បំពេញពាក្យសម្ងាត់" required>
+                                    <label for="password">បំពេញពាក្យសម្ងាត់</label>
+                                    <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <input type="password" class="form-control" id="confirmPassword"
+                                        placeholder="បញ្ជាក់ពាក្យសម្ងាត់" required>
+                                    <label for="confirmPassword">បញ្ជាក់ពាក្យសម្ងាត់</label>
+                                    <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
+                                </div>
+                                <button type="submit"
+                                    class="btn btn-login w-100 mb-4 fw-bold fs-6">ផ្លាស់ប្តូរពាក្យសម្ងាត់</button>
+                                <div class="line border-bottom border-2 mb-4"></div>
+                                <a href="login.html" class="btn back-btn fs-6">ត្រលប់ក្រោយ</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="checkEmail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-2">
+                <div class="d-flex justify-content-center mb-0">
+                    <i class="bi bi-check-circle"></i>
+                </div>
+                <div class="">
+                    <h3 class="text-center bazaar fw-bold">ការផ្លាស់ប្តូរពាក្យសម្ងាត់បានជោគជ័យ</h3>
+                    <p class="fs-5 text-center">ពាក្យសម្ងាត់របស់អ្នកត្រូវបានផ្លាស់ប្តូរដោយជោគជ័យ។ សូមចូលគណនីរបស់អ្នកម្ដងទៀតដោយប្រើពាក្យសម្ងាត់ថ្មី។</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <a href="login.html" class="btn back-btn w-100 fw-bold fs-6">ចូលគណនី</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const form = document.querySelector(".needs-validation");
+        const modal = new bootstrap.Modal(document.getElementById("checkEmail"));
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (!form.checkValidity()) {
+                event.stopPropagation();
+                form.classList.add("was-validated");
+                return;
+            }
+
+            form.classList.add("was-validated");
+
+            // Form Valid
+            modal.show();
+        });
+    </script>
+</body>
+
+</html>

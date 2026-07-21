@@ -1,0 +1,228 @@
+:root{
+    --bazaar-text: #d97706;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Battambang", "Roboto", sans-serif !important;
+}
+.sec-authentication{
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+    radial-gradient(circle at top left, #ecfdf5 0%, transparent 40%),
+    radial-gradient(circle at top right, #fef3c7 0%, transparent 35%),
+    radial-gradient(circle at bottom left, #dcfce7 0%, transparent 35%), #f8fafc;
+    position: relative;
+}
+.sec-authentication .img-logo{
+    width: 200px;
+}
+.sec-authentication .bazaar{
+    color: var(--bazaar-text);
+}
+/* ============ Blur Circle ======== */
+.blur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.6;
+  animation: float 18s ease-in-out infinite;
+}
+.blur-1 {
+  width: 350px;
+  height: 350px;
+  background: #22c55e;
+  top: -120px;
+  left: -120px;
+}
+.blur-2 {
+  width: 280px;
+  height: 280px;
+  background: #facc15;
+  top: 100px;
+  right: -80px;
+  animation-duration: 12s;
+}
+.blur-3 {
+  width: 300px;
+  height: 300px;
+  background: #16a34a;
+  bottom: -120px;
+  left: 250px;
+  animation-duration: 6s;
+}
+/* ======= Blob ======= */
+.blob {
+  position: absolute;
+  background: rgba(34, 197, 94, 0.186);
+  animation: blobMove 10s ease-in-out infinite;
+}
+.blob-1 {
+  width: 280px;
+  height: 280px;
+  top: 180px;
+  left: 120px;
+  border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
+}
+.blob-2 {
+  width: 220px;
+  height: 220px;
+  bottom: 60px;
+  right: 120px;
+  border-radius: 40% 60% 45% 55% / 60% 40% 55% 45%;
+  animation-duration: 28s;
+}
+
+.card{
+    background-color: #ffffff00 !important; 
+    backdrop-filter: blur(20px) !important;
+    border-radius: 25px !important;
+}
+.card .card-body{
+    padding: 35px;
+}
+.form-control{
+    height: 48px;
+    border-radius: 10px !important;
+    border: 1px solid #dbe2ea !important;
+    padding-left: 18px;
+    font-size: 16px !important;
+}
+.form-control:focus{
+    border-color:#198754 !important;
+    box-shadow: 0 0 0 4px rgba(25,135,84,.15) !important;
+}
+.form-select{
+    height: 48px;
+    border-radius: 10px !important;
+    border: 1px solid #dbe2ea !important;
+    padding-left: 18px;
+    font-size: 16px !important;
+}
+.form-select:focus{
+    border-color:#198754 !important;
+    box-shadow: 0 0 0 4px rgba(25,135,84,.15) !important;
+}
+.input-container {
+    position: relative;   
+}
+.input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 30px; 
+  box-sizing: border-box;
+}
+.eye-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%) !important;
+  cursor: pointer;
+  line-height: 1;
+}
+.link{
+    text-decoration: none;
+}
+.btn-login{
+    height: 48px;
+    border: none;
+    border-radius: 12px !important;
+    font-size: 18px;
+    font-weight: 600;
+    color:white !important;
+    background: linear-gradient(135deg, #198754, #20c997);
+    transition:.3s !important;
+}
+.btn-login:hover{
+    transform:translateY(-1px);
+    background-image: linear-gradient(135deg, #157347, #198754);
+}
+
+.social-login{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+.social-btn{
+    width: 100%;
+    height: 48px;
+    border: 1px solid #dbe2ea;
+    border-radius: 15px;
+    background:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.social-btn img{
+    width:24px;
+    height:24px;
+}
+.social-btn:hover{
+    transform:translateY(-1px);
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+.facebook-btn, .google-btn{
+    color:#1877f2;
+}
+@media (max-width:576px){
+    .card{
+        margin-top: 40px;
+        border-radius: 10px !important;
+    }
+    .card-body{
+        padding: 20px !important;
+    }
+    .sec-login .title{
+        font-size: 20px !important;
+    }
+    .sec-login .img-logo{
+        width: 150px;
+    }
+}
+@media (min-width:992px){
+    .title{
+        font-size: 25px;
+    }
+    .sec-login .img-logo{
+        width: 200px;
+    }
+}
+@media (min-width:1200px){
+    .title{
+        font-size:30px;
+    }
+    .sec-login .img-logo{
+        width: 250px;
+    }
+}
+/* ===== Animation background ====== */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes blobMove {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(30px, -20px) rotate(20deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}

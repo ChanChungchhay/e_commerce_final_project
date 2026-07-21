@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Register</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/customer_register.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icon link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="sec-authentication py-3 py-lg-5 p-lg-5">
+        <!-- Background -->
+        <div class="background">
+            <div class="blur blur-1"></div>
+            <div class="blur blur-2"></div>
+            <div class="blur blur-3"></div>
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="mt-5 d-flex justify-content-evenly align-items-center">
+                        <h1 class="title fw-bold">សូមស្វាគមន៍មកកាន់ <br><span class="text-success">Khmer<span
+                                    class="bazaar"> Bazaar</span>.</span></h1>
+                        <img src="assets/img/logo-removebg-preview.png" class="img-logo" alt="">
+                    </div>
+                    <img src="assets/img/seller_images/Ecommerce web page-bro.png" class="w-100" alt="">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body">
+                            <h2 class="text-center login-title fw-bold bazaar">បង្កើតគណនី</h2>
+                            <p class="text-center">ចូលរួមជាមួយ Khmer Bazzar និងចាប់ផ្តើមលក់ទំនិញស្រុកខ្មែរ</p>
+                            <form action="login.html" method="GET" class="needs-validation" novalidate>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="mb-4">
+                                            <input type="text" class="form-control" placeholder="បំពេញនាមត្រកូល"
+                                                required>
+                                            <div class="invalid-feedback">សូមបំពេញនាមត្រកូល</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div>
+                                            <input type="text" class="form-control" placeholder="បំពេញនាមខ្លួន"
+                                                required>
+                                            <div class="invalid-feedback">សូមបំពេញនាមខ្លួន</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p class="fw-bold">ភេទ*</p>
+                                    <div class="col-6">
+                                        <div class="form-check mb-4 p-0">
+                                            <label class="form-control d-flex justify-content-between align-items-center py-2" for="male">
+                                                <span class="form-check-label">ប្រុស</span>
+                                                <input type="radio" class="form-check-input m-0" name="gender" id="male" checked>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-check p-0">
+                                            <label class="form-control d-flex justify-content-between align-items-center py-2" for="female">
+                                                <span class="form-check-label">ស្រី</span>
+                                                <input type="radio" class="form-check-input m-0" name="gender" id="female">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-4 input-container">
+                                    <input type="email" class="form-control input" placeholder="បំពេញអុីម៉ែល"
+                                        required>
+                                    <div class="invalid-feedback">សូមបំពេញអុីម៉ែល</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="mb-4 input-container">
+                                    <input type="password" class="form-control input" placeholder="បំពេញពាក្យសម្ងាត់"
+                                        required>
+                                    <i class="bi bi-eye-slash eye-icon"></i>
+                                    <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
+                                </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6"><div class="mb-4 input-container">
+                                    <input type="password" class="form-control input" placeholder="បំពេញពាក្យសម្ងាត់"
+                                        required>
+                                    <i class="bi bi-eye-slash eye-icon"></i>
+                                    <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
+                                </div></div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <input type="checkbox" class="form-check-input border-dark" id="remember">
+                                        <label class="ms-1 small" for="remember">ខ្ញុំបានអាននិងយល់ព្រមលើ <a href="#" class="text-decoration-none">គោលការណ៍ឯកជនភាព</a></label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-login w-100 mb-3">បង្កើតគណនី</button>
+                                <div class="register-section ms-4">
+                                    <span>មានគណនីរួចហើយមែនទេ?</span>
+                                    <a href="login.html" class="link bazaar">ចូលប្រើប្រាស់</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>

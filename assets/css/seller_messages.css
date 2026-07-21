@@ -1,36 +1,49 @@
 /* START OF FILE seller_messages.css */
 
 /* ==========================================================================
-   MESSAGES SYSTEM SPLIT PANEL CONFIGURATIONS
+   1. MESSAGES SYSTEM ADAPTIVE CONTAINERS (Bootstrap 5 Dark Mode Fixes)
    ========================================================================== */
-.chat-sidebar {
-    width: 320px;
+.chat-workspace-container {
+    background-color: var(--bg-app);
+}
+
+/* ប្រើប្រាស់ variables របស់ dashboard ដើម្បីកុំឱ្យជាន់ពណ៌សលើផ្ទៃសក្នុង Dark Mode */
+.chat-sidebar-bg {
     background-color: var(--bg-card);
-    flex-shrink: 0;
-    transition: all 0.3s ease;
+    border-color: var(--border-color) !important;
 }
 
-.chat-conversation-area {
-    background-color: var(--bg-main);
+.chat-user-item.nav-link {
+    color: var(--text-main) !important;
+    background-color: transparent !important;
+    border-left: 4px solid transparent !important;
+    transition: all 0.2s ease-in-out;
+    text-align: left;
 }
 
-.chat-context-panel {
-    width: 280px;
-    background-color: var(--bg-card);
-    flex-shrink: 0;
+.chat-user-item.nav-link:hover {
+    background-color: rgba(11, 94, 52, 0.04) !important;
 }
 
-.chat-user-item {
-    transition: background-color 0.2s ease;
+/* កាតអតិថិជនសកម្ម៖ កំណត់ពណ៌តាម Mode នីមួយៗឱ្យបានច្បាស់លាស់បំផុត */
+.chat-user-item.nav-link.active {
+    background-color: rgba(11, 94, 52, 0.08) !important;
+    color: var(--logo-color) !important;
+    border-left: 4px solid var(--border-sidebar) !important; /* ឆ្នូតមាស */
 }
 
-.chat-user-item:hover {
-    background-color: rgba(79, 70, 229, 0.03);
+[data-bs-theme="dark"] .chat-user-item.nav-link.active {
+    background-color: rgba(25, 57, 39, 0.3) !important; /* ពណ៌បៃតងស្រទន់ក្នុង Dark Mode */
+    color: #ffffff !important;
 }
 
-.chat-user-item.active {
-    background-color: rgba(79, 70, 229, 0.06);
-    border-left: 3px solid var(--primary);
+.chat-user-item.nav-link.active .title-text {
+    color: var(--logo-color) !important;
+    font-weight: 700;
+}
+
+[data-bs-theme="dark"] .chat-user-item.nav-link.active .title-text {
+    color: #ffffff !important;
 }
 
 .chat-preview-text {
@@ -47,28 +60,58 @@
     border-radius: 20px;
 }
 
+/* របារក្បាលប្រអប់សារ៖ អនុវត្តពណ៌ច្បាស់ៗតាម Theme */
+.chat-header-bar {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chat-header-bar .header-name {
+    color: var(--text-main) !important;
+    font-weight: 700;
+}
+
+/* ផ្ទៃក្រោយប្រអប់សារជម្រុះពណ៌បែប Mint ស្រទន់បំផុត */
+.chat-messages-stream {
+    background-color: rgba(11, 94, 52, 0.02); 
+}
+
+[data-bs-theme="dark"] .chat-messages-stream {
+    background-color: rgba(0, 0, 0, 0.2); /* ខ្មៅស្រាលក្នុង Dark Mode */
+}
+
+/* ផ្ទៃប្រអប់វាយអក្សរ */
+.chat-input-area-bg {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+}
+
 /* ==========================================================================
-   CHAT MESSAGES CHIPS STREAM STYLING
+   2. CHAT MESSAGES CHIPS STREAM STYLING
    ========================================================================== */
 .message-bubble {
     max-width: 75%;
     padding: 12px 16px;
-    border-radius: 16px;
+    border-radius: 18px;
     position: relative;
+    box-shadow: var(--shadow-soft);
     animation: bubbleEnter 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ប្រអប់សារអតិថិជន (ឆ្វេង) */
 .left-bubble {
     background-color: var(--bg-card);
-    color: var(--text-main);
+    color: var(--text-main) !important;
     border: 1px solid var(--border-color);
     border-bottom-left-radius: 4px;
 }
 
+/* ប្រអប់សារហាង (ស្តាំ) */
 .right-bubble {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--logo-color), #053b22);
+    color: #ffffff !important;
     border-bottom-right-radius: 4px;
+    box-shadow: 0 4px 12px rgba(11, 94, 52, 0.15);
 }
 
 .bubble-time {
@@ -86,15 +129,23 @@
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* Custom Scroll Buttons for quick replies */
-.quick-replies-toolbar::-webkit-scrollbar {
-    height: 4px;
+/* ព័ត៌មានលម្អិតចំហៀងខាងស្តាំ */
+.chat-context-panel {
+    background-color: var(--bg-card);
+    border-color: var(--border-color) !important;
 }
 
-.quick-replies-toolbar button {
-    white-space: nowrap;
-    font-weight: 600;
-    transition: all 0.2s ease;
+.chat-context-panel .header-name {
+    color: var(--text-main) !important;
+    font-weight: 700;
+}
+
+.chat-context-panel h6, .chat-context-panel span {
+    color: var(--text-main) !important;
+}
+
+.chat-context-panel .text-muted {
+    color: var(--text-muted) !important;
 }
 
 .avatar-lg {
@@ -104,8 +155,23 @@
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN HELPER
+   3. PERFECT RESPONSIVE DESIGN HELPER
    ========================================================================== */
+@media (min-width: 992px) {
+    .chat-workspace-container {
+        height: calc(100vh - 70px);
+        overflow: hidden;
+    }
+    .scrollable-chat-area {
+        height: calc(100vh - 142px);
+        overflow-y: auto;
+    }
+    .chat-messages-stream {
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
 @media (max-width: 1200px) {
     .chat-context-panel {
         display: none !important;
@@ -113,11 +179,12 @@
 }
 
 @media (max-width: 768px) {
-    .chat-sidebar {
-        width: 100%;
+    .chat-workspace-container {
+        height: auto;
+        overflow: visible;
     }
-    .chat-conversation-area {
-        display: none !important; /* Hide chat area in mobile listing mode */
+    .scrollable-chat-area {
+        max-height: 250px;
     }
 }
 /* END OF FILE seller_messages.css */

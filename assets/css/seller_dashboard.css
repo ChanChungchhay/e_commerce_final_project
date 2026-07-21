@@ -1,56 +1,45 @@
-/* ==========================================================================
-   1. VARIABLES & COLOR PALETTE
-   ========================================================================== */
 :root {
-    --primary: #4F46E5;
-    --primary-hover: #4338CA;
-    --secondary: #6366F1;
-    --secondary-hover: #4F46E5;
-    --success: #22C55E;
-    --warning: #F59E0B;
-    --danger: #EF4444;
-    --info: #06B6D4;
+    --logo-color: #0B5E34;             
+    --logo-hover: #053B22;
+    --border-sidebar: #d97706; 
+    --icon-sidebar-hover: #B45309;
     
-    /* Light Mode Variables */
-    --bg-app: #F8FAFC;
-    --bg-card: #FFFFFF;
-    --bg-sidebar: #111827;
-    --bg-sidebar-hover: #1F2937;
-    --text-main: #374151;
-    --text-muted: #6B7280;
-    --border-color: #E2E8F0;
-    --shadow-soft: 0 4px 20px -2px rgba(17, 24, 39, 0.05), 0 2px 6px -1px rgba(17, 24, 39, 0.03);
-    --shadow-hover: 0 10px 30px -10px rgba(79, 70, 229, 0.15), 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+    /* Light Theme Glassmorphism */
+    --bg-app: #F4F7F5;         
+    --bg-dropdown-hover: #d4d4d4;       
+    --bg-card: rgba(255, 255, 255, 0.616); 
+    --bg-sidebar: #05140C;            
+    --bg-sidebar-hover: #0C241B;
+    --text-main: #112044;
+    --text-muted: #475569;
+    --border-color: rgba(11, 94, 52, 0.08);
+    --shadow-soft: 0 8px 32px 0 rgba(5, 20, 12, 0.04), 0 2px 6px -1px rgba(5, 20, 12, 0.02);
+    --shadow-hover: 0 16px 40px -10px rgba(11, 94, 52, 0.15), 0 8px 16px -2px rgba(0, 0, 0, 0.03);
     --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(226, 232, 240, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.25);
+    --blur-strength: 16px;
 }
-
 [data-bs-theme="dark"] {
-    /* Dark Mode Variables Override */
-    --bg-app: #0B0F19;
-    --bg-card: #1E293B;
-    --bg-sidebar: #0F172A;
-    --bg-sidebar-hover: #1E293B;
-    --text-main: #F1F5F9;
+    /* Dark Theme Glassmorphism Override */
+    --bg-app: #030805;               
+    --bg-card: rgba(12, 21, 16, 0.7); 
+    --bg-sidebar: #020604;
+    --bg-sidebar-hover: #193927;
+    --text-main: #F8FAFC;
     --text-muted: #94A3B8;
-    --border-color: #334155;
-    --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 10px 35px -10px rgba(99, 102, 241, 0.3);
-    --glass-bg: rgba(30, 41, 59, 0.7);
-    --glass-border: rgba(51, 65, 85, 0.8);
+    --border-color: rgba(255, 255, 255, 0.06);
+    --shadow-soft: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+    --shadow-hover: 0 16px 45px -10px rgba(11, 94, 52, 0.35);
+    --glass-bg: rgba(12, 21, 16, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.08);
 }
-
-/* ==========================================================================
-   2. SYSTEM GLOBAL STYLES & CUSTOM SCROLLBARS
-   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 body {
-    font-family: "Roboto Condensed","Battambang", serif !important;
+    font-family: "Battambang", "Poppins", sans-serif !important;
     background-color: var(--bg-app);
     color: var(--text-main);
     overflow-x: hidden;
@@ -82,56 +71,38 @@ body {
 
 /* Dynamic Background Gradients */
 .text-gradient-primary {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, var(--logo-color), var(--border-sidebar));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 10px 0px;
 }
-
+.text-bazaar{
+    color: var(--border-sidebar);
+}
 .bg-gradient-primary {
-    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+    background-image: linear-gradient(90deg, #4F7863, #B98B33);
 }
 
 .bg-gradient-secondary {
-    background: linear-gradient(135deg, var(--secondary), #818CF8) !important;
+    background-image: linear-gradient(90deg, #4F7863, #B98B33);
 }
 
 /* Light opacity background tints */
-.bg-light-primary { background-color: rgba(79, 70, 229, 0.12) !important; }
-.bg-light-secondary { background-color: rgba(99, 102, 241, 0.12) !important; }
-.bg-light-success { background-color: rgba(34, 197, 94, 0.12) !important; }
-.bg-light-warning { background-color: rgba(245, 158, 11, 0.12) !important; }
-.bg-light-danger { background-color: rgba(239, 68, 68, 0.12) !important; }
-.bg-light-info { background-color: rgba(6, 182, 212, 0.12) !important; }
+.bg-light-primary { background-color: #084426d2 !important; }
+.bg-light-secondary { background-color: rgba(217, 119, 6, 0.15) !important; }
+.bg-light-success { background-color: rgba(8, 68, 38, 0.823) !important; }
+.bg-light-warning { background-color: rgb(217, 119, 6, 0.7) !important; }
+.bg-light-danger { background-color: rgba(239, 68, 68, 0.15) !important; }
+.bg-light-info { background-color: rgba(6, 182, 212, 0.15) !important; }
 
 /* Custom Light Background for List Elements */
 .bg-light-theme-darker {
-    background-color: rgba(0, 0, 0, 0.02);
+    background-color: rgba(0, 0, 0, 0.015);
 }
 [data-bs-theme="dark"] .bg-light-theme-darker {
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(255, 255, 255, 0.02);
 }
 
-/* ==========================================================================
-   3. ANIMATED LOADING OVERLAY
-   ========================================================================== */
-.loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--bg-app);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-.loading-overlay.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
 
 /* ==========================================================================
    4. LAYOUT SYSTEM & WRAPPER CONTAINERS
@@ -152,20 +123,20 @@ body {
 }
 
 /* ==========================================================================
-   5. LEFT NAVIGATION SIDEBAR
+   5. LEFT NAVIGATION SIDEBAR (Midnight Forest Concept)
    ========================================================================== */
 .sidebar {
     width: 280px;
     height: 100vh;
     background-color: var(--bg-sidebar);
-    color: #9CA3AF;
+    color: #94A3B8;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1040;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.03);
     transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
@@ -175,7 +146,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .brand-logo {
@@ -191,7 +162,7 @@ body {
     justify-content: center;
     color: #FFFFFF;
 }
-.logo-img{
+.logo-img {
     width: 50px;
 }
 
@@ -217,6 +188,15 @@ body {
     gap: 0.25rem;
 }
 
+.menu-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #334155;
+    padding: 0.75rem 1rem 0.25rem;
+}
+
 .menu-item {
     border-radius: 10px;
     overflow: hidden;
@@ -227,16 +207,16 @@ body {
     align-items: center;
     gap: 0.85rem;
     padding: 0.75rem 1rem;
-    color: #9CA3AF;
+    color: #94A3B8;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.875rem;
-    transition: all 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .menu-link i {
     font-size: 1.1rem;
-    transition: transform 0.2s ease;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .menu-item:hover .menu-link,
@@ -247,22 +227,18 @@ body {
 
 .menu-item:hover .menu-link i {
     transform: scale(1.1);
+    color: var(--icon-sidebar-hover);
 }
 
 .menu-item.active .menu-link {
-    border-left: 3px solid var(--primary);
-    background-color: rgba(79, 70, 229, 0.1);
+    border-left: 3px solid var(--border-sidebar);
+    background-color: rgba(11, 94, 52, 0.15);
+    color: #FFFFFF;
 }
 
 .sidebar-footer {
     padding: 1.5rem 1.25rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.user-widget {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .avatar {
@@ -278,18 +254,18 @@ body {
 
 .user-role {
     font-size: 0.7rem;
-    color: #6B7280;
+    color: #475569;
 }
 
 /* ==========================================================================
-   6. TOP NAVIGATION NAVBAR & CONTROL MENUS
+   6. TOP NAVIGATION NAVBAR & CONTROL MENUS (Frosted Glass)
    ========================================================================== */
 .top-navbar {
     height: 70px;
     background-color: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(var(--blur-strength));
+    -webkit-backdrop-filter: blur(var(--blur-strength));
+    border-bottom: 1px solid var(--glass-border);
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -313,16 +289,16 @@ body {
     padding-left: 42px;
     border-radius: 30px;
     font-size: 13px;
-    background-color: var(--bg-app);
+    background-color: rgba(0, 0, 0, 0.02);
     border: 1px solid var(--border-color);
     color: var(--text-main);
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
 }
 
 .search-bar-wrapper .form-control:focus {
     background-color: var(--bg-card);
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+    border-color: var(--logo-color);
+    box-shadow: 0 0 0 3px rgba(11, 94, 52, 0.12);
 }
 
 /* Header Buttons Layout */
@@ -333,17 +309,57 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--glass-border);
     background-color: var(--bg-card);
+    backdrop-filter: blur(var(--blur-strength));
+    -webkit-backdrop-filter: blur(var(--blur-strength));
     color: var(--text-main);
-    transition: all 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-icon:hover {
     background-color: var(--bg-app);
-    color: var(--primary);
-    transform: translateY(-1px);
+    color: var(--border-sidebar);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(11, 94, 52, 0.08);
 }
+/* ប៊ូតុងចម្បងពណ៌បៃតងប្រណីត ចាំងស្រមោលពណ៌មាស */
+.btn-primary {
+    background: linear-gradient(135deg, #0B5E34 0%, #064E26 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 24px;
+    box-shadow: 0 4px 14px 0 rgba(11, 94, 52, 0.2), 0 2px 4px 0 rgba(217, 119, 6, 0.15); /* ស្រមោលមាស និងបៃតងលាយគ្នា */
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(11, 94, 52, 0.3), 0 4px 8px 0 rgba(217, 119, 6, 0.15);
+    background: linear-gradient(135deg, #0d6e3c 0%, #085e2f 100%) !important;
+}
+/* ប៊ូតុងបន្ទាប់បន្សំ បែបកញ្ចក់ថ្លាស្រអាប់ (Frosted Glass Button) */
+.btn-outline-custom {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(11, 94, 52, 0.15) !important; /* គែមពណ៌បៃតងថ្លាស្ដើងៗ */
+    color: #0B5E34 !important;                           /* អត្ថបទពណ៌បៃតងរាជវង្ស */
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 24px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-outline-custom:hover {
+    background-color: rgba(11, 94, 52, 0.08) !important; /* ប្តូរទៅជាផ្ទៃបៃតងថ្លាពេល Hover */
+    border-color: #0B5E34 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(11, 94, 52, 0.08);
+}
+
 
 .header-divider {
     width: 1px;
@@ -367,9 +383,10 @@ body {
 }
 
 .avatar-sm {
-    width: 32px;
-    height: 32px;
+    width: 45px;
+    height: 45px;
     object-fit: cover;
+    border: 2px solid var(--icon-sidebar-hover);
 }
 
 .avatar-xs {
@@ -384,19 +401,22 @@ body {
     color: var(--text-main);
 }
 
-/* Big Sized Navigation Popups/Menus styling */
+/* Big Sized Navigation Popups/Menus styling (Glassmorphic Card) */
 .dropdown-menu-large {
     width: 320px;
     padding: 0;
     border-radius: 16px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--glass-border);
+    background-color: var(--bg-card);
+    backdrop-filter: blur(var(--blur-strength));
+    -webkit-backdrop-filter: blur(var(--blur-strength));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     overflow: hidden;
 }
 
 .dropdown-header-custom {
     padding: 1rem;
-    background-color: var(--bg-card);
+    background-color: rgba(255, 255, 255, 1);
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -411,13 +431,11 @@ body {
     text-decoration: none;
     color: var(--text-main);
     border-bottom: 1px solid var(--border-color);
-    overflow-y: auto;
     transition: background-color 0.15s ease;
-
 }
 
 .dropdown-list-item:hover {
-    background-color: var(--bg-app);
+    background-color: var(--bg-dropdown-hover);
 }
 
 .dropdown-list-item .user-name {
@@ -440,25 +458,36 @@ body {
 }
 
 /* ==========================================================================
-   7. CORE COMPONENT CARDS (NEXIS SYSTEM SHAPE)
+   7. CORE COMPONENT CARDS (Glassmorphic Cards System)
    ========================================================================== */
 .dashboard-card {
     background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    backdrop-filter: blur(var(--blur-strength));
+    -webkit-backdrop-filter: blur(var(--blur-strength));
+    border: 2px solid var(--glass-border);
     border-radius: 16px;
+    overflow: hidden;
     box-shadow: var(--shadow-soft);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    /* transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease; */
+}
+.dashboard-card.pad-right{
+    padding-right: 1rem;
 }
 
+.dashboard-card:hover {
+    border-color: rgba(11, 94, 52, 0.15);
+}
 
 .dashboard-card .card-header {
     background-color: transparent;
     border-bottom: 1px solid var(--border-color);
-    padding: 1.25rem 1.5rem;
+    padding: 1.25rem 1.5rem !important;
 }
 
 .dashboard-card .card-body {
     padding: 1.5rem;
+    overflow-x: auto;
+
 }
 
 .card-title {
@@ -467,25 +496,35 @@ body {
 }
 
 /* ==========================================================================
-   8. ANIMATED COUNTER & METRICS CARDS
+   8. ANIMATED COUNTER & METRICS CARDS (Glow Effect)
    ========================================================================== */
 .stats-card {
     background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    backdrop-filter: blur(var(--blur-strength));
+    -webkit-backdrop-filter: blur(var(--blur-strength));
+    border: 1px solid var(--glass-border);
     border-radius: 16px;
     padding: 1.25rem;
     box-shadow: var(--shadow-soft);
     position: relative;
     overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .stats-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
-    border-color: var(--primary);
+    border-color: var(--logo-color);
 }
-
+.nav-link{
+    color: rgb(149, 149, 149);
+}
+.nav-link:hover{
+    color: #053B22;
+}
+.nav-link.active{
+    background: linear-gradient(135deg, #0d6e3c 0%, #085e2f 100%) !important;
+}
 .stats-card .icon-wrap {
     width: 44px;
     height: 44px;
@@ -494,6 +533,15 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);       
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.4), 0 6px 16px rgba(11, 94, 52, 0.08);             
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.stats-card .icon-wrap .icon {
+    line-height: 1;
+    display: block;
 }
 
 /* CSS-based Sparklines design inside Metric Cards */
@@ -513,16 +561,15 @@ body {
 
 .css-sparkline span {
     flex: 1;
-    background-color: var(--primary);
+    background-color: var(--logo-color);
     border-radius: 1px;
     opacity: 0.7;
     animation: bar-grow 0.8s ease-out forwards;
 }
 
-.css-sparkline.variant-secondary span { background-color: var(--secondary); }
-.css-sparkline.variant-success span { background-color: var(--success); }
-.css-sparkline.variant-warning span { background-color: var(--warning); }
-.css-sparkline.variant-info span { background-color: var(--info); }
+.css-sparkline.variant-box span { 
+    background-color: var(--border-sidebar); 
+}
 
 /* ==========================================================================
    9. CUSTOM PURE CSS CHART ENGINE
@@ -576,8 +623,8 @@ body {
     border-radius: 4px 4px 0 0;
     cursor: pointer;
     position: relative;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    animation: bar-grow 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    animation: bar-grow 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     transform-origin: bottom;
 }
 
@@ -587,7 +634,7 @@ body {
 }
 
 .bar-revenue {
-    background: linear-gradient(to top, var(--primary), var(--secondary));
+    background: linear-gradient(to top, var(--logo-color), var(--border-sidebar));
 }
 
 .bar-orders {
@@ -595,7 +642,7 @@ body {
 }
 
 [data-bs-theme="dark"] .bar-orders {
-    background: linear-gradient(to top, #312E81, #4338CA);
+    background: linear-gradient(to top, #0c241b, #0b5e34);
 }
 
 .bar-label {
@@ -635,10 +682,10 @@ body {
     font-weight: 600;
 }
 
-.status-completed { background-color: rgba(34, 197, 94, 0.15); color: #16A34A; }
-.status-pending { background-color: rgba(245, 158, 11, 0.15); color: #D97706; }
-.status-shipping { background-color: rgba(99, 102, 241, 0.15); color: #4F46E5; }
-.status-cancelled { background-color: rgba(239, 68, 68, 0.15); color: #DC2626; }
+.status-completed { background-color: rgba(34, 197, 94, 0.12); color: #16A34A; }
+.status-pending { background-color: rgba(217, 119, 6, 0.12); color: #D97706; }
+.status-shipping { background-color: rgba(11, 94, 52, 0.12); color: #0B5E34; }
+.status-cancelled { background-color: rgba(239, 68, 68, 0.12); color: #DC2626; }
 
 /* Product catalog row imagery thumbnail */
 .product-mini-thumb {
@@ -653,24 +700,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-/* ==========================================================================
-   11. TIMELINE & OPERATION LOGS
-   ========================================================================== */
-.custom-timeline {
-    position: relative;
-    padding-left: 28px;
-}
-
-.custom-timeline::before {
-    content: '';
-    position: absolute;
-    left: 11px;
-    top: 4px;
-    height: calc(100% - 10px);
-    width: 2px;
-    background-color: var(--border-color);
 }
 
 .timeline-item {
@@ -708,32 +737,21 @@ body {
     overflow-y: auto;
 }
 
-.todo-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--border-color);
-    animation: fade-in 0.3s ease;
-}
-
-.todo-item.completed span {
-    text-decoration: line-through;
-    color: var(--text-muted);
-}
-
 /* Custom Outlined form layout fields */
 .btn-outline-custom {
     border: 1px solid var(--border-color);
     background-color: var(--bg-card);
+    backdrop-filter: blur(var(--blur-strength));
+    -webkit-backdrop-filter: blur(var(--blur-strength));
     color: var(--text-main);
     font-weight: 600;
-    transition: all 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-outline-custom:hover {
     background-color: var(--bg-app);
-    border-color: var(--text-muted);
+    border-color: var(--logo-color);
+    transform: translateY(-1px);
 }
 
 /* ==========================================================================
@@ -771,7 +789,7 @@ body {
 }
 
 .calendar-cell.today {
-    background-color: var(--primary) !important;
+    background-color: var(--logo-color) !important;
     color: #FFFFFF !important;
 }
 
@@ -802,17 +820,12 @@ body {
 
 .circle-progress {
     fill: none;
-    stroke: url(#grad-bar); /* SVG gradient matching primary/secondary */
+    stroke: var(--logo-color); /* Deep Forest Green Indicator */
     stroke-width: 8;
     stroke-linecap: round;
     stroke-dasharray: 283;
-    stroke-dashoffset: 283; /* Handled dynamic calculation via JS */
-    transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Standard SVG Gradient styling inject definition */
-#progress-circle-indicator {
-    stroke: var(--primary);
+    stroke-dashoffset: 62; /* 78% of 283 */
+    transition: stroke-dashoffset 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .progress-inner-content {
@@ -822,22 +835,8 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/* ==========================================================================
-   15. FLOATING ACTIONS (FAB) DRAWERS
-   ========================================================================== */
-.fab-wrapper {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 1030;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 12px;
-}
-
 .fab-main {
-    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.4);
+    box-shadow: 0 4px 20px rgba(11, 94, 52, 0.4);
     border-radius: 50%;
     width: 56px;
     height: 56px;
@@ -851,10 +850,6 @@ body {
     transform: scale(1.05);
 }
 
-.fab-wrapper.active .fab-main {
-    transform: rotate(45deg);
-}
-
 .fab-menu {
     display: flex;
     flex-direction: column;
@@ -862,14 +857,10 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.fab-wrapper.active .fab-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
+
 
 .fab-item {
     width: 44px;
@@ -882,12 +873,12 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: all 0.2s ease;
 }
-.text-insights{
+.text-insights {
     font-size: 14px;
 }
 .fab-item:hover {
     transform: scale(1.1);
-    color: var(--primary);
+    color: var(--logo-color);
 }
 
 /* ==========================================================================
@@ -895,15 +886,15 @@ body {
    ========================================================================== */
 .scroll-to-top {
     position: fixed;
-    bottom: 30px;
-    left: 30px;
+    bottom: 20px !important;
+    right: 20px !important;
     z-index: 1030;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
     border-radius: 50%;
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -916,55 +907,34 @@ body {
 }
 
 /* ==========================================================================
-   17. SYSTEM FOOTER
-   ========================================================================== */
-.app-footer {
-    background-color: var(--bg-card);
-    border-top: 1px solid var(--border-color);
-    margin-top: auto;
-}
-
-.footer-link {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.15s ease;
-}
-
-.footer-link:hover {
-    color: var(--primary);
-}
-
-/* ==========================================================================
    18. GENERAL MODAL / TRANSITION SETS
    ========================================================================== */
 .modal-content {
     background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    backdrop-filter: blur(var(--blur-strength));
+    -webkit-backdrop-filter: blur(var(--blur-strength));
+    border: 1px solid var(--glass-border);
 }
 
 .form-control, .form-select {
-    background-color: var(--bg-card);
+    background-color: rgba(0,0,0,0.02);
     border: 1px solid var(--border-color);
     color: var(--text-main);
 }
 
 .form-control:focus, .form-select:focus {
     background-color: var(--bg-card);
-    border-color: var(--primary);
+    border-color: var(--logo-color);
     color: var(--text-main);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+    box-shadow: 0 0 0 3px rgba(11, 94, 52, 0.15);
 }
 
 /* ==========================================================================
    19. KEYFRAME ANIMATIONS DEFINITION
    ========================================================================== */
 @keyframes bar-grow {
-    from {
-        transform: scaleY(0);
-    }
-    to {
-        transform: scaleY(1);
-    }
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
 }
 
 @keyframes fade-in {
@@ -983,14 +953,14 @@ body {
    ========================================================================== */
 
 /* Laptop screens */
-@media (max-width: 1440px) {
+@media (min-width: 1200px) {
     .main-container {
         margin-left: 280px;
     }
 }
 
 /* Tablet screens (Collapsing Navigation Mechanics) */
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
     .sidebar {
         transform: translateX(-100%);
     }
@@ -1009,7 +979,7 @@ body {
 }
 
 /* Small mobile views */
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
     .top-navbar {
         padding: 0 0.5rem;
     }
@@ -1017,14 +987,5 @@ body {
     .search-bar-wrapper {
         display: none; /* Hide top search bar on ultra small displays to avoid squeeze */
     }
-    
-    .fab-wrapper {
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    .scroll-to-top {
-        bottom: 20px;
-        left: 20px;
-    }
 }
+/* END OF FILE seller_dashboard.css */

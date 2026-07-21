@@ -212,28 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.reinitBootstrapTooltips();
         },
 
-        // Update overall summary statistics
-        updateOverviewMetrics() {
-            const total = customersData.length;
-            const vipCount = customersData.filter(c => c.tier === 'vip').length;
-            const activeCount = customersData.filter(c => c.status === 'active').length;
-            
-            const payingCustCount = customersData.filter(c => c.totalSpent > 0).length;
-            const sumSpent = customersData.reduce((sum, c) => sum + c.totalSpent, 0);
-            const avgSpent = payingCustCount > 0 ? (sumSpent / payingCustCount) : 0;
-
-            document.getElementById('metric-total-customers').textContent = total;
-            document.getElementById('metric-total-customers').setAttribute('data-target', total);
-
-            document.getElementById('metric-vip-customers').textContent = vipCount;
-            document.getElementById('metric-vip-customers').setAttribute('data-target', vipCount);
-
-            document.getElementById('metric-active-customers').textContent = activeCount;
-            document.getElementById('metric-active-customers').setAttribute('data-target', activeCount);
-
-            document.getElementById('metric-avg-spent').textContent = Math.round(avgSpent).toLocaleString();
-            document.getElementById('metric-avg-spent').setAttribute('data-target', Math.round(avgSpent));
-        },
+        
 
         // Show Customer Dossier Panel
         showCustomerDossier(customerId) {
@@ -344,11 +323,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const modalInstance = bootstrap.Modal.getInstance(dossierModalEl);
                 if (modalInstance) modalInstance.hide();
             });
-
-            // Mock excel data export
-            document.getElementById('btn-export-customers').addEventListener('click', () => {
-                this.showSystemToast('ទាញយកឯកសារ', 'កំពុងបង្កើតបញ្ជីឈ្មោះអតិថិជនទាំងអស់ជាទម្រង់ Excel...');
-            });
         },
 
         reinitBootstrapTooltips() {
@@ -368,6 +342,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     };
-
     CustomersController.init();
 });
