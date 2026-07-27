@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/index.css">
-    <link rel="stylesheet" href="../assets/css/customer.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
     <link rel="stylesheet" href="/assets/css/product.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/img/logo/img-logo.png">
     <title>Product</title>
 </head>
 <body>
@@ -35,7 +36,7 @@
             <a href="/customer/home.html" class="navbar-brand"><img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
             <ul class="navbar-nav d-flex gap-1 flex-row d-lg-block d-none d-lg-flex">
                 <li class="nav-item"><a class="nav-link " href="/customer/home.html">ទំព័រដើម</a></li>
-                <li class="nav-item"><a class="nav-link "  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ប្រភេទទំនិញ<i class="fa-solid fa-angle-down" style="color: var(--color-gray);"></i></a>
+                <li class="nav-item"><a class="nav-link "  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ប្រភេទទំនិញ<i class="fa-solid fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/customer/product.html">សម្លៀកបំពាក់</a></li>
                         <li><a class="dropdown-item" href="/customer/product.html">គ្រឿងសម្អាង</a></li>
@@ -67,10 +68,14 @@
                 <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                  <img src="../assets/img/profile_customer/img-2.jpg" class="img-fluid object-fit-cover rounded-circle " style="width: 35px;" alt="">
                  <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="./profile.html">ប្រវត្តិរូប</a></li>
-                        <li><a class="dropdown-item" href="#">privacy</a></li>
-                        <li><a class="dropdown-item" href="#">Dark mode</a></li>
-                        <li><a class="dropdown-item active" href="../index.html">ចាកចេញ</a></li>
+                        <li><a class="dropdown-item" href="./profile.html"><i class="fa-solid fa-user fs-5 bg-danger-subtle p-1 me-3 rounded-circle" style="color:white;width: 30px;height: 30px;"></i>ប្រវត្តិរូប</a></li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center gap-2" href="#" role="button" id="themeToggle">
+                                <i class="fa-solid fa-moon text-warning bg-danger-subtle p-1 d-flex justify-content-center align-items-center rounded-circle" style="width: 30px;height: 30px;" id="themeIcon"></i>
+                                <span id="themeText">Dark Mode</span>
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item active" href="../index.html"><i class="fa-solid fa-right-from-bracket fs-5 bg-danger-subtle p-1 me-3 rounded-circle" style="color:red;width: 30px;height: 30px;"></i>ចាកចេញ</a></li>
                         <li><a class="dropdown-item" href="#"></a></li>
                     </ul>
                 </a>
@@ -103,12 +108,6 @@
                 <li class="nav-item"><a class="nav-link shadow " href="./discount.html">បញ្ចុះតម្លៃ</a></li>
                 <li class="nav-item"><a class="nav-link shadow " href="">អំពីយើង</a></li>
                 <li class="nav-item"><a class="nav-link shadow " href="">ទំនាក់ទំនង</a></li>
-                <!-- <div class="d-lg-block d-none">
-                    <a href="./customer/home.html" class="btn border shadow">Login</a>
-                    <a href="./customer/home.html" class="btn border shadow">Register</a>
-                </div> -->
-                <!-- <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>ក្លាយជាអ្នកលក់</a></li> -->
-                <!-- <li class="nav-item"><a class="nav-link shadow text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a></li> -->
             </ul>
         </div>
     </div>
@@ -119,7 +118,7 @@
         <div class="container">
             <div class="row g-3">
                 <div class="col-xl-3 col-12 ">
-                    <div class="card card-head shadow border-0 " style="position: sticky;top: 9%;" >
+                    <div class="card card-head  border-0 sidebar-scroll" style="position: sticky;top: 9%;max-height: 90vh; overflow-y: auto;" >
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center mb-2">
                                 <div class="text-success fs-5 fw-bold">ចម្រោះទំនិញ</div>
@@ -134,7 +133,7 @@
                                         <input type="range" min="0" max="500" value="500" id="upper">
                                     </div>
                                     <div class="price-wrap mt-2 d-flex justify-content-start align-items-center w-100">
-                                        <div class="">Price :</div>
+                                        <div class="">តម្លៃ :</div>
                                         <div class="price-wrap-1">
                                             <input id="one">
                                             <label for="one">$</label>
@@ -148,22 +147,47 @@
                                 </fieldset> 
                             </div>
                             <div class="mt-5 shadow">
-                                <div class="card-header border-0 fs-5 text-success fw-bold">Fliter by Category</div>
-                                <select class="form-select btn-outline-success shadow-none rounded-0 py-2 " style="outline: none;border: none;" aria-label="Default select example" >
-                                    <option selected  class="" >Category</option>
-                                    <option value="1" class="">សម្លៀកបំពាក់</option>
-                                    <option value="2" class="">គ្រឿងសម្អាង</option>
-                                    <option value="3" class="">ផលិតផលសិប្បកម្មខ្មែរ</option>
-                                    <option value="3" class="">អាហារ និងគ្រឿងទេស</option>
-                                    <option value="3" class="">សម្ភារៈកីឡា</option>
-                                    <option value="3" class="">សៀវភៅ និងសម្ភារៈសិក្សា</option>
-                                    <option value="3" class="">គ្រឿងអេឡិចត្រូនិក</option>
-                                </select>
+                                <div class="card-header border-0 fs-5 text-success fw-bold">ជ្រើសរើសប្រភេទ</div>
+                                <div class="card-body">
+                                    <div class="d-flex gap-2 mt-3">
+                                        <input class="form-check-input" checked type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                                        <div class="">ទាំងអស់</div>
+                                    </div>
+                                    <div class="d-flex gap-2 mt-3">
+                                        <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                                        <div class="">សម្លៀកបំពាក់</div>
+                                    </div>
+                                    <div class="d-flex gap-2 mt-3">
+                                        <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                                        <div class="">គ្រឿងសម្អាង</div>
+                                    </div>
+                                    <div class="d-flex gap-2 mt-3">
+                                        <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                                        <div class="">ផលិតផលសិប្បកម្មខ្មែរ</div>
+                                    </div>
+                                    <div class="d-flex gap-2 mt-3">
+                                        <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                                        <div class="">អាហារ និងគ្រឿងទេស</div>
+                                    </div>
+                                    <div class="d-flex gap-2 mt-3">
+                                        <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                                        <div class="">សម្ភារៈកីឡា</div>
+                                    </div>
+                                    <div class="d-flex gap-2 mt-3">
+                                        <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                                        <div class="">សៀវភៅ និងសម្ភារៈសិក្សា</div>
+                                    </div>
+                                    <div class="d-flex gap-2 mt-3">
+                                        <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                                        <div class="">គ្រឿងអេឡិចត្រូនិក</div>
+                                    </div>
+                                    
+                                </div>
                             </div>
                             <div class="mt-5 shadow">
-                                <div class="card-header border-0 fs-5 text-success fw-bold">Fliter by Area</div>
+                                <div class="card-header border-0 fs-5 text-success fw-bold">ជ្រើសរើសតំបន់</div>
                                 <select class="form-select btn-outline-success shadow-none rounded-0 py-2 " style="outline: none;border: none;" aria-label="Default select example" >
-                                    <option selected  class="" >Area</option>
+                                    <option selected  class="" >តំបន់</option>
                                     <option value="1" class="">Kandal - ខេត្តកណ្តាល</option>
                                     <option value="2" class="">Koh Kong - ខេត្តកោះកុង</option>
                                     <option value="3" class="">Takeo - ខេត្តតាកែវ</option>
@@ -182,10 +206,10 @@
                         <div class="card-body">
                             <div class=" border-0 fs-2 text-success fw-bold">ផលិតផល</div>
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="">Showing all product</div>
+                                <div class="">បង្ហាញគ្រប់​ផលិតផល</div>
                                 <div class="d-flex justify-content-between gap-3">
                                     <form class="d-flex w-75" role="search">
-                                        <input class="form-control me-2 border border-success shadow-none" type="search" placeholder="Search" aria-label="Search"/>
+                                        <input class="form-control me-2 border border-success shadow-none" type="search" placeholder="ស្វែងរកផលិតផល..." aria-label="Search"/>
                                         <button class="btn btn-outline-success" type="submit">Search</button>
                                     </form>
                                     <select class="form-select btn-outline-success shadow-none rounded-0 py-2 border " style="width: 130px;" aria-label="Default select example" >
@@ -200,7 +224,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <ul class="nav nav-pills mt-4 py-3 d-flex gap-2 flex-nowrap overflow-x-scroll hide-scroll " id="pills-tab" role="tablist">
                       <li class="col-lg-2 col-sm-6 col-12 nav-item " role="presentation">
                         <div class="card">
@@ -246,7 +269,7 @@
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-all-product" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                                 <div class="row g-3 mt-3">
-                                    <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <div class="col-lg-4 col-sm-6 col-12 " data-aos="fade-up" data-aos-duration="400">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/sport_shose.png" class="img-fluid object-fit-cover " alt="">
@@ -273,7 +296,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="500">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/skincare.png" class="img-fluid object-fit-cover " alt="">
@@ -300,7 +323,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="700">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/curry.png" class="img-fluid object-fit-cover " alt="">
@@ -327,7 +350,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="400">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/skincare-discount.png" class="img-fluid object-fit-cover " alt="">
@@ -354,7 +377,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="500">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/clothes-discount.png" class="img-fluid object-fit-cover " alt="">
@@ -381,7 +404,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="700">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/book-discount.png" class="img-fluid object-fit-cover " alt="">
@@ -408,7 +431,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="400">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/clothes-bayern.png" class="img-fluid object-fit-cover " alt="">
@@ -435,7 +458,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="500">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/ចានស្រាក.png" style="width: 350px;" class="img-fluid object-fit-cover " alt="">
@@ -462,7 +485,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="700">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/ម្រេច.png" class="img-fluid object-fit-cover " alt="">
@@ -489,7 +512,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="400">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/zinvo-1.webp" class="img-fluid object-fit-cover " alt="">
@@ -516,7 +539,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="500">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/hair-machin.png" class="img-fluid object-fit-cover " alt="">
@@ -543,7 +566,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="700">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/book.png" class="img-fluid object-fit-cover " alt="">
@@ -574,7 +597,7 @@
                             </div>
                             <div class="tab-pane fade" id="pills-clothes" role="tabpanel" aria-labelledby="pills-clothes-tab" tabindex="0">
                                 <div class="row g-3 mt-3">
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="400">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/clothes.png" class="img-fluid object-fit-cover " alt="">
@@ -601,7 +624,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="500">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/clothes-discount.png" class="img-fluid object-fit-cover " alt="">
@@ -628,7 +651,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="700">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/clothes-bayern.png" class="img-fluid object-fit-cover " alt="">
@@ -659,7 +682,7 @@
                             </div>
                             <div class="tab-pane fade" id="pills-beauty" role="tabpanel" aria-labelledby="pills-beauty-tab" tabindex="0">
                                 <div class="row g-3 mt-3">
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="400">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/skincare.png" class="img-fluid object-fit-cover " alt="">
@@ -686,7 +709,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="500">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/skincare-discount.png" class="img-fluid object-fit-cover " alt="">
@@ -717,7 +740,7 @@
                             </div>
                             <div class="tab-pane fade" id="pills-handicraft" role="tabpanel" aria-labelledby="pills-handicraft-tab" tabindex="0">
                                 <div class="row g-3 mt-3">
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="700">
                                         <div class="card ">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/krma.png" class="img-fluid object-fit-cover " alt="">
@@ -744,7 +767,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="400">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/ចានស្រាក.png" style="width: 350px;" class="img-fluid object-fit-cover " alt="">
@@ -775,7 +798,7 @@
                             </div>
                             <div class="tab-pane fade" id="pills-food" role="tabpanel" aria-labelledby="pills-food-tab" tabindex="0">
                                 <div class="row g-3 mt-3">
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="500">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/curry.png" class="img-fluid object-fit-cover " alt="">
@@ -802,7 +825,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="700">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/ម្រេច.png" class="img-fluid object-fit-cover " alt="">
@@ -833,7 +856,7 @@
                             </div>
                             <div class="tab-pane fade" id="pills-sport" role="tabpanel" aria-labelledby="pills-sport-tab" tabindex="0">
                                 <div class="row g-3 mt-3">
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="400">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/sport_shose.png" class="img-fluid object-fit-cover " alt="">
@@ -864,7 +887,7 @@
                             </div>
                             <div class="tab-pane fade" id="pills-book" role="tabpanel" aria-labelledby="pills-book-tab" tabindex="0">
                                 <div class="row g-3 mt-3">
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="500">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/book.png" class="img-fluid object-fit-cover " alt="">
@@ -891,7 +914,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="700">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/book-discount.png" class="img-fluid object-fit-cover " alt="">
@@ -922,7 +945,7 @@
                             </div>
                             <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">
                                 <div class="row g-3 mt-3">
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="400">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/zinvo.png" class="img-fluid object-fit-cover " alt="">
@@ -949,7 +972,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="500">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/zinvo-1.webp" class="img-fluid object-fit-cover " alt="">
@@ -976,7 +999,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-sm-6 col-12">
+                                    <div class="col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="700">
                                         <div class="card">
                                             <div class="card-img rounded-bottom-0">
                                                 <img src="../assets/img/product/hair-machin.png" class="img-fluid object-fit-cover " alt="">
@@ -1011,7 +1034,6 @@
             </div>
         </div>
     </section>
-
     <section class="sect-3 text-bg-light">
         <div class="container">
             <div class="tittle fs-4 fw-bold mt-2">ដៃគូរសហការ</div>
@@ -1054,7 +1076,7 @@
         <div class="container">
             <div class="tittle fs-4 fw-bold mb-2">ហាងលក់ដាច់បំផុត</div>
             <div class="row g-3">
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="400">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center gap-3">
@@ -1082,7 +1104,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="500">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center gap-3">
@@ -1110,7 +1132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="700">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center gap-3">
@@ -1223,6 +1245,9 @@
         </div>
         <div class="text-center py-2 bg-primary-subtle">© 2026 Khmer Bazaar. All Rights Reserved.</div>
     </section>
+    <button class="btn btn-primary scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up" style="color:white"></i>
+    </button>
   <!-- =====modal save to cart===== -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="liveToast-1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -1268,6 +1293,69 @@
             })
         })
     </script>
+    <!-- ============= scroll to top =========== -->
+    <script>
+        const NexisApp = {
+            init() {
+            this.initScrollToTop();
+            },
+            // 11. SCROLL TO TOP UTILITY TOGGLE BUTTON
+            initScrollToTop() {
+                const topBtn = document.getElementById('scrollTopBtn');
+                if (!topBtn) return;
+
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        topBtn.classList.add('visible');
+                    } else {
+                        topBtn.classList.remove('visible');
+                    }
+                });
+
+                topBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            },
+    };
+    NexisApp.init();
+    </script>
+    
+    <!-- ============ dark mode =========== -->
+    <script>
+  (function () {
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+
+    function applyTheme(theme) {
+      root.setAttribute('data-bs-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        themeText.textContent = 'Light Mode';
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        themeText.textContent = 'Dark Mode';
+      }
+    }
+
+    // Apply saved preference on load
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+
+    themeToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const current = root.getAttribute('data-bs-theme') || 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  })();
+</script>
    
 </body>
 </html>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/img/logo/img-logo.png">
     <title>View product</title>
 </head>
 <body>
@@ -66,11 +67,15 @@
                 </a>
                 <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                  <img src="/assets/img/profile_customer/img-2.jpg" class="img-fluid object-fit-cover rounded-circle " style="width: 35px;" alt="">
-                 <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">ប្រវត្តិរូប</a></li>
-                        <li><a class="dropdown-item" href="#">privacy</a></li>
-                        <li><a class="dropdown-item" href="#">Dark mode</a></li>
-                        <li><a class="dropdown-item active" href="../index.html">ចាកចេញ</a></li>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./profile.html"><i class="fa-solid fa-user fs-5 bg-danger-subtle p-1 me-3 rounded-circle" style="color:white;width: 30px;height: 30px;"></i>ប្រវត្តិរូប</a></li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center gap-2" href="#" role="button" id="themeToggle">
+                                <i class="fa-solid fa-moon text-warning bg-danger-subtle p-1 d-flex justify-content-center align-items-center rounded-circle" style="width: 30px;height: 30px;" id="themeIcon"></i>
+                                <span id="themeText">Dark Mode</span>
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item active" href="../index.html"><i class="fa-solid fa-right-from-bracket fs-5 bg-danger-subtle p-1 me-3 rounded-circle" style="color:red;width: 30px;height: 30px;"></i>ចាកចេញ</a></li>
                         <li><a class="dropdown-item" href="#"></a></li>
                     </ul>
                 </a>

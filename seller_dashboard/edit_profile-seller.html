@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="/assets/img/logo/img-logo.png">
-    <title>Profile_customer</title>
+    <title>Edits-profile-seller</title>
 </head>
 <body>
     <div class="header py-2 br-s bg-success">
@@ -32,20 +32,15 @@
     <nav class="nav pt-2 shadow position-sticky top-0 z-3 bg-white">
         <div class="container mb-0 d-flex justify-content-between align-items-center ">
             <div class="d-flex justify-content-center align-items-center gap-2">
-                <button for="button" class=" btn border-0  d-lg-none d-block  d-flex justify-content-center align-items-center"data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="width: 35px;height: 35px;"><i class="fa-solid fa-bars" ></i></button>
+                <button for="button" class="btn border-0  d-lg-none d-block  d-flex justify-content-center align-items-center"data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="width: 35px;height: 35px;"><i class="fa-solid fa-bars" ></i></button>
                 <a href="./home.html" class="navbar-brand d-flex justify-content-center align-items-center">
                     <img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt="">
                 </a>
             </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <a class="dropdown-item d-flex align-items-center gap-2 " href="#" role="button" id="themeToggle">
-                    <i class="fa-solid fa-moon text-warning bg-danger-subtle p-1 d-flex justify-content-center align-items-center rounded-circle" style="width: 30px;height: 30px;" id="themeIcon"></i>
-                    <span id="themeText" class="">Dark Mode</span>
-                </a>
-                
-                <a class="link" style="width: 120px;" href="./home.html">ទំព័រដើម</a>
+            <div class="">
+                <a href="/customer/home.html">ទំព័រដើម</a>
                 /
-                <a class="link"  href="./product.html">ផលិតផល</a>
+                <a href="/customer/product.html">ផលិតផល</a>
             </div>
         </div>
     </nav>
@@ -58,12 +53,12 @@
                         <div class="tittle fs-3 py-3 fw-bold text-success text-center">គណនី</div> 
                         <ul class="navbar-nav d-flex gap-3 justify-content-center align-items-center flex-column gap-1">
                             <li class="nav-item"><a class="nav-link shadow disabled bg-success-subtle" href="#"><i class="fa-solid fa-border-all" style="color: rgb(59, 255, 129);"></i>Dasboard</a></li>
-                            <li class="nav-item"><a class="nav-link shadow active"  href="./profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./order.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./favorite_profile.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./change_password.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./information.html"><i class="fa-solid fa-bell" style="color: rgb(59, 255, 129);"></i>ការជូនដំណឹង</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>ក្លាយជាអ្នកលក់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow "  href="../seller_dashboard/seller-profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/order-seller.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/favorite_seller.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/change_password-seller.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/information-seller.html"><i class="fa-solid fa-bell" style="color: rgb(59, 255, 129);"></i>ការជូនដំណឹង</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-border-all" style="color: rgb(59, 255, 129);"></i>ប្ដូរទៅកាន់ផ្ទាំងគ្រប់គ្រង</a></li>
                             <li class="nav-item"><a class="nav-link shadow text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>ចាកចេញ</a></li>
                         </ul> 
                     </div>
@@ -78,12 +73,12 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav d-flex gap-3 justify-content-center align-items-center flex-column gap-1">
                             <li class="nav-item"><a class="nav-link shadow disabled bg-success-subtle" href="#"><i class="fa-solid fa-border-all" style="color: rgb(59, 255, 129);"></i>Dasboard</a></li>
-                            <li class="nav-item"><a class="nav-link shadow active"  href="/customer/profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="/customer/order.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./favorite_profile.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./change_password.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./information.html"><i class="fa-solid fa-bell" style="color: rgb(59, 255, 129);"></i>ការជូនដំណឹង</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>ក្លាយជាអ្នកលក់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow "  href="../seller_dashboard/seller-profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/order-seller.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/favorite_seller.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/change_password-seller.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/information-seller.html"><i class="fa-solid fa-bell" style="color: rgb(59, 255, 129);"></i>ការជូនដំណឹង</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>ប្ដូរទៅកាន់ផ្ទាំងគ្រប់គ្រង</a></li>
                             <li class="nav-item"><a class="nav-link shadow text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a></li>
                         </ul>
                     </div>
@@ -95,29 +90,16 @@
                                 <div class="shadow rounded-2">
                                 <div class="card card-head text-bg-light">
                                 <div class="row g-3 ">
-                                    <div class="col-md-6 col-12">
-                                        <div class="card card-head bg-transparent border-0">
-                                            <div class="card-body d-flex justify-content-md-between align-md-items-center justify-content-center align-items-center">
-                                                <div class="d-flex justify-content-md-start align-items-md-center gap-2 justify-content-center align-items-center flex-md-row flex-column">
-                                                    <div class="profile position-relative" style="width: 100px;">
-                                                            <label for="fileInput">
-                                                                <img  id="profile" src="../assets/img/profile_customer/img-2.jpg" class="img-fluid object-fit-cover p-1 border border-success rounded-circle" style="cursor: pointer;width: 100px;height: 100px;" alt="">
-                                                                <img src="../assets/img/icon/camera.png" class="img-fluid object-fit-cover position-absolute bg-info px-1 " style="width: 30px;height: 30ox;border-radius: 5px;top: 80%;right: 10%; cursor: pointer;" alt="">
-                                                            </label>
-                                                            <input type="file" id="fileInput" style="display: none;">
-                                                    </div>
-                                                    <div class="d-flex flex-column justify-content-md-center align-items-md-start justify-content-center align-items-center">
-                                                        <div class="fw-bold fs-4">Ah Klo</div>
-                                                        <div class="" style="font-size: 13px;">ahklo@gmail.com</div>
-                                                    </div>
+                                    <div class="col-12">
+                                        <div class="card card-head border-0 py-3">
+                                            <div class="d-flex justify-content-center align-items-center ">
+                                                <div class="profile position-relative" style="width: 100px;">
+                                                    <label for="fileInput">
+                                                        <img  id="profile" src="../assets/img/profile_customer/img-2.jpg" class="img-fluid object-fit-cover p-1 border border-success rounded-circle" style="cursor: pointer;width: 100px;height: 100px;" alt="">
+                                                        <img src="../assets/img/icon/camera.png" class="img-fluid object-fit-cover position-absolute bg-info px-1 " style="width: 30px;height: 30ox;border-radius: 5px;top: 80%;right: 10%; cursor: pointer;" alt="">
+                                                    </label>
+                                                    <input type="file" id="fileInput" style="display: none;">
                                                 </div>
-                                            </div>
-                                        </div> 
-                                    </div>
-                                    <div class="col-md-6 col-12 ">
-                                        <div class="card card-head text-bg-light border-0 bg-transparent">
-                                            <div class="card-body d-flex justify-content-md-end align-items-md-center justify-content-center align-items-center">
-                                                <a href="./edit_profile.html" class="btn btn-success  d-flex justify-content-center align-items-center gap-1 text-white"><i class="fa-solid fa-pencil"></i>កែប្រែប្រវត្តិរូប</a>
                                             </div>
                                         </div> 
                                     </div>
@@ -130,77 +112,46 @@
                                 <div class="card card-head text-bg-light">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-3">
-                                            <div class=" fs-5">ព័តមានផ្ទាល់ខ្លួន</div>
-                                            <i class="fa-solid fa-circle-exclamation fs-5"></i>
+                                            <div class=" fs-5">កែប្រែព័តមានផ្ទាល់ខ្លួន</div>
+                                            <i class="fa-solid fa-circle-exclamation fs-5" ></i>
                                         </div>
-                                        <div class="d-flex gap-3" style="height: 50px;">
-                                            <div class="form-floating position-relative  w-50 border border-success rounded-2 " style="height: 100%;">
-                                                <label for="floatingInput">Ahklo</label>
+                                        <div class="d-flex gap-3 mb-3">
+                                            <div class="form-floating mb-3 w-50">
+                                                <input type="text" class="form-control shadow-none border border-success" id="floatingInput" placeholder="name@example.com">
+                                                <label for="floatingInput">Full Name :</label>
                                             </div>
-                                            <div class="form-floating w-50 border border-success rounded-2 " style="height: 100%;">
-                                                <label for="floatingInput">Ahklo@gmail.com</label>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex gap-3 mt-4" style="height: 50px;">
-                                            <div class="form-floating w-50  border border-success rounded-2 " style="height: 100%;">
-                                                <label for="floatingInput">Phone Number</label>
-                                            </div> 
-                                            <div class="form-floating mb-3 w-50  border border-success rounded-2 " style="height: 100%;">
-                                                <label for="floatingInput">Male</label>
+                                            <div class="form-floating mb-3 w-50">
+                                                <input type="email" class="form-control shadow-none border border-success" id="floatingInput" placeholder="name@example.com">
+                                                <label for="floatingInput">Enter email :</label>
                                             </div>
                                         </div>
-                                        <div class="d-flex gap-3 mt-4" style="height: 50px;">
-                                            <div class="form-floating w-50 border border-success rounded-2 " style="height: 100%;">
-                                                <label for="floatingInput">Birth of date: 2,1,2006</label>
+                                        <div class="d-flex gap-3 mb-3">
+                                            <div class="form-floating mb-3 w-50">
+                                                <input type="number" class="form-control shadow-none border border-success" id="floatingInput" placeholder="name@example.com">
+                                                <label for="floatingInput">Phone :</label>
                                             </div>
-                                            <div class="form-floating w-50 border border-success rounded-2  " style="height: 100%;">
-                                                <label for="floatingInput">Address : No , St63 , City : PP</label>
+                                            <div class="form-floating mb-3 w-50 ">
+                                                <select class="form-select shadow-none border border-success bg" aria-label="Default select example">
+                                                    <option selected>Choose your gender :</option>
+                                                    <option value="1">Male</option>
+                                                    <option value="2">Female</option>
+                                                    <option value="3">Other</option>
+                                                </select>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-12">
-                                <div class="shadow">
-                                <div class="card card-head text-bg-light">
-                                    <div class="card-body bg-success rounded-2">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="d-flex flex-column">
-                                                <div class="text-white">ការ​កម្មង់សរុប</div>
-                                                <div class="fs-3 fw-bold text-white">24</div>
+                                        <div class="d-flex gap-3 mb-3">
+                                            <div class="form-floating mb-3 w-50">
+                                                <input type="date" class="form-control shadow-none border border-success" id="floatingInput" placeholder="name@example.com">
+                                                <label for="floatingInput">Birth of date :</label>
                                             </div>
-                                            <i class="fa-solid fa-cart-shopping fs-1" style="color: rgba(59, 255, 128, 0.37);"></i>
+                                            <div class="form-floating mb-3 w-50">
+                                                <input type="text" class="form-control shadow-none border border-success" id="floatingInput" placeholder="name@example.com">
+                                                <label for="floatingInput">Address : st , house , City or Province</label>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-12">
-                                <div class="shadow rounded-2">
-                                <div class="card card-head ">
-                                    <div class="card-body text-bg-light rounded-2">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="d-flex flex-column">
-                                                <div class="">ចូលចិត្ត</div>
-                                                <div class="fs-3 fw-bold ">1</div>
-                                            </div>
-                                            <i class="fa-regular fa-heart fs-1" style="color: rgba(72, 79, 75, 0.336);"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-12">
-                                <div class="shadow rounded-2">
-                                <div class="card card-head ">
-                                    <div class="card-body text-bg-secondary rounded-2">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="d-flex flex-column">
-                                                <div class="">ប្រាក់ចំណាយសរុប</div>
-                                                <div class="fs-3 fw-bold ">250$</div>
-                                            </div>
-                                            <i class="fa-solid fa-dollar-sign fs-1" style="color: white;"></i>
+                                        <div class="d-flex gap-3 justify-content-center align-items-center">
+                                            <a href="../seller_dashboard/seller-profile.html" class="btn  w-25 bg-transparent border border-success p-2">ត្រឡប់</a>
+                                            <div class="btn editpro w-25 btn-success p-2">រក្សាទុក</div>
                                         </div>
                                     </div>
                                 </div>
@@ -292,6 +243,21 @@
         </div>
         <div class="text-center py-2 bg-primary-subtle">© 2026 Khmer Bazaar. All Rights Reserved.</div>
     </section>
+     <!-- ===== update profile ===== -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast-1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="/assets/img/logo/img-logo.png" style="width: 40px;" class="img-fluid object-fit-cover rounded me-2" alt="...">
+                <strong class="me-auto">khmerbazaar</strong>
+                <small>just now</small>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body text-center bg-success-subtle text-success">
+                <i class="fa-solid fa-circle-check" style="color: rgb(21, 197, 47);"></i>
+                បានកែប្រែប្រវត្តិរូប
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -315,6 +281,7 @@
                 reader.onload = function(e){
                     profile.src = e.target.result;
                 }
+
                 reader.readAsDataURL(file);
             }
         });
@@ -330,41 +297,16 @@
             });
         });   
     </script>
-
-    <!-- ============ dark mode =========== -->
     <script>
-  (function () {
-    const root = document.documentElement;
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const themeText = document.getElementById('themeText');
-
-    function applyTheme(theme) {
-      root.setAttribute('data-bs-theme', theme);
-      localStorage.setItem('theme', theme);
-      if (theme === 'dark') {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-        themeText.textContent = 'Light Mode';
-      } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-        themeText.textContent = 'Dark Mode';
-      }
-    }
-
-    // Apply saved preference on load
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    applyTheme(savedTheme);
-
-    themeToggle.addEventListener('click', function (e) {
-      e.preventDefault();
-      const current = root.getAttribute('data-bs-theme') || 'light';
-      applyTheme(current === 'dark' ? 'light' : 'dark');
-    });
-  })();
-</script>
-
+        // ===== edit profile ====
+        const toastLiveExample1 = document.getElementById('liveToast-1')
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample1)
+        document.querySelectorAll('.editpro').forEach(function (btn) {
+            btn.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        })
+    </script>
    
 </body>
 </html>
