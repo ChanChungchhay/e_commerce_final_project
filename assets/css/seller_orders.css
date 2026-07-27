@@ -116,7 +116,7 @@
    PREMIUM INVOICE STYLING
    ========================================================================== */
 .premium-invoice-card {
-    background-color: #ffffff;
+    background-color: var(--premium-bg-light);
     border: 1px solid var(--premium-border);
     border-radius: 12px;
     padding: 24px;

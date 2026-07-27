@@ -1,123 +1,144 @@
-/* START OF FILE seller_messages.css */
-
-/* ==========================================================================
-   MESSAGES SYSTEM SPLIT PANEL CONFIGURATIONS
-   ========================================================================== */
-.chat-sidebar {
-    width: 320px;
-    background-color: var(--bg-card);
-    flex-shrink: 0;
-    transition: all 0.3s ease;
+.chat-sidebar{
+    width: 27%;
+}
+.chat-container{
+    width: 73%;
+}
+.link-message{
+    display: inline-block;
+    padding: 8px 20px !important;
+    border-radius: 5px;
+    line-height: 1;
+    text-decoration: none !important;
+    font-size: 14px !important;
+}
+.message-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+    padding: 14px;
+}
+.message-item.active{
+    border-left: 3px solid #01940bc8;
+    background-color: #dbfadb69;
+}
+.message-item:hover{
+    background-color: #dffadf69;
+}
+.btn-message{
+    background-color: #01940b;
+    border-radius: 5px;
+    color: white !important;
+    transition: 0.3s !important;
+}
+.link-message:hover{
+    background-color: #004505;
+    color: white !important;
+}
+.badge-unread{
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px !important;
+}
+.message-status{
+    border-bottom: 1px solid #a3cfbb;
+}
+.message-avatar .status{
+    bottom: 0 !important;
+    left: 40px !important;
 }
 
-.chat-conversation-area {
-    background-color: var(--bg-main);
+
+.chat-main .chat-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #a3cfbb;   
+}
+.chat-main .chat-header-btn{
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #c8d1cd;
+    transition: 0.3s !important;
+}
+.chat-main .chat-header-btn:hover{
+    background-color: #01940b;
+    color: #ffffffc8;
 }
 
-.chat-context-panel {
-    width: 280px;
-    background-color: var(--bg-card);
-    flex-shrink: 0;
+/* ------- chat body ------- */
+.chat-body .chat-line{
+    width: 45%;
+    border-bottom: 1px solid #808080a2;
 }
-
-.chat-user-item {
-    transition: background-color 0.2s ease;
+.chat-body .chat-name{
+    padding: 14px 20px;
+    background-color: #dcdcdc;
+    border-radius: 15px;
+    border-bottom-left-radius: 7px;
 }
-
-.chat-user-item:hover {
-    background-color: rgba(79, 70, 229, 0.03);
+.chat-body .chat-time{
+    font-size: 12px;
 }
-
-.chat-user-item.active {
-    background-color: rgba(79, 70, 229, 0.06);
-    border-left: 3px solid var(--primary);
+.chat-body .seller-chat-name{
+    padding: 14px 20px;
+    color: #ffffffc6 !important;
+    background-color: #01940b;
+    border-radius: 15px;
+    border-bottom-right-radius: 7px;
 }
-
-.chat-preview-text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 220px;
+.chat-body .seller-chat-time{
+    font-size: 13px;
+    text-align: right;
+    color: #01940b !important;
 }
-
-.badge-customer-type {
-    font-size: 0.65rem;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 20px;
+/* ------- chat-footer ------- */
+.chat-footer .chat-input-wrapper{
+    background-color: #dcdcdc;
+    padding: 12px;
+    border-radius: 15px;
 }
-
-/* ==========================================================================
-   CHAT MESSAGES CHIPS STREAM STYLING
-   ========================================================================== */
-.message-bubble {
-    max-width: 75%;
-    padding: 12px 16px;
-    border-radius: 16px;
-    position: relative;
-    animation: bubbleEnter 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+.chat-footer .chat-input-btn{
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: 0.3s !important;
 }
-
-.left-bubble {
-    background-color: var(--bg-card);
-    color: var(--text-main);
-    border: 1px solid var(--border-color);
-    border-bottom-left-radius: 4px;
+.chat-footer .chat-input-btn:hover{
+    background-color: #01940b;
+    color: #ffffffc8;
 }
-
-.right-bubble {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: #ffffff;
-    border-bottom-right-radius: 4px;
+.chat-footer .chat-input-field{
+    flex: 1;
+    border-radius: 25px !important;
 }
-
-.bubble-time {
-    display: block;
-    font-size: 0.65rem;
-    color: var(--text-muted);
+.chat-footer .chat-input-field textarea{
+    width: 100% !important;
+    border: none !important;
+    background-color: transparent;
+    resize: none;
+    padding: 0.5rem;
+    font-size: 14px;
+    color: #242424c8;
+    max-height: 120px;
+    line-height: 1.5;
 }
-
-.right-bubble .bubble-time {
-    color: rgba(255, 255, 255, 0.7);
+.chat-footer .chat-input-field textarea:focus{
+    outline: none !important;
 }
-
-@keyframes bubbleEnter {
-    from { transform: translateY(10px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+.chat-footer .send-message-btn{
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #01940b;
+    color: #ffffffc6;
+    transition: 0.3s !important;
 }
-
-/* Custom Scroll Buttons for quick replies */
-.quick-replies-toolbar::-webkit-scrollbar {
-    height: 4px;
+.chat-footer .send-message-btn:hover{
+    background-color: #007908;
 }
-
-.quick-replies-toolbar button {
-    white-space: nowrap;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.avatar-lg {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-}
-
-/* ==========================================================================
-   RESPONSIVE DESIGN HELPER
-   ========================================================================== */
-@media (max-width: 1200px) {
-    .chat-context-panel {
-        display: none !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .chat-sidebar {
-        width: 100%;
-    }
-    .chat-conversation-area {
-        display: none !important; /* Hide chat area in mobile listing mode */
-    }
-}
-/* END OF FILE seller_messages.css */

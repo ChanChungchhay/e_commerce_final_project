@@ -1,0 +1,8 @@
+textarea.form-control{
+    height:auto;
+    padding-top: 12px;
+}
+
+select.form-control{
+    height:48px;
+}

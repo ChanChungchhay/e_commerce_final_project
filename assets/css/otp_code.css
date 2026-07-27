@@ -1,0 +1,23 @@
+.otp-input{
+    width:55px;
+    height:55px;
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+    border:1px solid #dbe2ea;
+    border-radius:12px;
+}
+
+.otp-input:focus{
+    outline:none;
+    border-color:#198754;
+    box-shadow:0 0 0 4px rgba(25,135,84,.15);
+}
+/* =========================
+   FORM
+========================= */
+
+.form-label{
+    margin-bottom:8px;
+    font-weight:500;
+}

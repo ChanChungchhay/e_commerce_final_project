@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>គ្រប់គ្រងផលិតផល - Khmer Bazaar</title>
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -34,7 +35,7 @@
                     <div class="logo-icon">
                         <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img" alt="Logo">
                     </div>
-                    <span class="brand-name">Khmer Bazaar<span class="text-success">.</span></span>
+                    <span class="brand-name text-success">Khmer <span class="text-bazaar">Bazzar</span>.</span>
                 </div>
                 <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close"
                     aria-label="Close"></button>
@@ -58,7 +59,6 @@
                         <a href="seller_orders.html" class="menu-link">
                             <i class="bi bi-cart-fill"></i>
                             <span class="menu-text">ការបញ្ជាទិញ</span>
-                            <span class="badge rounded-pill bg-danger ms-auto">12</span>
                         </a>
                     </li>
                     <li class="menu-item" data-page="customers">
@@ -77,20 +77,12 @@
                         <a href="seller_messages.html" class="menu-link">
                             <i class="bi bi-chat-left-dots-fill"></i>
                             <span class="menu-text">សារផ្ញើ</span>
-                            <span class="badge rounded-pill bg-primary ms-auto">4</span>
                         </a>
                     </li>
                 </ul>
             </div>
 
             <div class="sidebar-footer">
-                <div class="user-widget">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
-                        class="avatar rounded-circle" alt="User Profile">
-                    <div class="user-info">
-                        <h6 class="mb-0 text-white">ហេង សំណាង</h6>
-                    </div>
-                </div>
                 <button
                     class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
                     data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -103,7 +95,7 @@
         <div class="main-container">
 
             <!-- Top Header Navigation -->
-            <header class="top-navbar">
+            <header class="top-navbar rounded-5 mx-4">
                 <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
 
                     <!-- Left Toggle & Global Search -->
@@ -114,7 +106,7 @@
                         <div class="search-bar-wrapper">
                             <i class="bi bi-search search-icon"></i>
                             <input type="text" class="form-control" id="product-search-input"
-                                placeholder="ស្វែងរកផលិតផលតាមឈ្មោះ លេខកូដ SKU...">
+                                placeholder="ស្វែងរកផលិតផលតាមឈ្មោះ លេខកូដ">
                         </div>
                     </div>
 
@@ -125,6 +117,109 @@
                         <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
                         </button>
+                        <!-- Messages Dropdown -->
+                        <div class="dropdown">
+                            <button class="btn btn-icon position-relative" type="button" id="messageDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-chat-left-dots"></i>
+                                <span
+                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-warning border border-2 border-white">
+                                    3
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                aria-labelledby="messageDropdown">
+                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">Recent Messages</h6>
+                                    <a href="seller_messages.html" class="small text-primary text-decoration-none">មើលការផ្ញើសារ</a>
+                                </div>
+                                <div class="dropdown-list-container">
+                                    <!-- Message List Items -->
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar-sm rounded-circle" alt="User Image">
+                                        <div>
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="user-name">Sarah Jenkins</span>
+                                                <span class="timestamp">2m ago</span>
+                                            </div>
+                                            <p class="preview-text">សួស្តី សំណាង
+                                                តើការធានាផលិតផលមានរួមបញ្ចូលក្នុងតម្លៃដើមដែរឬទេ?</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar-sm rounded-circle" alt="User Image">
+                                        <div>
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="user-name">Marcus Vance</span>
+                                                <span class="timestamp">1h ago</span>
+                                            </div>
+                                            <p class="preview-text">សូមជួយបញ្ជាក់ផងថា
+                                                តើអ្នកអាចដឹកជញ្ជូនទំនិញទាំងនេះមកកាន់ឃ្លាំងរបស់យើងបានដែរឬទេ?</p>
+                                        </div>
+                                    </a>
+                                    <a href="#"
+                                        class="dropdown-list-item d-flex gap-3 text-center py-2 text-primary fw-medium justify-content-center">
+                                        View all messages
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Notification Dropdown -->
+                        <div class="dropdown">
+                            <button class="btn btn-icon position-relative" type="button" id="notifDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-bell"></i>
+                                <span
+                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
+                                    5
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                aria-labelledby="notifDropdown">
+                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">Notifications</h6>
+                                    <a href="#" class="small text-primary">Mark all read</a>
+                                </div>
+                                <div class="dropdown-list-container" id="notifications-container">
+                                    <!-- Dynamically/Statically Handled -->
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar  text-success"><i
+                                                class="bi bi-check-circle-fill"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Order #8832 Dispatched</span>
+                                                <span class="timestamp">Just now</span>
+                                            </div>
+                                            <p class="preview-text">Shipped to Seattle Warehouse Hub.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar text-danger"><i
+                                                class="bi bi-exclamation-triangle-fill"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Low Stock: Wireless Earbuds</span>
+                                                <span class="timestamp">12m ago</span>
+                                            </div>
+                                            <p class="preview-text">Only 3 items remaining in stock.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar  text-primary"><i
+                                                class="bi bi-cash-stack"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Payment Received</span>
+                                                <span class="timestamp">1h ago</span>
+                                            </div>
+                                            <p class="preview-text">Payout of $12,450.00 processed successfully.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="header-divider h-100"></div>
 
@@ -134,7 +229,10 @@
                                 id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
                                     class="avatar-sm rounded-circle" alt="User Avatar">
-                                <span class="profile-name d-none d-lg-inline-block">ហេង សំណាង</span>
+                                <div class="user-info">
+                                    <h6 class="profile-name d-none d-lg-inline-block">ហេង សំណាង</h6>
+                                    <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
+                                </div>
                                 <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
@@ -159,14 +257,21 @@
                     <!-- Title and Quick Statistics -->
                     <div class="row align-items-center mb-4 gy-3">
                         <div class="col-md-6 col-12">
-                            <h2 class="welcome-heading mb-1 text-gradient-primary">គ្រប់គ្រងផលិតផល</h2>
-                            <p class="text-muted text-sm mb-0">បន្ថែម កែប្រែ និងតាមដានស្តុកផលិតផលរបស់អ្នក</p>
+                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">គ្រប់គ្រងផលិតផល</h1>
+                            <p class="text-muted fs-5 mb-0">បន្ថែម កែប្រែ និងតាមដានស្តុកផលិតផលរបស់អ្នក</p>
                         </div>
                         <div class="col-md-6 col-12 d-flex flex-wrap justify-content-md-end gap-2">
                             <button class="btn btn-primary d-flex align-items-center gap-2 text-white rounded-3"
                                 id="btn-open-add-modal" data-bs-toggle="modal" data-bs-target="#productManageModal">
                                 <i class="bi bi-plus-circle-fill"></i> បន្ថែមផលិតផលថ្មី
                             </button>
+                            <button class="btn btn-outline-custom d-flex align-items-center gap-2"
+                                data-bs-toggle="modal" data-bs-target="#createDiscountModal">
+                                <i class="bi bi-tag-fill"></i> បង្កើតការបញ្ចុះតម្លៃ
+                            </button>
+
+
+
                         </div>
                     </div>
 
@@ -175,13 +280,13 @@
                         <div class="col-12 col-sm-6 col-xl-3">
                             <div class="stats-card">
                                 <div class="d-flex justify-content-between align-items-start">
-                                    <div class="icon-wrap bg-light-primary text-primary">
-                                        <i class="bi bi-box-seam"></i>
+                                    <div class="icon-wrap bg-light-success text-white">
+                                        <i class="bi bi-box-seam icon"></i>
                                     </div>
-                                    <span class="badge bg-light-success text-success">+4 ខែនេះ</span>
+                                    <span class="badge bg-light-success fw-medium text-white">+4 ខែនេះ</span>
                                 </div>
                                 <div class="stats-body mt-3">
-                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">ផលិតផលសរុប</h6>
+                                    <h6 class="text-muted small text-uppercase tracking-wider">ផលិតផលសរុប</h6>
                                     <h3 class="mb-0 stats-counter" id="metric-total-products" data-target="32">32</h3>
                                 </div>
                             </div>
@@ -189,13 +294,13 @@
                         <div class="col-12 col-sm-6 col-xl-3">
                             <div class="stats-card">
                                 <div class="d-flex justify-content-between align-items-start">
-                                    <div class="icon-wrap bg-light-success text-success">
-                                        <i class="bi bi-check2-circle"></i>
+                                    <div class="icon-wrap bg-light-success text-white">
+                                        <i class="bi bi-check2-circle icon"></i>
                                     </div>
-                                    <span class="badge bg-light-success text-success">ដំណើរការធម្មតា</span>
+                                    <span class="badge bg-light-success fw-medium text-white">ដំណើរការធម្មតា</span>
                                 </div>
                                 <div class="stats-body mt-3">
-                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">កំពុងដាក់លក់</h6>
+                                    <h6 class="text-muted small text-uppercase tracking-wider">កំពុងដាក់លក់</h6>
                                     <h3 class="mb-0 stats-counter" id="metric-active-products" data-target="28">28</h3>
                                 </div>
                             </div>
@@ -204,12 +309,12 @@
                             <div class="stats-card">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <div class="icon-wrap bg-light-warning text-warning">
-                                        <i class="bi bi-exclamation-triangle"></i>
+                                        <i class="bi bi-exclamation-triangle icon"></i>
                                     </div>
-                                    <span class="badge bg-light-warning text-warning">គួរតែបន្ថែម</span>
+                                    <span class="badge bg-light-warning text-white fw-medium">គួរតែបន្ថែម</span>
                                 </div>
                                 <div class="stats-body mt-3">
-                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">ស្ទើរអស់ពីស្តុក</h6>
+                                    <h6 class="text-muted small text-uppercase tracking-wider">ស្ទើរអស់ពីស្តុក</h6>
                                     <h3 class="mb-0 stats-counter" id="metric-low-stock" data-target="3">3</h3>
                                 </div>
                             </div>
@@ -218,12 +323,13 @@
                             <div class="stats-card">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <div class="icon-wrap bg-light-danger text-danger">
-                                        <i class="bi bi-x-circle"></i>
+                                        <i class="bi bi-x-circle icon"></i>
                                     </div>
-                                    <span class="badge bg-light-danger text-danger">ផ្អាកលក់បណ្តោះអាសន្ន</span>
+                                    <span
+                                        class="badge bg-light-danger text-danger fw-medium">ផ្អាកលក់បណ្តោះអាសន្ន</span>
                                 </div>
                                 <div class="stats-body mt-3">
-                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">អស់ពីស្តុក</h6>
+                                    <h6 class="text-muted small text-uppercase tracking-wider">អស់ពីស្តុក</h6>
                                     <h3 class="mb-0 stats-counter" id="metric-out-of-stock" data-target="1">1</h3>
                                 </div>
                             </div>
@@ -236,15 +342,15 @@
                             <div class="row g-3 align-items-center">
                                 <div class="col-12 col-md-4">
                                     <label
-                                        class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្វែងរកលម្អិត</label>
+                                        class="form-label small fw-bold text-muted text-uppercase mb-1">ស្វែងរកលម្អិត</label>
                                     <div class="position-relative">
                                         <input type="text" class="form-control" id="filter-search"
-                                            placeholder="ស្វែងរកតាមឈ្មោះ ឬកូដ SKU...">
+                                            placeholder="ស្វែងរកតាមឈ្មោះ ឬកូដ">
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-3">
                                     <label
-                                        class="form-label text-xs fw-bold text-muted text-uppercase mb-1">តម្រងតាមប្រភេទ</label>
+                                        class="form-label small fw-bold text-muted text-uppercase mb-1">តម្រងតាមប្រភេទ</label>
                                     <select class="form-select" id="filter-category">
                                         <option value="all">ទាំងអស់</option>
                                         <option value="គ្រឿងអេឡិចត្រូនិក">គ្រឿងអេឡិចត្រូនិក</option>
@@ -255,7 +361,7 @@
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-3">
                                     <label
-                                        class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្ថានភាពស្តុក</label>
+                                        class="form-label small fw-bold text-muted text-uppercase mb-1">ស្ថានភាពស្តុក</label>
                                     <select class="form-select" id="filter-stock-status">
                                         <option value="all">ទាំងអស់</option>
                                         <option value="instock">មានក្នុងស្តុក (ជិតបង្កើយ)</option>
@@ -279,7 +385,7 @@
                         <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
                             <div>
                                 <h5 class="mb-0 card-title">បញ្ជីទំនិញលក់</h5>
-                                <span class="text-muted text-xs">បង្ហាញព័ត៌មានលម្អិត រូបភាព និងតម្លៃនៃទំនិញនីមួយៗ</span>
+                                <span class="text-muted small">បង្ហាញព័ត៌មានលម្អិត រូបភាព និងតម្លៃនៃទំនិញនីមួយៗ</span>
                             </div>
                             <div class="d-flex align-items-center gap-2">
                                 <button class="btn btn-icon btn-sm active" id="view-list" data-bs-toggle="tooltip"
@@ -320,7 +426,7 @@
 
                             <!-- Table Pagination Footer -->
                             <div class="px-4 py-3 d-flex align-items-center justify-content-between border-top">
-                                <span class="text-xs text-muted" id="pagination-status">កំពុងបង្ហាញផលិតផល 4 ក្នុងចំណោម
+                                <span class="small text-muted" id="pagination-status">កំពុងបង្ហាញផលិតផល 4 ក្នុងចំណោម
                                     4</span>
                                 <nav aria-label="Page navigation">
                                     <ul class="pagination pagination-sm mb-0">
@@ -338,23 +444,6 @@
 
                 </div>
             </main>
-
-            <!-- Bottom Professional Footer Section -->
-            <footer class="app-footer">
-                <div
-                    class="container-fluid px-4 py-3 d-flex flex-column flex-sm-row align-items-center justify-content-between text-muted text-xs">
-                    <div>
-                        <span class="fw-semibold">Khmer Bazaar</span> Storefront Center &copy; <span
-                            id="current-year">2026</span>. រក្សាសិទ្ធិគ្រប់យ៉ាង។
-                    </div>
-                    <div class="d-flex gap-3 mt-2 mt-sm-0">
-                        <a href="#" class="footer-link">ជំនួយបច្ចេកទេស</a>
-                        <a href="#" class="footer-link">លក្ខខណ្ឌឯកជនភាព</a>
-                        <span class="badge bg-light text-dark py-1 px-2 border">កំណែទម្រង់ ២.៤.០</span>
-                    </div>
-                </div>
-            </footer>
-
         </div>
     </div>
 
@@ -367,10 +456,10 @@
     <div class="modal fade" id="productManageModal" tabindex="-1" aria-labelledby="productManageModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content border-0 shadow-lg">
-                <div class="modal-header bg-gradient-primary text-white border-0 py-3">
-                    <h5 class="modal-title fw-bold" id="productManageModalLabel">បន្ថែមព័ត៌មានផលិតផលលម្អិត</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+            <div class="modal-content border-0 shadow-lg rounded-4">
+                <div class="modal-header text-muted border-2 py-3">
+                    <h5 class="modal-title fw-bold" id="productManageModalLabel">បន្ថែមព័ត៌មានផលិតផលថ្មី</h5>
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">
@@ -380,11 +469,11 @@
                             <!-- Image Upload Zone -->
                             <div class="col-12 col-md-4">
                                 <label
-                                    class="form-label text-xs fw-bold text-uppercase text-muted d-block">រូបភាពផលិតផល</label>
+                                    class="form-label small fw-bold text-uppercase text-muted d-block">រូបភាពផលិតផល</label>
                                 <div class="product-image-uploader-wrapper text-center p-3 border rounded-3 position-relative"
                                     id="drop-zone">
                                     <i class="bi bi-cloud-arrow-up text-primary fs-2"></i>
-                                    <p class="text-xs text-muted mt-2 mb-0">អូស & ទម្លាក់ រូបភាព ឬ ចុចទីនេះ</p>
+                                    <p class="small text-muted mt-2 mb-0">អូស & ទម្លាក់ រូបភាព ឬ ចុចទីនេះ</p>
                                     <input type="file"
                                         class="opacity-0 position-absolute w-100 h-100 top-0 start-0 cursor-pointer"
                                         id="product-img-file" accept="image/*">
@@ -405,7 +494,7 @@
                                 <div class="row g-3">
                                     <div class="col-12">
                                         <label for="productName"
-                                            class="form-label text-xs fw-bold text-uppercase">ឈ្មោះផលិតផល <span
+                                            class="form-label small fw-bold text-uppercase">ឈ្មោះផលិតផល <span
                                                 class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="productName"
                                             placeholder="ឧ. កាសស្តាប់ត្រចៀក UltraBass" required>
@@ -413,7 +502,7 @@
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="productCategory"
-                                            class="form-label text-xs fw-bold text-uppercase">ប្រភេទផលិតផល <span
+                                            class="form-label small fw-bold text-uppercase">ប្រភេទផលិតផល <span
                                                 class="text-danger">*</span></label>
                                         <select class="form-select" id="productCategory" required>
                                             <option value="" selected disabled>ជ្រើសរើសប្រភេទ</option>
@@ -426,7 +515,7 @@
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="productSKU"
-                                            class="form-label text-xs fw-bold text-uppercase">លេខកូដសម្គាល់ (SKU) <span
+                                            class="form-label small fw-bold text-uppercase">លេខកូដសម្គាល់ (SKU) <span
                                                 class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="productSKU"
                                             placeholder="ឧ. SKU-1002" required>
@@ -437,7 +526,7 @@
 
                             <!-- Stock & Price details -->
                             <div class="col-12 col-sm-6 col-md-4">
-                                <label for="productPrice" class="form-label text-xs fw-bold text-uppercase">តម្លៃលក់រាយ
+                                <label for="productPrice" class="form-label small fw-bold text-uppercase">តម្លៃលក់រាយ
                                     ($) <span class="text-danger">*</span></label>
                                 <input type="number" step="0.01" class="form-control" id="productPrice"
                                     placeholder="0.00" required>
@@ -445,14 +534,14 @@
                             </div>
                             <div class="col-12 col-sm-6 col-md-4">
                                 <label for="productStock"
-                                    class="form-label text-xs fw-bold text-uppercase">ចំនួនក្នុងស្តុក <span
+                                    class="form-label small fw-bold text-uppercase">ចំនួនក្នុងស្តុក <span
                                         class="text-danger">*</span></label>
                                 <input type="number" class="form-control" id="productStock" placeholder="0" required>
                                 <div class="invalid-feedback">សូមបំពេញចំនួនស្តុក។</div>
                             </div>
                             <div class="col-12 col-md-4">
                                 <label for="stockThreshold"
-                                    class="form-label text-xs fw-bold text-uppercase">កម្រិតជូនដំណឹងស្តុកទាប</label>
+                                    class="form-label small fw-bold text-uppercase">កម្រិតជូនដំណឹងស្តុកទាប</label>
                                 <input type="number" class="form-control" id="stockThreshold" value="5"
                                     placeholder="ឧ. 5">
                             </div>
@@ -460,7 +549,7 @@
                             <!-- Description -->
                             <div class="col-12">
                                 <label for="productDesc"
-                                    class="form-label text-xs fw-bold text-uppercase">ការពិពណ៌នាផលិតផល</label>
+                                    class="form-label small fw-bold text-uppercase">ការពិពណ៌នាផលិតផល</label>
                                 <textarea class="form-control" id="productDesc" rows="3"
                                     placeholder="ពិពណ៌នាដោយសង្ខេបពីផលិតផលរបស់អ្នក..."></textarea>
                             </div>
@@ -527,6 +616,66 @@
             </div>
         </div>
     </div>
+    <!-- Bootstrap Create Discount Modal Dialog -->
+    <div class="modal fade" id="createDiscountModal" tabindex="-1" aria-labelledby="createDiscountModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4">
+                <div class="modal-header  text-muted border-1 py-3">
+                    <h5 class="modal-title fw-bold" id="createDiscountModalLabel">ប័ណ្ណបញ្ចុះតម្លៃសម្រាប់ហាង</h5>
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="addDiscountForm">
+                        <div class="mb-3">
+                            <label for="couponCode" class="form-label fw-bold text-uppercase">លេខកូដបញ្ចុះតម្លៃ</label>
+                            <input type="text" class="form-control font-monospace" id="couponCode"
+                                placeholder="e.g. FLASH30" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold text-uppercase d-block">ប្រភេទនៃការបញ្ចុះតម្លៃ</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="couponType" id="typePercentage"
+                                    value="percentage" checked>
+                                <label class="form-check-label" for="typePercentage">ភាគរយ (%)</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="couponType" id="typeFixed"
+                                    value="fixed">
+                                <label class="form-check-label" for="typeFixed">ចំនួនទឹកប្រាក់ ($)</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="discountValue"
+                                class="form-label fw-bold text-uppercase">បញ្ចូលចំនួនទឹកប្រាក់នៃការបញ្ចុះតម្លៃ</label>
+                            <input type="number" class="form-control" id="discountValue" placeholder="e.g. 30" min="0"
+                                required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-top-0 px-4 pb-3 pt-0">
+                    <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">បោះបង់</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        id="liveToastBtn">បង្កើតកូដ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- toast for creating coupon discount -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+        <div id="liveToast" class="toast align-items-center text-white bg-dark border-0 shadow" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body d-flex align-items-center gap-2">
+                    <i class="bi bi-info-circle-fill text-success"></i>
+                    <span id="toast-message">កូដបង្កើតបានជោគជ័យ!</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap 5 Bundle JS with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -534,6 +683,7 @@
     <script src="../assets/js/seller_dashboard.js"></script>
     <!-- Product Page Controller Logic -->
     <script src="../assets/js/seller_products.js"></script>
+
 </body>
 
 </html>
