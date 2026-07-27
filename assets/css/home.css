@@ -7,7 +7,7 @@
     --color-white:rgba(26, 9, 9, 0.673);
     --color-gray:rgba(128, 128, 128, 0.782);
     --color-green-tittle:green;
-    --color-green:rgba(29, 180, 77);
+    --color-green:rgb(23, 165, 68);
     --btn-hover-color:rgb(18, 57, 22);
     --color-active:rgba(141, 184, 141, 0.434);
     --color-white:white;
@@ -23,25 +23,117 @@ a{
     color: black  !important;
 }
 
+[data-bs-theme="dark"] body,
+[data-bs-theme="dark"] {
+  background-color: #16181b;
+  color: #e9ecef;
+}
+
+[data-bs-theme="dark"] .nav{
+  background-color: #16181b !important;
+}
+[data-bs-theme="dark"] .nav .nav-link{
+    color: white !important;
+}
+[data-bs-theme="dark"] .nav .dropdown-item{
+    color: white !important;
+}
+[data-bs-theme="dark"] .offcanvas .nav-link{
+    color: white !important;
+    border:  1px solid rgba(255, 255, 255, 0.334);
+}
+[data-bs-theme="dark"] .offcanvas .dropdown-item{
+    color: white !important;
+}
+
+[data-bs-theme="dark"] .hero-banner{
+  background-color: #222523 !important;
+}
+[data-bs-theme="dark"] .hero-banner .btn{
+    color: white !important;
+}
+[data-bs-theme="dark"] .hero-banner .card {
+    background-color: transparent !important;
+}
+[data-bs-theme="dark"] .hero-banner button{
+    color: black !important;
+}
+
+[data-bs-theme="dark"] .sect-1{
+    color: white !important;
+    background-color: #23272e !important;
+}
+[data-bs-theme="dark"] .sect-1 .tittle{
+    color: white !important;
+}
+
+[data-bs-theme="dark"] .sect-2 .price span ,
+[data-bs-theme="dark"] .sect-2 .text
+{
+    color: white !important;
+}
+[data-bs-theme="dark"] .sect-1 .card{
+    background-color: #499f68 !important;
+}
+
+[data-bs-theme="dark"] .sect-3{
+    color: white !important;
+  background-color: #16181b !important;
+}
+[data-bs-theme="dark"] .sect-3 .card{
+    background-color:rgba(255, 255, 255, 0.334) ;
+}
+
+[data-bs-theme="dark"] .sect-5{
+    color: white !important;
+  background-color: #23272e !important;
+}
+[data-bs-theme="dark"] .sect-5 .card{
+    border:  1px solid rgba(255, 255, 255, 0.334);
+}
+
+[data-bs-theme="dark"] .footer {
+  --footer-bg: #14171a;        
+}
+[data-bs-theme="dark"] .footer .link:hover{
+    color: rgb(37, 145, 65) !important;
+} 
+
+/* ======header====== */
+.header .body-link ,
+.header .fa-brands{
+    color: white !important;
+}
+
 /* ====nav===== */
 .nav .nav-link.active{
-    background-color: var(--color-active) !important;
-    box-shadow: var(--box-shadow);
+    background-color: var(--color-green) !important;
+    color: white !important;
 }
 .nav .nav-link{
     padding: 2px 10px;
     border-radius: 20px ;
     transition: .3s linear;
 }
+.nav .nav-link:hover{
+    background-color: var(--color-green) !important;
+    color: white !important;
+}
+
 .nav .btn:hover{
     transform: translateY(-2px);
     transition: .3s;
+}
+.nav .nav-link:focus{
+    background-color: var(--color-green);
+    transition: .3s ;
+    color: var(--color-white) !important;
+    box-shadow: var(--box-shadow);
 }
 .nav .nav-link:focus .fa-angle-down{
     transform: rotateX(180deg);
     transition: .3s;
 }
-
 .nav .dropdown-item ,
 .offcanvas .dropdown-item{
     background-color: transparent !important;
@@ -81,12 +173,12 @@ a{
 .hero-banner .card-1{
     width: 100%;
     height: 250px;
-    /* background-color: bisque; */
     position: relative !important;
     img{
     border-radius: 10px;
     }
 }
+
 .hero-banner .btn:nth-child(2):hover    {
     background-color: var(--btn-hover-color) !important;
     color: var(--color-white) !important;
@@ -106,13 +198,14 @@ a{
     border-radius: 10px;
 }
 .sect-1 .card{
-    transition: .3s linear;
+    transition: .2s linear;
 }
 .sect-1 .card:hover{
-    transition: .3s;
     transform: translateY(2px);
+    transition: .2s linear;
     box-shadow: var(--box-shadow) !important;
 }
+
 /* ====offcanvas====== */
 .offcanvas .nav-link{
     width: 200px;
@@ -137,16 +230,53 @@ a{
     color: white !important;
 }
 
+/* ============== scroll to top =============== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 1030;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-radius: 50% !important;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.btn-primary {
+    background: linear-gradient(135deg, #0B5E34 0%, #064E26 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 24px;
+    box-shadow: 0 4px 14px 0 rgba(11, 94, 52, 0.2), 0 2px 4px 0 rgba(217, 119, 6, 0.15); /* ស្រមោលមាស និងបៃតងលាយគ្នា */
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(11, 94, 52, 0.3), 0 4px 8px 0 rgba(217, 119, 6, 0.15);
+    background: linear-gradient(135deg, #0d6e3c 0%, #085e2f 100%) !important;
+}
 
 /* =======sect-2====== */
 .sect-2 .card{
+    border-radius: 10px;
     cursor: pointer;
-    /* border: none !important; */
-    transition: .2s linear;
+    transition:  .2s linear;
 }
 .sect-2 .card:hover{
+    transition:  .2s linear;
     transform: translateY(-2px);
-    transition: .2s linear;
     box-shadow: var(--box-shadow-product);
 }
 .sect-2 .card-img{
@@ -332,8 +462,6 @@ a{
 
 /* ===== modal ==== */
 .modal .card{
-    /* height: 300px; */
-    /* background-color: aqua; */
     border-radius: 10px;
     border: none;
 }

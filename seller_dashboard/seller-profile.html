@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="/assets/img/logo/img-logo.png">
-    <title>Profile_customer</title>
+    <title>Profile_seller</title>
 </head>
 <body>
     <div class="header py-2 br-s bg-success">
@@ -32,20 +32,15 @@
     <nav class="nav pt-2 shadow position-sticky top-0 z-3 bg-white">
         <div class="container mb-0 d-flex justify-content-between align-items-center ">
             <div class="d-flex justify-content-center align-items-center gap-2">
-                <button for="button" class=" btn border-0  d-lg-none d-block  d-flex justify-content-center align-items-center"data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="width: 35px;height: 35px;"><i class="fa-solid fa-bars" ></i></button>
+                <button for="button" class="btn border-0  d-lg-none d-block  d-flex justify-content-center align-items-center"data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="width: 35px;height: 35px;"><i class="fa-solid fa-bars" ></i></button>
                 <a href="./home.html" class="navbar-brand d-flex justify-content-center align-items-center">
                     <img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt="">
                 </a>
             </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <a class="dropdown-item d-flex align-items-center gap-2 " href="#" role="button" id="themeToggle">
-                    <i class="fa-solid fa-moon text-warning bg-danger-subtle p-1 d-flex justify-content-center align-items-center rounded-circle" style="width: 30px;height: 30px;" id="themeIcon"></i>
-                    <span id="themeText" class="">Dark Mode</span>
-                </a>
-                
-                <a class="link" style="width: 120px;" href="./home.html">ទំព័រដើម</a>
+            <div class="">
+                <a href="/customer/home.html">ទំព័រដើម</a>
                 /
-                <a class="link"  href="./product.html">ផលិតផល</a>
+                <a href="/customer/product.html">ផលិតផល</a>
             </div>
         </div>
     </nav>
@@ -58,12 +53,12 @@
                         <div class="tittle fs-3 py-3 fw-bold text-success text-center">គណនី</div> 
                         <ul class="navbar-nav d-flex gap-3 justify-content-center align-items-center flex-column gap-1">
                             <li class="nav-item"><a class="nav-link shadow disabled bg-success-subtle" href="#"><i class="fa-solid fa-border-all" style="color: rgb(59, 255, 129);"></i>Dasboard</a></li>
-                            <li class="nav-item"><a class="nav-link shadow active"  href="./profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./order.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./favorite_profile.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./change_password.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./information.html"><i class="fa-solid fa-bell" style="color: rgb(59, 255, 129);"></i>ការជូនដំណឹង</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>ក្លាយជាអ្នកលក់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow active"  href="../seller_dashboard/seller-profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/order-seller.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/favorite_seller.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/change_password-seller.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/information-seller.html"><i class="fa-solid fa-bell" style="color: rgb(59, 255, 129);"></i>ការជូនដំណឹង</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-border-all" style="color: rgb(59, 255, 129);"></i>ប្ដូរទៅកាន់ផ្ទាំងគ្រប់គ្រង</a></li>
                             <li class="nav-item"><a class="nav-link shadow text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>ចាកចេញ</a></li>
                         </ul> 
                     </div>
@@ -78,12 +73,12 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav d-flex gap-3 justify-content-center align-items-center flex-column gap-1">
                             <li class="nav-item"><a class="nav-link shadow disabled bg-success-subtle" href="#"><i class="fa-solid fa-border-all" style="color: rgb(59, 255, 129);"></i>Dasboard</a></li>
-                            <li class="nav-item"><a class="nav-link shadow active"  href="/customer/profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="/customer/order.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./favorite_profile.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./change_password.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./information.html"><i class="fa-solid fa-bell" style="color: rgb(59, 255, 129);"></i>ការជូនដំណឹង</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>ក្លាយជាអ្នកលក់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow active"  href="../seller_dashboard/seller-profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/order-seller.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/favorite_seller.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/change_password-seller.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/information-seller.html"><i class="fa-solid fa-bell" style="color: rgb(59, 255, 129);"></i>ការជូនដំណឹង</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>ប្ដូរទៅកាន់ផ្ទាំងគ្រប់គ្រង</a></li>
                             <li class="nav-item"><a class="nav-link shadow text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a></li>
                         </ul>
                     </div>
@@ -117,7 +112,7 @@
                                     <div class="col-md-6 col-12 ">
                                         <div class="card card-head text-bg-light border-0 bg-transparent">
                                             <div class="card-body d-flex justify-content-md-end align-items-md-center justify-content-center align-items-center">
-                                                <a href="./edit_profile.html" class="btn btn-success  d-flex justify-content-center align-items-center gap-1 text-white"><i class="fa-solid fa-pencil"></i>កែប្រែប្រវត្តិរូប</a>
+                                                <a href="../seller_dashboard/edit_profile-seller.html" class="btn btn-success  d-flex justify-content-center align-items-center gap-1 text-white"><i class="fa-solid fa-pencil"></i>កែប្រែប្រវត្តិរូប</a>
                                             </div>
                                         </div> 
                                     </div>
@@ -133,28 +128,34 @@
                                             <div class=" fs-5">ព័តមានផ្ទាល់ខ្លួន</div>
                                             <i class="fa-solid fa-circle-exclamation fs-5"></i>
                                         </div>
-                                        <div class="d-flex gap-3" style="height: 50px;">
-                                            <div class="form-floating position-relative  w-50 border border-success rounded-2 " style="height: 100%;">
-                                                <label for="floatingInput">Ahklo</label>
+                                        <div class="d-flex gap-3">
+                                            <div class="form-floating w-50 border border-success rounded-2 " >
+                                                <!-- <label for="floatingInput">Ahklo</label> -->
+                                                 <input type="text" class="form-control shadow-none border-0" value="Ahklo">
                                             </div>
-                                            <div class="form-floating w-50 border border-success rounded-2 " style="height: 100%;">
-                                                <label for="floatingInput">Ahklo@gmail.com</label>
+                                            <div class="form-floating w-50 border border-success rounded-2 " >
+                                                <!-- <label for="floatingInput">Ahklo@gmail.com</label> -->
+                                                 <input type="text" class="form-control shadow-none border-0" value="Ahklo@gmail.com">
                                             </div>
                                         </div>
-                                        <div class="d-flex gap-3 mt-4" style="height: 50px;">
-                                            <div class="form-floating w-50  border border-success rounded-2 " style="height: 100%;">
-                                                <label for="floatingInput">Phone Number</label>
+                                        <div class="d-flex gap-3 mt-4">
+                                            <div class="form-floating w-50  border border-success rounded-2 ">
+                                                <!-- <label for="floatingInput">Phone Number</label> -->
+                                                 <input type="text" class="form-control shadow-none border-0" value="Phone Number +855 01234567">
                                             </div> 
-                                            <div class="form-floating mb-3 w-50  border border-success rounded-2 " style="height: 100%;">
-                                                <label for="floatingInput">Male</label>
+                                            <div class="form-floating w-50  border border-success rounded-2 ">
+                                                <!-- <label for="floatingInput">Male</label> -->
+                                                 <input type="text" class="form-control shadow-none border-0" value="Male">
                                             </div>
                                         </div>
-                                        <div class="d-flex gap-3 mt-4" style="height: 50px;">
-                                            <div class="form-floating w-50 border border-success rounded-2 " style="height: 100%;">
-                                                <label for="floatingInput">Birth of date: 2,1,2006</label>
+                                        <div class="d-flex gap-3 mt-4">
+                                            <div class="form-floating w-50 border border-success rounded-2 " >
+                                                <!-- <label for="floatingInput">Birth of date: 2,1,2006</label> -->
+                                                 <input type="text" class="form-control shadow-none border-0" value="Birth of date: 2,1,2006">
                                             </div>
-                                            <div class="form-floating w-50 border border-success rounded-2  " style="height: 100%;">
-                                                <label for="floatingInput">Address : No , St63 , City : PP</label>
+                                            <div class="form-floating w-50 border border-success rounded-2  " >
+                                                <!-- <label for="floatingInput">Address : No , St63 , City : PP</label> -->
+                                                 <input type="text" class="form-control shadow-none border-0" value="Address : No , St63 , City : PP">
                                             </div>
                                         </div>
                                     </div>
@@ -330,41 +331,6 @@
             });
         });   
     </script>
-
-    <!-- ============ dark mode =========== -->
-    <script>
-  (function () {
-    const root = document.documentElement;
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const themeText = document.getElementById('themeText');
-
-    function applyTheme(theme) {
-      root.setAttribute('data-bs-theme', theme);
-      localStorage.setItem('theme', theme);
-      if (theme === 'dark') {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-        themeText.textContent = 'Light Mode';
-      } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-        themeText.textContent = 'Dark Mode';
-      }
-    }
-
-    // Apply saved preference on load
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    applyTheme(savedTheme);
-
-    themeToggle.addEventListener('click', function (e) {
-      e.preventDefault();
-      const current = root.getAttribute('data-bs-theme') || 'light';
-      applyTheme(current === 'dark' ? 'light' : 'dark');
-    });
-  })();
-</script>
-
    
 </body>
 </html>

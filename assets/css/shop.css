@@ -7,7 +7,7 @@
     --color-white:rgba(26, 9, 9, 0.673);
     --color-gray:rgba(128, 128, 128, 0.782);
     --color-green-tittle:green;
-    --color-green:rgba(29, 180, 77);
+    --color-green:rgb(23, 165, 68);
     --btn-hover-color:rgb(18, 57, 22);
     --color-active:rgba(141, 184, 141, 0.434);
     --color-white:white;
@@ -38,38 +38,47 @@ a{
 [data-bs-theme="dark"] .nav .dropdown-item{
     color: white !important;
 }
+
 [data-bs-theme="dark"] .offcanvas .nav-link{
-    border:  1px solid rgba(255, 255, 255, 0.334);
     color: white !important;
+    border:  1px solid rgba(255, 255, 255, 0.334);
 }
 [data-bs-theme="dark"] .offcanvas .dropdown-item{
     color: white !important;
 }
+/* ====offcanvas====== */
+.offcanvas .nav-link{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    padding: 0px 10px;
+    border-radius: 30px;
+}
+.offcanvas .nav-link:hover{
+    background-color:var(--color-green);
+    color: white !important;
+}
+.offcanvas .nav-link:focus{
+    background-color:var(--color-green);
+    color: white !important;
+}
+.offcanvas .nav-link.active{
+    background-color:rgba(22, 132, 22, 0.668);
+    color: white !important;
+}
 
-[data-bs-theme="dark"] .sect-1{
+[data-bs-theme="dark"] .sect-5{
     color: white !important;
-    background-color: #23272e !important;
+  background-color: #23272e !important;
 }
-[data-bs-theme="dark"] .sect-1 .tittle{
-    color: white !important;
+[data-bs-theme="dark"] .sect-5 .tittle{
+    background-color: #14171a !important;
 }
-[data-bs-theme="dark"] .sect-1 .card{
-    background-color: transparent;
-}
-[data-bs-theme="dark"] .sect-1 .card .btn{
-    color: white !important;
-}
-[data-bs-theme="dark"] .sect-1 .card .shop{
-    background-color: #23272e !important;
-    color: white !important;
-    border:  1px solid rgba(255, 255, 255, 0.334) !important;
-}
-[data-bs-theme="dark"] .sect-1 .card .shop .btn-follow{
-    color: black !important;
-}
-[data-bs-theme="dark"] .sect-1 .comment{
-    background-color:transparent !important;
-    color: white !important;
+[data-bs-theme="dark"] .sect-5 .card{
+    border:  1px solid rgba(255, 255, 255, 0.334);
 }
 
 [data-bs-theme="dark"] .footer {
@@ -97,6 +106,11 @@ a{
 }
 .nav .nav-link:hover{
     background-color: var(--color-green) !important;
+    color: white !important;
+}
+.nav .btn:hover{
+    transform: translateY(-2px);
+    transition: .3s;
 }
 .nav .nav-link:focus{
     background-color: var(--color-green);
@@ -104,49 +118,39 @@ a{
     color: var(--color-white) !important;
     box-shadow: var(--box-shadow);
 }
-.nav .btn:hover{
-    transform: translateY(-2px);
-    transition: .3s;
-    /* background-color: var(--color-green); */
-}
 .nav .nav-link:focus .fa-angle-down{
     transform: rotateX(180deg);
     transition: .3s;
 }
-
-.nav .dropdown-item{
+.nav .dropdown-item ,
+.offcanvas .dropdown-item{
     background-color: transparent !important;
     transition: .3s linear;
 }
-.nav .dropdown-item:hover{
+.nav .dropdown-item:hover ,
+.offcanvas .dropdown-item:hover{
     transform: translateX(3px);
     transition: .3s ;
     color: var(--color-green-tittle) !important;
     border-left: 5px solid green;
 }
-.sect-1 .card{
+
+/* ===== sect-5 ==== */
+.sect-5 .card{
     border-radius: 10px;
     border: none;
+    transition: .3s ;
 }
-.sect-1 .payment img{
-    width: 120px;
-    height: 50px;
-    border-radius: 10px;
+.sect-5 .card:hover{
+    box-shadow: var(--box-shadow) !important;
+    transition: .3s linear;
+    transform: translateY(-2px);
 }
-
-.sect-1 .color.selected {
-    outline: 2px solid #10a72e;
-    outline-offset: 2px;
-}
-
-.sect-1 .size.selected {
-    background-color: #10a72e !important;
-    border-color: #000;
+.sect-5 .btn-follow:focus{
+    background-color: var(--color-green) !important;
+    color: var(--color-white) !important;
 }
 
-.sect-1 .size.selected .btn {
-    color: #fff;
-}
 /* =======footer====== */
 .footer .card{
     border-radius: 10px;
@@ -175,18 +179,44 @@ a{
     background-color: var(--color-gray);
    color: white !important;
 }
-.footer img{
-    width: 100px;
+.footer .payment img{
+    width: 120px;
     height: 50px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /* xs */
 @media screen and (max-width:576px) {
+    .hero-banner .btn{
+        font-size: 15px;
+    }
+    .modal .btn-cart ,
+    .modal .favo{
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+    }
+    .footer img{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    }
 
 }
 @media screen and (min-width:576px) {
-
+    .hero-banner .btn{
+        font-size: 15px;
+    }
+    .modal .btn-cart ,
+    .modal .favo{
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
 }
 @media screen and (min-width:786px) {
 
@@ -199,81 +229,7 @@ a{
 }
 @media screen and (min-width:1400px) {
 
+.hero-banner .btn{
+        font-size: 20px;
+    }
 } 
-
-.sect-1 .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-.sect-1 .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #44444452;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 450px;
-        cursor: pointer;
-      }
-
-.sect-1 .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-.sect-1 .swiper {
-        width: 100%;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-.sect-1 .swiper-slide {
-        background-size: cover;
-        background-position: center;
-      }
-
-.sect-1 .mySwiper2 {
-        height: 80%;
-        width: 100%;
-      }
-
-.sect-1 .mySwiper {
-        height: 20%;
-        box-sizing: border-box;
-        padding: 10px 0;
-      }
-
-.sect-1 .mySwiper .swiper-slide {
-        height: 100px;
-        opacity: 0.4;
-        border-radius: 10px;
-      }
-
-.sect-1 .mySwiper .swiper-slide-thumb-active {
-        opacity: 1;
-      }
-
-.sect-1 .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-.sect-1 .fa-star ,
-.sect-1 .fa-star-half-stroke{
-        font-size: 10px;
-    }
-.sect-1 .btn-follow:focus{
-        background-color: var(--color-green) !important;
-        color: var(--color-white) !important;
-    }
-.sect-1 .size {
-        border: none !important;
-    }
-.sect-1 .favo:focus{
-        background-color: red !important;
-        color: white;
-    }

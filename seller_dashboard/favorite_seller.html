@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="/assets/img/logo/img-logo.png">
-    <title>Favorite</title>
+    <title>Favorite-seller</title>
 </head>
 <body>
     <div class="header py-2 br-s bg-success">
@@ -37,40 +37,35 @@
                     <img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt="">
                 </a>
             </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <a class="dropdown-item d-flex align-items-center gap-2 " href="#" role="button" id="themeToggle">
-                    <i class="fa-solid fa-moon text-warning bg-danger-subtle p-1 d-flex justify-content-center align-items-center rounded-circle" style="width: 30px;height: 30px;" id="themeIcon"></i>
-                    <span id="themeText" class="">Dark Mode</span>
-                </a>
-                
-                <a class="link" style="width: 120px;" href="./home.html">ទំព័រដើម</a>
+            <div class="">
+                <a href="/customer/home.html">ទំព័រដើម</a>
                 /
-                <a class="link"  href="./product.html">ផលិតផល</a>
+                <a href="/customer/product.html">ផលិតផល</a>
             </div>
         </div>
     </nav>
     <section class="sect-1 py-4">
         <div class="container">
             <div class="row g-3">
-                <div class="col-3 d-lg-block d-none">
-                    <div class="shadow rounded-2 position-sticky " style="top: 8%;">
+                <div class="col-3 d-lg-block d-none ">
+                    <div class="shadow rounded-2">
                     <div class="card card-head py-3">
                         <div class="tittle fs-3 py-3 fw-bold text-success text-center">គណនី</div> 
                         <ul class="navbar-nav d-flex gap-3 justify-content-center align-items-center flex-column gap-1">
                             <li class="nav-item"><a class="nav-link shadow disabled bg-success-subtle" href="#"><i class="fa-solid fa-border-all" style="color: rgb(59, 255, 129);"></i>Dasboard</a></li>
-                            <li class="nav-item"><a class="nav-link shadow "  href="/customer/profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="/customer/order.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow active" href="/customer/favorite_profile.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./change_password.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./information.html"><i class="fa-solid fa-bell" style="color: rgb(59, 255, 129);"></i>ការជូនដំណឹង</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>ក្លាយជាអ្នកលក់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a></li>
+                            <li class="nav-item"><a class="nav-link shadow "  href="../seller_dashboard/seller-profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/order-seller.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow active" href="../seller_dashboard/favorite_seller.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/change_password-seller.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/information-seller.html"><i class="fa-solid fa-bell" style="color: rgb(59, 255, 129);"></i>ការជូនដំណឹង</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-border-all" style="color: rgb(59, 255, 129);"></i>ប្ដូរទៅកាន់ផ្ទាំងគ្រប់គ្រង</a></li>
+                            <li class="nav-item"><a class="nav-link shadow text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>ចាកចេញ</a></li>
                         </ul> 
                     </div>
                     </div>
                 </div>
                 <!-- ======offcanvas========== -->
-                <div class="offcanvas offcanvas-start position-absolute" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 350px;top: -5%;">
+                <div class="offcanvas offcanvas-start position-absolute " data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 350px;top: -5%;">
                     <div class="offcanvas-header">
                         <img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt="">
                         <button type="button" class="btn-close shadow-none " data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -78,12 +73,12 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav d-flex gap-3 justify-content-center align-items-center flex-column gap-1">
                             <li class="nav-item"><a class="nav-link shadow disabled bg-success-subtle" href="#"><i class="fa-solid fa-border-all" style="color: rgb(59, 255, 129);"></i>Dasboard</a></li>
-                            <li class="nav-item"><a class="nav-link shadow "  href="./profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./order.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow active" href="./favorite_profile.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./change_password.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="./information.html"><i class="fa-solid fa-bell" style="color: rgb(59, 255, 129);"></i>ការជូនដំណឹង</a></li>
-                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>Become a seller</a></li>
+                            <li class="nav-item"><a class="nav-link shadow "  href="../seller_dashboard/seller-profile.html"><i class="fa-solid fa-circle-user" style="color: rgb(59, 255, 129);"></i>ប្រវត្តិរូប</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/order-seller.html"><i class="fa-solid fa-dolly" style="color: rgb(59, 255, 129);"></i>កម្មង់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow active" href="../seller_dashboard/favorite_seller.html"><i class="fa-regular fa-heart" style="color: rgb(59, 255, 129);"></i>ចូលចិត្ត</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/change_password-seller.html"><i class="fa-solid fa-lock" style="color: rgb(59, 255, 129);"></i>ផ្លាស់ប្តូរលេខសម្ងាត់</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="../seller_dashboard/information-seller.html"><i class="fa-solid fa-bell" style="color: rgb(59, 255, 129);"></i>ការជូនដំណឹង</a></li>
+                            <li class="nav-item"><a class="nav-link shadow " href="#"><i class="fa-solid fa-store" style="color: rgb(59, 255, 129);"></i>ប្ដូរទៅកាន់ផ្ទាំងគ្រប់គ្រង</a></li>
                             <li class="nav-item"><a class="nav-link shadow text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a></li>
                         </ul>
                     </div>
@@ -117,7 +112,7 @@
                                     <div class="col-md-6 col-12 ">
                                         <div class="card card-head text-bg-light border-0 bg-transparent">
                                             <div class="card-body d-flex justify-content-md-end align-items-md-center justify-content-center align-items-center">
-                                                <div class="btn btn-success  d-flex justify-content-center align-items-center gap-1"><i class="fa-solid fa-pencil"></i>កែប្រែប្រវត្តិរូប</div>
+                                                <a href="../seller_dashboard/edit_profile-seller.html" class="btn btn-success  d-flex justify-content-center align-items-center gap-1 text-white"><i class="fa-solid fa-pencil"></i>កែប្រែប្រវត្តិរូប</a>
                                             </div>
                                         </div> 
                                     </div>
@@ -447,40 +442,6 @@
             })
         })
     </script>
-    
-    <!-- ============ dark mode =========== -->
-    <script>
-  (function () {
-    const root = document.documentElement;
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const themeText = document.getElementById('themeText');
-
-    function applyTheme(theme) {
-      root.setAttribute('data-bs-theme', theme);
-      localStorage.setItem('theme', theme);
-      if (theme === 'dark') {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-        themeText.textContent = 'Light Mode';
-      } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-        themeText.textContent = 'Dark Mode';
-      }
-    }
-
-    // Apply saved preference on load
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    applyTheme(savedTheme);
-
-    themeToggle.addEventListener('click', function (e) {
-      e.preventDefault();
-      const current = root.getAttribute('data-bs-theme') || 'light';
-      applyTheme(current === 'dark' ? 'light' : 'dark');
-    });
-  })();
-</script>
    
 </body>
 </html>

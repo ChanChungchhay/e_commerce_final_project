@@ -22,11 +22,15 @@ a{
     text-decoration: none !important;
     color: black  !important;
 }
+.header .body-link ,
+.header .fa-brands{
+    color: white !important;
+}
 
 /* =================nav=============== */
 .nav .nav-link.active{
-    background-color: var(--color-active) !important;
-    box-shadow: var(--box-shadow);
+   background-color: var(--color-green) !important;
+    color: white !important;
 }
 .nav .nav-link{
     padding: 2px 10px;
@@ -35,7 +39,9 @@ a{
 }
 .nav .nav-link:hover{
     background-color: var(--color-green) !important;
+    color: white !important;
 }
+
 .nav .nav-link:focus{
     background-color: var(--color-green);
     transition: .3s ;
@@ -88,9 +94,6 @@ a{
 }
 .hero-banner .card-1{
     width: 100%;
-    /* height: 250px; */
-    /* overflow: hidden; */
-    /* background-color: bisque; */
     position: relative !important;
     img{
     border-radius: 10px;
@@ -115,10 +118,10 @@ a{
     border-radius: 10px;
 }
 .sect-1 .card{
-    transition: .3s linear;
+    transition: .2s linear;
 }
 .sect-1 .card:hover{
-    transition: .3s;
+    transition: .2s linear;
     transform: translateY(2px);
     box-shadow: var(--box-shadow) !important;
 }
@@ -149,7 +152,6 @@ a{
 /* =======sect-2====== */
 .sect-2 .card{
     cursor: pointer;
-    /* border: none !important; */
     transition: 0.2s linear;
 }
 .sect-2 .card:hover{
@@ -167,7 +169,6 @@ a{
 }
 .sect-2 .status{
     position: absolute;
-    /* background-color: var(--color-green) !important; */
     top: 5%;
     left: 5%;
     color: var(--color-white);
@@ -223,7 +224,6 @@ a{
 }
 /* =======sect-4====== */
 .sect-4 .card{
-    /* height: 200px; */
     border-radius: 10px;
     cursor: pointer;
     border: none;
@@ -299,13 +299,49 @@ a{
     border-radius: 10px;
 }
 
+/* ============== scroll to top =============== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 1030;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-radius: 50% !important;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.btn-primary {
+    background: linear-gradient(135deg, #0B5E34 0%, #064E26 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 24px;
+    box-shadow: 0 4px 14px 0 rgba(11, 94, 52, 0.2), 0 2px 4px 0 rgba(217, 119, 6, 0.15); /* ស្រមោលមាស និងបៃតងលាយគ្នា */
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(11, 94, 52, 0.3), 0 4px 8px 0 rgba(217, 119, 6, 0.15);
+    background: linear-gradient(135deg, #0d6e3c 0%, #085e2f 100%) !important;
+}
+
 /* xs */
 @media screen and (max-width:576px) {
     .hero-banner .btn{
         font-size: 15px;
     }
-    
-   
 }
 @media screen and (min-width:576px) {
     .hero-banner .btn{
@@ -328,5 +364,84 @@ a{
         font-size: 20px;
     }
 } 
+.modal .card:hover{
+    box-shadow: none !important;
+    transform:none !important;
+}
 
+.modal .swiper {
+        width: 100%;
+        height: 100%;
+      }
 
+.modal .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #44444452;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 450px;
+        cursor: pointer;
+      }
+
+.modal .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+.modal .swiper {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+.modal .swiper-slide {
+        background-size: cover;
+        background-position: center;
+      }
+
+.modal .mySwiper2 {
+        height: 80%;
+        width: 100%;
+      }
+
+.modal .mySwiper {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+
+.modal .mySwiper .swiper-slide {
+        height: 100px;
+        opacity: 0.4;
+        border-radius: 10px;
+      }
+
+.modal .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+      }
+
+.modal .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+.modal .fa-star ,
+.modal .fa-star-half-stroke{
+        font-size: 10px;
+    }
+.modal .btn-follow:focus{
+        background-color: var(--color-green) !important;
+        color: var(--color-white) !important;
+    }
+.modal .size {
+        border: none !important;
+    }
+.modal .favo:focus{
+        background-color: red !important;
+        color: white;
+    }

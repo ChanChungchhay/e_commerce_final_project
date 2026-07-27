@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/img/logo/img-logo.png">
     <title>View product</title>
 </head>
 <body>
@@ -66,16 +67,19 @@
                 </a>
                 <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                  <img src="/assets/img/profile_customer/img-2.jpg" class="img-fluid object-fit-cover rounded-circle " style="width: 35px;" alt="">
-                 <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/customer/profile.html">ប្រវត្តិរូប</a></li>
-                        <li><a class="dropdown-item" href="#">privacy</a></li>
-                        <li><a class="dropdown-item" href="#">Dark mode</a></li>
-                        <li><a class="dropdown-item active" href="../index.html">ចាកចេញ</a></li>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./profile.html"><i class="fa-solid fa-user fs-5 bg-danger-subtle p-1 me-3 rounded-circle" style="color:white;width: 30px;height: 30px;"></i>ប្រវត្តិរូប</a></li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center gap-2" href="#" role="button" id="themeToggle">
+                                <i class="fa-solid fa-moon text-warning bg-danger-subtle p-1 d-flex justify-content-center align-items-center rounded-circle" style="width: 30px;height: 30px;" id="themeIcon"></i>
+                                <span id="themeText">Dark Mode</span>
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item active" href="../index.html"><i class="fa-solid fa-right-from-bracket fs-5 bg-danger-subtle p-1 me-3 rounded-circle" style="color:red;width: 30px;height: 30px;"></i>ចាកចេញ</a></li>
                         <li><a class="dropdown-item" href="#"></a></li>
                     </ul>
                 </a>
-                <div class="btn border shadow d-lg-none d-block  d-flex justify-content-center align-items-center" style="width: 35px;height: 35px;"><i class="fa-solid fa-bars" ></i></div>
-
+                <button type="button" class="btn border shadow d-lg-none d-block  d-flex justify-content-center align-items-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"  style="width: 35px;height: 35px;"><i class="fa-solid fa-bars" ></i></button>
             </div>
         </div>
     </nav>
@@ -114,11 +118,10 @@
                                 </div>
                             </div>
                             <div class="card-body d-flex flex-column ">
-                                <!-- <img src="./assets/img/shop-logo/group-users.png" class="img-fluid object-fit-cover" style="width: 50px;" alt=""> -->
                                 <a class="btn shadow btn-outline-light bg-transparent mt-2 d-flex justify-content-between align-items-center" style="width: 200px;" data-bs-toggle="collapse" href="#collapseExample-1" role="button" aria-expanded="false" aria-controls="collapseExample"><div><img src="/assets/img/icon/delivery-man.png" class="img-fluid object-fit-cover me-2" style="width: 20px;" alt="">ការដឹកជញ្ជូន</div><i class="fa-solid fa-angle-down "></i></a>
                                 <div class="collapse " id="collapseExample-1">
                                     <div class="card  card-body border border-success" style="background-color: transparent;">
-                                        <ul class="list-unstyled d">
+                                        <ul class="list-unstyled ">
                                             <li><div class="">ដឹកជញ្ជូនទូទាំងប្រទេសកម្ពុជា</div></li>
                                             <li><div class="">រយៈពេលដឹកជញ្ជូន៖ ១–៣ ថ្ងៃ</div></li>
                                             <li><div class="">វេចខ្ចប់មានសុវត្ថិភាព</div></li>
@@ -198,7 +201,7 @@
                                         <button type="button" class="btn favo bg-transparent border "><i class="fa-regular fa-heart"></i></button>
                                     </div>
                                 </div>
-                                <div class="border border-0 rounded-3 card-body text-bg-light">
+                                <div class="shop border border-0 rounded-3 card-body text-bg-light">
                                     <div class="d-flex justify-content-between align-items-center gap-3 py-3">
                                         <div class="d-flex gap-2">
                                             <a href="#"><img src="/assets/img/shop-logo/electronic-shop.png" class="img-fluid object-fit-cover rounded-circle" style="width: 45px;height: 45px;" alt=""></a>
@@ -215,9 +218,8 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="">
                         <div class="tittle fs-4 fw-bold my-2 text-center">មតិអតិថជន</div>
-                        <div class="card-body py-3 text-bg-light">
+                        <div class="comment card-body py-3 text-bg-light">
                             <div class=" d-flex justify-content-center align-items-center">
                             <div class="d-flex justify-content-start align-items-center gap-2">
                                 <img src="/assets/img/profile_customer/img-4.jpg" class="img-fluid object-fit-cover" style="width: 70px;height: 70px;border-radius: 50%;" alt="">
@@ -242,7 +244,6 @@
                                 "អ្នកលក់មានភាពរួសរាយរាក់ទាក់ ឆ្លើយតបបានរហ័ស ហើយការដឹកជញ្ជូនក៏ទាន់ពេលវេលា។"
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -319,7 +320,7 @@
                                     <li><a class="payment" href="#"><img src="/assets/img/payment/acleda.jpg" class="img-fluid object-fit-cover" alt=""></a></li>
                                     <li><a class="payment" href="#"><img src="/assets/img/payment/visa.png" class="img-fluid object-fit-cover" alt=""></a></li>
                                     <li><a class="payment" href="#"><img src="/assets/img/payment/wing.png" class="img-fluid object-fit-cover" alt=""></a></li>
-                                    <div class="payment bg-body  rounded-2">Cash on Delivery</div>
+                                    <div class="payment bg-success  rounded-2 text-nowrap d-flex justify-content-center align-items-center text-white" style="height: 50px;width: 120px;">Cash on Delivery</div>
                                 </ul>
                             </div>
                     </div>
@@ -381,5 +382,39 @@
             })
         })
     </script>
+
+    <!-- ============ dark mode =========== -->
+    <script>
+  (function () {
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+
+    function applyTheme(theme) {
+      root.setAttribute('data-bs-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        themeText.textContent = 'Light Mode';
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        themeText.textContent = 'Dark Mode';
+      }
+    }
+
+    // Apply saved preference on load
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+
+    themeToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const current = root.getAttribute('data-bs-theme') || 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  })();
+</script>
 </body>
 </html>
