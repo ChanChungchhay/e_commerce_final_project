@@ -1,0 +1,1030 @@
+/* ==========================================================================
+   1. VARIABLES & COLOR PALETTE
+   ========================================================================== */
+:root {
+    --primary: #4F46E5;
+    --primary-hover: #4338CA;
+    --secondary: #6366F1;
+    --secondary-hover: #4F46E5;
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+    --info: #06B6D4;
+    
+    /* Light Mode Variables */
+    --bg-app: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --bg-sidebar: #111827;
+    --bg-sidebar-hover: #1F2937;
+    --text-main: #374151;
+    --text-muted: #6B7280;
+    --border-color: #E2E8F0;
+    --shadow-soft: 0 4px 20px -2px rgba(17, 24, 39, 0.05), 0 2px 6px -1px rgba(17, 24, 39, 0.03);
+    --shadow-hover: 0 10px 30px -10px rgba(79, 70, 229, 0.15), 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(226, 232, 240, 0.8);
+}
+
+[data-bs-theme="dark"] {
+    /* Dark Mode Variables Override */
+    --bg-app: #0B0F19;
+    --bg-card: #1E293B;
+    --bg-sidebar: #0F172A;
+    --bg-sidebar-hover: #1E293B;
+    --text-main: #F1F5F9;
+    --text-muted: #94A3B8;
+    --border-color: #334155;
+    --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 10px 35px -10px rgba(99, 102, 241, 0.3);
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(51, 65, 85, 0.8);
+}
+
+/* ==========================================================================
+   2. SYSTEM GLOBAL STYLES & CUSTOM SCROLLBARS
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Condensed","Battambang", serif !important;
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* Typography Utilities */
+.text-xs { font-size: 0.75rem !important; }
+.text-xxs { font-size: 0.65rem !important; }
+.fw-extrabold { font-weight: 800; }
+.tracking-wider { letter-spacing: 0.05em; }
+
+/* Dynamic Background Gradients */
+.text-gradient-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 0px;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+}
+
+.bg-gradient-secondary {
+    background: linear-gradient(135deg, var(--secondary), #818CF8) !important;
+}
+
+/* Light opacity background tints */
+.bg-light-primary { background-color: rgba(79, 70, 229, 0.12) !important; }
+.bg-light-secondary { background-color: rgba(99, 102, 241, 0.12) !important; }
+.bg-light-success { background-color: rgba(34, 197, 94, 0.12) !important; }
+.bg-light-warning { background-color: rgba(245, 158, 11, 0.12) !important; }
+.bg-light-danger { background-color: rgba(239, 68, 68, 0.12) !important; }
+.bg-light-info { background-color: rgba(6, 182, 212, 0.12) !important; }
+
+/* Custom Light Background for List Elements */
+.bg-light-theme-darker {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+[data-bs-theme="dark"] .bg-light-theme-darker {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* ==========================================================================
+   3. ANIMATED LOADING OVERLAY
+   ========================================================================== */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-app);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.loading-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ==========================================================================
+   4. LAYOUT SYSTEM & WRAPPER CONTAINERS
+   ========================================================================== */
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main-container {
+    flex: 1;
+    margin-left: 280px; /* Sidebar Width offset */
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* ==========================================================================
+   5. LEFT NAVIGATION SIDEBAR
+   ========================================================================== */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background-color: var(--bg-sidebar);
+    color: #9CA3AF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.sidebar-header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+.logo-img{
+    width: 50px;
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+}
+
+.sidebar-menu-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem 1rem;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.menu-item {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.75rem 1rem;
+    color: #9CA3AF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.menu-link i {
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.menu-item:hover .menu-link,
+.menu-item.active .menu-link {
+    color: #FFFFFF;
+    background-color: var(--bg-sidebar-hover);
+}
+
+.menu-item:hover .menu-link i {
+    transform: scale(1.1);
+}
+
+.menu-item.active .menu-link {
+    border-left: 3px solid var(--primary);
+    background-color: rgba(79, 70, 229, 0.1);
+}
+
+.sidebar-footer {
+    padding: 1.5rem 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.user-widget {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-info h6 {
+    font-size: 0.875rem;
+}
+
+.user-role {
+    font-size: 0.7rem;
+    color: #6B7280;
+}
+
+/* ==========================================================================
+   6. TOP NAVIGATION NAVBAR & CONTROL MENUS
+   ========================================================================== */
+.top-navbar {
+    height: 70px;
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    transition: all 0.3s ease;
+}
+
+.search-bar-wrapper {
+    position: relative;
+    width: 320px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.search-bar-wrapper .form-control {
+    padding-left: 42px;
+    border-radius: 30px;
+    font-size: 13px;
+    background-color: var(--bg-app);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+.search-bar-wrapper .form-control:focus {
+    background-color: var(--bg-card);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+/* Header Buttons Layout */
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+    background-color: var(--bg-app);
+    color: var(--primary);
+    transform: translateY(-1px);
+}
+
+.header-divider {
+    width: 1px;
+    background-color: var(--border-color);
+    margin: 0 5px;
+}
+
+.current-date-badge {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.btn-profile {
+    border: none;
+    background: transparent;
+    text-align: left;
+}
+
+.avatar-sm {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+.avatar-xs {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Big Sized Navigation Popups/Menus styling */
+.dropdown-menu-large {
+    width: 320px;
+    padding: 0;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.dropdown-header-custom {
+    padding: 1rem;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown-list-container {
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.dropdown-list-item {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-color);
+    overflow-y: auto;
+    transition: background-color 0.15s ease;
+
+}
+
+.dropdown-list-item:hover {
+    background-color: var(--bg-app);
+}
+
+.dropdown-list-item .user-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.dropdown-list-item .timestamp {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+}
+
+.dropdown-list-item .preview-text {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 4px 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   7. CORE COMPONENT CARDS (NEXIS SYSTEM SHAPE)
+   ========================================================================== */
+.dashboard-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+
+.dashboard-card .card-header {
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.25rem 1.5rem;
+}
+
+.dashboard-card .card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   8. ANIMATED COUNTER & METRICS CARDS
+   ========================================================================== */
+.stats-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stats-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
+}
+
+.stats-card .icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+/* CSS-based Sparklines design inside Metric Cards */
+.sparkline-placeholder {
+    height: 30px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.css-sparkline {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    width: 100%;
+    height: 100%;
+}
+
+.css-sparkline span {
+    flex: 1;
+    background-color: var(--primary);
+    border-radius: 1px;
+    opacity: 0.7;
+    animation: bar-grow 0.8s ease-out forwards;
+}
+
+.css-sparkline.variant-secondary span { background-color: var(--secondary); }
+.css-sparkline.variant-success span { background-color: var(--success); }
+.css-sparkline.variant-warning span { background-color: var(--warning); }
+.css-sparkline.variant-info span { background-color: var(--info); }
+
+/* ==========================================================================
+   9. CUSTOM PURE CSS CHART ENGINE
+   ========================================================================== */
+.css-bar-chart {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    height: 320px;
+    position: relative;
+}
+
+.chart-y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 24px); /* Subtracted bottom x-axis space */
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-align: right;
+}
+
+.chart-bars-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.bar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.bar-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    width: 100%;
+    height: calc(100% - 30px);
+    justify-content: center;
+}
+
+.bar {
+    width: 14px;
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    animation: bar-grow 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform-origin: bottom;
+}
+
+.bar:hover {
+    transform: scaleY(1.05);
+    opacity: 0.9;
+}
+
+.bar-revenue {
+    background: linear-gradient(to top, var(--primary), var(--secondary));
+}
+
+.bar-orders {
+    background: linear-gradient(to top, #A5B4FC, #C7D2FE);
+}
+
+[data-bs-theme="dark"] .bar-orders {
+    background: linear-gradient(to top, #312E81, #4338CA);
+}
+
+.bar-label {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   10. ORDER PIPELINE SYSTEM TABLES
+   ========================================================================== */
+.table th {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-uppercase: true;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.table td {
+    padding: 1.15rem 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Status badging styles */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-completed { background-color: rgba(34, 197, 94, 0.15); color: #16A34A; }
+.status-pending { background-color: rgba(245, 158, 11, 0.15); color: #D97706; }
+.status-shipping { background-color: rgba(99, 102, 241, 0.15); color: #4F46E5; }
+.status-cancelled { background-color: rgba(239, 68, 68, 0.15); color: #DC2626; }
+
+/* Product catalog row imagery thumbnail */
+.product-mini-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.product-mini-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   11. TIMELINE & OPERATION LOGS
+   ========================================================================== */
+.custom-timeline {
+    position: relative;
+    padding-left: 28px;
+}
+
+.custom-timeline::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 4px;
+    height: calc(100% - 10px);
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -28px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    z-index: 2;
+    box-shadow: 0 0 0 4px var(--bg-card);
+}
+
+.timeline-content {
+    background-color: var(--bg-app);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+/* ==========================================================================
+   12. INTERACTIVE JAVASCRIPT TODO ENGINE
+   ========================================================================== */
+.max-height-todo-container {
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    animation: fade-in 0.3s ease;
+}
+
+.todo-item.completed span {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+/* Custom Outlined form layout fields */
+.btn-outline-custom {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--bg-app);
+    border-color: var(--text-muted);
+}
+
+/* ==========================================================================
+   13. MONTHLY CALENDAR GRID
+   ========================================================================== */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    text-align: center;
+}
+
+.calendar-header-day {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-uppercase: true;
+    color: var(--text-muted);
+    padding-bottom: 8px;
+}
+
+.calendar-cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.calendar-cell:hover:not(.empty-cell) {
+    background-color: var(--border-color);
+}
+
+.calendar-cell.today {
+    background-color: var(--primary) !important;
+    color: #FFFFFF !important;
+}
+
+.calendar-cell.empty-cell {
+    cursor: default;
+}
+
+/* ==========================================================================
+   14. RIGHT HAND TARGET DASHBOARD PANELS
+   ========================================================================== */
+.circular-progress-wrap {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.progress-circle {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: var(--border-color);
+    stroke-width: 8;
+}
+
+.circle-progress {
+    fill: none;
+    stroke: url(#grad-bar); /* SVG gradient matching primary/secondary */
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283; /* Handled dynamic calculation via JS */
+    transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Standard SVG Gradient styling inject definition */
+#progress-circle-indicator {
+    stroke: var(--primary);
+}
+
+.progress-inner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ==========================================================================
+   15. FLOATING ACTIONS (FAB) DRAWERS
+   ========================================================================== */
+.fab-wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1030;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 12px;
+}
+
+.fab-main {
+    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.4);
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.fab-main:hover {
+    transform: scale(1.05);
+}
+
+.fab-wrapper.active .fab-main {
+    transform: rotate(45deg);
+}
+
+.fab-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fab-wrapper.active .fab-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.fab-item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+}
+.text-insights{
+    font-size: 14px;
+}
+.fab-item:hover {
+    transform: scale(1.1);
+    color: var(--primary);
+}
+
+/* ==========================================================================
+   16. BACK TO TOP SCROLL BUTTON
+   ========================================================================== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1030;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ==========================================================================
+   17. SYSTEM FOOTER
+   ========================================================================== */
+.app-footer {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+.footer-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.footer-link:hover {
+    color: var(--primary);
+}
+
+/* ==========================================================================
+   18. GENERAL MODAL / TRANSITION SETS
+   ========================================================================== */
+.modal-content {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+.form-control, .form-select {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--bg-card);
+    border-color: var(--primary);
+    color: var(--text-main);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* ==========================================================================
+   19. KEYFRAME ANIMATIONS DEFINITION
+   ========================================================================== */
+@keyframes bar-grow {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   20. RESPONSIVE WEB DESIGNS (RESPONSIVE GRID ADJUSTMENTS)
+   ========================================================================== */
+
+/* Laptop screens */
+@media (max-width: 1440px) {
+    .main-container {
+        margin-left: 280px;
+    }
+}
+
+/* Tablet screens (Collapsing Navigation Mechanics) */
+@media (max-width: 991.98px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .main-container {
+        margin-left: 0;
+    }
+    
+    .search-bar-wrapper {
+        width: 200px;
+    }
+}
+
+/* Small mobile views */
+@media (max-width: 575.98px) {
+    .top-navbar {
+        padding: 0 0.5rem;
+    }
+    
+    .search-bar-wrapper {
+        display: none; /* Hide top search bar on ultra small displays to avoid squeeze */
+    }
+    
+    .fab-wrapper {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .scroll-to-top {
+        bottom: 20px;
+        left: 20px;
+    }
+}

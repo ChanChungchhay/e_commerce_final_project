@@ -1,0 +1,456 @@
+<!-- START OF FILE seller_analytics.html -->
+<!DOCTYPE html>
+<html lang="km" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>វិភាគទិន្នន័យ - Khmer Bazaar</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700&family=Kantumruy+Pro:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Main Style Sheet (Shared with Dashboard) -->
+    <link rel="stylesheet" href="../assets/css/seller_analytics.css">
+    <link rel="stylesheet" href="../assets/css/seller_analytics.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <!-- Left Sidebar Navigation -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <div class="logo-icon">
+                        <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img" alt="Logo">
+                    </div>
+                    <span class="brand-name">Khmer Bazaar<span class="text-success">.</span></span>
+                </div>
+                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close" aria-label="Close"></button>
+            </div>
+            
+            <div class="sidebar-menu-wrapper">
+                <ul class="sidebar-menu">
+                    <li class="menu-item" data-page="dashboard">
+                        <a href="seller_dashboard.html" class="menu-link">
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            <span class="menu-text">ផ្ទាំងគ្រប់គ្រង</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="products">
+                        <a href="seller_products.html" class="menu-link">
+                            <i class="bi bi-box-seam-fill"></i>
+                            <span class="menu-text">ផលិតផល</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="orders">
+                        <a href="seller_orders.html" class="menu-link">
+                            <i class="bi bi-cart-fill"></i>
+                            <span class="menu-text">ការបញ្ជាទិញ</span>
+                            <span class="badge rounded-pill bg-danger ms-auto">12</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="customers">
+                        <a href="seller_customers.html" class="menu-link">
+                            <i class="bi bi-people-fill"></i>
+                            <span class="menu-text">អតិថិជន</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active" data-page="analytics">
+                        <a href="seller_analytics.html" class="menu-link">
+                            <i class="bi bi-bar-chart-line-fill"></i>
+                            <span class="menu-text">វិភាគទិន្នន័យ</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="messages">
+                        <a href="seller_messages.html" class="menu-link">
+                            <i class="bi bi-chat-left-dots-fill"></i>
+                            <span class="menu-text">សារផ្ញើ</span>
+                            <span class="badge rounded-pill bg-primary ms-auto">4</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-footer">
+                <div class="user-widget">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                        class="avatar rounded-circle" alt="User Profile">
+                    <div class="user-info">
+                        <h6 class="mb-0 text-white">ហេង សំណាង</h6>
+                    </div>
+                </div>
+                <button
+                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-box-arrow-left"></i> ចាកចេញ
+                </button>
+            </div>
+        </aside>
+
+        <!-- Right Side Main Content Area -->
+        <div class="main-container">
+            <!-- Top Navbar -->
+            <header class="top-navbar">
+                <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-icon d-lg-none" id="sidebar-toggle" aria-label="Toggle Sidebar">
+                            <i class="bi bi-list fs-4"></i>
+                        </button>
+                        <span class="navbar-title fw-bold text-dark">របាយការណ៍វិភាគទិន្នន័យហាងលក់ (Analytics Console)</span>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
+                            <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                        </button>
+                        <div class="header-divider h-100"></div>
+                        <div class="dropdown">
+                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100" class="avatar-sm rounded-circle" alt="User Avatar">
+                                <span class="profile-name d-none d-lg-inline-block">ហេង សំណាង</span>
+                                <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="seller_profile.html"><i class="bi bi-person"></i> ប្រវត្តិរូបសង្ខេប</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i> ចាកចេញ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="content-wrapper">
+                <div class="container-fluid px-4 py-4">
+                    
+                    <!-- Title and Actions Header -->
+                    <div class="row align-items-center mb-4 gy-3">
+                        <div class="col-md-6 col-12">
+                            <h2 class="welcome-heading mb-1 text-gradient-primary">វិភាគទិន្នន័យហាងលក់</h2>
+                            <p class="text-muted text-sm mb-0">តាមដានស្ថានភាពការលក់ ចរាចរណ៍អ្នកទិញ និងដំណើរការផលិតផលរបស់អ្នក</p>
+                        </div>
+                        <div class="col-md-6 col-12 text-md-end">
+                            <button class="btn btn-primary d-flex align-items-center gap-2 ms-auto text-white rounded-3" id="exportReportBtn">
+                                <i class="bi bi-file-earmark-excel-fill"></i> ទាញយករបាយការណ៍ជា Excel
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- KPI Statistics Grid (Using Shared Stats Card Layout) -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="stats-header d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-primary text-primary">
+                                        <i class="bi bi-currency-dollar"></i>
+                                    </div>
+                                    <span class="badge bg-light-success text-success d-flex align-items-center gap-1">
+                                        <i class="bi bi-arrow-up-right"></i> +14%
+                                    </span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted fw-semibold text-xs text-uppercase tracking-wider">ប្រាក់ចំណូលសរុប</h6>
+                                    <h3 class="mb-1 fw-bold text-dark">$1,520.00</h3>
+                                    <span class="text-xxs text-muted">ធៀបនឹងខែមុន ($1,340)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="stats-header d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-success text-success">
+                                        <i class="bi bi-cart-check-fill"></i>
+                                    </div>
+                                    <span class="badge bg-light-success text-success d-flex align-items-center gap-1">
+                                        <i class="bi bi-arrow-up-right"></i> +8.4%
+                                    </span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted fw-semibold text-xs text-uppercase tracking-wider">ការកុម្មង់សរុប</h6>
+                                    <h3 class="mb-1 fw-bold text-dark">158 ដង</h3>
+                                    <span class="text-xxs text-muted">អត្រាសម្រេចការដឹកជញ្ជូន ៩៨%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="stats-header d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-info text-info">
+                                        <i class="bi bi-people-fill"></i>
+                                    </div>
+                                    <span class="badge bg-light-success text-success d-flex align-items-center gap-1">
+                                        <i class="bi bi-arrow-up-right"></i> +18%
+                                    </span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted fw-semibold text-xs text-uppercase tracking-wider">អតិថិជនសរុប</h6>
+                                    <h3 class="mb-1 fw-bold text-dark">450 នាក់</h3>
+                                    <span class="text-xxs text-muted">អតិថិជនថ្មីក្នុងខែនេះ +90 នាក់</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="stats-header d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-warning text-warning">
+                                        <i class="bi bi-graph-up-arrow"></i>
+                                    </div>
+                                    <span class="badge bg-light-danger text-danger d-flex align-items-center gap-1">
+                                        <i class="bi bi-arrow-down-left"></i> -0.5%
+                                    </span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted fw-semibold text-xs text-uppercase tracking-wider">Conversion Rate</h6>
+                                    <h3 class="mb-1 fw-bold text-dark">3.42%</h3>
+                                    <span class="text-xxs text-muted">អត្រាបំប្លែងការទិញជាមធ្យម</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts Grid: Sales Chart (Pure CSS) vs Product Categories (CSS Progress Bars) -->
+                    <div class="row g-4 mb-4">
+                        <!-- Sales Chart Card (Using Existing Bar Chart styling) -->
+                        <div class="col-12 col-xl-8">
+                            <div class="dashboard-card">
+                                <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                    <div>
+                                        <h5 class="mb-0 card-title">និន្នាការនៃការលក់ប្រចាំសប្តាហ៍</h5>
+                                        <span class="text-muted text-xs">ប្រៀបធៀបប្រាក់ចំណូលលក់ និងចំនួនប្រតិបត្តិការកុម្មង់</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-container py-3">
+                                        <div class="css-bar-chart">
+                                            <div class="chart-y-axis">
+                                                <span>10k</span>
+                                                <span>8k</span>
+                                                <span>6k</span>
+                                                <span>4k</span>
+                                                <span>2k</span>
+                                                <span>0</span>
+                                            </div>
+                                            <div class="chart-bars-wrap">
+                                                <div class="bar-col">
+                                                    <div class="bar-group">
+                                                        <div class="bar bar-revenue" style="height: 60%;" data-bs-toggle="tooltip" title="ចំណូល៖ $6,000"></div>
+                                                        <div class="bar bar-orders" style="height: 40%;" data-bs-toggle="tooltip" title="ការកុម្មង់៖ 40"></div>
+                                                    </div>
+                                                    <span class="bar-label">ចន្ទ</span>
+                                                </div>
+                                                <div class="bar-col">
+                                                    <div class="bar-group">
+                                                        <div class="bar bar-revenue" style="height: 75%;" data-bs-toggle="tooltip" title="ចំណូល៖ $7,500"></div>
+                                                        <div class="bar bar-orders" style="height: 55%;" data-bs-toggle="tooltip" title="ការកុម្មង់៖ 55"></div>
+                                                    </div>
+                                                    <span class="bar-label">អង្គារ</span>
+                                                </div>
+                                                <div class="bar-col">
+                                                    <div class="bar-group">
+                                                        <div class="bar bar-revenue" style="height: 90%;" data-bs-toggle="tooltip" title="ចំណូល៖ $9,000"></div>
+                                                        <div class="bar bar-orders" style="height: 70%;" data-bs-toggle="tooltip" title="ការកុម្មង់៖ 70"></div>
+                                                    </div>
+                                                    <span class="bar-label">ពុធ</span>
+                                                </div>
+                                                <div class="bar-col">
+                                                    <div class="bar-group">
+                                                        <div class="bar bar-revenue" style="height: 45%;" data-bs-toggle="tooltip" title="ចំណូល៖ $4,500"></div>
+                                                        <div class="bar bar-orders" style="height: 35%;" data-bs-toggle="tooltip" title="ការកុម្មង់៖ 35"></div>
+                                                    </div>
+                                                    <span class="bar-label">ព្រហ</span>
+                                                </div>
+                                                <div class="bar-col">
+                                                    <div class="bar-group">
+                                                        <div class="bar bar-revenue" style="height: 80%;" data-bs-toggle="tooltip" title="ចំណូល៖ $8,000"></div>
+                                                        <div class="bar bar-orders" style="height: 65%;" data-bs-toggle="tooltip" title="ការកុម្មង់៖ 65"></div>
+                                                    </div>
+                                                    <span class="bar-label">សុក្រ</span>
+                                                </div>
+                                                <div class="bar-col">
+                                                    <div class="bar-group">
+                                                        <div class="bar bar-revenue" style="height: 95%;" data-bs-toggle="tooltip" title="ចំណូល៖ $9,500"></div>
+                                                        <div class="bar bar-orders" style="height: 85%;" data-bs-toggle="tooltip" title="ការកុម្មង់៖ 85"></div>
+                                                    </div>
+                                                    <span class="bar-label">សៅរ៍</span>
+                                                </div>
+                                                <div class="bar-col">
+                                                    <div class="bar-group">
+                                                        <div class="bar bar-revenue" style="height: 100%;" data-bs-toggle="tooltip" title="ចំណូល៖ $10,000"></div>
+                                                        <div class="bar bar-orders" style="height: 90%;" data-bs-toggle="tooltip" title="ការកុម្មង់៖ 90"></div>
+                                                    </div>
+                                                    <span class="bar-label">អាទិត្យ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chart-legends d-flex justify-content-center gap-4 mt-3">
+                                            <span class="legend-item"><span class="legend-color bg-primary"></span> ប្រាក់ចំណូល (Revenue)</span>
+                                            <span class="legend-item"><span class="legend-color bg-secondary"></span> បរិមាណការកុម្មង់ (Orders)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                        <!-- Revenue by Categories (Using Pure Bootstrap Progress Bars to avoid JS chart scripts) -->
+                            <div class="col-12 col-xl-4">
+                                <div class="dashboard-card h-100">
+                                    <div class="card-header">
+                                        <h5 class="mb-0 card-title">ចំណូលតាមប្រភេទផលិតផល</h5>
+                                        <span class="text-muted text-xs">ការវិភាគចំណូលលក់ដាច់តាមក្រុមផលិតផល</span>
+                                    </div>
+                                    <div class="card-body d-flex flex-column justify-content-center gap-4 py-4">
+                                        <!-- Category 1 -->
+                                        <div>
+                                            <div class="d-flex justify-content-between text-xs mb-2">
+                                                <span class="fw-semibold text-dark">សម្លៀកបំពាក់ និងគ្រឿងលម្អ (Fashion)</span>
+                                                <span class="fw-bold">$84,040.00 (55%)</span>
+                                            </div>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 55%"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Category 2 -->
+                                        <div>
+                                            <div class="d-flex justify-content-between text-xs mb-2">
+                                                <span class="fw-semibold text-dark">គ្រឿងអេឡិចត្រូនិច (Electronics)</span>
+                                                <span class="fw-bold">$45,840.00 (30%)</span>
+                                            </div>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 30%"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Category 3 -->
+                                        <div>
+                                            <div class="d-flex justify-content-between text-xs mb-2">
+                                                <span class="fw-semibold text-dark">គ្រឿងសម្អាង និងថែរក្សាស្បែក (Cosmetics)</span>
+                                                <span class="fw-bold">$15,280.00 (10%)</span>
+                                            </div>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 10%"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Category 4 -->
+                                        <div>
+                                            <div class="d-flex justify-content-between text-xs mb-2">
+                                                <span class="fw-semibold text-dark">ផ្សេងៗ (Others)</span>
+                                                <span class="fw-bold">$7,640.00 (5%)</span>
+                                            </div>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 5%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- Product Performance Analytics Table -->
+                        <div class="card border-0 shadow-sm rounded-3 mt-4">
+                            <div class="card-header bg-transparent border-bottom py-3">
+                                <h6 class="mb-0 fw-bold text-dark"><i class="bi bi-box-seam-fill"></i> ការវិភាគការលក់លម្អិតតាមមុខទំនិញ (Product Performance Analytics)</h6>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th class="py-3 px-3">ឈ្មោះទំនិញ</th>
+                                                <th>ប្រភេទក្រុម</th>
+                                                <th>ចំនួនលក់ដាច់</th>
+                                                <th>ចំណូលសរុប</th>
+                                                <th>អត្រាសម្រេចការដឹក</th>
+                                                <th>ស្ថានភាពស្តុក</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="py-3 px-3 d-flex align-items-center gap-3">
+                                                    <div class="product-mini-thumb">
+                                                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=100" alt="Product">
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="mb-0 text-sm fw-semibold">UltraBass Headphones</h6>
+                                                        <span class="text-xs text-muted">SKU: SKU-99381</span>
+                                                    </div>
+                                                </td>
+                                                <td>Electronics</td>
+                                                <td class="fw-semibold">1,420 គ្រឿង</td>
+                                                <td class="fw-bold text-dark">$183,180.00</td>
+                                                <td><span class="badge bg-success-subtle text-success rounded-pill px-2">99%</span></td>
+                                                <td><span class="badge bg-success text-white px-2 py-1 text-xxs">មានក្នុងស្តុក (85)</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-3 px-3 d-flex align-items-center gap-3">
+                                                    <div class="product-mini-thumb">
+                                                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=100" alt="Product">
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="mb-0 text-sm fw-semibold">Active Fit Pro Watch</h6>
+                                                        <span class="text-xs text-muted">SKU: SKU-99324</span>
+                                                    </div>
+                                                </td>
+                                                <td>Smart Wearables</td>
+                                                <td class="fw-semibold">890 គ្រឿង</td>
+                                                <td class="fw-bold text-dark">$177,110.00</td>
+                                                <td><span class="badge bg-success-subtle text-success rounded-pill px-2">97%</span></td>
+                                                <td><span class="badge bg-success text-white px-2 py-1 text-xxs">មានក្នុងស្តុក (42)</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-3 px-3 d-flex align-items-center gap-3">
+                                                    <div class="product-mini-thumb">
+                                                        <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&q=80&w=100" alt="Product">
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="mb-0 text-sm fw-semibold">Laser Gaming Mouse</h6>
+                                                        <span class="text-xs text-muted">SKU: SKU-88321</span>
+                                                    </div>
+                                                </td>
+                                                <td>Accessories</td>
+                                                <td class="fw-semibold">720 គ្រឿង</td>
+                                                <td class="fw-bold text-dark">$50,400.00</td>
+                                                <td><span class="badge bg-success-subtle text-success rounded-pill px-2">95%</span></td>
+                                                <td><span class="badge bg-danger text-white px-2 py-1 text-xxs">ជិតអស់ស្តុក (5)</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+
+            <!-- Bottom Professional Footer Section -->
+            <footer class="app-footer">
+                <div class="container-fluid px-4 py-3 d-flex flex-column flex-sm-row align-items-center justify-content-between text-muted text-xs">
+                    <div>
+                        <span class="fw-semibold">Khmer Bazaar</span> Storefront Center &copy; <span>2026</span>. រក្សាសិទ្ធិគ្រប់យ៉ាង។
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- System Event Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+        <div id="actionToast" class="toast align-items-center text-white bg-dark border-0 shadow" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body d-flex align-items-center gap-2">
+                    <i class="bi bi-info-circle-fill text-success"></i>
+                    <span id="toast-message">ប្រតិបត្តិការទទួលបានជោគជ័យ!</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS with Popper -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Simple Shared Theme Controller -->
+    <script src="../assets/js/seller_analytics.js"></script>
+</body>
+</html>
+<!-- END OF FILE seller_analytics.html -->

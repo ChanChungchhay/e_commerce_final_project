@@ -1,0 +1,416 @@
+<!-- START OF FILE seller_customers.html -->
+<!DOCTYPE html>
+<html lang="km" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>គ្រប់គ្រងអតិថិជន - Khmer Bazaar</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Base Dashboard Style -->
+    <link rel="stylesheet" href="../assets/css/seller_dashboard.css">
+    <!-- Customers Specific Style -->
+    <link rel="stylesheet" href="../assets/css/seller_customers.css">
+</head>
+<body>
+    <!-- Application Layout Wrapper -->
+    <div class="dashboard-wrapper">
+        <!-- Left Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <div class="logo-icon">
+                        <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img" alt="Logo">
+                    </div>
+                    <span class="brand-name">Khmer Bazaar<span class="text-success">.</span></span>
+                </div>
+                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close" aria-label="Close"></button>
+            </div>
+            
+            <div class="sidebar-menu-wrapper">
+                <ul class="sidebar-menu">
+                    <li class="menu-item" data-page="dashboard">
+                        <a href="seller_dashboard.html" class="menu-link">
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            <span class="menu-text">ផ្ទាំងគ្រប់គ្រង</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="products">
+                        <a href="seller_products.html" class="menu-link">
+                            <i class="bi bi-box-seam-fill"></i>
+                            <span class="menu-text">ផលិតផល</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="orders">
+                        <a href="seller_orders.html" class="menu-link">
+                            <i class="bi bi-cart-fill"></i>
+                            <span class="menu-text">ការបញ្ជាទិញ</span>
+                            <span class="badge rounded-pill bg-danger ms-auto">12</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active" data-page="customers">
+                        <a href="seller_customers.html" class="menu-link">
+                            <i class="bi bi-people-fill"></i>
+                            <span class="menu-text">អតិថិជន</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="analytics">
+                        <a href="seller_analytics.html" class="menu-link">
+                            <i class="bi bi-bar-chart-line-fill"></i>
+                            <span class="menu-text">វិភាគទិន្នន័យ</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="messages">
+                        <a href="seller_messages.html" class="menu-link">
+                            <i class="bi bi-chat-left-dots-fill"></i>
+                            <span class="menu-text">សារផ្ញើ</span>
+                            <span class="badge rounded-pill bg-primary ms-auto">4</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="user-widget">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                        class="avatar rounded-circle" alt="User Profile">
+                    <div class="user-info">
+                        <h6 class="mb-0 text-white">ហេង សំណាង</h6>
+                    </div>
+                </div>
+                <button
+                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-box-arrow-left"></i> ចាកចេញ
+                </button>
+            </div>
+        </aside>
+
+        <!-- Right Side Main Content Area -->
+        <div class="main-container">
+            <!-- Top Navbar -->
+            <header class="top-navbar">
+                <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-icon d-lg-none" id="sidebar-toggle" aria-label="Toggle Sidebar">
+                            <i class="bi bi-list fs-4"></i>
+                        </button>
+                        <div class="search-bar-wrapper">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" class="form-control" id="customer-quick-search" placeholder="ស្វែងរកតាមឈ្មោះ លេខទូរស័ព្ទ ឬអ៊ីមែល...">
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
+                            <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                        </button>
+                        <div class="header-divider h-100"></div>
+                        <div class="dropdown">
+                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100" class="avatar-sm rounded-circle" alt="User Avatar">
+                                <span class="profile-name d-none d-lg-inline-block">ហេង សំណាង</span>
+                                <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> ប្រវត្តិរូបសង្ខេប</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i> ចាកចេញ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="content-wrapper">
+                <div class="container-fluid px-4 py-4">
+                    
+                    <!-- Title Header -->
+                    <div class="row align-items-center mb-4 gy-3">
+                        <div class="col-md-6 col-12">
+                            <h2 class="welcome-heading mb-1 text-gradient-primary">បញ្ជីព័ត៌មានអតិថិជន</h2>
+                            <p class="text-muted text-sm mb-0">គ្រប់គ្រងទំនាក់ទំនង តាមដានចំណាយ និងប្រវត្តិនៃការទិញទំនិញរបស់អតិថិជន</p>
+                        </div>
+                        <div class="col-md-6 col-12 d-flex flex-wrap justify-content-md-end gap-2">
+                            <button class="btn btn-primary d-flex align-items-center gap-2 text-white rounded-3" id="btn-export-customers">
+                                <i class="bi bi-file-earmark-arrow-down-fill"></i> ទាញយកបញ្ជីឈ្មោះអតិថិជន
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Customer Statistics Grid -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-primary text-primary">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <span class="badge bg-light-success text-success">+8 នាក់ខែនេះ</span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">អតិថិជនសរុប</h6>
+                                    <h3 class="mb-0 stats-counter" id="metric-total-customers" data-target="182">182</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-warning text-warning">
+                                        <i class="bi bi-gem"></i>
+                                    </div>
+                                    <span class="badge bg-light-warning text-warning">សមាជិក VIP</span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">អតិថិជន VIP</h6>
+                                    <h3 class="mb-0 stats-counter" id="metric-vip-customers" data-target="24">24</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-success text-success">
+                                        <i class="bi bi-person-check"></i>
+                                    </div>
+                                    <span class="badge bg-light-success text-success">សកម្មខ្លាំង</span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">សកម្មក្នុងខែនេះ</h6>
+                                    <h3 class="mb-0 stats-counter" id="metric-active-customers" data-target="145">145</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="stats-card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div class="icon-wrap bg-light-info text-info">
+                                        <i class="bi bi-graph-up"></i>
+                                    </div>
+                                    <span class="badge bg-light-info text-info">ជាមធ្យម / ម្នាក់</span>
+                                </div>
+                                <div class="stats-body mt-3">
+                                    <h6 class="text-muted text-xs text-uppercase tracking-wider">ចំណាយមធ្យម (LTV)</h6>
+                                    <h3 class="mb-0">$<span class="stats-counter" id="metric-avg-spent" data-target="215">215</span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filters Control Area -->
+                    <div class="dashboard-card mb-4">
+                        <div class="card-body py-3">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-12 col-md-4">
+                                    <label class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្វែងរកអតិថិជន</label>
+                                    <input type="text" class="form-control" id="filter-customer-search" placeholder="ស្វែងរកតាមឈ្មោះ លេខទូរស័ព្ទ ឬអ៊ីមែល...">
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <label class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ប្រភេទអតិថិជន</label>
+                                    <select class="form-select" id="filter-vip-type">
+                                        <option value="all">ទាំងអស់</option>
+                                        <option value="vip">អតិថិជន VIP</option>
+                                        <option value="regular">អតិថិជនទូទៅ (Regular)</option>
+                                        <option value="new">អតិថិជនថ្មី (New)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <label class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្ថានភាព</label>
+                                    <select class="form-select" id="filter-customer-status">
+                                        <option value="all">ទាំងអស់</option>
+                                        <option value="active">សកម្ម (Active)</option>
+                                        <option value="inactive">អសកម្ម (Inactive)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-2 d-flex align-items-end h-100 mt-auto">
+                                    <button class="btn btn-outline-custom w-100 d-flex justify-content-center align-items-center gap-2" id="btn-reset-customer-filters">
+                                        <i class="bi bi-arrow-counterclockwise"></i> កំណត់ឡើងវិញ
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customers Table Card -->
+                    <div class="dashboard-card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <div>
+                                <h5 class="mb-0 card-title">មូលដ្ឋានទិន្នន័យអតិថិជន</h5>
+                                <span class="text-muted text-xs">គ្រប់គ្រង និងស្វែងយល់ពីតម្រូវការរបស់អតិថិជនម្នាក់ៗ</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            
+                            <div class="table-responsive" id="customers-table-wrapper">
+                                <table class="table table-hover align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>អតិថិជន</th>
+                                            <th>ទំនាក់ទំនង</th>
+                                            <th>ប្រភេទសមាជិក</th>
+                                            <th>ចំនួនបញ្ជាទិញ</th>
+                                            <th>ចំណាយសរុប</th>
+                                            <th>ស្ថានភាព</th>
+                                            <th>ថ្ងៃចុះឈ្មោះ</th>
+                                            <th class="text-end">សកម្មភាព</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="customers-list-rows">
+                                        <!-- Javascript renders initial customer rows here dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Empty Customers State -->
+                            <div class="text-center py-5 d-none" id="customers-empty-state">
+                                <i class="bi bi-people-mute text-muted" style="font-size: 3rem;"></i>
+                                <h5 class="mt-3">រកមិនឃើញអតិថិជនដែលអ្នកចង់ស្វែងរកទេ</h5>
+                                <p class="text-muted text-sm">សូមព្យាយាមស្វែងរកជាមួយទិន្នន័យផ្សេងទៀត។</p>
+                            </div>
+
+                            <!-- Pagination Footer -->
+                            <div class="px-4 py-3 d-flex align-items-center justify-content-between border-top">
+                                <span class="text-xs text-muted" id="customer-pagination-text">កំពុងបង្ហាញ 0 ក្នុងចំណោម 0 អតិថិជន</span>
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination pagination-sm mb-0">
+                                        <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- Bottom professional Footer -->
+            <footer class="app-footer">
+                <div class="container-fluid px-4 py-3 d-flex flex-column flex-sm-row align-items-center justify-content-between text-muted text-xs">
+                    <div>
+                        <span class="fw-semibold">Khmer Bazaar</span> Storefront Center &copy; <span>2026</span>. រក្សាសិទ្ធិគ្រប់យ៉ាង។
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Floating action to Top -->
+    <button class="btn btn-primary scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Customer Profile dossier Details Modal -->
+    <div class="modal fade" id="customerDetailModal" tabindex="-1" aria-labelledby="customerDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-gradient-primary text-white border-0 py-3">
+                    <h5 class="modal-title fw-bold" id="customerDetailModalLabel">កម្រងព័ត៌មានអតិថិជន និង ប្រវត្តិបញ្ជាទិញ</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    
+                    <div class="row g-4">
+                        <!-- Left Panel: Profile Detail, Spend Overview, Notes -->
+                        <div class="col-12 col-md-5 border-end-md">
+                            <div class="text-center pb-3 border-bottom mb-3">
+                                <div class="position-relative d-inline-block">
+                                    <img src="" class="customer-large-avatar rounded-circle mb-2" id="detail-cust-avatar" alt="Customer Avatar">
+                                    <span class="customer-badge-label" id="detail-cust-badge">VIP</span>
+                                </div>
+                                <h5 class="fw-bold mb-1" id="detail-cust-name">មាស ធីតា</h5>
+                                <span class="text-xs text-muted font-monospace" id="detail-cust-joined">សមាជិកតាំងពី: 12-មករា-2025</span>
+                            </div>
+
+                            <h6 class="text-xs fw-bold text-uppercase text-muted mb-2">ព័ត៌មានទំនាក់ទំនង</h6>
+                            <ul class="list-unstyled text-sm mb-4">
+                                <li class="mb-2"><i class="bi bi-telephone text-muted me-2"></i> <span id="detail-cust-phone">092 112 233</span></li>
+                                <li class="mb-2"><i class="bi bi-envelope text-muted me-2"></i> <span id="detail-cust-email">thida.meas@gmail.com</span></li>
+                                <li class="mb-2"><i class="bi bi-geo-alt text-muted me-2"></i> <span id="detail-cust-address" class="text-xs">ផ្លូវ ៣១០ ភ្នំពេញ</span></li>
+                            </ul>
+
+                            <h6 class="text-xs fw-bold text-uppercase text-muted mb-2">ការវិភាគចំណាយ (Lifetime analytics)</h6>
+                            <div class="row g-2 mb-4 text-center">
+                                <div class="col-6">
+                                    <div class="p-2 border rounded-3 bg-light-theme-darker">
+                                        <span class="text-xxs text-muted d-block">ទិញសរុប</span>
+                                        <strong class="text-sm text-primary" id="detail-cust-orders-count">12 ដង</strong>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-2 border rounded-3 bg-light-theme-darker">
+                                        <span class="text-xxs text-muted d-block">ចំណាយសរុប</span>
+                                        <strong class="text-sm text-success" id="detail-cust-total-spent">$450.00</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cust-internal-note" class="form-label text-xs fw-bold text-uppercase text-muted">កំណត់ចំណាំផ្ទៃក្នុងរបស់ហាង</label>
+                                <textarea class="form-control text-xs" id="cust-internal-note" rows="3" placeholder="ឧ. អតិថិជននេះចូលចិត្តការវេចខ្ចប់ប្រអប់ស្អាតៗ និងឆ្លើយតបរហ័ស..."></textarea>
+                            </div>
+                            
+                            <button class="btn btn-sm btn-primary w-100 text-white" id="btn-save-customer-note">
+                                <i class="bi bi-save"></i> រក្សាទុកកំណត់ចំណាំ
+                            </button>
+                        </div>
+
+                        <!-- Right Panel: Order History Table -->
+                        <div class="col-12 col-md-7">
+                            <h6 class="fw-bold mb-3"><i class="bi bi-clock-history"></i> ប្រវត្តិនៃការបញ្ជាទិញថ្មីៗ</h6>
+                            
+                            <div class="table-responsive" style="max-height: 380px; overflow-y: auto;">
+                                <table class="table table-sm table-hover align-middle border text-xs">
+                                    <thead class="bg-light sticky-top">
+                                        <tr>
+                                            <th>លេខបញ្ជាទិញ</th>
+                                            <th>កាលបរិច្ឆេទ</th>
+                                            <th>តម្លៃសរុប</th>
+                                            <th>ស្ថានភាព</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="customer-history-rows">
+                                        <!-- Dynomically generated historical list -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Event Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+        <div id="actionToast" class="toast align-items-center text-white bg-dark border-0 shadow" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body d-flex align-items-center gap-2">
+                    <i class="bi bi-info-circle"></i>
+                    <span id="toast-message">ប្រតិបត្តិការទទួលបានជោគជ័យ!</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS with Popper -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core Dashboard Layout Javascript Engine -->
+    <script src="../assets/js/seller_dashboard.js"></script>
+    <!-- Customers Page specific JavaScript controller -->
+    <script src="../assets/js/seller_customers.js"></script>
+</body>
+</html>

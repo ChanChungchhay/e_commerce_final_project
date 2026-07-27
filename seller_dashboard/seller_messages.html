@@ -1,0 +1,386 @@
+<!-- START OF FILE seller_messages.html -->
+<!DOCTYPE html>
+<html lang="km" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>សារផ្ញើអតិថិជន - Khmer Bazaar</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700&family=Kantumruy+Pro:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Shared Sidebar/Navbar Style Sheet -->
+    <link rel="stylesheet" href="../assets/css/seller_dashboard.css">
+    <!-- Messages Specific Style Sheet -->
+    <link rel="stylesheet" href="../assets/css/seller_messages.css">
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <div class="logo-icon">
+                        <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img" alt="Logo">
+                    </div>
+                    <span class="brand-name">Khmer Bazaar<span class="text-success">.</span></span>
+                </div>
+                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="sidebar-menu-wrapper">
+                <ul class="sidebar-menu">
+                    <li class="menu-item" data-page="dashboard">
+                        <a href="seller_dashboard.html" class="menu-link">
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            <span class="menu-text">ផ្ទាំងគ្រប់គ្រង</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="products">
+                        <a href="seller_products.html" class="menu-link">
+                            <i class="bi bi-box-seam-fill"></i>
+                            <span class="menu-text">ផលិតផល</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="orders">
+                        <a href="seller_orders.html" class="menu-link">
+                            <i class="bi bi-cart-fill"></i>
+                            <span class="menu-text">ការបញ្ជាទិញ</span>
+                            <span class="badge rounded-pill bg-danger ms-auto">12</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="customers">
+                        <a href="seller_customers.html" class="menu-link">
+                            <i class="bi bi-people-fill"></i>
+                            <span class="menu-text">អតិថិជន</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="analytics">
+                        <a href="seller_analytics.html" class="menu-link">
+                            <i class="bi bi-bar-chart-line-fill"></i>
+                            <span class="menu-text">វិភាគទិន្នន័យ</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active" data-page="messages">
+                        <a href="seller_messages.html" class="menu-link">
+                            <i class="bi bi-chat-left-dots-fill"></i>
+                            <span class="menu-text">សារផ្ញើ</span>
+                            <span class="badge rounded-pill bg-primary ms-auto">4</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="user-widget">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                        class="avatar rounded-circle" alt="User Profile">
+                    <div class="user-info">
+                        <h6 class="mb-0 text-white">ហេង សំណាង</h6>
+                    </div>
+                </div>
+                <button
+                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-box-arrow-left"></i> ចាកចេញ
+                </button>
+            </div>
+        </aside>
+
+        <!-- Right Side Main Content Area -->
+        <div class="main-container">
+            <!-- Top Navbar -->
+            <header class="top-navbar">
+                <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-icon d-lg-none" id="sidebar-toggle" aria-label="Toggle Sidebar">
+                            <i class="bi bi-list fs-4"></i>
+                        </button>
+                        <span class="navbar-title fw-bold text-dark">មជ្ឈមណ្ឌលបំរើអតិថិជន (Storefront Support
+                            Center)</span>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
+                            <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                        </button>
+                        <div class="header-divider h-100"></div>
+                        <div class="dropdown">
+                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
+                                id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                                    class="avatar-sm rounded-circle" alt="User Avatar">
+                                <span class="profile-name d-none d-lg-inline-block">ហេង សំណាង</span>
+                                <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="seller_profile.html"><i class="bi bi-person"></i>
+                                        ប្រវត្តិរូបសង្ខេប</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i>
+                                        ចាកចេញ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Chat Workspace (Split-Screen layout) -->
+            <main class="content-wrapper p-0  d-flex flex-column">
+                <div class="row">
+                    <div class="col-xl-3 col-12">
+                        <div class="container p-0 d-flex">
+                            <!-- 1. LEFT COLUMN: Chat Conversations List -->
+                            <div class="chat-sidebar border-end d-flex flex-column">
+                                <div class="p-3 border-bottom">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0"><i
+                                                class="bi bi-search text-muted"></i></span>
+                                        <input type="text" class="form-control bg-light border-start-0 text-xs"
+                                            placeholder="ស្វែងរកអតិថិជន...">
+                                    </div>
+                                </div>
+
+                                <!-- Chat List Stream -->
+                                <div class="flex-grow-1 overflow-y-auto" id="chat-users-list">
+                                    <!-- Customer 1 -->
+                                    <div class="chat-user-item active d-flex gap-3 p-3 border-bottom cursor-pointer"
+                                        data-id="meas-thida" data-status="unread">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar rounded-circle" alt="User">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <h6 class="mb-0 text-sm fw-bold">មាស ធីតា</h6>
+                                                <span class="text-xxs text-muted">២នាទីមុន</span>
+                                            </div>
+                                            <p class="chat-preview-text text-xs mb-0 text-dark fw-bold">តើកាស UltraBass
+                                                នេះមានសេវាដឹកដល់សៀមរាបដែរទេបង?</p>
+                                            <div class="mt-2">
+                                                <span class="badge badge-customer-type bg-danger">អតិថិជនកម្រិត
+                                                    VIP</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Customer 2 -->
+                                    <div class="chat-user-item d-flex gap-3 p-3 border-bottom cursor-pointer"
+                                        data-id="chan-dara" data-status="pending">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar rounded-circle" alt="User">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <h6 class="mb-0 text-sm fw-bold">ចាន់ ដារ៉ា</h6>
+                                                <span class="text-xxs text-muted">១ម៉ោងមុន</span>
+                                            </div>
+                                            <p class="chat-preview-text text-xs mb-0 text-muted">
+                                                ខ្ញុំបានវាយប្រាក់រួចហើយបង សូមជួយឆែកមើលផង</p>
+                                            <div class="mt-2">
+                                                <span class="badge badge-customer-type bg-primary">ម៉ូយចាស់</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Customer 3 -->
+                                    <div class="chat-user-item d-flex gap-3 p-3 border-bottom cursor-pointer"
+                                        data-id="sok-sophea" data-status="resolved">
+                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar rounded-circle" alt="User">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <h6 class="mb-0 text-sm fw-bold">សុខ សុភា</h6>
+                                                <span class="text-xxs text-muted">១ថ្ងៃមុន</span>
+                                            </div>
+                                            <p class="chat-preview-text text-xs mb-0 text-muted">ទទួលបាននាឡិការួចរាល់ហើយ
+                                                ស្អាតខ្លាំងណាស់បង!</p>
+                                            <div class="mt-2">
+                                                <span class="badge badge-customer-type bg-success">អ្នកទិញថ្មី</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-12">
+                        <!-- 2. CENTER COLUMN: Chat Conversation Screen -->
+                        <div class="chat-conversation-area d-flex flex-column flex-grow-1">
+                            <!-- Chat Header -->
+                            <div
+                                class="chat-header-bar p-3 border-bottom d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img id="active-user-avatar"
+                                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                        class="avatar rounded-circle" alt="User">
+                                    <div>
+                                        <h6 class="mb-0 fw-bold" id="active-user-name">មាស ធីតា</h6>
+                                        <small class="text-success"><span class="badge bg-success rounded-circle p-1"
+                                                style="width: 8px; height: 8px;"></span> កំពុងអនឡាញ</small>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-custom btn-sm" type="button"
+                                        id="markResolvedDropdown" data-bs-toggle="dropdown">
+                                        <i class="bi bi-check-circle"></i> ស្ថានភាពការជជែក
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="markResolvedDropdown">
+                                        <li><button class="dropdown-item" id="btn-mark-pending"><i
+                                                    class="bi bi-clock"></i> ដាក់ជា៖ រង់ចាំការឆ្លើយតប</button></li>
+                                        <li><button class="dropdown-item" id="btn-mark-resolved"><i
+                                                    class="bi bi-check2-circle text-success"></i> ដាក់ជា៖
+                                                ដោះស្រាយរួច</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Chat Message Stream (Scroller) -->
+                            <div class="chat-messages-stream p-4 flex-grow-1 overflow-y-auto d-flex flex-column gap-3"
+                                id="chat-messages-container">
+                                <!-- Left Bubble -->
+                                <div class="message-bubble left-bubble">
+                                    <p class="mb-0 text-sm">សួស្តីបង តើកាសស្តាប់ UltraBass Headphones ពណ៌ស
+                                        នៅមានក្នុងស្តុកដែរទេបង?</p>
+                                    <span class="bubble-time mt-1">០៩:៣០ ព្រឹក</span>
+                                </div>
+
+                                <!-- Right Bubble (Seller Response) -->
+                                <div class="message-bubble right-bubble ms-auto">
+                                    <p class="mb-0 text-sm">សួស្តីបង ធីតា! ម៉ូឌែល UltraBass ពណ៌ស នៅសល់ស្តុកចុងក្រោយ
+                                        ២គ្រឿងបង។</p>
+                                    <span class="bubble-time mt-1 text-end">០៩:៣១ ព្រឹក</span>
+                                </div>
+
+                                <!-- Left Bubble -->
+                                <div class="message-bubble left-bubble">
+                                    <p class="mb-0 text-sm">តើកាស UltraBass នេះមានសេវាដឹកដល់សៀមរាបដែរទេបង?
+                                        ហើយរយៈពេលប៉ុន្មានថ្ងៃបានដល់បង?</p>
+                                    <span class="bubble-time mt-1">០៩:៣២ ព្រឹក</span>
+                                </div>
+                            </div>
+
+                            <!-- Quick Replies & Input Toolbar Area -->
+                            <div class="p-3 border-top bg-light-theme-darker">
+
+                                <!-- Quick Replies Templates Chips (គំរូសារឆ្លើយតបស្វ័យប្រវត្ត) -->
+                                <div
+                                    class="quick-replies-toolbar d-flex align-items-center gap-2 mb-3 overflow-x-auto pb-2">
+                                    <span class="text-xs text-muted fw-bold text-nowrap"><i
+                                            class="bi bi-lightning-charge-fill text-warning"></i> គំរូសាររហ័ស៖</span>
+                                    <button class="btn btn-xs btn-outline-primary text-xs rounded-pill quick-reply-btn"
+                                        data-text="សូមជម្រាបសួរអតិថិជនជាទីគោរព! ផលិតផលនេះមានតម្លៃ $129.00 បង។">សាកសួរតម្លៃ</button>
+                                    <button class="btn btn-xs btn-outline-primary text-xs rounded-pill quick-reply-btn"
+                                        data-text="ហាងយើងខ្ញុំមានសេវាដឹកជញ្ជូនរហ័សទូទាំង ២៥ ខេត្ត-ក្រុង ដោយប្រើប្រាស់សេវាដឹកជញ្ជូន J&T Express ដោយចំណាយពេលតែ ១ ទៅ ២ថ្ងៃប៉ុណ្ណោះបង។">សេវាដឹកជញ្ជូន</button>
+                                    <button class="btn btn-xs btn-outline-primary text-xs rounded-pill quick-reply-btn"
+                                        data-text="ទីតាំងហាងយើងខ្ញុំស្ថិតនៅ៖ ផ្ទះលេខ ១២ ផ្លូវ ៣១០ សង្កាត់បឹងកេងកង ភ្នំពេញ បងអាចអញ្ជើញមកមើលផ្ទាល់បានបង។">ទីតាំងហាង</button>
+                                </div>
+
+                                <!-- Chat Input Box -->
+                                <form id="chat-input-form" onsubmit="return false;">
+                                    <div class="input-group">
+                                        <button class="btn btn-outline-secondary border-end-0 bg-white" type="button"
+                                            data-bs-toggle="modal" data-bs-target="#modal-not-implemented"><i
+                                                class="bi bi-paperclip"></i></button>
+                                        <input type="text" class="form-control border-start-0 border-end-0 py-2 text-sm"
+                                            id="chat-text-input" placeholder="សរសេរសារឆ្លើយតបទីនេះ...">
+                                        <button class="btn btn-primary px-4 text-white" type="submit"
+                                            id="btn-send-message"><i class="bi bi-send-fill"></i> ផ្ញើសារ</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-12">
+                        <!-- 3. RIGHT COLUMN: Customer Profile Context Sidebar -->
+                        <div class="chat-context-panel border-start p-4 d-flex flex-column d-none d-xl-flex">
+                            <div class="text-center pb-4 border-bottom">
+                                <img id="context-avatar"
+                                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=1200"
+                                    class="avatar-lg rounded-circle border border-3 border-white shadow-sm mb-3"
+                                    alt="Avatar">
+                                <h5 class="fw-bold mb-1" id="context-user-name">មាស ធីតា</h5>
+                                <span class="badge bg-danger-subtle text-danger rounded-pill px-3"
+                                    id="context-user-badge">អតិថិជនកម្រិត VIP</span>
+                            </div>
+
+                            <div class="py-4 border-bottom text-xs">
+                                <h6 class="fw-bold text-dark mb-3">ព័ត៌មានលម្អិតទំនាក់ទំនង</h6>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">អ៊ីមែល៖</span>
+                                    <span class="fw-semibold text-dark">thidameas@gmail.com</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">លេខទូរស័ព្ទ៖</span>
+                                    <span class="fw-semibold text-dark">092 555 123</span>
+                                </div>
+                            </div>
+
+                            <div class="py-4 text-xs">
+                                <h6 class="fw-bold text-dark mb-3">របាយការណ៍បញ្ជាទិញ</h6>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">ការទិញសរុប៖</span>
+                                    <span class="fw-bold text-primary">12 ដង</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-muted">ចំណាយសរុប៖</span>
+                                    <span class="fw-bold text-success">$450.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Demo Placeholder Modal -->
+    <div class="modal fade" id="modal-not-implemented" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-body text-center p-4">
+                    <i class="bi bi-info-circle-fill text-warning" style="font-size: 3rem;"></i>
+                    <h5 class="fw-bold mt-3 text-dark">ព័ត៌មានប្រព័ន្ធ</h5>
+                    <p class="text-xs text-muted mb-4">មុខងារនេះមិនទាន់ត្រូវបានដំឡើងដំណើរការឡើយ។</p>
+                    <button type="button" class="btn btn-primary w-100 py-2 text-white text-xs fw-bold"
+                        data-bs-dismiss="modal">យល់ព្រម</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Event Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+        <div id="actionToast" class="toast align-items-center text-white bg-dark border-0 shadow" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body d-flex align-items-center gap-2">
+                    <i class="bi bi-info-circle-fill text-success"></i>
+                    <span id="toast-message">ប្រតិបត្តិការទទួលបានជោគជ័យ!</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Basic Shared Dashboard Logic -->
+    <script src="assets/js/seller_dashboard.js"></script>
+    <!-- Messages Specific Logic Sheet -->
+    <script src="assets/js/seller_messages.js"></script>
+</body>
+
+</html>
+
+</html>
+    

@@ -1,0 +1,123 @@
+/* START OF FILE seller_messages.css */
+
+/* ==========================================================================
+   MESSAGES SYSTEM SPLIT PANEL CONFIGURATIONS
+   ========================================================================== */
+.chat-sidebar {
+    width: 320px;
+    background-color: var(--bg-card);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.chat-conversation-area {
+    background-color: var(--bg-main);
+}
+
+.chat-context-panel {
+    width: 280px;
+    background-color: var(--bg-card);
+    flex-shrink: 0;
+}
+
+.chat-user-item {
+    transition: background-color 0.2s ease;
+}
+
+.chat-user-item:hover {
+    background-color: rgba(79, 70, 229, 0.03);
+}
+
+.chat-user-item.active {
+    background-color: rgba(79, 70, 229, 0.06);
+    border-left: 3px solid var(--primary);
+}
+
+.chat-preview-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 220px;
+}
+
+.badge-customer-type {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+/* ==========================================================================
+   CHAT MESSAGES CHIPS STREAM STYLING
+   ========================================================================== */
+.message-bubble {
+    max-width: 75%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    position: relative;
+    animation: bubbleEnter 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.left-bubble {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-bottom-left-radius: 4px;
+}
+
+.right-bubble {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+}
+
+.bubble-time {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+}
+
+.right-bubble .bubble-time {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes bubbleEnter {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Custom Scroll Buttons for quick replies */
+.quick-replies-toolbar::-webkit-scrollbar {
+    height: 4px;
+}
+
+.quick-replies-toolbar button {
+    white-space: nowrap;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.avatar-lg {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN HELPER
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .chat-context-panel {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .chat-sidebar {
+        width: 100%;
+    }
+    .chat-conversation-area {
+        display: none !important; /* Hide chat area in mobile listing mode */
+    }
+}
+/* END OF FILE seller_messages.css */
