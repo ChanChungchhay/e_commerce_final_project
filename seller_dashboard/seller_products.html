@@ -59,7 +59,6 @@
                         <a href="seller_orders.html" class="menu-link">
                             <i class="bi bi-cart-fill"></i>
                             <span class="menu-text">ការបញ្ជាទិញ</span>
-                            <span class="badge rounded-pill bg-danger ms-auto">12</span>
                         </a>
                     </li>
                     <li class="menu-item" data-page="customers">
@@ -78,7 +77,6 @@
                         <a href="seller_messages.html" class="menu-link">
                             <i class="bi bi-chat-left-dots-fill"></i>
                             <span class="menu-text">សារផ្ញើ</span>
-                            <span class="badge rounded-pill bg-primary ms-auto">4</span>
                         </a>
                     </li>
                 </ul>
@@ -97,7 +95,7 @@
         <div class="main-container">
 
             <!-- Top Header Navigation -->
-            <header class="top-navbar">
+            <header class="top-navbar rounded-5 mx-4">
                 <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
 
                     <!-- Left Toggle & Global Search -->
@@ -108,7 +106,7 @@
                         <div class="search-bar-wrapper">
                             <i class="bi bi-search search-icon"></i>
                             <input type="text" class="form-control" id="product-search-input"
-                                placeholder="ស្វែងរកផលិតផលតាមឈ្មោះ លេខកូដ SKU...">
+                                placeholder="ស្វែងរកផលិតផលតាមឈ្មោះ លេខកូដ">
                         </div>
                     </div>
 
@@ -119,6 +117,109 @@
                         <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
                         </button>
+                        <!-- Messages Dropdown -->
+                        <div class="dropdown">
+                            <button class="btn btn-icon position-relative" type="button" id="messageDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-chat-left-dots"></i>
+                                <span
+                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-warning border border-2 border-white">
+                                    3
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                aria-labelledby="messageDropdown">
+                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">Recent Messages</h6>
+                                    <a href="seller_messages.html" class="small text-primary text-decoration-none">មើលការផ្ញើសារ</a>
+                                </div>
+                                <div class="dropdown-list-container">
+                                    <!-- Message List Items -->
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar-sm rounded-circle" alt="User Image">
+                                        <div>
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="user-name">Sarah Jenkins</span>
+                                                <span class="timestamp">2m ago</span>
+                                            </div>
+                                            <p class="preview-text">សួស្តី សំណាង
+                                                តើការធានាផលិតផលមានរួមបញ្ចូលក្នុងតម្លៃដើមដែរឬទេ?</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar-sm rounded-circle" alt="User Image">
+                                        <div>
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="user-name">Marcus Vance</span>
+                                                <span class="timestamp">1h ago</span>
+                                            </div>
+                                            <p class="preview-text">សូមជួយបញ្ជាក់ផងថា
+                                                តើអ្នកអាចដឹកជញ្ជូនទំនិញទាំងនេះមកកាន់ឃ្លាំងរបស់យើងបានដែរឬទេ?</p>
+                                        </div>
+                                    </a>
+                                    <a href="#"
+                                        class="dropdown-list-item d-flex gap-3 text-center py-2 text-primary fw-medium justify-content-center">
+                                        View all messages
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Notification Dropdown -->
+                        <div class="dropdown">
+                            <button class="btn btn-icon position-relative" type="button" id="notifDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-bell"></i>
+                                <span
+                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
+                                    5
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                aria-labelledby="notifDropdown">
+                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">Notifications</h6>
+                                    <a href="#" class="small text-primary">Mark all read</a>
+                                </div>
+                                <div class="dropdown-list-container" id="notifications-container">
+                                    <!-- Dynamically/Statically Handled -->
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar  text-success"><i
+                                                class="bi bi-check-circle-fill"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Order #8832 Dispatched</span>
+                                                <span class="timestamp">Just now</span>
+                                            </div>
+                                            <p class="preview-text">Shipped to Seattle Warehouse Hub.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar text-danger"><i
+                                                class="bi bi-exclamation-triangle-fill"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Low Stock: Wireless Earbuds</span>
+                                                <span class="timestamp">12m ago</span>
+                                            </div>
+                                            <p class="preview-text">Only 3 items remaining in stock.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar  text-primary"><i
+                                                class="bi bi-cash-stack"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Payment Received</span>
+                                                <span class="timestamp">1h ago</span>
+                                            </div>
+                                            <p class="preview-text">Payout of $12,450.00 processed successfully.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="header-divider h-100"></div>
 
@@ -128,7 +229,10 @@
                                 id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
                                     class="avatar-sm rounded-circle" alt="User Avatar">
-                                <span class="profile-name d-none d-lg-inline-block">ហេង សំណាង</span>
+                                <div class="user-info">
+                                    <h6 class="profile-name d-none d-lg-inline-block">ហេង សំណាង</h6>
+                                    <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
+                                </div>
                                 <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
@@ -153,8 +257,8 @@
                     <!-- Title and Quick Statistics -->
                     <div class="row align-items-center mb-4 gy-3">
                         <div class="col-md-6 col-12">
-                            <h2 class="welcome-heading mb-1 text-gradient-primary">គ្រប់គ្រងផលិតផល</h2>
-                            <p class="text-muted text-sm mb-0">បន្ថែម កែប្រែ និងតាមដានស្តុកផលិតផលរបស់អ្នក</p>
+                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">គ្រប់គ្រងផលិតផល</h1>
+                            <p class="text-muted fs-5 mb-0">បន្ថែម កែប្រែ និងតាមដានស្តុកផលិតផលរបស់អ្នក</p>
                         </div>
                         <div class="col-md-6 col-12 d-flex flex-wrap justify-content-md-end gap-2">
                             <button class="btn btn-primary d-flex align-items-center gap-2 text-white rounded-3"
@@ -176,7 +280,7 @@
                         <div class="col-12 col-sm-6 col-xl-3">
                             <div class="stats-card">
                                 <div class="d-flex justify-content-between align-items-start">
-                                    <div class="icon-wrap bg-light-primary text-white">
+                                    <div class="icon-wrap bg-light-success text-white">
                                         <i class="bi bi-box-seam icon"></i>
                                     </div>
                                     <span class="badge bg-light-success fw-medium text-white">+4 ខែនេះ</span>
@@ -190,7 +294,7 @@
                         <div class="col-12 col-sm-6 col-xl-3">
                             <div class="stats-card">
                                 <div class="d-flex justify-content-between align-items-start">
-                                    <div class="icon-wrap bg-light-success text-success">
+                                    <div class="icon-wrap bg-light-success text-white">
                                         <i class="bi bi-check2-circle icon"></i>
                                     </div>
                                     <span class="badge bg-light-success fw-medium text-white">ដំណើរការធម្មតា</span>
@@ -221,7 +325,8 @@
                                     <div class="icon-wrap bg-light-danger text-danger">
                                         <i class="bi bi-x-circle icon"></i>
                                     </div>
-                                    <span class="badge bg-light-danger text-danger fw-medium">ផ្អាកលក់បណ្តោះអាសន្ន</span>
+                                    <span
+                                        class="badge bg-light-danger text-danger fw-medium">ផ្អាកលក់បណ្តោះអាសន្ន</span>
                                 </div>
                                 <div class="stats-body mt-3">
                                     <h6 class="text-muted small text-uppercase tracking-wider">អស់ពីស្តុក</h6>
@@ -240,7 +345,7 @@
                                         class="form-label small fw-bold text-muted text-uppercase mb-1">ស្វែងរកលម្អិត</label>
                                     <div class="position-relative">
                                         <input type="text" class="form-control" id="filter-search"
-                                            placeholder="ស្វែងរកតាមឈ្មោះ ឬកូដ SKU...">
+                                            placeholder="ស្វែងរកតាមឈ្មោះ ឬកូដ">
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-3">
@@ -351,10 +456,10 @@
     <div class="modal fade" id="productManageModal" tabindex="-1" aria-labelledby="productManageModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content border-0 shadow-lg">
-                <div class="modal-header bg-gradient-primary text-white border-0 py-3">
-                    <h5 class="modal-title fw-bold" id="productManageModalLabel">បន្ថែមព័ត៌មានផលិតផលលម្អិត</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+            <div class="modal-content border-0 shadow-lg rounded-4">
+                <div class="modal-header text-muted border-2 py-3">
+                    <h5 class="modal-title fw-bold" id="productManageModalLabel">បន្ថែមព័ត៌មានផលិតផលថ្មី</h5>
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">
@@ -515,10 +620,10 @@
     <div class="modal fade" id="createDiscountModal" tabindex="-1" aria-labelledby="createDiscountModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 shadow-lg">
-                <div class="modal-header bg-gradient-secondary text-white border-0 py-3">
+            <div class="modal-content border-0 shadow-lg rounded-4">
+                <div class="modal-header  text-muted border-1 py-3">
                     <h5 class="modal-title fw-bold" id="createDiscountModalLabel">ប័ណ្ណបញ្ចុះតម្លៃសម្រាប់ហាង</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">

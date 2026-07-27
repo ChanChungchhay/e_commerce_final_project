@@ -57,7 +57,6 @@
                         <a href="seller_orders.html" class="menu-link">
                             <i class="bi bi-cart-fill"></i>
                             <span class="menu-text">ការបញ្ជាទិញ</span>
-                            <span class="badge rounded-pill bg-danger ms-auto">12</span>
                         </a>
                     </li>
                     <li class="menu-item" data-page="customers">
@@ -76,7 +75,6 @@
                         <a href="seller_messages.html" class="menu-link">
                             <i class="bi bi-chat-left-dots-fill"></i>
                             <span class="menu-text">សារផ្ញើ</span>
-                            <span class="badge rounded-pill bg-primary ms-auto">4</span>
                         </a>
                     </li>
                 </ul>
@@ -93,7 +91,7 @@
         <!-- Right Side Main Content Area -->
         <div class="main-container">
             <!-- Top Navbar -->
-            <header class="top-navbar">
+            <header class="top-navbar rounded-5 mx-4">
                 <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
                     <div class="d-flex align-items-center gap-3">
                         <button class="btn btn-icon d-lg-none" id="sidebar-toggle" aria-label="Toggle Sidebar">
@@ -106,29 +104,142 @@
                         </div>
                     </div>
 
-                    <div class="d-flex align-items-center gap-2">
+                    <div class="d-flex align-items-center gap-2 gap-md-3">
+                        <!-- Light/Dark Mode Switcher -->
                         <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
                         </button>
-                        <div class="header-divider"></div>
+
+                        <!-- Messages Dropdown -->
+                        <div class="dropdown">
+                            <button class="btn btn-icon position-relative" type="button" id="messageDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-chat-left-dots"></i>
+                                <span
+                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-warning border border-2 border-white">
+                                    3
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                aria-labelledby="messageDropdown">
+                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">Recent Messages</h6>
+                                    <a href="seller_messages.html" class="small text-primary text-decoration-none">មើលការផ្ញើសារ</a>
+                                </div>
+                                <div class="dropdown-list-container">
+                                    <!-- Message List Items -->
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar-sm rounded-circle" alt="User Image">
+                                        <div>
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="user-name">Sarah Jenkins</span>
+                                                <span class="timestamp">2m ago</span>
+                                            </div>
+                                            <p class="preview-text">សួស្តី សំណាង
+                                                តើការធានាផលិតផលមានរួមបញ្ចូលក្នុងតម្លៃដើមដែរឬទេ?</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar-sm rounded-circle" alt="User Image">
+                                        <div>
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="user-name">Marcus Vance</span>
+                                                <span class="timestamp">1h ago</span>
+                                            </div>
+                                            <p class="preview-text">សូមជួយបញ្ជាក់ផងថា
+                                                តើអ្នកអាចដឹកជញ្ជូនទំនិញទាំងនេះមកកាន់ឃ្លាំងរបស់យើងបានដែរឬទេ?</p>
+                                        </div>
+                                    </a>
+                                    <a href="#"
+                                        class="dropdown-list-item d-flex gap-3 text-center py-2 text-primary fw-medium justify-content-center">
+                                        View all messages
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notification Dropdown -->
+                        <div class="dropdown">
+                            <button class="btn btn-icon position-relative" type="button" id="notifDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-bell"></i>
+                                <span
+                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
+                                    5
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                aria-labelledby="notifDropdown">
+                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">Notifications</h6>
+                                    <a href="#" class="small text-primary">Mark all read</a>
+                                </div>
+                                <div class="dropdown-list-container" id="notifications-container">
+                                    <!-- Dynamically/Statically Handled -->
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar text-success"><i
+                                                class="bi bi-check-circle-fill"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Order #8832 Dispatched</span>
+                                                <span class="timestamp">Just now</span>
+                                            </div>
+                                            <p class="preview-text">Shipped to Seattle Warehouse Hub.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar text-danger"><i
+                                                class="bi bi-exclamation-triangle-fill"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Low Stock: Wireless Earbuds</span>
+                                                <span class="timestamp">12m ago</span>
+                                            </div>
+                                            <p class="preview-text">Only 3 items remaining in stock.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar text-primary"><i
+                                                class="bi bi-cash-stack"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Payment Received</span>
+                                                <span class="timestamp">1h ago</span>
+                                            </div>
+                                            <p class="preview-text">Payout of $12,450.00 processed successfully.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-divider h-100"></div>
+                        <!-- Mini profile info -->
                         <div class="dropdown">
                             <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
-                                id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                id="profileDropdow" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
                                     class="avatar-sm rounded-circle" alt="User Avatar">
-                                <span class="profile-name d-none d-lg-inline-block">ហេង សំណាង</span>
+                                <div class="user-info">
+                                    <h6 class="profile-name d-none d-lg-inline-block">ហេង សំណាង</h6>
+                                    <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
+                                </div>
                                 <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                                <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> ប្រវត្តិរូបសង្ខេប</a>
-                                </li>
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i
+                                            class="bi bi-person-fill"></i> Profile settings</a></li>
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i
+                                            class="bi bi-shield-lock-fill"></i> Security settings</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i>
-                                        ចាកចេញ</a></li>
+                                <li><a class="dropdown-item text-danger d-flex align-items-center gap-2" href="#"><i
+                                            class="bi bi-box-arrow-right"></i> Sign out</a></li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </header>
@@ -141,8 +252,8 @@
                     <div
                         class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
                         <div>
-                            <h2 class="welcome-heading mb-1 text-gradient-primary">ការបញ្ជាទិញទំនិញ</h2>
-                            <p class="text-muted text-sm mb-0">គ្រប់គ្រងដំណើរការដឹកជញ្ជូន និងការទូទាត់ប្រាក់ពីអតិថិជន
+                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">គ្រប់គ្រងការបញ្ជាទិញទំនិញ</h1>
+                            <p class="text-muted fs-5 mb-0">គ្រប់គ្រងដំណើរការដឹកជញ្ជូន និងការទូទាត់ប្រាក់ពីអតិថិជន
                             </p>
                         </div>
                     </div>
@@ -152,7 +263,7 @@
                         <div class="col-12 col-sm-6 col-xl-3">
                             <div class="stats-card">
                                 <div class="d-flex justify-content-between align-items-start">
-                                    <div class="icon-wrap bg-light-primary text-white">
+                                    <div class="icon-wrap bg-light-success text-white">
                                         <i class="bi bi-cart-check icon"></i>
                                     </div>
                                     <span class="badge bg-light-success text-white fw-medium">+15% ធៀបម្សិលមិញ</span>
@@ -286,7 +397,7 @@
                                             <td class="text-xs text-truncate" style="max-width: 200px;">
                                                 កាសស្តាប់ត្រចៀក UltraBass Wireless (x1)
                                             </td>
-                                            <td class="fw-bold text-dark">$131.00</td>
+                                            <td class="fw-bold text-muted">$131.00</td>
                                             <td>
                                                 <span class="text-xs fw-semibold"><i class="bi bi-wallet2"></i>
                                                     ABA</span>
@@ -312,7 +423,7 @@
                                             <td class="text-xs text-truncate" style="max-width: 200px;">
                                                 នាឡិកាឆ្លាតវៃ Active Fit Pro Watch (x2)
                                             </td>
-                                            <td class="fw-bold text-dark">$401.50</td>
+                                            <td class="fw-bold text-muted">$401.50</td>
                                             <td>
                                                 <span class="text-xs fw-semibold"><i class="bi bi-wallet2"></i>
                                                     Visa</span>
@@ -338,7 +449,7 @@
                                             <td class="text-xs text-truncate" style="max-width: 200px;">
                                                 កាបូបលុយស្បែកស្តើង Slim Leather Wallet (x1)
                                             </td>
-                                            <td class="fw-bold text-dark">$53.00</td>
+                                            <td class="fw-bold text-muted">$53.00</td>
                                             <td>
                                                 <span class="text-xs fw-semibold"><i class="bi bi-wallet2"></i>
                                                     COD</span>
@@ -575,7 +686,6 @@
             </div>
         </div>
     </div>
-
     <!-- System Event Toast Container -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
         <div id="actionToast" class="toast align-items-center text-white bg-dark border-0 shadow" role="alert"
@@ -590,9 +700,8 @@
             </div>
         </div>
     </div>
-
     <!-- Bootstrap 5 Bundle JS with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core App Dashboard Engine -->
     <script src="../assets/js/seller_dashboard.js"></script>
     <!-- Orders Specific Controller -->
@@ -600,4 +709,3 @@
 </body>
 
 </html>
-<!-- END OF FILE seller_orders.html -->

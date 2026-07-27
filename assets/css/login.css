@@ -116,11 +116,14 @@ body {
   padding-right: 30px; 
   box-sizing: border-box;
 }
-.eye-icon {
+.form-control.input {
+    position: relative !important;
+}
+.form-control.input + .eye-icon {
   position: absolute;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%) !important;
+  top: 22px !important;
+  /* transform: translateY(-50%) !important; */
   cursor: pointer;
   line-height: 1;
 }

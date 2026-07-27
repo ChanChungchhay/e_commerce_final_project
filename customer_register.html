@@ -42,7 +42,6 @@
                     <div class="card border-0 shadow-lg">
                         <div class="card-body">
                             <h2 class="text-center login-title fw-bold bazaar">បង្កើតគណនី</h2>
-                            <p class="text-center">ចូលរួមជាមួយ Khmer Bazzar និងចាប់ផ្តើមលក់ទំនិញស្រុកខ្មែរ</p>
                             <form action="login.html" method="GET" class="needs-validation" novalidate>
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
@@ -53,7 +52,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
-                                        <div>
+                                        <div class="mb-4">
                                             <input type="text" class="form-control" placeholder="បំពេញនាមខ្លួន"
                                                 required>
                                             <div class="invalid-feedback">សូមបំពេញនាមខ្លួន</div>
@@ -86,17 +85,20 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
-                                        <div class="mb-4 input-container">
-                                    <input type="password" class="form-control input" placeholder="បំពេញពាក្យសម្ងាត់"
+                                        <div class="form-floating mb-4 input-container">
+                                    <input type="password" class="form-control input" id="floatingPassword" placeholder="បំពេញពាក្យសម្ងាត់"
                                         required>
                                     <i class="bi bi-eye-slash eye-icon"></i>
+                                    <label for="floatingPassword">បំពេញពាក្យសម្ងាត់</label>
                                     <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
                                 </div>
                                     </div>
-                                    <div class="col-12 col-lg-6"><div class="mb-4 input-container">
-                                    <input type="password" class="form-control input" placeholder="បំពេញពាក្យសម្ងាត់"
-                                        required>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-floating mb-4 input-container">
+                                    <input type="password" class="form-control input" id="confirmPassword" placeholder="បំពេញពាក្យសម្ងាត់"
+                                        required> 
                                     <i class="bi bi-eye-slash eye-icon"></i>
+                                    <label for="confirmPassword">ផ្ទៀងផ្ទាត់ពាក្យសម្ងាត់</label>
                                     <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
                                 </div></div>
                                 </div>

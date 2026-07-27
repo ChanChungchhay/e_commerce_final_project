@@ -10,8 +10,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
     <!-- Bootstrap Icons -->
@@ -34,7 +36,8 @@
                     </div>
                     <span class="brand-name text-success">Khmer <span class="text-bazaar">Bazzar</span>.</span>
                 </div>
-                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close"
+                    aria-label="Close"></button>
             </div>
 
             <div class="sidebar-menu-wrapper">
@@ -55,7 +58,6 @@
                         <a href="seller_orders.html" class="menu-link">
                             <i class="bi bi-cart-fill"></i>
                             <span class="menu-text">ការបញ្ជាទិញ</span>
-                            <span class="badge rounded-pill bg-danger ms-auto">12</span>
                         </a>
                     </li>
                     <li class="menu-item" data-page="customers">
@@ -74,14 +76,14 @@
                         <a href="seller_messages.html" class="menu-link">
                             <i class="bi bi-chat-left-dots-fill"></i>
                             <span class="menu-text">សារផ្ញើ</span>
-                            <span class="badge rounded-pill bg-primary ms-auto">4</span>
                         </a>
                     </li>
                 </ul>
             </div>
 
             <div class="sidebar-footer">
-                <button class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
+                <button
+                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
                     <i class="bi bi-box-arrow-left"></i> ចាកចេញ
                 </button>
             </div>
@@ -90,7 +92,7 @@
         <!-- Right Side Main Content Area -->
         <div class="main-container">
             <!-- Top Navbar -->
-            <header class="top-navbar">
+            <header class="top-navbar rounded-5 mx-4">
                 <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
                     <div class="d-flex align-items-center gap-3">
                         <button class="btn btn-icon d-lg-none" id="sidebar-toggle" aria-label="Toggle Sidebar">
@@ -98,33 +100,360 @@
                         </button>
                     </div>
 
-                    <div class="d-flex align-items-center gap-2">
+                    <div class="d-flex align-items-center gap-2 gap-md-3">
+                        <!-- Light/Dark Mode Switcher -->
                         <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
                         </button>
-                        <div class="header-divider h-100"></div>
+
+                        <!-- Messages Dropdown -->
                         <div class="dropdown">
-                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100" class="avatar-sm rounded-circle" alt="User Avatar">
-                                <span class="profile-name d-none d-lg-inline-block">ហេង សំណាង</span>
+                            <button class="btn btn-icon position-relative" type="button" id="messageDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-chat-left-dots"></i>
+                                <span
+                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-warning border border-2 border-white">
+                                    3
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                aria-labelledby="messageDropdown">
+                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">Recent Messages</h6>
+                                    <a href="seller_messages.html"
+                                        class="small text-primary text-decoration-none">មើលការផ្ញើសារ</a>
+                                </div>
+                                <div class="dropdown-list-container">
+                                    <!-- Message List Items -->
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar-sm rounded-circle" alt="User Image">
+                                        <div>
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="user-name">Sarah Jenkins</span>
+                                                <span class="timestamp">2m ago</span>
+                                            </div>
+                                            <p class="preview-text">សួស្តី សំណាង
+                                                តើការធានាផលិតផលមានរួមបញ្ចូលក្នុងតម្លៃដើមដែរឬទេ?</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar-sm rounded-circle" alt="User Image">
+                                        <div>
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="user-name">Marcus Vance</span>
+                                                <span class="timestamp">1h ago</span>
+                                            </div>
+                                            <p class="preview-text">សូមជួយបញ្ជាក់ផងថា
+                                                តើអ្នកអាចដឹកជញ្ជូនទំនិញទាំងនេះមកកាន់ឃ្លាំងរបស់យើងបានដែរឬទេ?</p>
+                                        </div>
+                                    </a>
+                                    <a href="#"
+                                        class="dropdown-list-item d-flex gap-3 text-center py-2 text-primary fw-medium justify-content-center">
+                                        View all messages
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notification Dropdown -->
+                        <div class="dropdown">
+                            <button class="btn btn-icon position-relative" type="button" id="notifDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-bell"></i>
+                                <span
+                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
+                                    5
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                aria-labelledby="notifDropdown">
+                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">Notifications</h6>
+                                    <a href="#" class="small text-primary">Mark all read</a>
+                                </div>
+                                <div class="dropdown-list-container" id="notifications-container">
+                                    <!-- Dynamically/Statically Handled -->
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <div class="icon-avatar bg-light-success text-success"><i
+                                                class="bi bi-check-circle-fill"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Order #8832 Dispatched</span>
+                                                <span class="timestamp">Just now</span>
+                                            </div>
+                                            <p class="preview-text">Shipped to Seattle Warehouse Hub.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <div class="icon-avatar bg-light-danger text-danger"><i
+                                                class="bi bi-exclamation-triangle-fill"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Low Stock: Wireless Earbuds</span>
+                                                <span class="timestamp">12m ago</span>
+                                            </div>
+                                            <p class="preview-text">Only 3 items remaining in stock.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <div class="icon-avatar bg-light-primary text-primary"><i
+                                                class="bi bi-cash-stack"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Payment Received</span>
+                                                <span class="timestamp">1h ago</span>
+                                            </div>
+                                            <p class="preview-text">Payout of $12,450.00 processed successfully.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-divider h-100"></div>
+                        <!-- Mini profile info -->
+                        <div class="dropdown">
+                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
+                                id="profileDropdow" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                                    class="avatar-sm rounded-circle" alt="User Avatar">
+                                <div class="user-info">
+                                    <h6 class="profile-name d-none d-lg-inline-block">ហេង សំណាង</h6>
+                                    <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
+                                </div>
                                 <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                                <li><a class="dropdown-item" href="seller_profile.html"><i class="bi bi-person"></i> ប្រវត្តិរូបសង្ខេប</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i> ចាកចេញ</a></li>
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i
+                                            class="bi bi-person-fill"></i> Profile settings</a></li>
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i
+                                            class="bi bi-shield-lock-fill"></i> Security settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger d-flex align-items-center gap-2" href="#"><i
+                                            class="bi bi-box-arrow-right"></i> Sign out</a></li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </header>
 
             <!-- Main Chat Workspace (Split-Screen layout) -->
-            <main class="content-wrapper p-0">
-                <div class="container-fluid p-0 chat-workspace-container">
-                    <div class="row g-0 h-100">
+            <main class="content-wrapper">
+                <div class="container-fluid px-4 py-4">
+                    <!-- Dashboard Greetings and Quick Action Menu -->
+                    <div class="row align-items-center mb-4 gy-3">
+                        <div class="col-md-6 col-12">
+                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">សូមស្វាគមន៍ សំណាង</h1>
+                        </div>
+                    </div>
+                    <div class="row h-100 w-100 border border-1 border-success-subtle rounded-3 gx-0">
+                        <div class="chat-sidebar p-0" style="border-right: 1px solid #a3cfbb;">
+                            <div class="chat-profile">
+                                <div class="message-header p-3 mb-2" style="border-bottom: 1px solid #a3cfbb;">
+                                    <h4 class="mb-2">Messages</h4>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="search-bar-wrapper">
+                                            <i class="bi bi-search search-icon"></i>
+                                            <input type="text" class="form-control " id="global-search"
+                                                placeholder="ស្វែងរកការសន្ទនា...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-status py-2 d-flex justify-content-evenly align-items-center">
+                                    <a class="link-message text-muted btn-message" href="#">All</a>
+                                    <a class="link-message text-muted d-flex align-items-center justify-content-evenly gap-2"
+                                        href="#">Unread<span class="badge-unread text-bg-success"
+                                            style="line-height: 1;">3</span></a>
+                                    <a class="link-message text-muted" href="#">Group</a>
+                                </div>
+                                <div class="message-body">
+                                    <div class="message-item active">
+                                        <div class="message-avatar position-relative">
+                                            <img src="../assets/img/seller_images/forgot_pw.png"
+                                                class="avatar rounded-circle"
+                                                style="width: 50px !important; height: 50px;" alt="VIP 1">
+                                            <span
+                                                class="position-absolute status p-1 bg-success border rounded-circle"></span>
+                                        </div>
+                                        <div class="message-content">
+                                            <div class="message-content-header d-flex align-items-center mb-2">
+                                                <span class="chat-name  fw-bold text-muted">Sarah Wilson</span>
+                                                <span class="chat-time ms-auto small text-muted">2m ago</span>
+                                            </div>
+                                            <div class="message-content-body">
+                                                <span class="chat-text text-muted small">Sure, I'll send the files right
+                                                    away!</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="message-item">
+                                        <div class="message-avatar position-relative">
+                                            <img src="../assets/img/seller_images/forgot_pw.png"
+                                                class="avatar rounded-circle"
+                                                style="width: 50px !important; height: 50px;" alt="VIP 1">
+                                            <span
+                                                class="position-absolute status p-1 bg-danger border rounded-circle"></span>
+                                        </div>
+                                        <div class="message-content">
+                                            <div class="message-content-header d-flex align-items-center mb-2">
+                                                <span class="chat-name  fw-bold">Sarah Wilson</span>
+                                                <span class="chat-time ms-auto small">2m ago</span>
+                                            </div>
+                                            <div class="message-content-body">
+                                                <span class="chat-text small">Sure, I'll send the files right
+                                                    away!</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-container">
+                            <div class="chat-main">
+                                <div class="chat-header p-3">
+                                    <div class="chat-header-user d-flex gap-3 align-items-center">
+                                        <div class="chat-header-avatar position-relative">
+                                            <img src="../assets/img/seller_images/forgot_pw.png"
+                                                class="avatar rounded-circle"
+                                                style="width: 45px !important; height: 45px;" alt="VIP 1">
+                                        </div>
+                                        <div class="chat-header-info">
+                                            <h6 class="chat-name  fw-bold">Sarah Wilson</h6>
+                                            <span><i class="bi bi-circle-fill"
+                                                    style="font-size: 0.5rem; color: green;"></i> Online</span>
+                                        </div>
+                                    </div>
+                                    <div class="chat-header-actions">
+                                        <button class="chat-header-btn"><i class="bi bi-telephone"></i></button>
+                                        <button class="chat-header-btn"><i class="bi bi-camera-video"></i></button>
+                                        <button class="chat-header-btn"><i class="bi bi-info-circle"></i></button>
+                                        <button class="chat-header-btn"><i
+                                                class="bi bi-three-dots-vertical"></i></button>
+                                    </div>
+                                </div>
+                                <div class="chat-body p-3">
+                                    <div
+                                        class="chat-body-date mt-3 mb-4 d-flex justify-content-center align-items-center gap-2">
+                                        <div class="chat-line text-muted"></div>
+                                        <div class="chat-date text-muted small">ថ្ងៃនេះ</div>
+                                        <div class="chat-line text-muted"></div>
+                                    </div>
+                                    <div class="chat-message d-flex  gap-3">
+                                        <div class="chat-message-avatar">
+                                            <img src="../assets/img/seller_images/forgot_pw.png"
+                                                class="avatar rounded-circle"
+                                                style="width: 45px !important; height: 45px;" alt="VIP 1">
+                                        </div>
+                                        <div class="chat-message-info mt-1">
+                                            <p class="chat-name text-muted small mb-1">Hi there! How's the project
+                                                going?</p>
+                                            <p class="chat-time text-muted small">9:30AM</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat-message d-flex  gap-4 justify-content-end">
+                                        <div class="chat-message-info mt-1">
+                                            <p class="seller-chat-name small mb-1">Hey Sarah! It's going well. Just
+                                                finished the dashboard design.</p>
+                                            <p class="seller-chat-time position small"><i class="bi bi-check2-all"></i>
+                                                seen</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat-message d-flex  gap-3">
+                                        <div class="chat-message-avatar">
+                                            <img src="../assets/img/seller_images/forgot_pw.png"
+                                                class="avatar rounded-circle"
+                                                style="width: 45px !important; height: 45px;" alt="VIP 1">
+                                        </div>
+                                        <div class="chat-message-info mt-1">
+                                            <p class="chat-name text-muted small mb-1">That's great! Can you share the
+                                                latest mockups?</p>
+                                            <p class="chat-time text-muted small">9:30AM</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat-message d-flex  gap-4 justify-content-end">
+                                        <div class="chat-message-info mt-1">
+                                            <p class="seller-chat-name small mb-1">ure thing! Here are the files:</p>
+                                            <p class="seller-chat-time position small"><i class="bi bi-check2-all"></i>
+                                                seen</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat-message d-flex  gap-3">
+                                        <div class="chat-message-avatar">
+                                            <img src="../assets/img/seller_images/forgot_pw.png"
+                                                class="avatar rounded-circle"
+                                                style="width: 45px !important; height: 45px;" alt="VIP 1">
+                                        </div>
+                                        <div class="chat-message-info mt-1">
+                                            <p class="chat-name text-muted small mb-1">Perfect! Let me take a look at
+                                                these.</p>
+                                            <p class="chat-time text-muted small">9:42AM</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat-message d-flex  gap-3">
+                                        <div class="chat-message-avatar">
+                                            <img src="../assets/img/seller_images/forgot_pw.png"
+                                                class="avatar rounded-circle"
+                                                style="width: 45px !important; height: 45px;" alt="VIP 1">
+                                        </div>
+                                        <div class="chat-message-info mt-1">
+                                            <p class="chat-name text-muted small mb-1">Perfect! Let me take a look at
+                                                these.</p>
+                                            <p class="chat-name text-muted small mb-1">Just a few minor suggestions:</p>
+                                            <p class="chat-name text-muted small mb-1">1. Could we make the sidebar a
+                                                bit narrower?</p>
+                                            <p class="chat-time text-muted small">10:22 AM</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat-message d-flex  gap-4 justify-content-end">
+                                        <div class="chat-message-info mt-1">
+                                            <p class="seller-chat-name small mb-1">Great feedback! I'll work on those
+                                                changes today.</p>
+                                            <p class="seller-chat-time position small"><i class="bi bi-check2-all"></i>
+                                                seen</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat-message d-flex  gap-3">
+                                        <div class="chat-message-avatar">
+                                            <img src="../assets/img/seller_images/forgot_pw.png"
+                                                class="avatar rounded-circle"
+                                                style="width: 45px !important; height: 45px;" alt="VIP 1">
+                                        </div>
+                                        <div class="chat-message-info mt-1">
+                                            <p class="chat-name text-muted small mb-1">Sure, I'll send the files right
+                                                away!</p>
+                                            <p class="chat-time text-muted small">10:40 AM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-footer p-3">
+                                    <div class="chat-input-wrapper d-flex justify-content-between align-items-center gap-1">
+                                        <div class="chat-input-actions">
+                                            <button class="chat-input-btn"><i class="bi bi-paperclip"></i></button>
+                                            <button class="chat-input-btn"><i class="bi bi-image"></i></button>
+                                        </div>
+                                        <div class="chat-input-field">
+                                            <textarea id="messageInput" rows="1"
+                                                placeholder="Type a message..."></textarea>
+                                        </div>
+                                        <div class="chat-input-actions">
+                                            <button class="chat-input-btn"><i class="bi bi-emoji-smile"></i></button>
+                                            <button class="send-message-btn" title="ផ្ញើសារ"><i
+                                                    class="bi bi-send"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="row g-0 h-100">
                         
-                        <!-- 1. LEFT COLUMN: Chat Conversations List -->
+                        1. LEFT COLUMN: Chat Conversations List
                         <div class="col-12 col-md-5 col-lg-4 col-xl-3 border-end h-100 d-flex flex-column chat-sidebar-bg">
                             <div class="p-3 border-bottom">
                                 <div class="input-group">
@@ -133,10 +462,10 @@
                                 </div>
                             </div>
 
-                            <!-- Dynamic Switching Pill List -->
+                            Dynamic Switching Pill List
                             <div class="nav flex-column nav-pills flex-grow-1 scrollable-chat-area" id="chat-users-list" role="tablist">
                                 
-                                <!-- Customer Item 1 -->
+                                Customer Item 1
                                 <button class="nav-link chat-user-item text-start border-bottom rounded-0 p-3 w-100" id="pill-meas-thida" data-bs-toggle="pill" data-bs-target="#pane-meas-thida" type="button" role="tab" aria-controls="pane-meas-thida" aria-selected="false">
                                     <div class="d-flex gap-3">
                                         <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="User">
@@ -153,7 +482,7 @@
                                     </div>
                                 </button>
 
-                                <!-- Customer Item 2 (Active in Screenshot) -->
+                                Customer Item 2 (Active in Screenshot)
                                 <button class="nav-link active chat-user-item text-start border-bottom rounded-0 p-3 w-100" id="pill-chan-dara" data-bs-toggle="pill" data-bs-target="#pane-chan-dara" type="button" role="tab" aria-controls="pane-chan-dara" aria-selected="true">
                                     <div class="d-flex gap-3">
                                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="User">
@@ -170,7 +499,7 @@
                                     </div>
                                 </button>
 
-                                <!-- Customer Item 3 -->
+                                Customer Item 3
                                 <button class="nav-link chat-user-item text-start border-bottom rounded-0 p-3 w-100" id="pill-sok-sophea" data-bs-toggle="pill" data-bs-target="#pane-sok-sophea" type="button" role="tab" aria-controls="pane-sok-sophea" aria-selected="false">
                                     <div class="d-flex gap-3">
                                         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="User">
@@ -190,15 +519,15 @@
                             </div>
                         </div>
 
-                        <!-- 2 & 3. RIGHT CONTENT AREA -->
+                        2 & 3. RIGHT CONTENT AREA
                         <div class="col-12 col-md-7 col-lg-8 col-xl-9 h-100">
                             <div class="tab-content h-100" id="chat-tab-content">
                                 
-                                <!-- Pane 1: Meas Thida -->
+                                Pane 1: Meas Thida
                                 <div class="tab-pane fade h-100" id="pane-meas-thida" role="tabpanel" aria-labelledby="pill-meas-thida">
                                     <div class="row g-0 h-100">
                                         <div class="col-12 col-xl-8 d-flex flex-column h-100 border-end">
-                                            <!-- Chat Header -->
+                                            Chat Header
                                             <div class="chat-header-bar p-3 border-bottom d-flex align-items-center justify-content-between">
                                                 <div class="d-flex align-items-center gap-3">
                                                     <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="User">
@@ -208,7 +537,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- Chat Messages Stream -->
+                                            Chat Messages Stream
                                             <div class="chat-messages-stream p-4 flex-grow-1 overflow-y-auto d-flex flex-column gap-3">
                                                 <div class="message-bubble left-bubble">
                                                     <p class="mb-0 text-sm">សួស្តីបង តើកាសស្តាប់ UltraBass Headphones ពណ៌ស នៅមានក្នុងស្តុកដែរទេបង?</p>
@@ -223,7 +552,7 @@
                                                     <span class="bubble-time mt-1">០៩:៣២ ព្រឹក</span>
                                                 </div>
                                             </div>
-                                            <!-- Chat Input Block -->
+                                            Chat Input Block
                                             <div class="p-3 border-top chat-input-area-bg">
                                                 <form class="chat-input-form" onsubmit="return false;">
                                                     <div class="input-group shadow-sm rounded-3 overflow-hidden">
@@ -234,7 +563,7 @@
                                                 </form>
                                             </div>
                                         </div>
-                                        <!-- Sidebar Context Info -->
+                                        Sidebar Context Info
                                         <div class="col-xl-4 d-none d-xl-flex chat-context-panel p-4 flex-column h-100 overflow-y-auto">
                                             <div class="text-center pb-4 border-bottom w-100">
                                                 <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=1200" class="avatar-lg rounded-circle border border-3 border-white shadow mb-3" alt="Avatar">
@@ -256,11 +585,11 @@
                                     </div>
                                 </div>
 
-                                <!-- Pane 2: Chan Dara (Active in Screenshot) -->
+                                Pane 2: Chan Dara (Active in Screenshot)
                                 <div class="tab-pane fade show active h-100" id="pane-chan-dara" role="tabpanel" aria-labelledby="pill-chan-dara">
                                     <div class="row g-0 h-100">
                                         <div class="col-12 col-xl-8 d-flex flex-column h-100 border-end">
-                                            <!-- Chat Header -->
+                                            Chat Header
                                             <div class="chat-header-bar p-3 border-bottom d-flex align-items-center justify-content-between">
                                                 <div class="d-flex align-items-center gap-3">
                                                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="User">
@@ -270,7 +599,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- Chat Messages Stream -->
+                                            Chat Messages Stream
                                             <div class="chat-messages-stream p-4 flex-grow-1 overflow-y-auto d-flex flex-column gap-3">
                                                 <div class="message-bubble left-bubble">
                                                     <p class="mb-0 text-sm">បងខ្ញុំបានទូទាត់ថវិកាលើការកម្មង់ Active Fit Pro Watch ចំនួន២គ្រឿងរួចហើយបង launch។</p>
@@ -285,7 +614,7 @@
                                                     <span class="bubble-time mt-1">១ម៉ោងមុន</span>
                                                 </div>
                                             </div>
-                                            <!-- Chat Input Block -->
+                                            Chat Input Block
                                             <div class="p-3 border-top chat-input-area-bg">
                                                 <form class="chat-input-form" onsubmit="return false;">
                                                     <div class="input-group shadow-sm rounded-3 overflow-hidden">
@@ -296,7 +625,7 @@
                                                 </form>
                                             </div>
                                         </div>
-                                        <!-- Sidebar Context Info -->
+                                        Sidebar Context Info
                                         <div class="col-xl-4 d-none d-xl-flex chat-context-panel p-4 flex-column h-100 overflow-y-auto">
                                             <div class="text-center pb-4 border-bottom w-100">
                                                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1200" class="avatar-lg rounded-circle border border-3 border-white shadow mb-3" alt="Avatar">
@@ -329,11 +658,11 @@
                                     </div>
                                 </div>
 
-                                <!-- Pane 3: Sok Sophea -->
+                                Pane 3: Sok Sophea
                                 <div class="tab-pane fade h-100" id="pane-sok-sophea" role="tabpanel" aria-labelledby="pill-sok-sophea">
                                     <div class="row g-0 h-100">
                                         <div class="col-12 col-xl-8 d-flex flex-column h-100 border-end">
-                                            <!-- Chat Header -->
+                                            Chat Header
                                             <div class="chat-header-bar p-3 border-bottom d-flex align-items-center justify-content-between">
                                                 <div class="d-flex align-items-center gap-3">
                                                     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="User">
@@ -343,7 +672,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- Chat Messages Stream -->
+                                            Chat Messages Stream
                                             <div class="chat-messages-stream p-4 flex-grow-1 overflow-y-auto d-flex flex-column gap-3">
                                                 <div class="message-bubble right-bubble ms-auto">
                                                     <p class="mb-0 text-sm">សូមជម្រាបសួរអ្នកស្រី សុភា! តើផលិតផលដែលបានផ្ញើទៅដល់ដៃមានបញ្ហាអ្វីដែរទេ?</p>
@@ -354,7 +683,7 @@
                                                     <span class="bubble-time mt-1">១ថ្ងៃមុន</span>
                                                 </div>
                                             </div>
-                                            <!-- Chat Input Block -->
+                                            Chat Input Block
                                             <div class="p-3 border-top chat-input-area-bg">
                                                 <form class="chat-input-form" onsubmit="return false;">
                                                     <div class="input-group shadow-sm rounded-3 overflow-hidden">
@@ -365,7 +694,7 @@
                                                 </form>
                                             </div>
                                         </div>
-                                        <!-- Sidebar Context Info -->
+                                        Sidebar Context Info
                                         <div class="col-xl-4 d-none d-xl-flex chat-context-panel p-4 flex-column h-100 overflow-y-auto">
                                             <div class="text-center pb-4 border-bottom w-100">
                                                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1200" class="avatar-lg rounded-circle border border-3 border-white shadow mb-3" alt="Avatar">
@@ -390,12 +719,15 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> -->
                 </div>
             </main>
 
         </div>
     </div>
+    <button class="btn btn-primary scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
     <!-- Demo Placeholder Modal -->
     <div class="modal fade" id="modal-not-implemented" tabindex="-1" aria-hidden="true">
@@ -405,7 +737,8 @@
                     <i class="bi bi-info-circle-fill text-warning" style="font-size: 3rem;"></i>
                     <h5 class="fw-bold mt-3 text-dark">ព័ត៌មានប្រព័ន្ធ</h5>
                     <p class="text-xs text-muted mb-4">មុខងារនេះមិនទាន់ត្រូវបានដំឡើងដំណើរការឡើយ។</p>
-                    <button type="button" class="btn btn-primary w-100 py-2 text-white text-xs fw-bold" data-bs-dismiss="modal">យល់ព្រម</button>
+                    <button type="button" class="btn btn-primary w-100 py-2 text-white text-xs fw-bold"
+                        data-bs-dismiss="modal">យល់ព្រម</button>
                 </div>
             </div>
         </div>

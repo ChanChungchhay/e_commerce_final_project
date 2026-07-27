@@ -31,7 +31,7 @@
                     </div>
                     <span class="brand-name text-success">Khmer <span class="text-bazaar">Bazzar</span>.</span>
                 </div>
-                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close"
+                <button type="button" class="btn-close btn-close-black d-lg-none" id="sidebar-close"
                     aria-label="Close"></button>
             </div>
 
@@ -53,7 +53,6 @@
                         <a href="seller_orders.html" class="menu-link">
                             <i class="bi bi-cart-fill"></i>
                             <span class="menu-text">ការបញ្ជាទិញ</span>
-                            <span class="badge rounded-pill bg-danger ms-auto">12</span>
                         </a>
                     </li>
                     <li class="menu-item" data-page="customers">
@@ -72,7 +71,6 @@
                         <a href="seller_messages.html" class="menu-link">
                             <i class="bi bi-chat-left-dots-fill"></i>
                             <span class="menu-text">សារផ្ញើ</span>
-                            <span class="badge rounded-pill bg-primary ms-auto">4</span>
                         </a>
                     </li>
                 </ul>
@@ -86,7 +84,7 @@
                 </button>
                 <button
                     class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
-                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    data-bs-toggle="modal" data-bs-target="#logout">
                     <i class="bi bi-box-arrow-left"></i> ចាកចេញ
                 </button>
             </div>
@@ -96,7 +94,7 @@
         <div class="main-container">
 
             <!-- Top Header Navigation -->
-            <header class="top-navbar">
+            <header class="top-navbar rounded-5 mx-4">
                 <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
 
                     <!-- Left Toggle & Global Search -->
@@ -106,18 +104,13 @@
                         </button>
                         <div class="search-bar-wrapper">
                             <i class="bi bi-search search-icon"></i>
-                            <input type="text" class="form-control" id="global-search"
+                            <input type="text" class="form-control " id="global-search"
                                 placeholder="ស្វែងរកការបញ្ជាទិញ ទំនិញ ឬអតិថិជន...">
                         </div>
                     </div>
 
                     <!-- Right Controls Menu -->
                     <div class="d-flex align-items-center gap-2 gap-md-3">
-
-
-
-
-
                         <!-- Light/Dark Mode Switcher -->
                         <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
                             <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
@@ -137,7 +130,7 @@
                                 aria-labelledby="messageDropdown">
                                 <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
                                     <h6 class="mb-0">Recent Messages</h6>
-                                    <a href="#" class="small text-primary">Mark all read</a>
+                                    <a href="seller_messages.html" class="small text-primary text-decoration-none">មើលការផ្ញើសារ</a>
                                 </div>
                                 <div class="dropdown-list-container">
                                     <!-- Message List Items -->
@@ -191,8 +184,8 @@
                                 </div>
                                 <div class="dropdown-list-container" id="notifications-container">
                                     <!-- Dynamically/Statically Handled -->
-                                    <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <div class="icon-avatar bg-light-success text-success"><i
+                                    <a href="#" class="dropdown-list-item d-flex gap-3 align-items-center">
+                                        <div class="icon-avatar text-success"><i
                                                 class="bi bi-check-circle-fill"></i></div>
                                         <div class="flex-grow-1">
                                             <div class="item-title-row d-flex justify-content-between">
@@ -202,8 +195,8 @@
                                             <p class="preview-text">Shipped to Seattle Warehouse Hub.</p>
                                         </div>
                                     </a>
-                                    <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <div class="icon-avatar bg-light-danger text-danger"><i
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar text-danger"><i
                                                 class="bi bi-exclamation-triangle-fill"></i></div>
                                         <div class="flex-grow-1">
                                             <div class="item-title-row d-flex justify-content-between">
@@ -213,8 +206,8 @@
                                             <p class="preview-text">Only 3 items remaining in stock.</p>
                                         </div>
                                     </a>
-                                    <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <div class="icon-avatar bg-light-primary text-primary"><i
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar text-primary"><i
                                                 class="bi bi-cash-stack"></i></div>
                                         <div class="flex-grow-1">
                                             <div class="item-title-row d-flex justify-content-between">
@@ -227,16 +220,17 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="header-divider h-100"></div>
-
                         <!-- Mini profile info -->
                         <div class="dropdown">
                             <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
-                                id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                id="profileDropdow" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
                                     class="avatar-sm rounded-circle" alt="User Avatar">
-                                <span class="profile-name d-none d-lg-inline-block">ហេង សំណាង</span>
+                                <div class="user-info">
+                                    <h6 class="profile-name d-none d-lg-inline-block">ហេង សំណាង</h6>
+                                    <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
+                                </div>
                                 <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
@@ -263,8 +257,8 @@
                     <!-- Dashboard Greetings and Quick Action Menu -->
                     <div class="row align-items-center mb-4 gy-3">
                         <div class="col-md-6 col-12">
-                            <h2 class="welcome-heading mb-1 text-gradient-primary">សូមស្វាគមន៍ សំណាង</h2>
-                            <p class="text-muted text-sm mb-0">នេះជាទិន្នន័យសំខាន់ៗក្នុងហាងរបស់អ្នក</p>
+                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">សូមស្វាគមន៍ សំណាង</h1>
+                            <p class="text-muted fs-5 mb-0">នេះជាទិន្នន័យសំខាន់ៗក្នុងហាងរបស់អ្នក</p>
                         </div>
                     </div>
 
@@ -278,14 +272,14 @@
                             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
 
                                 <!-- Card 1 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-4">
                                     <div class="stats-card">
                                         <div class="stats-header d-flex justify-content-between align-items-start">
-                                            <div class="icon-wrap bg-light-primary text-white">
+                                            <div class="icon-wrap bg-light-success text-white">
                                                 <i class="bi bi-currency-dollar icon"></i>
                                             </div>
                                             <span
-                                                class="badge bg-light-primary text-white d-flex align-items-center gap-1">
+                                                class="badge bg-light-success text-white d-flex align-items-center gap-1">
                                                 <i class="bi bi-arrow-up-right"></i> 14.2%
                                             </span>
                                         </div>
@@ -310,7 +304,7 @@
                                 </div>
 
                                 <!-- Card 2 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-4">
                                     <div class="stats-card">
                                         <div class="stats-header d-flex justify-content-between align-items-start">
                                             <div class="icon-wrap bg-light-warning text-white">
@@ -341,7 +335,7 @@
                                 </div>
 
                                 <!-- Card 3 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-4">
                                     <div class="stats-card">
                                         <div class="stats-header d-flex justify-content-between align-items-start">
                                             <div class="icon-wrap bg-light-success text-white">
@@ -372,7 +366,7 @@
                                 </div>
 
                                 <!-- Card 4 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <!-- <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                                     <div class="stats-card">
                                         <div class="stats-header d-flex justify-content-between align-items-start">
                                             <div class="icon-wrap bg-light-warning text-white">
@@ -400,10 +394,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- Card 5 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-4">
                                     <div class="stats-card">
                                         <div class="stats-header d-flex justify-content-between align-items-start">
                                             <div class="icon-wrap bg-light-success text-white">
@@ -434,7 +428,7 @@
                                 </div>
 
                                 <!-- Card 6 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-4">
                                     <div class="stats-card">
                                         <div class="stats-header d-flex justify-content-between align-items-start">
                                             <div class="icon-wrap bg-light-warning text-white">
@@ -465,7 +459,7 @@
                                 </div>
 
                                 <!-- Card 7 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <!-- <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                                     <div class="stats-card">
                                         <div class="stats-header d-flex justify-content-between align-items-start">
                                             <div class="icon-wrap bg-light-success text-white">
@@ -494,10 +488,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- Card 8 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-4">
                                     <div class="stats-card">
                                         <div class="stats-header d-flex justify-content-between align-items-start">
                                             <div class="icon-wrap bg-light-warning text-white">
@@ -779,7 +773,7 @@
                                                     <thead>
                                                         <tr>
                                                             <th style="text-wrap: nowrap;">លេខកូដបញ្ជាទិញ</th>
-                                                            <th >ឈ្មោះអតិថិជន</th>
+                                                            <th>ឈ្មោះអតិថិជន</th>
                                                             <th>ឈ្មោះទំនិញ</th>
                                                             <th class="text-center">ចំនួន</th>
                                                             <th>តម្លៃ</th>
@@ -1117,7 +1111,8 @@
                                                 </div>
                                                 <div class="text-end">
                                                     <span class="fw-bold d-block text-sm">$18</span>
-                                                    <span class="badge bg-light-success text-white">ការវាយតម្លៃ៖
+                                                    <span
+                                                        class="badge bg-light-success text-white d-flex align-items-center">ការវាយតម្លៃ៖
                                                         4.9</span>
                                                 </div>
                                             </div>
@@ -1272,7 +1267,7 @@
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="logout" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm">
             <div class="modal-content">
@@ -1284,7 +1279,7 @@
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">បោះបង់</button>
                     <button type="button" class="btn btn-primary" id="logoutBtn" data-bs-target="#staticBackdrop1"><a
-                            href="seller_login.html" class="text-white text-decoration-none">បាទ/ចាស
+                            href="../login.html" class="text-white text-decoration-none">បាទ/ចាស
                             យល់ព្រម</a></button>
                 </div>
             </div>

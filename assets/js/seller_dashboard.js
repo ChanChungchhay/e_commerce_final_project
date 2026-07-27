@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     htmlElement.setAttribute('data-bs-theme', targetTheme);
                     localStorage.setItem('nexis-theme', targetTheme);
                     this.updateThemeIcon(themeIcon, targetTheme);
-                    this.showToast('Theme System', `Successfully converted to ${targetTheme} interface view!`);
                 });
             }
         },

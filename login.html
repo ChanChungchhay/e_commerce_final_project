@@ -39,15 +39,18 @@
                     <div class="card border-0 shadow-lg">
                         <div class="card-body">
                             <h2 class="text-center login-title fw-bold bazaar mb-5">ចូលប្រើប្រាស់</h2>
-                            <form action="seller_da.html" method="GET" class="needs-validation" novalidate>
-                                <div class="mb-4">
-                                    <input type="email" class="form-control" placeholder="បញ្ចូលអុីម៉ែល"
+                            <form action="./seller_dashboard/seller_dashboard.html" method="GET" class="needs-validation" novalidate>
+                                <div class="form-floating mb-4">
+                                    <input type="email" class="form-control" id="floatingInput" placeholder="បញ្ចូលអុីម៉ែល"
                                         required>
+                                        <label for="floatingInput">បំពេញអុីម៉ែល</label>
                                     <div class="invalid-feedback">សូមបំពេញអុីម៉ែល</div>
                                 </div>
-                                <div class="mb-4 input-container">
-                                    <input type="password" class="form-control input" placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
-                                    <i class="bi bi-eye-slash eye-icon"></i>
+                                <div class="form-floating mb-4 input-container">
+                                    
+                                        <input type="password" class="form-control input" id="floatingPassword" placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
+                                        <i class="bi bi-eye-slash eye-icon"></i>
+                                        <label for="floatingPassword">បំពេញពាក្យសម្ងាត់</label>
                                     <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center mb-3">
