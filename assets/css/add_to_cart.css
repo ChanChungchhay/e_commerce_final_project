@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #0F172A;
+  --primary-hover: #1E293B;
+  --accent: #C5A880;
+  --accent-hover: #B3956D;
+  --dark: #0F172A;
+  --light: #F8F9FA;
+  --body-bg: #FAFBFD;
+  --text-main: #334155;
+  --text-muted: #64748B;
+  --border-color: #E2E8F0;
+  --success: #10B981;
+  --danger: #EF4444;
+  --warning: #F59E0B;
+  --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.04), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --card-shadow-hover: 0 20px 30px -10px rgba(15, 23, 42, 0.12), 0 10px 15px -8px rgba(15, 23, 42, 0.08);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.4);
+
+}
+
+body {
+  font-family: "Battambang", system-ui, "Roboto", sans-serif !important;
+}
+
+.sect-1 .card-cart {
+  border-radius: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0.1px 0.1px 5px rgba(128, 128, 128, 0.188);
+
+}
+
+.sect-1 .table .th,
+.sect-1 .table .td {
+  width: 20%;
+  height: 100%;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.sect-1 .td i {
+  cursor: pointer !important;
+  transition: .2s;
+}
+
+.sect-1 .td .fa-solid:hover {
+  color: red !important;
+  transition: .2s linear;
+  transform: scale(1.04);
+}
+
+.sect-1 .qty {
+  overflow: hidden;
+}
+
+.sect-1 .qty:focus-within {
+  box-shadow: 0.1px 0.1px 3px rgb(12, 111, 12) !important;
+}
+
+.sect-1 .btn-plus:hover {
+  background-color: #1da34ccd !important;
+}
+
+.sect-1 .btn-subtract:hover {
+  background-color: #961d1dcd !important;
+}
+
+.sect-1 .btn-pay {
+  transition: .2s;
+  cursor: pointer;
+}
+
+.sect-1 .btn-pay:hover {
+  transition: .2s linear;
+  transform: translateY(-2px);
+  background-color: rgba(0, 0, 2, 0.649) !important;
+  color: white !important;
+}
+
+
+
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  border-radius: 5px;
+  background: #F59E0B;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+
+
+/* ============ Invoice modal (វិកាយប័ណ្ណ) ============ */
+#invoiceModal .modal-content {
+  box-shadow: var(--card-shadow-hover);
+}
+
+#invoiceModal .table th {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+#invoiceModal .btn-primary {
+  background-color: var(--primary);
+  border: none;
+}
+
+#invoiceModal .btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.swal2-popup {
+  font-family: "Battambang", system-ui, "Roboto", sans-serif !important;
+  border-radius: 16px !important;
+}
+
+/* print only the invoice when clicking បោះពុម្ព */
+@media print {
+  body>.sect-1 {
+    display: none !important;
+  }
+
+  #invoiceModal {
+    position: static !important;
+    display: block !important;
+  }
+
+  #invoiceModal .modal-footer,
+  #invoiceModal .btn-close {
+    display: none !important;
+  }
+}
+
+/* ============ Customer info + payment modal ============ */
+#customerFormContent {
+  border-radius: 16px;
+  box-shadow: var(--card-shadow-hover);
+}
+
+#customerInfoForm .form-label {
+  color: var(--dark);
+  font-size: 14px;
+}
+
+#customerInfoForm .form-control {
+  border: 1.5px solid var(--border-color);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+#customerInfoForm .form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.18);
+}
+
+#customerInfoForm .form-control.is-invalid {
+  border-color: var(--danger);
+}
+
+#customerInfoForm .invalid-feedback {
+  font-size: 12.5px;
+}
+
+/* payment method selectable cards */
+.pay-method-group {
+  margin-top: 4px;
+}
+
+.pay-method-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 12px;
+  padding: 14px 8px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-main);
+  background-color: var(--light);
+  transition: var(--transition);
+  user-select: none;
+}
+
+.pay-method-card i {
+  font-size: 20px;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.pay-method-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.pay-method-input:checked+.pay-method-card {
+  border-color: var(--accent);
+  background-color: rgba(197, 168, 128, 0.12);
+  color: var(--dark);
+  box-shadow: 0 4px 10px -4px rgba(197, 168, 128, 0.4);
+}
+
+.pay-method-input:checked+.pay-method-card i {
+  color: var(--accent-hover);
+}
+
+.pay-method-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-pay-confirm {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-pay-confirm:hover {
+  background-color: var(--primary-hover);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* customer info block shown on the invoice */
+.invoice-customer-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background-color: var(--light);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border: 1px dashed var(--border-color);
+}
+
+.invoice-customer-col {
+  min-width: 180px;
+}
+
+.invoice-customer-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  margin-bottom: 2px;
+}
+
+/* SweetAlert2: match the two post-payment choice buttons with the site's palette */
+.swal2-styled.swal2-confirm {
+  border-radius: 8px !important;
+}
+
+.swal2-styled.swal2-deny {
+  border-radius: 8px !important;
+}
+
+.qr-pay-box {
+  border: 1px dashed #0f9bb0;
+  background: #f4fbfc;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+}
+
+.qr-pay-img {
+  width: 170px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.visa-pay-box {
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.visa-pay-box .form-control:focus {
+  border-color: #1a1f71;
+  box-shadow: 0 0 0 0.2rem rgba(26, 31, 113, 0.15);
+}
+
+.sect-1 .table thead th {
+  white-space: normal !important;
+  word-break: keep-all;
+}
+
+.sect-1 .product-name-cell {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark, #0F172A);
+  line-height: 1.5;
+  padding: 6px 0 6px 12px;
+  border-left: 3px solid var(--accent, #C5A880);
+  letter-spacing: 0.1px;
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 1030;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-radius: 50% !important;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.btn-primary {
+    background: linear-gradient(135deg, #0B5E34 0%, #064E26 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 24px;
+    box-shadow: 0 4px 14px 0 rgba(11, 94, 52, 0.2), 0 2px 4px 0 rgba(217, 119, 6, 0.15); /* ស្រមោលមាស និងបៃតងលាយគ្នា */
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(11, 94, 52, 0.3), 0 4px 8px 0 rgba(217, 119, 6, 0.15);
+    background: linear-gradient(135deg, #0d6e3c 0%, #085e2f 100%) !important;
+}
