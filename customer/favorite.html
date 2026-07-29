@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Favorite</title>
+    <link rel="stylesheet" href="../assets/css/favorite.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/customer.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    
+</head>
+
+<body>
+    <div class="header py-2 br-s bg-success">
+        <div class="container d-flex justify-content-between  align-items-center ">
+            <div class="head-link d-flex gap-3 ">
+                <a class=" body-link text-light" href="#"><i class="fa-regular fa-envelope me-1 fs-6"
+                        style="color: rgb(255, 255, 255);"></i>contact@example.com</a>
+                <a class=" body-link text-light" href="#"><i class="fa-solid fa-mobile-screen me-1 fs-6"
+                        style="color: rgb(255, 255, 255);"></i> +885 096300600</a>
+            </div>
+             <button type="button" class="head-icon d-flex gap-3 d-md-block d-none border-0 bg-transparent ">
+                <a href="#"><i class="fa-brands fa-twitter  fs-6  text-light"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook fs-6  text-light"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram fs-6  text-light"></i></a>
+                <a href="#"><i class="fa-brands fa-invision fs-6  text-light"></i></a>
+            </button>
+        </div>
+    </div>
+    <nav class="nav pt-2 shadow position-sticky top-0 z-3 bg-white">
+        <div class="container mb-0 d-flex justify-content-between align-items-center ">
+            <a href="#" class="navbar-brand"><img src="../assets/img/logo/img-logo.jpg" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
+            <ul class="navbar-nav d-flex gap-1 flex-row d-lg-block d-none d-lg-flex">
+                <li class="nav-item"><a class="nav-link active" href="./home.html">ទំព័រដើម</a></li>
+                <li class="nav-item"><a class="nav-link "  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ប្រភេទទំនិញ<i class="fa-solid fa-angle-down" style="color: var(--color-gray);"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/customer/product.html">សម្លៀកបំពាក់</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">គ្រឿងសម្អាង</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">ផលិតផលសិប្បកម្មខ្មែរ</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">អាហារ និងគ្រឿងទេស</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">សម្ភារៈកីឡា</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">សៀវភៅ និងសម្ភារៈសិក្សា</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">គ្រឿងអេឡិចត្រូនិក</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link " href="../customer/product.html">ផលិតផល</a></li>
+                <li class="nav-item"><a class="nav-link " href="/customer/discount.html">បញ្ចុះតម្លៃ</a></li>
+                <li class="nav-item"><a class="nav-link " href="./about_us.html">អំពីយើង</a></li>
+                <li class="nav-item"><a class="nav-link " href="./contact.html">ទំនាក់ទំនង</a></li>
+            </ul>
+            <div class="d-flex gap-2">
+                <a href="/customer/shop.html" class="btn border shadow rounded-circle bg-transparent d-flex justify-content-center align-items-center position-relative" style="width: 35px;height: 35px;">
+                    <i class="fa-solid fa-store text-primary"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px;">2</span>
+                </a>
+                <a href="../customer/favorite.html" class="btn border shadow rounded-circle bg-transparent d-flex justify-content-center align-items-center position-relative" style="width: 35px;height: 35px;">
+                    <i class="fa-regular fa-heart text-danger"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px;">3</span>
+                </a>
+                <a href="../customer/add_to_cart.html" class="btn border shadow rounded-circle bg-transparent d-flex justify-content-center align-items-center position-relative" style="width: 35px;height: 35px;">
+                    <i class="fa-solid fa-cart-shopping text-success" ></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px;">4</span>
+                </a>
+                <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 <img src="../assets/img/logo/profile.jpg" class="img-fluid object-fit-cover rounded-circle " style="width: 35px;" alt="">
+                 <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./profile.html">ប្រវត្តិរូប</a></li>
+                        <li><a class="dropdown-item" href="#">privacy</a></li>
+                        <li><a class="dropdown-item" href="#">Dark mode</a></li>
+                        <li><a class="dropdown-item active" href="../index.html">ចាកចេញ</a></li>
+                        <li><a class="dropdown-item" href="#"></a></li>
+                    </ul>
+                </a>
+                <button type="button" class="btn border shadow d-lg-none d-block  d-flex justify-content-center align-items-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="width: 35px;height: 35px;"><i class="fa-solid fa-bars" ></i></button>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======offcanvas========== -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 350px;">
+        <div class="offcanvas-header">
+            <img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt="">
+            <button type="button" class="btn-close shadow-none " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav d-flex gap-3 justify-content-center align-items-center flex-column gap-1">
+                <li class="nav-item"><a class="nav-link shadow " href="./home.html">ទំព័រដើម</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ប្រភេទទំនិញ<i class="fa-solid fa-angle-down" style="color: var(--color-gray);"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./product.html">សម្លៀកបំពាក់</a></li>
+                        <li><a class="dropdown-item" href="./product.html">គ្រឿងសម្អាង</a></li>
+                        <li><a class="dropdown-item" href="./product.html">ផលិតផលសិប្បកម្មខ្មែរ</a></li>
+                        <li><a class="dropdown-item" href="./product.html">អាហារ និងគ្រឿងទេស</a></li>
+                        <li><a class="dropdown-item" href="./product.html">សម្ភារៈកីឡា</a></li>
+                        <li><a class="dropdown-item" href="./product.html">សៀវភៅ និងសម្ភារៈសិក្សា</a></li>
+                        <li><a class="dropdown-item" href="./product.html">គ្រឿងអេឡិចត្រូនិក</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link shadow " href="./product.html">ផលិតផល</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="./discount.html">បញ្ចុះតម្លៃ</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="./about_us.html">អំពីយើង</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="./contact.html">ទំនាក់ទំនង</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <section class="sect-1 py-4">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="fs-3 fw-bold text-success text-center">ចូលចិត្ត</div>
+                        <button type="button" id="movealltostock"
+                            class="btn btn-success">ផ្លាស់ទីផលិតផលទាំងអស់ទៅក្នុងកន្ត្រកទំនិញ</button>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-9 col-12 d-flex">
+                            <div class="card product-card w-100 h-100 d-flex flex-column">
+                                <div class="card-img rounded-bottom-0 position-relative overflow-hidden d-flex justify-content-center align-items-center bg-light" style="height: 160px;">
+                                    <img src="../assets/img/payment/watch.png" class="img-fluid" style="max-height: 100%;max-width: 100%;object-fit: contain;"
+                                        alt="">
+                                    <button type="button"
+                                        class="status bg-primary rounded-pill px-2 text-white border-0"
+                                        style="position: absolute; top: 8px; left: 8px; font-size: 11px; line-height: 1.6;">New
+                                        Arrival</button>
+                                    <button class="delete rounded-circle bg-white border-0 shadow-sm d-flex justify-content-center align-items-center"
+                                        data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                        style="position: absolute;top: 8px;right: 8px;width: 28px;height: 28px;"><i
+                                            class="fa-solid fa-xmark text-danger" style="font-size: 13px;"></i></button>
+                                </div>
+                                <div class="card-body d-flex flex-column flex-grow-1">
+                                    <div class="text-success fw-bold bg-light shadow text-center rounded-pill "
+                                        style="font-size: 10px;width:40%;">in stock</div>
+                                    <div class="tittle fs-5 fw-bold py-2 text-success">នាឡិកា</div>
+                                    <div class="text text-secondary  " style="font-size: 13px;">
+                                        ពណ៌​ខ្សាច់​ទន់​ប៉ះ​នឹង​ពណ៌​មាស​លឿង​ភ្ក្នុង​នាឡិកា​ស្ត្រី​នេះ</div>
+                                    <div class="py-2 d-flex  justify-content-start align-items-center">
+                                        <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                        <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div class="price text-success fw-bold">285$/ <span
+                                                class="text-black fw-normal " style="font-size: 12px; ">In stock</span>
+                                        </div>
+                                        <button type="button" class="btn movetostock bg-success text-white">Add
+                                            cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-9 col-12 d-flex">
+                            <div class="card product-card w-100 h-100 d-flex flex-column">
+                                <div class="card-img rounded-bottom-0 position-relative overflow-hidden d-flex justify-content-center align-items-center bg-light" style="height: 160px;">
+                                    <img src="../assets/img/payment/hair.png" class="img-fluid" style="max-height: 100%;max-width: 100%;object-fit: contain;"
+                                        alt="">
+                                    <button type="button"
+                                        class="status bg-danger rounded-pill px-2 text-white border-0"
+                                        style="position: absolute; top: 8px; left: 8px; font-size: 11px; line-height: 1.6;">-10%</button>
+                                    <button class="delete rounded-circle bg-white border-0 shadow-sm d-flex justify-content-center align-items-center"
+                                        data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                        style="position: absolute;top: 8px;right: 8px;width: 28px;height: 28px;"><i
+                                            class="fa-solid fa-xmark text-danger" style="font-size: 13px;"></i></button>
+                                </div>
+                                <div class="card-body d-flex flex-column flex-grow-1">
+                                    <div class="text-danger fw-bold bg-light shadow text-center rounded-pill "
+                                        style="font-size: 10px;width:40%;">Discount</div>
+                                    <div class="tittle fs-5 fw-bold py-2 text-success">ម៉ាស៊ីនសម្ងួតសក់</div>
+                                    <div class="text text-secondary  " style="font-size: 13px;">ម៉ាស៊ីនសម្ងួតសក់ Mijia
+                                        H101 (ទំហំតូច) ពណ៌ផ្កាឈូក/ស</div>
+                                    <div class="py-2 d-flex  justify-content-start align-items-center">
+                                        <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                        <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div class="price text-success fw-bold"> <del class="text-secondary">5.5$</del>
+                                            3$/ <span class="text-black fw-normal " style="font-size: 12px; ">In
+                                                stock</span></div>
+                                        <button type="button" class="btn movetostock bg-success text-white">Add
+                                            cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-9 col-12 d-flex">
+                            <div class="card product-card w-100 h-100 d-flex flex-column">
+                                <div class="card-img rounded-bottom-0 position-relative overflow-hidden d-flex justify-content-center align-items-center bg-light" style="height: 160px;">
+                                    <img src="../assets/img/payment/book.png" class="img-fluid" style="max-height: 100%;max-width: 100%;object-fit: contain;"
+                                        alt="">
+                                    <button type="button"
+                                        class="status bg-secondary rounded-pill px-2 text-white border-0"
+                                        style="position: absolute; top: 8px; left: 8px; font-size: 11px; line-height: 1.6;">អស់ពីស្តុក</button>
+                                    <button class="delete rounded-circle bg-white border-0 shadow-sm d-flex justify-content-center align-items-center"
+                                        data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                        style="position: absolute;top: 8px;right: 8px;width: 28px;height: 28px;"><i
+                                            class="fa-solid fa-xmark text-danger" style="font-size: 13px;"></i></button>
+                                </div>
+                                <div class="card-body d-flex flex-column flex-grow-1">
+                                    <div class="text-secondary fw-bold bg-light shadow text-center rounded-pill "
+                                        style="font-size: 10px;width:40%;">អស់ពីស្តុក</div>
+                                    <div class="tittle fs-5 fw-bold py-2 text-success">សៀវភៅ</div>
+                                    <div class="text text-secondary  " style="font-size: 13px;">សេដ្ឋកិច្ចកម្ពុជា
+                                        មាគាឆ្ពោះទៅរកអនាគតដ៏ភ្លឺស្វាង</div>
+                                    <div class="py-2 d-flex  justify-content-start align-items-center">
+                                        <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                        <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div class="price text-success fw-bold">10$/ <span class="text-black fw-normal "
+                                                style="font-size: 12px; ">Out stock</span></div>
+                                        <div class="">
+                                            <button type="button"
+                                                class="btn bg-secondary text-white disabled">អស់ពីស្តុក</button>
+                                            <button type="button" class="btn bg-success text-white disabled">Add
+                                                cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-9 col-12 d-flex">
+                            <div class="card product-card w-100 h-100 d-flex flex-column">
+                                <div class="card-img rounded-bottom-0 position-relative overflow-hidden d-flex justify-content-center align-items-center bg-light" style="height: 160px;">
+                                    <img src="../assets/img/payment/perfum-oil.png" class="img-fluid" style="max-height: 100%;max-width: 100%;object-fit: contain;"
+                                        alt="">
+                                    <button type="button"
+                                        class="status bg-danger rounded-pill px-2 text-white border-0"
+                                        style="position: absolute; top: 8px; left: 8px; font-size: 11px; line-height: 1.6;">-10%</button>
+                                    <button class="delete rounded-circle bg-white border-0 shadow-sm d-flex justify-content-center align-items-center"
+                                        data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                        style="position: absolute;top: 8px;right: 8px;width: 28px;height: 28px;"><i
+                                            class="fa-solid fa-xmark text-danger" style="font-size: 13px;"></i></button>
+                                </div>
+                                <div class="card-body d-flex flex-column flex-grow-1">
+                                    <div class="text-danger fw-bold bg-light shadow text-center rounded-pill "
+                                        style="font-size: 10px;width:40%;">Discount</div>
+                                    <div class="tittle fs-5 fw-bold py-2 text-success">ទឹកអប់</div>
+                                    <div class="text text-secondary  " style="font-size: 13px;">ទឹកអប់ក្លិនស្រស់ថ្លា
+                                        ជាប់បានយូរ ស័ក្តិសមសម្រាប់ប្រើប្រចាំថ្ងៃ</div>
+                                    <div class="py-2 d-flex  justify-content-start align-items-center">
+                                        <div class="text text-secondary" style="font-size: 13px;">Rate :</div>
+                                        <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 212, 59);"></i>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        <div class="price text-success fw-bold"> <del class="text-secondary">5.5$</del>
+                                            3$/ <span class="text-black fw-normal " style="font-size: 12px; ">In
+                                                stock</span></div>
+                                        <button type="button" class="btn movetostock bg-success text-white">Add
+                                            cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======modal====== -->
+    <div class="modal " id="deleteModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        លុបចេញពីចំណូលចិត្ត
+                    </h5>
+
+                    <button type="button" class="btn-close shadow-none " data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+
+                    <i class="fa-solid fa-trash fa-3x text-danger mb-3"></i>
+
+                    <h5>លុបផលិតផលនេះចេញឬ?</h5>
+
+                    <p class="text-secondary">
+                        តើអ្នកប្រាកដឬទេថាចង់លុបផលិតផលនេះចេញពីបញ្ជីដែលអ្នកពេញចិត្ត?
+                    </p>
+
+                </div>
+                <div class="modal-footer border-0">
+
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        បោះបង់
+                    </button>
+
+                    <button type="button" class="btn btn-danger" id="confirmDelete">
+                        លុប
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- =====modal save all pro===== -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="../assets/img/logo/img-logo.png" style="width: 40px;"
+                    class="img-fluid object-fit-cover rounded me-2" alt="...">
+                <strong class="me-auto">khmerbazaar</strong>
+                <small>just now</small>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body text-center bg-success-subtle">
+                <i class="fa-solid fa-circle-check" style="color: rgb(21, 197, 47);"></i>
+                ផលិតផលទាំងអស់បានទៅក្នុងកន្ត្រកទំនិញ
+            </div>
+        </div>
+    </div>
+    <!-- =====modal save to cart===== -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast-1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="../assets/img/logo/img-logo.png" style="width: 40px;"
+                    class="img-fluid object-fit-cover rounded me-2" alt="...">
+                <strong class="me-auto">khmerbazaar</strong>
+                <small>just now</small>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body text-center bg-success-subtle">
+                <i class="fa-solid fa-circle-check" style="color: rgb(21, 197, 47);"></i>
+                ផលិតផលបានដាក់ទៅក្នុងកន្ត្រកទំនិញ
+            </div>
+        </div>
+    </div>
+    <section class="footer pt-4 " style="background-color: var(--footer-bg);">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" class="navbar-brand"><img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
+                            <div class="tittie text-white">ផ្សារអនឡាញដែលជួយប្រជាជនកម្ពុជាទិញ និងលក់ផលិតផលដើម្បីបង្កើនចំណូល និងគាំទ្រអាជីវកម្មក្នុងស្រុក។</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="d-flex">
+                            <div class="card-body ">
+                                <div class=" tittle fw-bold">Quick Links</div>
+                                <ul class=" list-unstyled mt-3">
+                                    <li><a class="link" href="#">ទំព័រដើម</a></li>
+                                    <li><a class="link" href="#">រភេទទំនិញ</a></li>
+                                    <li><a class="link" href="#">ផលិតផល</a></li>
+                                    <li><a class="link" href="#">បញ្ចុះតម្លៃ</a></li>
+                                    <li><a class="link" href="#">អំពីយើង</a></li>
+                                    <li><a class="link" href="#">ទំនាក់ទំនង</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-body" >
+                                <div class=" tittle fw-bold">Customer Service</div>
+                                <ul class=" list-unstyled mt-3">
+                                    <li><a class="link" href="#">តាមដានការបញ្ជាទិញ</a></li>
+                                    <li><a class="link" href="#">ការដឹកជញ្ជូន</a></li>
+                                    <li><a class="link" href="#">លក្ខខណ្ឌប្រើប្រាស់</a></li>
+                                    <li><a class="link" href="#">គោលការណ៍ឯកជនភាព</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class=" tittle fw-bold">Contact Us</div>
+                            <div class="d-flex flex-column mt-3">
+                                <a href="#" class="link"><i class="fa-solid fa-location-dot text-secondary"></i>Steung mean chey , Phnom Penh City</a>
+                                <a href="#" class="link"><i class="fa-solid fa-phone text-secondary"></i>+855 12 345 678</a>
+                                <a href="#" class="link"><i class="fa-solid fa-envelope text-secondary"></i>support@khmerbazaar.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card">
+                            <div class="card-body" >
+                                <div class=" tittle fw-bold">Follow Us</div>
+                                <ul class="d-flex gap-2 list-unstyled mt-3">
+                                    <li><a class="icon bg-primary" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a class="icon bg-info" href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                                    <li><a class="icon bg-danger" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a class="icon bg-danger" href="#"><i class="fa-brands fa-youtube" ></i></a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card">
+                            <div class="card-body" >
+                                <div class=" tittle fw-bold">Payment Menthods</div>
+                                <ul class="d-flex justify-content-start align-items-center gap-2 list-unstyled mt-3 flex-wrap">
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/ABA.webp" class="img-fluid object-fit-cover " alt=""></a></li>
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/acleda.jpg" class="img-fluid object-fit-cover" alt=""></a></li>
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/visa.png" class="img-fluid object-fit-cover" alt=""></a></li>
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/wing.png" class="img-fluid object-fit-cover" alt=""></a></li>
+                                    <div class="payment bg-success  rounded-2 text-nowrap d-flex justify-content-center align-items-center text-white" style="height: 50px;width: 120px;">Cash on Delivery</div>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-2 bg-primary-subtle">© 2026 Khmer Bazaar. All Rights Reserved.</div>
+    </section>
+     <button class="btn btn-primary scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+         <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
+    <!-- <script src="assets/js/favorite.js"></script> -->
+    <script>
+         // =====move favo to stock====
+        const toastLiveExample1 = document.getElementById('liveToast-1')
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample1)
+        document.querySelectorAll('.movetostock').forEach(function (btn) {
+            btn.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        })
+    </script>
+    <script>
+         // =====move all favo to stock====
+         const toastTrigger = document.getElementById('movealltostock')
+        const toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+            toastTrigger.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        }
+    </script>
+    <script>
+        // =====delete favo ======
+        let cardToDelete = null;
+        document.querySelectorAll(".delete").forEach(btn => {
+            btn.addEventListener("click", function () {
+                cardToDelete = this.closest(".product-card");
+            });
+        });
+        document.getElementById("confirmDelete").addEventListener("click", function () {
+
+            if (cardToDelete) {
+                cardToDelete.remove();
+            }
+            const modal = bootstrap.Modal.getInstance(document.getElementById("deleteModal"));
+            modal.hide();
+        });
+    </script>
+    <script>
+        const NexisApp = {
+            init() {
+            this.initScrollToTop();
+        },
+        initScrollToTop() {
+            const topBtn = document.getElementById('scrollTopBtn');
+            if (!topBtn) return;
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    topBtn.classList.add('visible');
+                } else {
+                    topBtn.classList.remove('visible');
+                }
+            });
+
+            topBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        },
+        };
+        NexisApp.init();
+    </script>
+</body>
+
+</html>
