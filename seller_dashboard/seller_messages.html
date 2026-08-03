@@ -1,18 +1,15 @@
-<!-- START OF FILE seller_messages.html -->
 <!DOCTYPE html>
 <html lang="km" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>សារផ្ញើអតិថិជន - Khmer Bazaar</title>
-
+    <title>សារផ្ញើអតិថិជន | Khmer Bazaar Seller Center</title>
+    <link rel="shortcut icon" href="../assets/img/seller_images/img-logo-no-title.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
@@ -36,8 +33,7 @@
                     </div>
                     <span class="brand-name text-success">Khmer <span class="text-bazaar">Bazzar</span>.</span>
                 </div>
-                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close"
-                    aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close" aria-label="Close"></button>
             </div>
 
             <div class="sidebar-menu-wrapper">
@@ -78,12 +74,20 @@
                             <span class="menu-text">សារផ្ញើ</span>
                         </a>
                     </li>
+                    <li class="menu-item" data-page="profiles">
+                        <a href="seller_profiles.html" class="menu-link">
+                            <i class="bi bi-person-fill"></i>
+                            <span class="menu-text">ប្រវត្តិរូប</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <div class="sidebar-footer">
-                <button
-                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
+                <button type="button" class="btn btn-success w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
+                    <a href="../customer/home.html" class="text-white text-decoration-none"><i class="bi bi-chevron-double-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
+                </button>
+                <button class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2" data-bs-toggle="modal" data-bs-target="#modal-not-implemented">
                     <i class="bi bi-box-arrow-left"></i> ចាកចេញ
                 </button>
             </div>
@@ -108,50 +112,27 @@
 
                         <!-- Messages Dropdown -->
                         <div class="dropdown">
-                            <button class="btn btn-icon position-relative" type="button" id="messageDropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-icon position-relative" type="button" id="messageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-chat-left-dots"></i>
-                                <span
-                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-warning border border-2 border-white">
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark border border-2 border-white">
                                     3
                                 </span>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
-                                aria-labelledby="messageDropdown">
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large" aria-labelledby="messageDropdown">
                                 <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-0">Recent Messages</h6>
-                                    <a href="seller_messages.html"
-                                        class="small text-primary text-decoration-none">មើលការផ្ញើសារ</a>
+                                    <h6 class="mb-0 fw-bold">សារទទួលបានថ្មីៗ</h6>
+                                    <a href="seller_messages.html" class="small text-success text-decoration-none">មើលទាំងអស់</a>
                                 </div>
                                 <div class="dropdown-list-container">
-                                    <!-- Message List Items -->
                                     <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
-                                            class="avatar-sm rounded-circle" alt="User Image">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar-sm rounded-circle" alt="User">
                                         <div>
                                             <div class="item-title-row d-flex justify-content-between">
-                                                <span class="user-name">Sarah Jenkins</span>
+                                                <span class="user-name">មាស ធីតា</span>
                                                 <span class="timestamp">2m ago</span>
                                             </div>
-                                            <p class="preview-text">សួស្តី សំណាង
-                                                តើការធានាផលិតផលមានរួមបញ្ចូលក្នុងតម្លៃដើមដែរឬទេ?</p>
+                                            <p class="preview-text">សួស្តីបង តើកាស UltraBass នេះមានស្តុកទេ?</p>
                                         </div>
-                                    </a>
-                                    <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
-                                            class="avatar-sm rounded-circle" alt="User Image">
-                                        <div>
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="user-name">Marcus Vance</span>
-                                                <span class="timestamp">1h ago</span>
-                                            </div>
-                                            <p class="preview-text">សូមជួយបញ្ជាក់ផងថា
-                                                តើអ្នកអាចដឹកជញ្ជូនទំនិញទាំងនេះមកកាន់ឃ្លាំងរបស់យើងបានដែរឬទេ?</p>
-                                        </div>
-                                    </a>
-                                    <a href="#"
-                                        class="dropdown-list-item d-flex gap-3 text-center py-2 text-primary fw-medium justify-content-center">
-                                        View all messages
                                     </a>
                                 </div>
                             </div>
@@ -159,81 +140,45 @@
 
                         <!-- Notification Dropdown -->
                         <div class="dropdown">
-                            <button class="btn btn-icon position-relative" type="button" id="notifDropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-icon position-relative" type="button" id="notifDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-bell"></i>
-                                <span
-                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
                                     5
                                 </span>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
-                                aria-labelledby="notifDropdown">
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large" aria-labelledby="notifDropdown">
                                 <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-0">Notifications</h6>
-                                    <a href="#" class="small text-primary">Mark all read</a>
+                                    <h6 class="mb-0 fw-bold">ការជូនដំណឹង</h6>
+                                    <a href="#" class="small text-success text-decoration-none">អានទាំងអស់</a>
                                 </div>
-                                <div class="dropdown-list-container" id="notifications-container">
-                                    <!-- Dynamically/Statically Handled -->
-                                    <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <div class="icon-avatar bg-light-success text-success"><i
-                                                class="bi bi-check-circle-fill"></i></div>
+                                <div class="dropdown-list-container">
+                                    <a href="#" class="dropdown-list-item d-flex gap-3 align-items-center">
+                                        <div class="icon-avatar text-success"><i class="bi bi-check-circle-fill"></i></div>
                                         <div class="flex-grow-1">
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="notif-title">Order #8832 Dispatched</span>
-                                                <span class="timestamp">Just now</span>
-                                            </div>
-                                            <p class="preview-text">Shipped to Seattle Warehouse Hub.</p>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <div class="icon-avatar bg-light-danger text-danger"><i
-                                                class="bi bi-exclamation-triangle-fill"></i></div>
-                                        <div class="flex-grow-1">
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="notif-title">Low Stock: Wireless Earbuds</span>
-                                                <span class="timestamp">12m ago</span>
-                                            </div>
-                                            <p class="preview-text">Only 3 items remaining in stock.</p>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <div class="icon-avatar bg-light-primary text-primary"><i
-                                                class="bi bi-cash-stack"></i></div>
-                                        <div class="flex-grow-1">
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="notif-title">Payment Received</span>
-                                                <span class="timestamp">1h ago</span>
-                                            </div>
-                                            <p class="preview-text">Payout of $12,450.00 processed successfully.</p>
+                                            <span class="notif-title fw-bold text-sm">បានបញ្ជូនកញ្ចប់ #ODR-8832</span>
+                                            <p class="preview-text">បានដឹកជញ្ជូនទៅកាន់ឃ្លាំងភ្នំពេញ។</p>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </div>
+
                         <div class="header-divider h-100"></div>
+
                         <!-- Mini profile info -->
                         <div class="dropdown">
-                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
-                                id="profileDropdow" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
-                                    class="avatar-sm rounded-circle" alt="User Avatar">
+                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" class="avatar-sm rounded-circle" alt="User Avatar">
                                 <div class="user-info">
-                                    <h6 class="profile-name d-none d-lg-inline-block">ហេង សំណាង</h6>
-                                    <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
+                                    <h6 class="profile-name d-none d-lg-inline-block fw-bold mb-0">ហេង សំណាង</h6>
+                                    <p class="small text-muted d-none d-lg-block mb-0" style="font-size: 11px;">ហាង ល្អប្រណីត</p>
                                 </div>
-                                <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
+                                <i class="bi bi-chevron-down d-none d-lg-inline-block text-muted small"></i>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i
-                                            class="bi bi-person-fill"></i> Profile settings</a></li>
-                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i
-                                            class="bi bi-shield-lock-fill"></i> Security settings</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item text-danger d-flex align-items-center gap-2" href="#"><i
-                                            class="bi bi-box-arrow-right"></i> Sign out</a></li>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="seller_profiles.html"><i class="bi bi-person-fill text-success"></i> កែប្រែគណនី</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger d-flex align-items-center gap-2" href="#"><i class="bi bi-box-arrow-right"></i> ចាកចេញ</a></li>
                             </ul>
                         </div>
 
@@ -241,493 +186,208 @@
                 </div>
             </header>
 
-            <!-- Main Chat Workspace (Split-Screen layout) -->
-            <main class="content-wrapper">
-                <div class="container-fluid px-4 py-4">
-                    <!-- Dashboard Greetings and Quick Action Menu -->
-                    <div class="row align-items-center mb-4 gy-3">
-                        <div class="col-md-6 col-12">
-                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">សូមស្វាគមន៍ សំណាង</h1>
+            <!-- Main Chat Workspace Layout -->
+            <main class="content-wrapper p-4">
+                <div class="container-fluid p-0">
+
+                    <div class="row align-items-center mb-3 gy-2">
+                        <div class="col-12">
+                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">សារសន្ទនាជាមួយអតិថិជន 💬</h1>
+                            <p class="text-muted fs-5 mb-0">ឆ្លើយតបសំណួរអតិថិជនរហ័ស ដើម្បីបង្កើនការលក់ និងទំនុកចិត្ត</p>
                         </div>
                     </div>
-                    <div class="row h-100 w-100 border border-1 border-success-subtle rounded-3 gx-0">
-                        <div class="chat-sidebar p-0" style="border-right: 1px solid #a3cfbb;">
-                            <div class="chat-profile">
-                                <div class="message-header p-3 mb-2" style="border-bottom: 1px solid #a3cfbb;">
-                                    <h4 class="mb-2">Messages</h4>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="search-bar-wrapper">
-                                            <i class="bi bi-search search-icon"></i>
-                                            <input type="text" class="form-control " id="global-search"
-                                                placeholder="ស្វែងរកការសន្ទនា...">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="message-status py-2 d-flex justify-content-evenly align-items-center">
-                                    <a class="link-message text-muted btn-message" href="#">All</a>
-                                    <a class="link-message text-muted d-flex align-items-center justify-content-evenly gap-2"
-                                        href="#">Unread<span class="badge-unread text-bg-success"
-                                            style="line-height: 1;">3</span></a>
-                                    <a class="link-message text-muted" href="#">Group</a>
-                                </div>
-                                <div class="message-body">
-                                    <div class="message-item active">
-                                        <div class="message-avatar position-relative">
-                                            <img src="../assets/img/seller_images/forgot_pw.png"
-                                                class="avatar rounded-circle"
-                                                style="width: 50px !important; height: 50px;" alt="VIP 1">
-                                            <span
-                                                class="position-absolute status p-1 bg-success border rounded-circle"></span>
-                                        </div>
-                                        <div class="message-content">
-                                            <div class="message-content-header d-flex align-items-center mb-2">
-                                                <span class="chat-name  fw-bold text-muted">Sarah Wilson</span>
-                                                <span class="chat-time ms-auto small text-muted">2m ago</span>
-                                            </div>
-                                            <div class="message-content-body">
-                                                <span class="chat-text text-muted small">Sure, I'll send the files right
-                                                    away!</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="message-item">
-                                        <div class="message-avatar position-relative">
-                                            <img src="../assets/img/seller_images/forgot_pw.png"
-                                                class="avatar rounded-circle"
-                                                style="width: 50px !important; height: 50px;" alt="VIP 1">
-                                            <span
-                                                class="position-absolute status p-1 bg-danger border rounded-circle"></span>
-                                        </div>
-                                        <div class="message-content">
-                                            <div class="message-content-header d-flex align-items-center mb-2">
-                                                <span class="chat-name  fw-bold">Sarah Wilson</span>
-                                                <span class="chat-time ms-auto small">2m ago</span>
-                                            </div>
-                                            <div class="message-content-body">
-                                                <span class="chat-text small">Sure, I'll send the files right
-                                                    away!</span>
-                                            </div>
-                                        </div>
-                                    </div>
+
+                    <!-- Chat Box Main Container Card -->
+                    <div class="dashboard-card d-flex flex-row overflow-hidden shadow-sm" style="height: calc(100vh - 210px); min-height: 520px;">
+                        
+                        <!-- 1. LEFT SIDEBAR: Conversations List -->
+                        <div class="chat-sidebar">
+                            <div class="message-header p-3">
+                                <h5 class="fw-bold mb-3">ការសន្ទនា (Messages)</h5>
+                                <div class="search-bar-wrapper w-100">
+                                    <i class="bi bi-search search-icon"></i>
+                                    <input type="text" class="form-control" id="chat-search" placeholder="ស្វែងរកឈ្មោះអតិថិជន...">
                                 </div>
                             </div>
+
+                            <!-- Filter Tabs -->
+                            <div class="message-status d-flex align-items-center justify-content-between">
+                                <a class="link-message active" href="#">ទាំងអស់</a>
+                                <a class="link-message" href="#">មិនទាន់អាន <span class="badge-unread bg-danger text-white ms-1">3</span></a>
+                                <a class="link-message" href="#">VIP <i class="bi bi-star-fill text-warning ms-1"></i></a>
+                            </div>
+
+                            <!-- Chat Customers Stream List -->
+                            <div class="overflow-y-auto flex-grow-1">
+                                
+                                <!-- Customer Item 1 (Active Chat) -->
+                                <a class="message-item active" href="#">
+                                    <div class="message-avatar">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="Meas Thida">
+                                        <span class="status-dot status-online"></span>
+                                    </div>
+                                    <div class="message-content">
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <span class="chat-name-title">មាស ធីតា</span>
+                                            <span class="text-xxs text-muted">២នាទីមុន</span>
+                                        </div>
+                                        <span class="chat-text-preview fw-semibold text-dark">តើកាស UltraBass នេះមានសេវាដឹកដល់សៀមរាបដែរទេបង?</span>
+                                    </div>
+                                </a>
+
+                                <!-- Customer Item 2 -->
+                                <a class="message-item" href="#">
+                                    <div class="message-avatar">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="Chan Dara">
+                                        <span class="status-dot status-offline"></span>
+                                    </div>
+                                    <div class="message-content">
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <span class="chat-name-title">ចាន់ ដារ៉ា</span>
+                                            <span class="text-xxs text-muted">១ម៉ោងមុន</span>
+                                        </div>
+                                        <span class="chat-text-preview">ខ្ញុំបានវាយប្រាក់តាម ABA រួចហើយបង សូមជួយឆែកមើលផង</span>
+                                    </div>
+                                </a>
+
+                                <!-- Customer Item 3 -->
+                                <a class="message-item" href="#">
+                                    <div class="message-avatar">
+                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="Sok Sophea">
+                                        <span class="status-dot status-online"></span>
+                                    </div>
+                                    <div class="message-content">
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <span class="chat-name-title">សុខ សុភា</span>
+                                            <span class="text-xxs text-muted">១ថ្ងៃមុន</span>
+                                        </div>
+                                        <span class="chat-text-preview">ទទួលបាននាឡិការួចរាល់ហើយ ស្អាតខ្លាំងណាស់បង!</span>
+                                    </div>
+                                </a>
+
+                            </div>
                         </div>
+
+                        <!-- 2. RIGHT CHAT WORKSPACE CONTAINER -->
                         <div class="chat-container">
                             <div class="chat-main">
-                                <div class="chat-header p-3">
-                                    <div class="chat-header-user d-flex gap-3 align-items-center">
-                                        <div class="chat-header-avatar position-relative">
-                                            <img src="../assets/img/seller_images/forgot_pw.png"
-                                                class="avatar rounded-circle"
-                                                style="width: 45px !important; height: 45px;" alt="VIP 1">
+                                
+                                <!-- Active Chat User Header -->
+                                <div class="chat-header">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="message-avatar">
+                                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="Meas Thida">
+                                            <span class="status-dot status-online"></span>
                                         </div>
-                                        <div class="chat-header-info">
-                                            <h6 class="chat-name  fw-bold">Sarah Wilson</h6>
-                                            <span><i class="bi bi-circle-fill"
-                                                    style="font-size: 0.5rem; color: green;"></i> Online</span>
+                                        <div>
+                                            <h6 class="fw-bold text-dark mb-0">មាស ធីតា </h6>
+                                            <span class="text-xs text-success"><i class="bi bi-circle-fill me-1" style="font-size: 8px;"></i> កំពុងអនឡាញ (Online)</span>
                                         </div>
                                     </div>
-                                    <div class="chat-header-actions">
-                                        <button class="chat-header-btn"><i class="bi bi-telephone"></i></button>
-                                        <button class="chat-header-btn"><i class="bi bi-camera-video"></i></button>
-                                        <button class="chat-header-btn"><i class="bi bi-info-circle"></i></button>
-                                        <button class="chat-header-btn"><i
-                                                class="bi bi-three-dots-vertical"></i></button>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button class="chat-header-btn" title="ការហៅទូរស័ព្ទ"><i class="bi bi-telephone"></i></button>
+                                        <button class="chat-header-btn" title="ព័ត៌មានអតិថិជន"><i class="bi bi-info-circle"></i></button>
+                                        <button class="chat-header-btn" title="ជម្រើសបន្ថែម"><i class="bi bi-three-dots-vertical"></i></button>
                                     </div>
                                 </div>
-                                <div class="chat-body p-3">
-                                    <div
-                                        class="chat-body-date mt-3 mb-4 d-flex justify-content-center align-items-center gap-2">
-                                        <div class="chat-line text-muted"></div>
-                                        <div class="chat-date text-muted small">ថ្ងៃនេះ</div>
-                                        <div class="chat-line text-muted"></div>
+
+                                <!-- Chat Stream Messages Body -->
+                                <div class="chat-body">
+                                    
+                                    <div class="chat-body-date">
+                                        <div class="chat-line"></div>
+                                        <div class="chat-date">ថ្ងៃនេះ (Today)</div>
+                                        <div class="chat-line"></div>
                                     </div>
-                                    <div class="chat-message d-flex  gap-3">
-                                        <div class="chat-message-avatar">
-                                            <img src="../assets/img/seller_images/forgot_pw.png"
-                                                class="avatar rounded-circle"
-                                                style="width: 45px !important; height: 45px;" alt="VIP 1">
-                                        </div>
-                                        <div class="chat-message-info mt-1">
-                                            <p class="chat-name text-muted small mb-1">Hi there! How's the project
-                                                going?</p>
-                                            <p class="chat-time text-muted small">9:30AM</p>
-                                        </div>
-                                    </div>
-                                    <div class="chat-message d-flex  gap-4 justify-content-end">
-                                        <div class="chat-message-info mt-1">
-                                            <p class="seller-chat-name small mb-1">Hey Sarah! It's going well. Just
-                                                finished the dashboard design.</p>
-                                            <p class="seller-chat-time position small"><i class="bi bi-check2-all"></i>
-                                                seen</p>
-                                        </div>
-                                    </div>
-                                    <div class="chat-message d-flex  gap-3">
-                                        <div class="chat-message-avatar">
-                                            <img src="../assets/img/seller_images/forgot_pw.png"
-                                                class="avatar rounded-circle"
-                                                style="width: 45px !important; height: 45px;" alt="VIP 1">
-                                        </div>
-                                        <div class="chat-message-info mt-1">
-                                            <p class="chat-name text-muted small mb-1">That's great! Can you share the
-                                                latest mockups?</p>
-                                            <p class="chat-time text-muted small">9:30AM</p>
+
+                                    <!-- Customer Message -->
+                                    <div class="chat-message">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle align-self-end" style="width: 32px; height: 32px;" alt="User">
+                                        <div>
+                                            <div class="chat-bubble-incoming">
+                                                <!-- Referenced Product Card -->
+                                                <div class="chat-product-card">
+                                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=100" alt="Product">
+                                                    <div>
+                                                        <h6 class="mb-0 fw-bold text-xs text-dark">UltraBass Wireless Headphones</h6>
+                                                        <span class="text-xs text-success fw-bold">$18.00</span>
+                                                    </div>
+                                                </div>
+                                                សួស្តីបង! តើកាសស្តាប់ UltraBass Headphones ពណ៌ស នេះនៅមានក្នុងស្តុកដែរទេបង?
+                                            </div>
+                                            <span class="chat-time">០៩:៣០ ព្រឹក</span>
                                         </div>
                                     </div>
-                                    <div class="chat-message d-flex  gap-4 justify-content-end">
-                                        <div class="chat-message-info mt-1">
-                                            <p class="seller-chat-name small mb-1">ure thing! Here are the files:</p>
-                                            <p class="seller-chat-time position small"><i class="bi bi-check2-all"></i>
-                                                seen</p>
+
+                                    <!-- Seller Response -->
+                                    <div class="chat-message seller-side">
+                                        <div>
+                                            <div class="chat-bubble-outgoing">
+                                                សួស្តីបង ធីតា! ម៉ូឌែល UltraBass ពណ៌ស នៅមានក្នុងស្តុកស្រាប់បង។ ជាផលិតផលសុទ្ធ 100% មានការធានារយៈពេល ១ឆ្នាំពេញជូនបង!
+                                            </div>
+                                            <span class="seller-chat-time"><i class="bi bi-check2-all text-primary me-1"></i> បានអាន ០៩:៣១ ព្រឹក</span>
                                         </div>
                                     </div>
-                                    <div class="chat-message d-flex  gap-3">
-                                        <div class="chat-message-avatar">
-                                            <img src="../assets/img/seller_images/forgot_pw.png"
-                                                class="avatar rounded-circle"
-                                                style="width: 45px !important; height: 45px;" alt="VIP 1">
-                                        </div>
-                                        <div class="chat-message-info mt-1">
-                                            <p class="chat-name text-muted small mb-1">Perfect! Let me take a look at
-                                                these.</p>
-                                            <p class="chat-time text-muted small">9:42AM</p>
-                                        </div>
-                                    </div>
-                                    <div class="chat-message d-flex  gap-3">
-                                        <div class="chat-message-avatar">
-                                            <img src="../assets/img/seller_images/forgot_pw.png"
-                                                class="avatar rounded-circle"
-                                                style="width: 45px !important; height: 45px;" alt="VIP 1">
-                                        </div>
-                                        <div class="chat-message-info mt-1">
-                                            <p class="chat-name text-muted small mb-1">Perfect! Let me take a look at
-                                                these.</p>
-                                            <p class="chat-name text-muted small mb-1">Just a few minor suggestions:</p>
-                                            <p class="chat-name text-muted small mb-1">1. Could we make the sidebar a
-                                                bit narrower?</p>
-                                            <p class="chat-time text-muted small">10:22 AM</p>
+
+                                    <!-- Customer Message -->
+                                    <div class="chat-message">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle align-self-end" style="width: 32px; height: 32px;" alt="User">
+                                        <div>
+                                            <div class="chat-bubble-incoming">
+                                                តើកាស UltraBass នេះមានសេវាដឹកដល់សៀមរាបដែរទេបង? ហើយរយៈពេលប៉ុន្មានថ្ងៃបានដល់បង?
+                                            </div>
+                                            <span class="chat-time">០៩:៣២ ព្រឹក</span>
                                         </div>
                                     </div>
-                                    <div class="chat-message d-flex  gap-4 justify-content-end">
-                                        <div class="chat-message-info mt-1">
-                                            <p class="seller-chat-name small mb-1">Great feedback! I'll work on those
-                                                changes today.</p>
-                                            <p class="seller-chat-time position small"><i class="bi bi-check2-all"></i>
-                                                seen</p>
+
+                                    <!-- Seller Response -->
+                                    <div class="chat-message seller-side">
+                                        <div>
+                                            <div class="chat-bubble-outgoing">
+                                                មានបង! ខាងហាងយើងខ្ញុំមានសេវាដឹកជញ្ជូនលឿនទាន់ចិត្តទៅ ២៤ខេត្តក្រុង តាមរយៈដៃគូ J&T និង Vet Express។ ផ្ញើថ្ងៃនេះ ស្អែកដល់ដៃបងនៅសៀមរាបតែម្តង!
+                                            </div>
+                                            <span class="seller-chat-time"><i class="bi bi-check2-all text-primary me-1"></i> បានអាន ០៩:៣៣ ព្រឹក</span>
                                         </div>
                                     </div>
-                                    <div class="chat-message d-flex  gap-3">
-                                        <div class="chat-message-avatar">
-                                            <img src="../assets/img/seller_images/forgot_pw.png"
-                                                class="avatar rounded-circle"
-                                                style="width: 45px !important; height: 45px;" alt="VIP 1">
-                                        </div>
-                                        <div class="chat-message-info mt-1">
-                                            <p class="chat-name text-muted small mb-1">Sure, I'll send the files right
-                                                away!</p>
-                                            <p class="chat-time text-muted small">10:40 AM</p>
+
+                                    <!-- Customer Message -->
+                                    <div class="chat-message">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle align-self-end" style="width: 32px; height: 32px;" alt="User">
+                                        <div>
+                                            <div class="chat-bubble-incoming">
+                                                ល្អខ្លាំងណាស់បង! អញ្ចឹងខ្ញុំសុំយក ១គ្រឿង។ សូមផ្ញើលេខគណនីធនាគារ ABA មកបង ដើម្បីខ្ញុំបាញ់លុយជូន។
+                                            </div>
+                                            <span class="chat-time">០៩:៣៥ ព្រឹក</span>
                                         </div>
                                     </div>
+
                                 </div>
-                                <div class="chat-footer p-3">
-                                    <div class="chat-input-wrapper d-flex justify-content-between align-items-center gap-1">
-                                        <div class="chat-input-actions">
-                                            <button class="chat-input-btn"><i class="bi bi-paperclip"></i></button>
-                                            <button class="chat-input-btn"><i class="bi bi-image"></i></button>
-                                        </div>
+
+                                <!-- Chat Input Footer Area -->
+                                <div class="chat-footer">
+                                    <div class="chat-input-wrapper">
+                                        <button class="chat-input-btn" title="ភ្ជាប់ឯកសារ"><i class="bi bi-paperclip fs-5"></i></button>
+                                        <button class="chat-input-btn" title="ផ្ញើរូបភាព"><i class="bi bi-image fs-5"></i></button>
+                                        
                                         <div class="chat-input-field">
-                                            <textarea id="messageInput" rows="1"
-                                                placeholder="Type a message..."></textarea>
+                                            <textarea id="messageInput" rows="1" placeholder="សរសេរសារឆ្លើយតបទៅកាន់អតិថិជនទីនេះ..."></textarea>
                                         </div>
-                                        <div class="chat-input-actions">
-                                            <button class="chat-input-btn"><i class="bi bi-emoji-smile"></i></button>
-                                            <button class="send-message-btn" title="ផ្ញើសារ"><i
-                                                    class="bi bi-send"></i></button>
-                                        </div>
+
+                                        <button class="chat-input-btn" title="រូបភាពអារម្មណ៍"><i class="bi bi-emoji-smile fs-5"></i></button>
+                                        <button class="send-message-btn" title="ផ្ញើសារ"><i class="bi bi-send-fill fs-6"></i></button>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
+
                     </div>
 
-
-                    <!-- <div class="row g-0 h-100">
-                        
-                        1. LEFT COLUMN: Chat Conversations List
-                        <div class="col-12 col-md-5 col-lg-4 col-xl-3 border-end h-100 d-flex flex-column chat-sidebar-bg">
-                            <div class="p-3 border-bottom">
-                                <div class="input-group">
-                                    <span class="input-group-text border-end-0"><i class="bi bi-search text-muted"></i></span>
-                                    <input type="text" class="form-control border-start-0 text-xs" placeholder="ស្វែងរកអតិថិជន...">
-                                </div>
-                            </div>
-
-                            Dynamic Switching Pill List
-                            <div class="nav flex-column nav-pills flex-grow-1 scrollable-chat-area" id="chat-users-list" role="tablist">
-                                
-                                Customer Item 1
-                                <button class="nav-link chat-user-item text-start border-bottom rounded-0 p-3 w-100" id="pill-meas-thida" data-bs-toggle="pill" data-bs-target="#pane-meas-thida" type="button" role="tab" aria-controls="pane-meas-thida" aria-selected="false">
-                                    <div class="d-flex gap-3">
-                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="User">
-                                        <div class="flex-grow-1 text-truncate">
-                                            <div class="d-flex justify-content-between mb-1">
-                                                <h6 class="mb-0 text-sm fw-bold title-text">មាស ធីតា</h6>
-                                                <span class="text-xxs text-muted">២នាទីមុន</span>
-                                            </div>
-                                            <p class="chat-preview-text text-xs mb-0 text-muted text-truncate">តើកាស UltraBass នេះមានសេវាដឹកដល់សៀមរាបដែរទេបង?</p>
-                                            <div class="mt-2">
-                                                <span class="badge badge-customer-type bg-danger">អតិថិជនកម្រិត VIP</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </button>
-
-                                Customer Item 2 (Active in Screenshot)
-                                <button class="nav-link active chat-user-item text-start border-bottom rounded-0 p-3 w-100" id="pill-chan-dara" data-bs-toggle="pill" data-bs-target="#pane-chan-dara" type="button" role="tab" aria-controls="pane-chan-dara" aria-selected="true">
-                                    <div class="d-flex gap-3">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="User">
-                                        <div class="flex-grow-1 text-truncate">
-                                            <div class="d-flex justify-content-between mb-1">
-                                                <h6 class="mb-0 text-sm fw-bold title-text">ចាន់ ដារ៉ា</h6>
-                                                <span class="text-xxs text-muted">១ម៉ោងមុន</span>
-                                            </div>
-                                            <p class="chat-preview-text text-xs mb-0 text-muted text-truncate">ខ្ញុំបានវាយប្រាក់រួចហើយបង សូមជួយឆែកមើលផង</p>
-                                            <div class="mt-2">
-                                                <span class="badge badge-customer-type bg-primary">ម៉ូយចាស់</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </button>
-
-                                Customer Item 3
-                                <button class="nav-link chat-user-item text-start border-bottom rounded-0 p-3 w-100" id="pill-sok-sophea" data-bs-toggle="pill" data-bs-target="#pane-sok-sophea" type="button" role="tab" aria-controls="pane-sok-sophea" aria-selected="false">
-                                    <div class="d-flex gap-3">
-                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="User">
-                                        <div class="flex-grow-1 text-truncate">
-                                            <div class="d-flex justify-content-between mb-1">
-                                                <h6 class="mb-0 text-sm fw-bold title-text">សុខ សុភា</h6>
-                                                <span class="text-xxs text-muted">១ថ្ងៃមុន</span>
-                                            </div>
-                                            <p class="chat-preview-text text-xs mb-0 text-muted text-truncate">ទទួលបាននាឡិការួចរាល់ហើយ ស្អាតខ្លាំងណាស់បង!</p>
-                                            <div class="mt-2">
-                                                <span class="badge badge-customer-type bg-success">អ្នកទិញថ្មី</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </button>
-
-                            </div>
-                        </div>
-
-                        2 & 3. RIGHT CONTENT AREA
-                        <div class="col-12 col-md-7 col-lg-8 col-xl-9 h-100">
-                            <div class="tab-content h-100" id="chat-tab-content">
-                                
-                                Pane 1: Meas Thida
-                                <div class="tab-pane fade h-100" id="pane-meas-thida" role="tabpanel" aria-labelledby="pill-meas-thida">
-                                    <div class="row g-0 h-100">
-                                        <div class="col-12 col-xl-8 d-flex flex-column h-100 border-end">
-                                            Chat Header
-                                            <div class="chat-header-bar p-3 border-bottom d-flex align-items-center justify-content-between">
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="User">
-                                                    <div>
-                                                        <h6 class="mb-0 fw-bold header-name">មាស ធីតា</h6>
-                                                        <small class="text-success"><span class="badge bg-success rounded-circle p-1" style="width: 8px; height: 8px;"></span> កំពុងអនឡាញ</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            Chat Messages Stream
-                                            <div class="chat-messages-stream p-4 flex-grow-1 overflow-y-auto d-flex flex-column gap-3">
-                                                <div class="message-bubble left-bubble">
-                                                    <p class="mb-0 text-sm">សួស្តីបង តើកាសស្តាប់ UltraBass Headphones ពណ៌ស នៅមានក្នុងស្តុកដែរទេបង?</p>
-                                                    <span class="bubble-time mt-1">០៩:៣០ ព្រឹក</span>
-                                                </div>
-                                                <div class="message-bubble right-bubble ms-auto">
-                                                    <p class="mb-0 text-sm">សួស្តីបង ធីតា! ម៉ូឌែល UltraBass ពណ៌ស នៅសល់ស្តុកចុងក្រោយ ២គ្រឿងបង។</p>
-                                                    <span class="bubble-time mt-1 text-end">០៩:៣១ ព្រឹក</span>
-                                                </div>
-                                                <div class="message-bubble left-bubble">
-                                                    <p class="mb-0 text-sm">តើកាស UltraBass នេះមានសេវាដឹកដល់សៀមរាបដែរទេបង? ហើយរយៈពេលប៉ុន្មានថ្ងៃបានដល់បង?</p>
-                                                    <span class="bubble-time mt-1">០៩:៣២ ព្រឹក</span>
-                                                </div>
-                                            </div>
-                                            Chat Input Block
-                                            <div class="p-3 border-top chat-input-area-bg">
-                                                <form class="chat-input-form" onsubmit="return false;">
-                                                    <div class="input-group shadow-sm rounded-3 overflow-hidden">
-                                                        <button class="btn btn-light border-end-0 border" type="button" data-bs-toggle="modal" data-bs-target="#modal-not-implemented"><i class="bi bi-paperclip text-muted"></i></button>
-                                                        <input type="text" class="form-control border-start-0 border-end-0 py-2 text-sm" placeholder="សរសេរសារឆ្លើយតបទីនេះ...">
-                                                        <button class="btn btn-primary px-4" type="button" data-bs-toggle="modal" data-bs-target="#modal-not-implemented"><i class="bi bi-send-fill text-white"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        Sidebar Context Info
-                                        <div class="col-xl-4 d-none d-xl-flex chat-context-panel p-4 flex-column h-100 overflow-y-auto">
-                                            <div class="text-center pb-4 border-bottom w-100">
-                                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=1200" class="avatar-lg rounded-circle border border-3 border-white shadow mb-3" alt="Avatar">
-                                                <h5 class="fw-bold mb-1 header-name">មាស ធីតា</h5>
-                                                <span class="badge bg-danger rounded-pill px-3">អតិថិជនកម្រិត VIP</span>
-                                            </div>
-                                            <div class="py-4 border-bottom text-xs w-100">
-                                                <h6 class="fw-bold mb-3">ព័ត៌មានលម្អិតទំនាក់ទំនង</h6>
-                                                <div class="d-flex justify-content-between mb-2">
-                                                    <span class="text-muted">អ៊ីមែល៖</span>
-                                                    <span class="fw-semibold text-dark">thidameas@gmail.com</span>
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="text-muted">លេខទូរស័ព្ទ៖</span>
-                                                    <span class="fw-semibold text-dark">092 555 123</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                Pane 2: Chan Dara (Active in Screenshot)
-                                <div class="tab-pane fade show active h-100" id="pane-chan-dara" role="tabpanel" aria-labelledby="pill-chan-dara">
-                                    <div class="row g-0 h-100">
-                                        <div class="col-12 col-xl-8 d-flex flex-column h-100 border-end">
-                                            Chat Header
-                                            <div class="chat-header-bar p-3 border-bottom d-flex align-items-center justify-content-between">
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="User">
-                                                    <div>
-                                                        <h6 class="mb-0 fw-bold header-name">ចាន់ ដារ៉ា</h6>
-                                                        <small class="text-muted"><span class="badge bg-secondary rounded-circle p-1" style="width: 8px; height: 8px;"></span> អសកម្ម</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            Chat Messages Stream
-                                            <div class="chat-messages-stream p-4 flex-grow-1 overflow-y-auto d-flex flex-column gap-3">
-                                                <div class="message-bubble left-bubble">
-                                                    <p class="mb-0 text-sm">បងខ្ញុំបានទូទាត់ថវិកាលើការកម្មង់ Active Fit Pro Watch ចំនួន២គ្រឿងរួចហើយបង launch។</p>
-                                                    <span class="bubble-time mt-1">ម្សិលមិញ</span>
-                                                </div>
-                                                <div class="message-bubble right-bubble ms-auto">
-                                                    <p class="mb-0 text-sm">បាទបងដារ៉ា! ខាងបុគ្គលិកផ្នែកគណនេយ្យបានទទួលប្រាក់រួចហើយបង។ ទំនិញនឹងផ្ញើទៅល្ងាចនេះ!</p>
-                                                    <span class="bubble-time mt-1 text-end">ម្សិលមិញ</span>
-                                                </div>
-                                                <div class="message-bubble left-bubble">
-                                                    <p class="mb-0 text-sm">ខ្ញុំបានវាយប្រាក់រួចហើយបង សូមជួយឆែកមើលផង</p>
-                                                    <span class="bubble-time mt-1">១ម៉ោងមុន</span>
-                                                </div>
-                                            </div>
-                                            Chat Input Block
-                                            <div class="p-3 border-top chat-input-area-bg">
-                                                <form class="chat-input-form" onsubmit="return false;">
-                                                    <div class="input-group shadow-sm rounded-3 overflow-hidden">
-                                                        <button class="btn btn-light border-end-0 border" type="button" data-bs-toggle="modal" data-bs-target="#modal-not-implemented"><i class="bi bi-paperclip text-muted"></i></button>
-                                                        <input type="text" class="form-control border-start-0 border-end-0 py-2 text-sm" placeholder="សរសេរសារឆ្លើយតបទីនេះ...">
-                                                        <button class="btn btn-primary px-4" type="button" data-bs-toggle="modal" data-bs-target="#modal-not-implemented"><i class="bi bi-send-fill text-white"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        Sidebar Context Info
-                                        <div class="col-xl-4 d-none d-xl-flex chat-context-panel p-4 flex-column h-100 overflow-y-auto">
-                                            <div class="text-center pb-4 border-bottom w-100">
-                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1200" class="avatar-lg rounded-circle border border-3 border-white shadow mb-3" alt="Avatar">
-                                                <h5 class="fw-bold mb-1 header-name">ចាន់ ដារ៉ា</h5>
-                                                <span class="badge bg-primary text-white rounded-pill px-3">ម៉ូយចាស់</span>
-                                            </div>
-                                            <div class="py-4 border-bottom text-xs w-100">
-                                                <h6 class="fw-bold mb-3">ព័ត៌មានលម្អិតទំនាក់ទំនង</h6>
-                                                <div class="d-flex justify-content-between mb-2">
-                                                    <span class="text-muted">អ៊ីមែល៖</span>
-                                                    <span class="fw-semibold">darachan@gmail.com</span>
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="text-muted">លេខទូរស័ព្ទ៖</span>
-                                                    <span class="fw-semibold">010 556 778</span>
-                                                </div>
-                                            </div>
-                                            <div class="py-4 text-xs w-100">
-                                                <h6 class="fw-bold mb-3">របាយការណ៍បញ្ជាទិញ</h6>
-                                                <div class="d-flex justify-content-between mb-2">
-                                                    <span class="text-muted">ការទិញសរុប៖</span>
-                                                    <span class="fw-bold text-primary">5 ដង</span>
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="text-muted">ចំណាយសរុប៖</span>
-                                                    <span class="fw-bold text-success">$650.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                Pane 3: Sok Sophea
-                                <div class="tab-pane fade h-100" id="pane-sok-sophea" role="tabpanel" aria-labelledby="pill-sok-sophea">
-                                    <div class="row g-0 h-100">
-                                        <div class="col-12 col-xl-8 d-flex flex-column h-100 border-end">
-                                            Chat Header
-                                            <div class="chat-header-bar p-3 border-bottom d-flex align-items-center justify-content-between">
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="User">
-                                                    <div>
-                                                        <h6 class="mb-0 fw-bold header-name">សុខ សុភា</h6>
-                                                        <small class="text-muted"><span class="badge bg-secondary rounded-circle p-1" style="width: 8px; height: 8px;"></span> អសកម្ម</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            Chat Messages Stream
-                                            <div class="chat-messages-stream p-4 flex-grow-1 overflow-y-auto d-flex flex-column gap-3">
-                                                <div class="message-bubble right-bubble ms-auto">
-                                                    <p class="mb-0 text-sm">សូមជម្រាបសួរអ្នកស្រី សុភា! តើផលិតផលដែលបានផ្ញើទៅដល់ដៃមានបញ្ហាអ្វីដែរទេ?</p>
-                                                    <span class="bubble-time mt-1 text-end">២ថ្ងៃមុន</span>
-                                                </div>
-                                                <div class="message-bubble left-bubble">
-                                                    <p class="mb-0 text-sm">ទទួលបាននាឡិការួចរាល់ហើយ ស្អាតខ្លាំងណាស់បង!</p>
-                                                    <span class="bubble-time mt-1">១ថ្ងៃមុន</span>
-                                                </div>
-                                            </div>
-                                            Chat Input Block
-                                            <div class="p-3 border-top chat-input-area-bg">
-                                                <form class="chat-input-form" onsubmit="return false;">
-                                                    <div class="input-group shadow-sm rounded-3 overflow-hidden">
-                                                        <button class="btn btn-light border-end-0 border" type="button" data-bs-toggle="modal" data-bs-target="#modal-not-implemented"><i class="bi bi-paperclip text-muted"></i></button>
-                                                        <input type="text" class="form-control border-start-0 border-end-0 py-2 text-sm" placeholder="សរសេរសារឆ្លើយតបទីនេះ...">
-                                                        <button class="btn btn-primary px-4" type="button" data-bs-toggle="modal" data-bs-target="#modal-not-implemented"><i class="bi bi-send-fill text-white"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        Sidebar Context Info
-                                        <div class="col-xl-4 d-none d-xl-flex chat-context-panel p-4 flex-column h-100 overflow-y-auto">
-                                            <div class="text-center pb-4 border-bottom w-100">
-                                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1200" class="avatar-lg rounded-circle border border-3 border-white shadow mb-3" alt="Avatar">
-                                                <h5 class="fw-bold mb-1 header-name">សុខ សុភា</h5>
-                                                <span class="badge bg-success rounded-pill px-3">អ្នកទិញថ្មី</span>
-                                            </div>
-                                            <div class="py-4 border-bottom text-xs w-100">
-                                                <h6 class="fw-bold mb-3">ព័ត៌មានលម្អិតទំនាក់ទំនង</h6>
-                                                <div class="d-flex justify-content-between mb-2">
-                                                    <span class="text-muted">អ៊ីមែល៖</span>
-                                                    <span class="fw-semibold">sopheasok@gmail.com</span>
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="text-muted">លេខទូរស័ព្ទ៖</span>
-                                                    <span class="fw-semibold">097 789 123</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div> -->
                 </div>
             </main>
 
         </div>
     </div>
-    <button class="btn btn-primary scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
-        <i class="bi bi-arrow-up"></i>
-    </button>
 
     <!-- Demo Placeholder Modal -->
     <div class="modal fade" id="modal-not-implemented" tabindex="-1" aria-hidden="true">
@@ -737,8 +397,7 @@
                     <i class="bi bi-info-circle-fill text-warning" style="font-size: 3rem;"></i>
                     <h5 class="fw-bold mt-3 text-dark">ព័ត៌មានប្រព័ន្ធ</h5>
                     <p class="text-xs text-muted mb-4">មុខងារនេះមិនទាន់ត្រូវបានដំឡើងដំណើរការឡើយ។</p>
-                    <button type="button" class="btn btn-primary w-100 py-2 text-white text-xs fw-bold"
-                        data-bs-dismiss="modal">យល់ព្រម</button>
+                    <button type="button" class="btn btn-success w-100 py-2 text-white text-xs fw-bold" data-bs-dismiss="modal">យល់ព្រម</button>
                 </div>
             </div>
         </div>
@@ -746,8 +405,19 @@
 
     <!-- Bootstrap 5 Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Basic Shared Dashboard Logic -->
+    <!-- Shared Dashboard Logic -->
     <script src="../assets/js/seller_dashboard.js"></script>
+
+    <script>
+        // Auto-expand textarea on typing
+        const tx = document.getElementById('messageInput');
+        if(tx) {
+            tx.addEventListener("input", function() {
+                this.style.height = "auto";
+                this.style.height = (this.scrollHeight) + "px";
+            });
+        }
+    </script>
 </body>
 
 </html>

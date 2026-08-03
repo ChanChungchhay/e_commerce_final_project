@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller's Profile</title>
+    <link rel="shortcut icon" href="/assets/img/logo/img-logo.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="../assets/css/seller_dashboard.css">
+    <link rel="stylesheet" href="../assets/css/seller_profiles.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Application Layout -->
+    <div class="dashboard-wrapper">
+        <!-- Left Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <div class="logo-icon">
+                        <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img" alt="">
+                    </div>
+                    <span class="brand-name text-success">Khmer <span class="text-bazaar">Bazzar</span>.</span>
+                </div>
+                <button type="button" class="btn-close btn-close-black d-lg-none" id="sidebar-close"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="sidebar-menu-wrapper">
+                <ul class="sidebar-menu">
+                    <li class="menu-item" data-page="dashboard">
+                        <a href="seller_dashboard.html" class="menu-link">
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            <span>ផ្ទាំងគ្រប់គ្រង</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="products">
+                        <a href="seller_products.html" class="menu-link">
+                            <i class="bi bi-box-seam-fill"></i>
+                            <span class="menu-text">ផលិតផល</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="orders">
+                        <a href="seller_orders.html" class="menu-link">
+                            <i class="bi bi-cart-fill"></i>
+                            <span class="menu-text">ការបញ្ជាទិញ</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="customers">
+                        <a href="seller_customers.html" class="menu-link">
+                            <i class="bi bi-people-fill"></i>
+                            <span class="menu-text">អតិថិជន</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="analytics">
+                        <a href="seller_analytics.html" class="menu-link">
+                            <i class="bi bi-bar-chart-line-fill"></i>
+                            <span class="menu-text">វិភាគទិន្នន័យ</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" data-page="messages">
+                        <a href="seller_messages.html" class="menu-link">
+                            <i class="bi bi-chat-left-dots-fill"></i>
+                            <span class="menu-text">សារផ្ញើ</span>
+                        </a>
+                    </li>
+                    <li class="menu-item active" data-page="messages">
+                        <a href="seller_profiles.html" class="menu-link">
+                            <i class="bi bi-person-fill"></i>
+                            <span class="menu-text">ប្រវត្តិរូប</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <button type="button"
+                    class="btn btn-success w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
+                    <a href="../customer/home.html" class="text-white text-decoration-none"><i
+                            class="bi bi-chevron-double-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
+                </button>
+                <button
+                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
+                    data-bs-toggle="modal" data-bs-target="#logout">
+                    <i class="bi bi-box-arrow-left"></i> ចាកចេញ
+                </button>
+            </div>
+        </aside>
+
+        <!-- Right Side Main Interface Wrap -->
+        <div class="main-container">
+
+            <!-- Top Header Navigation -->
+            <header class="top-navbar rounded-5 mx-4">
+                <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
+
+                    <!-- Left Toggle & Global Search -->
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn btn-icon d-lg-none" id="sidebar-toggle" aria-label="Toggle Sidebar">
+                            <i class="bi bi-list fs-4"></i>
+                        </button>
+                        <div class="search-bar-wrapper">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" class="form-control " id="global-search"
+                                placeholder="ស្វែងរកការបញ្ជាទិញ ទំនិញ ឬអតិថិជន...">
+                        </div>
+                    </div>
+
+                    <!-- Right Controls Menu -->
+                    <div class="d-flex align-items-center gap-2 gap-md-3">
+                        <!-- Light/Dark Mode Switcher -->
+                        <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
+                            <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                        </button>
+
+                        <!-- Messages Dropdown -->
+                        <div class="dropdown">
+                            <button class="btn btn-icon position-relative" type="button" id="messageDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-chat-left-dots"></i>
+                                <span
+                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-warning border border-2 border-white">
+                                    3
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                aria-labelledby="messageDropdown">
+                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">Recent Messages</h6>
+                                    <a href="seller_messages.html"
+                                        class="small text-primary text-decoration-none">មើលការផ្ញើសារ</a>
+                                </div>
+                                <div class="dropdown-list-container">
+                                    <!-- Message List Items -->
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar-sm rounded-circle" alt="User Image">
+                                        <div>
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="user-name">Sarah Jenkins</span>
+                                                <span class="timestamp">2m ago</span>
+                                            </div>
+                                            <p class="preview-text">សួស្តី សំណាង
+                                                តើការធានាផលិតផលមានរួមបញ្ចូលក្នុងតម្លៃដើមដែរឬទេ?</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex gap-3">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                            class="avatar-sm rounded-circle" alt="User Image">
+                                        <div>
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="user-name">Marcus Vance</span>
+                                                <span class="timestamp">1h ago</span>
+                                            </div>
+                                            <p class="preview-text">សូមជួយបញ្ជាក់ផងថា
+                                                តើអ្នកអាចដឹកជញ្ជូនទំនិញទាំងនេះមកកាន់ឃ្លាំងរបស់យើងបានដែរឬទេ?</p>
+                                        </div>
+                                    </a>
+                                    <a href="#"
+                                        class="dropdown-list-item d-flex gap-3 text-center py-2 text-primary fw-medium justify-content-center">
+                                        View all messages
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notification Dropdown -->
+                        <div class="dropdown">
+                            <button class="btn btn-icon position-relative" type="button" id="notifDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-bell"></i>
+                                <span
+                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
+                                    5
+                                </span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                aria-labelledby="notifDropdown">
+                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">Notifications</h6>
+                                    <a href="#" class="small text-primary">Mark all read</a>
+                                </div>
+                                <div class="dropdown-list-container" id="notifications-container">
+                                    <!-- Dynamically/Statically Handled -->
+                                    <a href="#" class="dropdown-list-item d-flex gap-3 align-items-center">
+                                        <div class="icon-avatar text-success"><i class="bi bi-check-circle-fill"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Order #8832 Dispatched</span>
+                                                <span class="timestamp">Just now</span>
+                                            </div>
+                                            <p class="preview-text">Shipped to Seattle Warehouse Hub.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar text-danger"><i
+                                                class="bi bi-exclamation-triangle-fill"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Low Stock: Wireless Earbuds</span>
+                                                <span class="timestamp">12m ago</span>
+                                            </div>
+                                            <p class="preview-text">Only 3 items remaining in stock.</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                        <div class="icon-avatar text-primary"><i class="bi bi-cash-stack"></i></div>
+                                        <div class="flex-grow-1">
+                                            <div class="item-title-row d-flex justify-content-between">
+                                                <span class="notif-title">Payment Received</span>
+                                                <span class="timestamp">1h ago</span>
+                                            </div>
+                                            <p class="preview-text">Payout of $12,450.00 processed successfully.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-divider h-100"></div>
+                        <!-- Mini profile info -->
+                        <div class="dropdown">
+                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
+                                id="profileDropdow" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                                    class="avatar-sm rounded-circle" alt="User Avatar">
+                                <div class="user-info">
+                                    <h6 class="profile-name d-none d-lg-inline-block">ហេង សំណាង</h6>
+                                    <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
+                                </div>
+                                <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i
+                                            class="bi bi-person-fill"></i> Profile settings</a></li>
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i
+                                            class="bi bi-shield-lock-fill"></i> Security settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger d-flex align-items-center gap-2" href="#"><i
+                                            class="bi bi-box-arrow-right"></i> Sign out</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Scroll Area -->
+            <main class="content-wrapper p-4">
+                <div class="container-fluid">
+                    <!-- Dashboard Greetings and Quick Action Menu -->
+                    <div class="row align-items-center mb-4 gy-3">
+                        <div class="col-md-6 col-12">
+                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">ប្រវត្តិរូបរបស់អ្នក សំណាង
+                            </h1>
+                            <p class="text-muted fs-5 mb-0">គ្រប់គ្រងព័ត៌មានផ្ទាល់ខ្លួន និងហាងរបស់អ្នក</p>
+                        </div>
+                    </div>
+                    <div class="row d-flex">
+                        <div class="col-9">
+                            <!----- image cover --- -->
+                            <div class="sec-img-cover position-relative">
+                                <div class="cover position-relative">
+                                    <button class="change-cover-img-btn"><i class="bi bi-camera"></i>
+                                        ផ្លាស់ប្តូរផ្ទាំងរូបភាព</button>
+                                </div>
+                                <div class="header-img-cover">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                                        class="img-profile" alt="">
+                                    <button class="change-profile-icon"><i class="bi bi-camera-fill"></i></button>
+                                    <div class="seller-info">
+                                        <div class="seller-info-header d-flex gap-5 mb-3">
+                                            <h4 class="seller-name fw-bold">ហាង​ ល្អប្រណីត</h4>
+                                            <h6 class="verify-seller"><span><i class="bi bi-check-lg"></i></span>
+                                                Verified
+                                                Seller</h6>
+                                            <h6 class="vip-seller"><span><i class="bi bi-check-lg"></i></span> VIP Gold
+                                            </h6>
+                                        </div>
+                                        <div class="seller-info-body d-flex gap-5">
+                                            <span><i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                                4.8</span>
+                                            <p>សមាជិកតាំងពី Jan 2025</p>
+                                            <p class="status fw-bold">កំពុងដំណើរការ</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4 g-1">
+                                <div class="col-2">
+                                    <div
+                                        class="stats-card px-2 py-3 rounded-3 d-flex justify-content-between align-items-center">
+                                        <div class="stats-header">
+                                            <div class="icon-wrap bg-light-success text-white">
+                                                <i class="bi bi-box-seam-fill icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="starts-body">
+                                            <h6 class="text-center mt-2">12</h6>
+                                            <h6 class="text-muted fw-semibold small">ទំនិញសរុប</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div
+                                        class="stats-card px-2 py-3 rounded-3 d-flex justify-content-between align-items-center">
+                                        <div class="stats-header">
+                                            <div class="icon-wrap bg-light-success text-white">
+                                                <i class="bi bi-cart-check-fill icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="starts-body">
+                                            <h6 class="text-center mt-2" data-target="158">158</h6>
+                                            <h6 class="text-muted fw-semibold small">ការបញ្ជាទិញ</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div
+                                        class="stats-card px-2 py-3 rounded-3 d-flex justify-content-between align-items-center">
+                                        <div class="stats-header">
+                                            <div class="icon-wrap bg-light-success text-white">
+                                                <i class="bi bi-people-fill icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="starts-body">
+                                            <h6 class="text-center mt-2">158</h6>
+                                            <h6 class="text-muted fw-semibold small">អតិថិជន</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div
+                                        class="stats-card px-2 py-3 rounded-3 d-flex justify-content-between align-items-center">
+                                        <div class="stats-header">
+                                            <div class="icon-wrap bg-light-success text-white">
+                                                <i class="bi bi-currency-dollar icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="starts-body">
+                                            <h6 class="text-center mt-2">152,8</h6>
+                                            <h6 class="text-muted fw-semibold small">ចំណូលសរុប</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div
+                                        class="stats-card px-2 py-3 rounded-3 d-flex justify-content-between align-items-center">
+                                        <div class="stats-header">
+                                            <div class="icon-wrap bg-light-success text-white">
+                                                <i class="bi bi-star-fill icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="starts-body">
+                                            <h6 class="text-center mt-2">4.8</h6>
+                                            <h6 class="text-muted fw-semibold small">ការវាយតម្លៃ</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div
+                                        class="stats-card px-2 py-3 rounded-3 d-flex justify-content-between align-items-center">
+                                        <div class="stats-header">
+                                            <div class="icon-wrap bg-light-danger text-danger">
+                                                <i class="bi bi-heart-fill"></i>
+                                            </div>
+                                        </div>
+                                        <div class="starts-body">
+                                            <h6 class="text-center mt-2">158</h6>
+                                            <h6 class="text-muted fw-semibold small">អ្នកតាមដាន</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-12">
+                                    <div class="seller-details  shadow-lg rounded-3">
+                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active fw-bold" id="home-tab"
+                                                    data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+                                                    role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                                                    <i class="bi bi-person-fill"></i> ព័ត៌មានផ្ទាល់ខ្លួន
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link fw-bold" id="profile-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                                    aria-controls="profile-tab-pane" aria-selected="false">
+                                                    <i class="bi bi-shop"></i> ព័ត៌មានហាង
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link fw-bold" id="contact-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                                    aria-controls="contact-tab-pane" aria-selected="false">
+                                                    <i class="bi bi-geo-alt-fill"></i> អាសយដ្ឋាន
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link fw-bold" id="bank-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#bank-tab-pane" type="button" role="tab"
+                                                    aria-controls="bank-tab-pane" aria-selected="false">
+                                                    <i class="bi bi-bank2"></i> គណនីធនាគារ
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link fw-bold" id="security-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#security-tab-pane" type="button" role="tab"
+                                                    aria-controls="security-tab-pane" aria-selected="false">
+                                                    <i class="bi bi-shield-check"></i> សុវត្ថិភាព
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link fw-bold" id="verification-tab"
+                                                    data-bs-toggle="tab" data-bs-target="#verification-tab-pane"
+                                                    type="button" role="tab" aria-controls="verification-tab-pane"
+                                                    aria-selected="false">
+                                                    <i class="bi bi-patch-check-fill"></i> ផ្ទៀងផ្ទាត់
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link fw-bold" id="settings-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#settings-tab-pane" type="button" role="tab"
+                                                    aria-controls="settings-tab-pane" aria-selected="false">
+                                                    <i class="bi bi-gear-fill"></i> ការកំណត់
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content p-3" id="myTabContent">
+
+                                            <!-- ==========================================
+         TAB 1: ព័ត៌មានផ្ទាល់ខ្លួន (PERSONAL PROFILE)
+         ========================================== -->
+                                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                                aria-labelledby="home-tab" tabindex="0">
+                                                <div
+                                                    class="info-header d-flex align-items-center justify-content-between mb-4">
+                                                    <div>
+                                                        <h5 class="fw-bold mb-1">ព័ត៌មានផ្ទាល់ខ្លួន (Personal Profile)
+                                                        </h5>
+                                                        <p class="text-muted small mb-0">គ្រប់គ្រងព័ត៌មានអត្តសញ្ញាណ
+                                                            និងទំនាក់ទំនងផ្លូវការរបស់ម្ចាស់គណនី</p>
+                                                    </div>
+                                                    <button class="btn btn-primary text-white rounded-3 px-3"
+                                                        data-bs-toggle="modal" data-bs-target="#editProfile">
+                                                        <i class="bi bi-pencil-square me-1"></i> កែប្រែព័ត៌មាន
+                                                    </button>
+                                                </div>
+
+                                                <form class="needs-validation" novalidate>
+                                                    <!-- ឈ្មោះ និងអត្តសញ្ញាណ -->
+                                                    <div class="row g-3 mb-3">
+                                                        <div class="col-12 col-md-4">
+                                                            <label class="form-label fw-medium text-dark">នាមខ្លួន
+                                                                (First Name)</label>
+                                                            <input type="text" class="form-control bg-light"
+                                                                value="សំណាង" readonly>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <label class="form-label fw-medium text-dark">នាមត្រកូល
+                                                                (Last Name)</label>
+                                                            <input type="text" class="form-control bg-light" value="ហេង"
+                                                                readonly>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <label class="form-label fw-medium text-dark">ឈ្មោះបង្ហាញ
+                                                                (Display Name)</label>
+                                                            <input type="text" class="form-control bg-light"
+                                                                value="ហេង សំណាង" readonly>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row g-3 mb-3">
+                                                        <div class="col-12 col-md-4">
+                                                            <label class="form-label fw-medium text-dark">ភេទ
+                                                                (Gender)</label>
+                                                            <input type="text" class="form-control bg-light"
+                                                                value="ប្រុស" readonly>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <label
+                                                                class="form-label fw-medium text-dark">កាលបរិច្ឆេទកំណើត
+                                                                (Date of Birth)</label>
+                                                            <input type="date" class="form-control bg-light"
+                                                                value="1995-08-12" readonly>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <label
+                                                                class="form-label fw-medium text-dark">លេខអត្តសញ្ញាណប័ណ្ណ
+                                                                (National ID No.)</label>
+                                                            <input type="text"
+                                                                class="form-control bg-light fw-bold text-success"
+                                                                value="0102938475" readonly>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- ទំនាក់ទំនង និងសង្គម -->
+                                                    <div class="row g-3 mb-3">
+                                                        <div class="col-12 col-md-6">
+                                                            <label class="form-label fw-medium text-dark">អុីម៉ែលដើម
+                                                                (Primary Email)</label>
+                                                            <div class="input-group">
+                                                                <input type="email" class="form-control bg-light"
+                                                                    value="somnangheng@gmail.com" readonly>
+                                                                <span
+                                                                    class="input-group-text bg-success-subtle text-success fw-bold border-0"><i
+                                                                        class="bi bi-patch-check-fill me-1"></i>
+                                                                    បានផ្ទៀងផ្ទាត់</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <label class="form-label fw-medium text-dark">លេខទូរស័ព្ទដើម
+                                                                (Primary Phone)</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-text bg-light"><img
+                                                                        src="https://flagcdn.com/w20/kh.png" width="20"
+                                                                        alt="KH"></span>
+                                                                <input type="text" class="form-control bg-light"
+                                                                    value="+855 12 231 321" readonly>
+                                                                <span
+                                                                    class="input-group-text bg-success-subtle text-success fw-bold border-0"><i
+                                                                        class="bi bi-check-circle-fill me-1"></i> OTP
+                                                                    Valid</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row g-3 mb-3">
+                                                        <div class="col-12 col-md-6">
+                                                            <label class="form-label fw-medium text-dark">Telegram
+                                                                ផ្ទាល់ខ្លួន</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-text bg-light text-primary"><i
+                                                                        class="bi bi-telegram"></i></span>
+                                                                <input type="text" class="form-control bg-light"
+                                                                    value="@somnangheng" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <label
+                                                                class="form-label fw-medium text-dark">អ្នកទំនាក់ទំនងបន្ទាន់
+                                                                (Emergency Contact)</label>
+                                                            <input type="text" class="form-control bg-light"
+                                                                value="ហេង សុខា (បងប្រុស) - +855 92 111 222" readonly>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row g-3">
+                                                        <div class="col-12">
+                                                            <label
+                                                                class="form-label fw-medium text-dark">អាសយដ្ឋានផ្ទាល់ខ្លួន
+                                                                (Personal Address)</label>
+                                                            <textarea class="form-control bg-light" rows="2"
+                                                                readonly>ផ្ទះលេខ #128, ផ្លូវ 271, សង្កាត់ទឹកថ្លា, ខណ្ឌសែនសុខ, រាជធានីភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា</textarea>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <!-- TAB 2: ព័ត៌មានហាង (STORE INFORMATION) -->
+                                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                                aria-labelledby="profile-tab" tabindex="0">
+                                                <div
+                                                    class="info-header d-flex align-items-center justify-content-between mb-4">
+                                                    <div>
+                                                        <h5 class="fw-bold mb-1">ព័ត៌មាន និងអត្តសញ្ញាណហាង (Store Profile
+                                                            & Branding)</h5>
+                                                        <p class="text-muted small mb-0">គ្រប់គ្រងឈ្មោះ ប៊្រេន
+                                                            ម៉ោងធ្វើការ និងព័ត៌មានបង្ហាញលើគេហទំព័រ</p>
+                                                    </div>
+                                                    <button class="btn btn-primary text-white rounded-3 px-3"
+                                                        data-bs-toggle="modal" data-bs-target="#editStoreModal">
+                                                        <i class="bi bi-pencil-square me-1"></i> កែប្រែព័ត៌មានហាង
+                                                    </button>
+                                                </div>
+
+                                                <form class="needs-validation" novalidate>
+                                                    <!-- ឈ្មោះ និង URL ហាង -->
+                                                    <div class="row g-3 mb-3">
+                                                        <div class="col-12 col-md-6">
+                                                            <label
+                                                                class="form-label fw-medium text-dark">ឈ្មោះហាងផ្លូវការ
+                                                                (Store Name)</label>
+                                                            <input type="text"
+                                                                class="form-control bg-light fw-bold text-success"
+                                                                value="ហាង ល្អប្រណីត (Laor Praniet Store)" readonly>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <label class="form-label fw-medium text-dark">តំណភ្ជាប់ហាង
+                                                                (Store Web Address / Slug)</label>
+                                                            <div class="input-group">
+                                                                <span
+                                                                    class="input-group-text bg-light text-muted small">khmerbazaar.com/store/</span>
+                                                                <input type="text" class="form-control bg-light fw-bold"
+                                                                    value="laor-praniet" readonly>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- ប្រភេទ និងម៉ោងធ្វើការ -->
+                                                    <div class="row g-3 mb-3">
+                                                        <div class="col-12 col-md-4">
+                                                            <label
+                                                                class="form-label fw-medium text-dark">ប្រភេទទំនិញចម្បង
+                                                                (Main Category)</label>
+                                                            <input type="text" class="form-control bg-light"
+                                                                value="គ្រឿងសម្លៀកបំពាក់ និងគ្រឿងអលង្ការ" readonly>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <label class="form-label fw-medium text-dark">ប្រភេទទំនិញរង
+                                                                (Sub-Category)</label>
+                                                            <input type="text" class="form-control bg-light"
+                                                                value="ហូលផាមួង, ក្រមា, គ្រឿងប្រាក់ខ្មែរ" readonly>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <label
+                                                                class="form-label fw-medium text-dark">រយៈពេលរៀបចំកញ្ចប់ទំនិញ
+                                                                (Processing Time)</label>
+                                                            <input type="text" class="form-control bg-light"
+                                                                value="ក្នុងរង្វង់ ២៤ ម៉ោង (រហ័ស)" readonly>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- ទំនាក់ទំនងអតិថិជន -->
+                                                    <div class="row g-3 mb-3">
+                                                        <div class="col-12 col-md-4">
+                                                            <label
+                                                                class="form-label fw-medium text-dark">អុីម៉ែលផ្នែកបម្រើអតិថិជន
+                                                                (Support Email)</label>
+                                                            <input type="email" class="form-control bg-light"
+                                                                value="support.laorpraniet@gmail.com" readonly>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <label class="form-label fw-medium text-dark">លេខទូរស័ព្ទហាង
+                                                                (Support Phone)</label>
+                                                            <input type="text" class="form-control bg-light"
+                                                                value="+855 98 765 432" readonly>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <label class="form-label fw-medium text-dark">Telegram
+                                                                Channel/Group ហាង</label>
+                                                            <input type="text"
+                                                                class="form-control bg-light text-primary fw-medium"
+                                                                value="t.me/laorpraniet_official" readonly>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- បណ្តាញសង្គម -->
+                                                    <div class="row g-3 mb-3">
+                                                        <div class="col-12 col-md-4">
+                                                            <label class="form-label fw-medium text-dark">ទំព័រ Facebook
+                                                                Page</label>
+                                                            <input type="text" class="form-control bg-light"
+                                                                value="https://facebook.com/laorpraniet" readonly>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <label class="form-label fw-medium text-dark">TikTok Shop
+                                                                Account</label>
+                                                            <input type="text" class="form-control bg-light"
+                                                                value="@laorpraniet_kh" readonly>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <label class="form-label fw-medium text-dark">Instagram
+                                                                Account</label>
+                                                            <input type="text" class="form-control bg-light"
+                                                                value="@laorpraniet.official" readonly>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- ម៉ោងធ្វើការ & Holiday Mode -->
+                                                    <div class="row g-3 mb-3">
+                                                        <div class="col-12 col-md-6">
+                                                            <label
+                                                                class="form-label fw-medium text-dark">ម៉ោងបើកដំណើរការ
+                                                                (Operating Hours)</label>
+                                                            <input type="text" class="form-control bg-light"
+                                                                value="08:00 AM - 08:00 PM (រៀងរាល់ថ្ងៃ)" readonly>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <label
+                                                                class="form-label fw-medium text-dark">របៀបសម្រាកលំហែកាយ
+                                                                (Holiday Mode)</label>
+                                                            <div
+                                                                class="p-2 border rounded-3 bg-light d-flex align-items-center justify-content-between">
+                                                                <span
+                                                                    class="badge bg-danger-subtle text-danger px-3 py-2 fw-bold"><i
+                                                                        class="bi bi-power me-1"></i> បិទ
+                                                                    (Disabled)</span>
+                                                                <span
+                                                                    class="text-muted small">ហាងកំពុងបើកទទួលការបញ្ជាទិញធម្មតា</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- ការពិពណ៌នា -->
+                                                    <div class="row g-3">
+                                                        <div class="col-12">
+                                                            <label
+                                                                class="form-label fw-medium text-dark">ការពិពណ៌នាអំពីហាង
+                                                                (Store Biography & Policy)</label>
+                                                            <textarea class="form-control bg-light" rows="3"
+                                                                readonly>ហាង ល្អប្រណីត ជាហាងផ្លូវការលក់សម្លៀកបំពាក់ ហូលផាមួង គ្រឿងអលង្ការ និងផលិតផលស្នាដៃកូនខ្មែរដែលមានគុណភាពខ្ពស់ ធម្មជាតិ 100% ធានាតម្លៃសមរម្យ និងសេវាកម្មដឹកជញ្ជូនរហ័សទាន់ចិត្តជូនអតិថិជនគ្រប់ខេត្តក្រុង។❤️</textarea>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <!-- ==========================================
+         TAB 3: អាសយដ្ឋាន (ADDRESS & LOGISTICS)
+         ========================================== -->
+                                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
+                                                aria-labelledby="contact-tab" tabindex="0">
+                                                <div
+                                                    class="info-header d-flex align-items-center justify-content-between mb-4">
+                                                    <div>
+                                                        <h5 class="fw-bold mb-1">គ្រប់គ្រងអាសយដ្ឋាន (Address & Warehouse
+                                                            Logistics)</h5>
+                                                        <p class="text-muted small mb-0">គ្រប់គ្រងទីតាំងឃ្លាំងលើកទំនិញ
+                                                            (Pickup) និងទីតាំងទទួលទំនិញត្រឡប់ (Return)</p>
+                                                    </div>
+                                                    <button class="btn btn-primary text-white rounded-3 px-3"
+                                                        data-bs-toggle="modal" data-bs-target="#addAddressModal">
+                                                        <i class="bi bi-geo-alt-fill me-1"></i> បន្ថែមអាសយដ្ឋាន
+                                                    </button>
+                                                </div>
+
+                                                <div class="row g-3">
+                                                    <!-- Address 1: Primary Pickup & Return -->
+                                                    <div class="col-12 col-xl-6">
+                                                        <div
+                                                            class="card border rounded-3 p-3 h-100 position-relative shadow-sm border-start border-4 border-success">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-start mb-2">
+                                                                <div class="d-flex flex-wrap gap-1">
+                                                                    <span class="badge bg-success text-white"><i
+                                                                            class="bi bi-box-arrow-up me-1"></i>
+                                                                        លើកទំនិញចម្បង</span>
+                                                                    <span class="badge bg-primary text-white"><i
+                                                                            class="bi bi-arrow-return-left me-1"></i>
+                                                                        ទទួលត្រឡប់</span>
+                                                                </div>
+                                                                <div class="dropdown">
+                                                                    <button class="btn btn-sm btn-icon border-0"
+                                                                        type="button" data-bs-toggle="dropdown"><i
+                                                                            class="bi bi-three-dots-vertical"></i></button>
+                                                                    <ul
+                                                                        class="dropdown-menu dropdown-menu-end shadow-sm">
+                                                                        <li><a class="dropdown-item small" href="#"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#addAddressModal"><i
+                                                                                    class="bi bi-pencil me-2 text-primary"></i>
+                                                                                កែប្រែ</a></li>
+                                                                        <li><a class="dropdown-item small text-danger"
+                                                                                href="#"><i
+                                                                                    class="bi bi-trash me-2"></i>
+                                                                                លុប</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+                                                            <h6 class="fw-bold text-dark mb-1">ឃ្លាំងដើម ភ្នំពេញ
+                                                                (សែនសុខ)</h6>
+                                                            <p class="text-muted small mb-2"><i
+                                                                    class="bi bi-person me-1"></i> ហេង សំណាង
+                                                                &nbsp;|&nbsp; <i class="bi bi-telephone me-1"></i> +855
+                                                                12 231 321</p>
+                                                            <p class="text-dark small mb-2"><i
+                                                                    class="bi bi-geo-alt text-danger me-1"></i> ផ្ទះលេខ
+                                                                #128, ផ្លូវ 271, សង្កាត់ទឹកថ្លា, ខណ្ឌសែនសុខ,
+                                                                រាជធានីភ្នំពេញ</p>
+
+                                                            <div class="mb-3">
+                                                                <span
+                                                                    class="text-xs text-muted d-block mb-1">ដៃគូដឹកជញ្ជូនដែលគាំទ្រ៖</span>
+                                                                <span class="badge bg-light text-dark border me-1"><i
+                                                                        class="bi bi-truck text-success me-1"></i> J&T
+                                                                    Express</span>
+                                                                <span class="badge bg-light text-dark border me-1"><i
+                                                                        class="bi bi-truck text-primary me-1"></i> VET
+                                                                    Express</span>
+                                                                <span class="badge bg-light text-dark border"><i
+                                                                        class="bi bi-bicycle text-warning me-1"></i>
+                                                                    Grab Express</span>
+                                                            </div>
+
+                                                            <div
+                                                                class="mt-auto d-flex align-items-center justify-content-between border-top pt-2">
+                                                                <span class="text-xs text-success fw-medium"><i
+                                                                        class="bi bi-check-circle-fill me-1"></i> GPS
+                                                                    Coordinates Valid</span>
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-success rounded-pill px-3"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addAddressModal"><i
+                                                                        class="bi bi-pencil-square me-1"></i>
+                                                                    កែប្រែ</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Address 2: Branch Siem Reap -->
+                                                    <div class="col-12 col-xl-6">
+                                                        <div class="card border rounded-3 p-3 h-100 position-relative">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-start mb-2">
+                                                                <span class="badge bg-secondary text-white"><i
+                                                                        class="bi bi-building me-1"></i>
+                                                                    សាខាសៀមរាប</span>
+                                                                <div class="dropdown">
+                                                                    <button class="btn btn-sm btn-icon border-0"
+                                                                        type="button" data-bs-toggle="dropdown"><i
+                                                                            class="bi bi-three-dots-vertical"></i></button>
+                                                                    <ul
+                                                                        class="dropdown-menu dropdown-menu-end shadow-sm">
+                                                                        <li><a class="dropdown-item small text-success"
+                                                                                href="#"><i class="bi bi-star me-2"></i>
+                                                                                កំណត់ជាចម្បង</a></li>
+                                                                        <li><a class="dropdown-item small" href="#"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#addAddressModal"><i
+                                                                                    class="bi bi-pencil me-2 text-primary"></i>
+                                                                                កែប្រែ</a></li>
+                                                                        <li><a class="dropdown-item small text-danger"
+                                                                                href="#"><i
+                                                                                    class="bi bi-trash me-2"></i>
+                                                                                លុប</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+                                                            <h6 class="fw-bold text-dark mb-1">ហាង សាខាសៀមរាប (ស្ទឹងសែន)
+                                                            </h6>
+                                                            <p class="text-muted small mb-2"><i
+                                                                    class="bi bi-person me-1"></i> ចាន់ ដារ៉ា
+                                                                &nbsp;|&nbsp; <i class="bi bi-telephone me-1"></i> +855
+                                                                98 765 432</p>
+                                                            <p class="text-dark small mb-2"><i
+                                                                    class="bi bi-geo-alt text-danger me-1"></i> ផ្ទះលេខ
+                                                                #45, ផ្លូវ Sivatha, សង្កាត់ស្វាយដង្គំ, ក្រុងសៀមរាប,
+                                                                ខេត្តសៀមរាប</p>
+
+                                                            <div class="mb-3">
+                                                                <span
+                                                                    class="text-xs text-muted d-block mb-1">ដៃគូដឹកជញ្ជូនដែលគាំទ្រ៖</span>
+                                                                <span class="badge bg-light text-dark border me-1"><i
+                                                                        class="bi bi-truck text-success me-1"></i> J&T
+                                                                    Express</span>
+                                                                <span class="badge bg-light text-dark border"><i
+                                                                        class="bi bi-truck text-primary me-1"></i> Virak
+                                                                    Buntham</span>
+                                                            </div>
+
+                                                            <div
+                                                                class="mt-auto d-flex align-items-center justify-content-between border-top pt-2">
+                                                                <button
+                                                                    class="btn btn-sm btn-link text-success p-0 text-decoration-none fw-bold small"><i
+                                                                        class="bi bi-star me-1"></i>
+                                                                    កំណត់ជាចម្បង</button>
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-success rounded-pill px-3"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addAddressModal"><i
+                                                                        class="bi bi-pencil-square me-1"></i>
+                                                                    កែប្រែ</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- ==========================================
+         TAB 4: គណនីធនាគារ (BANK & PAYOUTS)
+         ========================================== -->
+                                            <div class="tab-pane fade" id="bank-tab-pane" role="tabpanel"
+                                                aria-labelledby="bank-tab" tabindex="0">
+                                                <div
+                                                    class="info-header d-flex align-items-center justify-content-between mb-4">
+                                                    <div>
+                                                        <h5 class="fw-bold mb-1">គ្រប់គ្រងគណនីធនាគារ (Bank Accounts &
+                                                            Payouts)</h5>
+                                                        <p class="text-muted small mb-0">
+                                                            ភ្ជាប់គណនីធនាគារសម្រាប់ទទួលប្រាក់ចំណូលលក់ពី Khmer Bazaar</p>
+                                                    </div>
+                                                    <button class="btn btn-primary text-white rounded-3 px-3"
+                                                        data-bs-toggle="modal" data-bs-target="#addBankModal">
+                                                        <i class="bi bi-plus-circle me-1"></i> ភ្ជាប់ធនាគារថ្មី
+                                                    </button>
+                                                </div>
+
+                                                <div
+                                                    class="alert alert-warning border-0 bg-warning-subtle text-dark rounded-3 d-flex align-items-start gap-3 p-3 mb-4">
+                                                    <i class="bi bi-shield-exclamation text-warning fs-3 lh-1"></i>
+                                                    <div class="small">
+                                                        <strong
+                                                            class="d-block mb-1 text-dark">គោលការណ៍សុវត្ថិភាពនៃការដកប្រាក់ចំណូល៖</strong>
+                                                        ដើម្បីការពារការលួចបន្លំ ឈ្មោះម្ចាស់គណនីធនាគារត្រូវតែជាឈ្មោះ
+                                                        <strong class="text-danger">"HENG SOMNANG"</strong>
+                                                        (ដូចគ្នានឹងឈ្មោះនៅលើអត្តសញ្ញាណប័ណ្ណដែលបានផ្ទៀងផ្ទាត់)។
+                                                        ប្រព័ន្ធមិនអនុញ្ញាតឱ្យផ្ទេរប្រាក់ទៅកាន់គណនីរបស់អ្នកដទៃឡើយ។
+                                                    </div>
+                                                </div>
+
+                                                <div class="row g-3 mb-4">
+                                                    <!-- ABA Bank Card -->
+                                                    <div class="col-12 col-xl-6">
+                                                        <div
+                                                            class="card border rounded-3 p-3 h-100 border-start border-4 border-success shadow-sm">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-start mb-3">
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div
+                                                                        class="bg-dark text-white rounded-2 p-2 fw-bold">
+                                                                        ABA</div>
+                                                                    <div>
+                                                                        <h6 class="fw-bold text-dark mb-0">ABA Bank
+                                                                            (Advanced Bank of Asia)</h6>
+                                                                        <span class="text-xs text-muted">SWIFT:
+                                                                            ABAKKHPP</span>
+                                                                    </div>
+                                                                </div>
+                                                                <span class="badge bg-success text-white"><i
+                                                                        class="bi bi-check-circle-fill me-1"></i>
+                                                                    ទទួលប្រាក់ចម្បង</span>
+                                                            </div>
+
+                                                            <div class="bg-light p-3 rounded-3 mb-3">
+                                                                <span
+                                                                    class="text-xs text-muted d-block mb-1">ឈ្មោះម្ចាស់គណនី
+                                                                    (Account Holder)</span>
+                                                                <h6 class="fw-bold text-dark mb-2">HENG SOMNANG</h6>
+                                                                <span class="text-xs text-muted d-block mb-1">លេខគណនី
+                                                                    (Account Number)</span>
+                                                                <h5 class="fw-bold text-success mb-0 tracking-wider">000
+                                                                    123 456 <span
+                                                                        class="badge bg-secondary fs-6 font-normal">USD</span>
+                                                                </h5>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center border-top pt-2">
+                                                                <span class="text-xs text-success fw-medium"><i
+                                                                        class="bi bi-qr-code me-1"></i> មាន KHQR
+                                                                    រួចរាល់</span>
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-success rounded-pill px-3"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addBankModal"><i
+                                                                        class="bi bi-pencil-square me-1"></i>
+                                                                    កែប្រែ</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- ACLEDA Bank Card -->
+                                                    <div class="col-12 col-xl-6">
+                                                        <div class="card border rounded-3 p-3 h-100">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-start mb-3">
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div
+                                                                        class="bg-warning text-dark rounded-2 p-2 fw-bold">
+                                                                        <i class="bi bi-bank"></i></div>
+                                                                    <div>
+                                                                        <h6 class="fw-bold text-dark mb-0">ACLEDA Bank
+                                                                            Plc.</h6>
+                                                                        <span class="text-xs text-muted">SWIFT:
+                                                                            ACLEKHPP</span>
+                                                                    </div>
+                                                                </div>
+                                                                <span
+                                                                    class="badge bg-secondary text-white">គណនីបន្ទាប់បន្សំ</span>
+                                                            </div>
+
+                                                            <div class="bg-light p-3 rounded-3 mb-3">
+                                                                <span
+                                                                    class="text-xs text-muted d-block mb-1">ឈ្មោះម្ចាស់គណនី
+                                                                    (Account Holder)</span>
+                                                                <h6 class="fw-bold text-dark mb-2">HENG SOMNANG</h6>
+                                                                <span class="text-xs text-muted d-block mb-1">លេខគណនី
+                                                                    (Account Number)</span>
+                                                                <h5 class="fw-bold text-dark mb-0 tracking-wider">0100
+                                                                    8899 7766 <span
+                                                                        class="badge bg-secondary fs-6 font-normal">KHR</span>
+                                                                </h5>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center border-top pt-2">
+                                                                <button
+                                                                    class="btn btn-sm btn-link text-success p-0 text-decoration-none fw-bold small"><i
+                                                                        class="bi bi-star me-1"></i>
+                                                                    កំណត់ជាចម្បង</button>
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-success rounded-pill px-3"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addBankModal"><i
+                                                                        class="bi bi-pencil-square me-1"></i>
+                                                                    កែប្រែ</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- การកំណត់ Payout Preferences -->
+                                                <div class="card border rounded-3 p-4 bg-light">
+                                                    <h6 class="fw-bold text-dark mb-3"><i
+                                                            class="bi bi-sliders text-success me-2"></i>
+                                                        ការកំណត់កាលវិភាគផ្ទេរប្រាក់ចំណូល (Payout Preferences)</h6>
+                                                    <div class="row g-3">
+                                                        <div class="col-12 col-md-6">
+                                                            <label
+                                                                class="form-label text-muted small fw-medium">កាលវិភាគផ្ទេរប្រាក់ស្វ័យប្រវត្តិ
+                                                                (Payout Schedule)</label>
+                                                            <select class="form-select">
+                                                                <option value="weekly" selected>ប្រចាំសប្តាហ៍
+                                                                    (រៀងរាល់ថ្ងៃចន្ទ)</option>
+                                                                <option value="biweekly">២ សប្តាហ៍ម្តង</option>
+                                                                <option value="monthly">ប្រចាំខែ (ថ្ងៃទី ១ នៃខែ)
+                                                                </option>
+                                                                <option value="manual">ដកដោយផ្ទាល់ដៃ (Manual Payout)
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <label
+                                                                class="form-label text-muted small fw-medium">ចំនួនប្រាក់ដកអប្បបរមា
+                                                                (Minimum Payout Threshold)</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-text">$</span>
+                                                                <input type="text" class="form-control" value="10.00">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- ==========================================
+         TAB 5: សុវត្ថិភាព (SECURITY & ACCESS)
+         ========================================== -->
+                                            <div class="tab-pane fade" id="security-tab-pane" role="tabpanel"
+                                                aria-labelledby="security-tab" tabindex="0">
+                                                <div
+                                                    class="info-header d-flex align-items-center justify-content-between mb-4">
+                                                    <div>
+                                                        <h5 class="fw-bold mb-1">សុវត្ថិភាព និងការចូលប្រើប្រាស់
+                                                            (Security & Access Control)</h5>
+                                                        <p class="text-muted small mb-0">គ្រប់គ្រងពាក្យសម្ងាត់
+                                                            ការផ្ទៀងផ្ទាត់ 2FA និងឧបករណ៍ដែលកំពុងភ្ជាប់</p>
+                                                    </div>
+                                                    <button class="btn btn-primary text-white rounded-3 px-3"
+                                                        data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                                                        <i class="bi bi-key-fill me-1"></i> ផ្លាស់ប្តូរពាក្យសម្ងាត់
+                                                    </button>
+                                                </div>
+
+                                                <div class="row g-4 mb-4">
+                                                    <!-- 2FA Settings -->
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="card border rounded-3 p-3 h-100">
+                                                            <div
+                                                                class="d-flex align-items-center justify-content-between mb-3">
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <i
+                                                                        class="bi bi-shield-lock-fill fs-2 text-success"></i>
+                                                                    <div>
+                                                                        <h6 class="fw-bold text-dark mb-0">
+                                                                            ការផ្ទៀងផ្ទាត់ ២ ជំហាន (2FA)</h6>
+                                                                        <span class="text-xs text-muted">Two-Factor
+                                                                            Authentication</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-check form-switch fs-4">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        role="switch" checked>
+                                                                </div>
+                                                            </div>
+                                                            <p class="small text-muted mb-2">នៅពេលបើក 2FA
+                                                                ប្រព័ន្ធនឹងផ្ញើលេខកូដ OTP ទៅកាន់ Telegram ឬ SMS
+                                                                របស់អ្នករៀងរាល់ពេលមានការចូលប្រើប្រាស់លើឧបករណ៍ថ្មី។</p>
+                                                            <span class="badge bg-success-subtle text-success border"><i
+                                                                    class="bi bi-telegram me-1"></i> ភ្ជាប់ជាមួយ
+                                                                Telegram @somnangheng រួចរាល់</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Sub-Accounts & Staff Management -->
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="card border rounded-3 p-3 h-100">
+                                                            <div
+                                                                class="d-flex align-items-center justify-content-between mb-3">
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <i class="bi bi-people-fill fs-2 text-primary"></i>
+                                                                    <div>
+                                                                        <h6 class="fw-bold text-dark mb-0">
+                                                                            ការគ្រប់គ្រងសិទ្ធិបុគ្គលិក (Staff Roles)
+                                                                        </h6>
+                                                                        <span class="text-xs text-muted">Sub-accounts &
+                                                                            Permissions</span>
+                                                                    </div>
+                                                                </div>
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-primary rounded-pill"><i
+                                                                        class="bi bi-plus-lg me-1"></i>
+                                                                    បន្ថែមបុគ្គលិក</button>
+                                                            </div>
+                                                            <ul class="list-group list-group-flush small">
+                                                                <li
+                                                                    class="list-group-item d-flex justify-content-between align-items-center px-0 py-2">
+                                                                    <div>
+                                                                        <strong class="d-block text-dark">ចាន់ ធីដា
+                                                                            (Thida Chan)</strong>
+                                                                        <span class="text-xs text-muted">ផ្នែកឃ្លាំង
+                                                                            (Inventory Staff)</span>
+                                                                    </div>
+                                                                    <span
+                                                                        class="badge bg-secondary text-white">មើលតែស្តុក</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Connected Devices & Active Sessions -->
+                                                <div class="card border rounded-3 p-3">
+                                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                                        <h6 class="fw-bold text-dark mb-0"><i
+                                                                class="bi bi-laptop text-success me-2"></i>
+                                                            ឧបករណ៍កំពុងចូលប្រើប្រាស់ (Active Connected Devices)</h6>
+                                                        <button class="btn btn-sm btn-outline-danger rounded-pill"><i
+                                                                class="bi bi-box-arrow-right me-1"></i>
+                                                            ចាកចេញពីគ្រប់ឧបករណ៍</button>
+                                                    </div>
+
+                                                    <div class="table-responsive">
+                                                        <table class="table table-hover align-middle mb-0 small">
+                                                            <thead class="table-light">
+                                                                <tr>
+                                                                    <th>ឧបករណ៍ / ប្រព័ន្ធប្រតិបត្តិការ</th>
+                                                                    <th>កម្មវិធីរុករក (Browser)</th>
+                                                                    <th>ទីតាំង IP Address</th>
+                                                                    <th>សកម្មភាពចុងក្រោយ</th>
+                                                                    <th class="text-end">សកម្មភាព</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><i class="bi bi-display text-success me-2"></i>
+                                                                        Windows PC (Desktop)</td>
+                                                                    <td>Chrome 122.0</td>
+                                                                    <td>175.100.20.12 (Phnom Penh)</td>
+                                                                    <td><span
+                                                                            class="badge bg-success-subtle text-success">ឧបករណ៍នេះ
+                                                                            (Active)</span></td>
+                                                                    <td class="text-end"><button
+                                                                            class="btn btn-sm btn-link text-muted p-0"
+                                                                            disabled>បច្ចុប្បន្ន</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><i class="bi bi-phone text-primary me-2"></i>
+                                                                        iPhone 15 Pro</td>
+                                                                    <td>Khmer Bazaar App</td>
+                                                                    <td>175.100.20.88 (Phnom Penh)</td>
+                                                                    <td class="text-muted">២ ម៉ោងមុន</td>
+                                                                    <td class="text-end"><button
+                                                                            class="btn btn-sm btn-link text-danger p-0 text-decoration-none">ចាកចេញ</button>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- ==========================================
+         TAB 6: ផ្ទៀងផ្ទាត់ (KYC VERIFICATION)
+         ========================================== -->
+                                            <div class="tab-pane fade" id="verification-tab-pane" role="tabpanel"
+                                                aria-labelledby="verification-tab" tabindex="0">
+                                                <div
+                                                    class="info-header d-flex align-items-center justify-content-between mb-4">
+                                                    <div>
+                                                        <h5 class="fw-bold mb-1">ផ្ទៀងផ្ទាត់អត្តសញ្ញាណ
+                                                            និងច្បាប់អាជីវកម្ម (KYC & Legal Verification)</h5>
+                                                        <p class="text-muted small mb-0">
+                                                            ឯកសារផ្លូវការសម្រាប់ទទួលបានសញ្ញា Verified Seller
+                                                            និងការជឿទុកចិត្តខ្ពស់</p>
+                                                    </div>
+                                                    <span class="badge bg-success px-3 py-2 fs-6"><i
+                                                            class="bi bi-patch-check-fill me-1"></i>
+                                                        បានផ្ទៀងផ្ទាត់ផ្លូវការ 100%</span>
+                                                </div>
+
+                                                <div class="row g-3 mb-4">
+                                                    <!-- ID Card Card -->
+                                                    <div class="col-12 col-md-6">
+                                                        <div
+                                                            class="p-3 border rounded-3 bg-light d-flex align-items-start gap-3 h-100">
+                                                            <div class="bg-success text-white p-3 rounded-3 fs-3"><i
+                                                                    class="bi bi-card-heading"></i></div>
+                                                            <div class="flex-grow-1">
+                                                                <div
+                                                                    class="d-flex justify-content-between align-items-center mb-1">
+                                                                    <h6 class="fw-bold text-dark mb-0">
+                                                                        អត្តសញ្ញាណប័ណ្ណសញ្ជាតិខ្មែរ (National ID)</h6>
+                                                                    <span
+                                                                        class="badge bg-success text-white">Approved</span>
+                                                                </div>
+                                                                <span
+                                                                    class="text-xs text-muted d-block mb-1">លេខអត្តសញ្ញាណប័ណ្ណ៖
+                                                                    <strong>0102938475</strong></span>
+                                                                <span class="text-xs text-muted d-block mb-2">សុពលភាព៖
+                                                                    ដល់ 15-Oct-2030</span>
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-secondary rounded-pill px-3"
+                                                                    data-bs-toggle="modal" data-bs-target="#kycModal"><i
+                                                                        class="bi bi-eye me-1"></i> មើលឯកសារ</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Patent Tax Card -->
+                                                    <div class="col-12 col-md-6">
+                                                        <div
+                                                            class="p-3 border rounded-3 bg-light d-flex align-items-start gap-3 h-100">
+                                                            <div class="bg-primary text-white p-3 rounded-3 fs-3"><i
+                                                                    class="bi bi-receipt-cutoff"></i></div>
+                                                            <div class="flex-grow-1">
+                                                                <div
+                                                                    class="d-flex justify-content-between align-items-center mb-1">
+                                                                    <h6 class="fw-bold text-dark mb-0">
+                                                                        ប័ណ្ណពន្ធដារអាជីវកម្ម (Patent Tax 2026)</h6>
+                                                                    <span
+                                                                        class="badge bg-success text-white">Approved</span>
+                                                                </div>
+                                                                <span
+                                                                    class="text-xs text-muted d-block mb-1">លេខសារពើពន្ធ
+                                                                    (TIN)៖ <strong>K008-902183921</strong></span>
+                                                                <span class="text-xs text-muted d-block mb-2">ចេញដោយ៖
+                                                                    អគ្គនាយកដ្ឋានពន្ធដារ (GDT)</span>
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-secondary rounded-pill px-3"
+                                                                    data-bs-toggle="modal" data-bs-target="#kycModal"><i
+                                                                        class="bi bi-eye me-1"></i> មើលឯកសារ</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card border rounded-3 p-3 bg-light">
+                                                    <h6 class="fw-bold text-dark mb-2"><i
+                                                            class="bi bi-award text-warning me-2"></i>
+                                                        កម្រិតសមាជិកភាពអ្នកលក់ (Seller Level): VIP Gold Partner</h6>
+                                                    <p class="small text-muted mb-0">
+                                                        អ្នកបានបំពេញឯកសារផ្លូវការគ្រប់គ្រាន់
+                                                        និងទទួលបានអត្ថប្រយោជន៍ដូចជា៖ ថ្លៃសេវាប្រព័ន្ធទាបជាងមុន (Low
+                                                        Platform Fee) និងការបង្ហាញស្តង់ដារអាទិភាពលើគេហទំព័រ Khmer
+                                                        Bazaar។</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- ==========================================
+         TAB 7: ការកំណត់ (GENERAL SETTINGS)
+         ========================================== -->
+                                            <div class="tab-pane fade" id="settings-tab-pane" role="tabpanel"
+                                                aria-labelledby="settings-tab" tabindex="0">
+                                                <div class="info-header mb-4">
+                                                    <h5 class="fw-bold mb-1">ការកំណត់ទូទៅ (General Settings &
+                                                        Preferences)</h5>
+                                                    <p class="text-muted small mb-0">កំណត់ការជូនដំណឹង ភាសា
+                                                        និងស្វ័យប្រវត្តិកម្មប្រតិបត្តិការហាង</p>
+                                                </div>
+
+                                                <div class="row g-4 mb-4">
+                                                    <!-- Notifications Card -->
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="card border rounded-3 p-3 h-100">
+                                                            <h6 class="fw-bold text-dark mb-3"><i
+                                                                    class="bi bi-bell text-success me-2"></i>
+                                                                ការជូនដំណឹង (Notifications)</h6>
+                                                            <div class="form-check form-switch mb-3">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    role="switch" id="notifOrder" checked>
+                                                                <label class="form-check-label fw-medium text-dark"
+                                                                    for="notifOrder">ការបញ្ជាទិញថ្មី (New Order
+                                                                    Alerts)</label>
+                                                            </div>
+                                                            <div class="form-check form-switch mb-3">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    role="switch" id="notifStock" checked>
+                                                                <label class="form-check-label fw-medium text-dark"
+                                                                    for="notifStock">ទំនិញជិតអស់ពីស្តុក (Low Stock
+                                                                    Alerts)</label>
+                                                            </div>
+                                                            <div class="form-check form-switch mb-3">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    role="switch" id="notifPayout" checked>
+                                                                <label class="form-check-label fw-medium text-dark"
+                                                                    for="notifPayout">ការផ្ទេរប្រាក់ចំណូល (Payout
+                                                                    Confirmations)</label>
+                                                            </div>
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    role="switch" id="notifTelegram" checked>
+                                                                <label class="form-check-label fw-medium text-dark"
+                                                                    for="notifTelegram">ផ្ញើសារជូនដំណឹងទៅកាន់ Telegram
+                                                                    Bot</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Automation & System Language -->
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="card border rounded-3 p-3 h-100">
+                                                            <h6 class="fw-bold text-dark mb-3"><i
+                                                                    class="bi bi-sliders text-primary me-2"></i>
+                                                                ប្រព័ន្ធ និងភាសា (System & Automation)</h6>
+                                                            <div class="mb-3">
+                                                                <label
+                                                                    class="form-label text-muted small fw-medium">ភាសាបង្ហាញក្នុង
+                                                                    Dashboard (Language)</label>
+                                                                <select class="form-select">
+                                                                    <option value="km" selected>ភាសាខ្មែរ (Khmer)
+                                                                    </option>
+                                                                    <option value="en">English (US)</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label
+                                                                    class="form-label text-muted small fw-medium">ល្វែងម៉ោងប្រព័ន្ធ
+                                                                    (Timezone)</label>
+                                                                <input type="text" class="form-control bg-light"
+                                                                    value="(GMT+07:00) Phnom Penh, Cambodia" readonly>
+                                                            </div>
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    role="switch" id="autoAcceptOrder">
+                                                                <label class="form-check-label fw-medium text-dark"
+                                                                    for="autoAcceptOrder">ទទួលការបញ្ជាទិញស្វ័យប្រវត្តិ
+                                                                    (Auto-accept Orders)</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Danger Zone -->
+                                                <div class="card border border-danger rounded-3 p-3 bg-danger-subtle">
+                                                    <h6 class="fw-bold text-danger mb-2"><i
+                                                            class="bi bi-exclamation-octagon-fill me-2"></i>
+                                                        តំបន់ប្រុងប្រយ័ត្ន (Danger Zone)</h6>
+                                                    <p class="small text-muted mb-3">ការបិទហាងជាបណ្តោះអាសន្ន
+                                                        នឹងលាក់ផលិតផលទាំងអស់របស់អ្នកពីគេហទំព័រ។
+                                                        អតិថិជននឹងមិនអាចបញ្ជាទិញបានឡើយ។</p>
+                                                    <div class="d-flex gap-2">
+                                                        <button
+                                                            class="btn btn-outline-danger btn-sm rounded-3 fw-bold"><i
+                                                                class="bi bi-pause-circle me-1"></i>
+                                                            បិទហាងជាបណ្តោះអាសន្ន (Pause Store)</button>
+                                                        <button class="btn btn-danger btn-sm rounded-3 fw-bold"><i
+                                                                class="bi bi-trash me-1"></i> លុបគណនីហាង (Close
+                                                            Account)</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="dashboard-card  p-4">
+                                <h5 class="mb-1 card-title text-start mb-3">ការបំពេញប្រវត្តិរូប</h5>
+                                <div class="circular-progress-wrap mx-auto">
+                                    <svg class="progress-circle" viewBox="0 0 100 100">
+                                        <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                        <circle class="circle-progress" cx="50" cy="50" r="45"
+                                            id="progress-circle-indicator"></circle>
+                                    </svg>
+                                    <div class="progress-inner-content">
+                                        <h3 class="mb-0 fw-extrabold text-gradient-primary">85%</h3>
+                                    </div>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="check1" checked>
+                                    <label class="form-check-label" for="check1">
+                                        រូបភាពប្រវត្តិរូប
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check2" checked>
+                                    <label class="form-check-label" for="check2">
+                                        ព័ត៌មានហាង
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check3" checked>
+                                    <label class="form-check-label" for="check3">
+                                        លេខទូរសព្ទ
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check4" checked>
+                                    <label class="form-check-label" for="check4">
+                                        អាសយដ្ឋាន
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault" disabled>
+                                    <label class="form-check-label" for="checkDefault">
+                                        គណនីធនាគារ
+                                    </label>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault" disabled>
+                                    <label class="form-check-label" for="checkDefault">
+                                        ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណប័ណ្ណ
+                                    </label>
+                                </div>
+                                <button class="btn btn-primary w-100 gap-2 text-white rounded-3">មើលលម្អិត</button>
+                            </div>
+
+                            <div class="dashboard-card  p-3 mt-4">
+                                <h5 class="mb-1 card-title text-start mb-3">ព័ត៌មានហាងរបស់អ្នក</h5>
+                                <div class="history-card lh-1 d-flex justify-content-between">
+                                    <p class="fw-bold">កម្រិតសមាជិក</p>
+                                    <p><i class="bi bi-stars text-warning"></i> VIP Gold</p>
+                                </div>
+                                <div class="history-card d-flex justify-content-between">
+                                    <p class="fw-bold">ស្ថានភាព</p>
+                                    <p class="badge text-success border border-1 bg-success-subtle"> កំពុងដំណើរការ</p>
+                                </div>
+                                <div class="history-card lh-1 d-flex justify-content-between">
+                                    <p class="fw-bold">ការវាយតម្លៃ</p>
+                                    <p><i class="bi bi-star-fill text-warning" style="font-size: 14px;"></i>
+                                        <i class="bi bi-star-fill text-warning" style="font-size: 14px;"></i>
+                                        <i class="bi bi-star-fill text-warning" style="font-size: 14px;"></i>
+                                        <i class="bi bi-star-fill text-warning" style="font-size: 14px;"></i>
+                                        <i class="bi bi-star-half text-warning" style="font-size: 14px;"></i> 4.8
+                                    </p>
+                                </div>
+                                <div class="history-card d-flex justify-content-between">
+                                    <p class="fw-bold">ចូលចុងក្រោយ</p>
+                                    <p class="fw-bold"> Today, 09:35 AM</p>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card  p-3 mt-4">
+                                <h5 class="mb-1 card-title text-start mb-3">សកម្មភាពថ្មីៗ</h5>
+                                <div class="history-card lh-1 d-flex justify-content-between">
+                                    <p class="fw-bold small">បានកែប្រែប្រវត្តិរូប​</p>
+                                    <p class="fw-bold small">2 ម៉ោងមុន</p>
+                                </div>
+                                <div class="history-card d-flex justify-content-between">
+                                    <p class="fw-bold">បានផ្លាស់ប្តូរលេខទូរសព្ទ</p>
+                                    <p class="fw-bold small">5 ម៉ោងមុន</p>
+                                </div>
+                                <div class="history-card d-flex justify-content-between">
+                                    <p class="fw-bold small">បានផ្ទៀងផ្ទាត់អុីម៉ែល</p>
+                                    <p class="fw-bold small">1 ថ្ងៃមុន</p>
+                                </div>
+                                <button class="btn btn-primary w-100 gap-2 text-white rounded-3">មើលទាំងអស់</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+    <button class="btn btn-primary scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editProfile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">កែប្រែព័ត៌មានផ្ទាល់ខ្លួន</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-4">
+                    <form action="login.html" method="GET" class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-12 col-lg-6 mb-4">
+                                <div>
+                                    <label class="form-label">
+                                        នាមខ្លួន (First Name)
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="សំណាង">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-4">
+                                    <label class="form-label">
+                                        នាមត្រកូល (Last Name)
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="ហេង">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-6 mb-4">
+                                <div>
+                                    <label class="form-label">
+                                        ឈ្មោះបង្ហាញ (Display Name)
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="ហេង សំណាង">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-4">
+                                    <label class="form-label">
+                                        ភេទ (Gender)
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="ប្រុស">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-6 mb-4">
+                                <div>
+                                    <label class="form-label">
+                                        អុីម៉ែល
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="somnangheng@gmail.com">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-4">
+                                    <label class="form-label">
+                                        កាលបរិច្ឆេទសមាជិក
+                                    </label>
+                                    <input type="date" class="form-control" value="2025-01-30">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-6 mb-4">
+                                <div>
+                                    <label class="form-label">
+                                        លេខទូរសព្ទ
+                                    </label>
+                                    <div class="input-group">
+                                        <button class="btn btn-outline-success d-flex align-items-center gap-2"
+                                            type="button">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ASQmG8iQUwQ_cM7sMBe6N82QosDAojls9czBDRAtCg&s=10"
+                                                style="width: 20px;" alt="">
+                                            <i class="bi bi-chevron-down"></i>
+                                        </button>
+                                        <input type="text" class="form-control" placeholder="+885 12 231 321 ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-4">
+                                    <label class="form-label">
+                                        Telegram
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="@somnangheng">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div>
+                                    <label class="form-label">
+                                        អាសយដ្ឋាន
+                                    </label>
+                                    <textarea class="form-control" rows="2"
+                                        placeholder="ខ្ញុំជាអ្នកលក់ផលិតផល នៅលើគេហទំព័រ Khmer Bazaar! សូមស្វាគមន៍មកកាន់គេហទំព័ររបស់ខ្ញុំ​❤️"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" style="padding: 10px 24px;"
+                        data-bs-dismiss="modal">បោះបង់</button>
+                    <button type="button" class="btn btn-primary" id="alertBtn" data-bs-target="#staticBackdrop1"><a
+                            id="" class="text-white text-decoration-none"><i class="bi bi-download"></i>
+                            រក្សាទុក</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal កែប្រែព័ត៌មានហាង -->
+    <div class="modal fade" id="editStoreModal" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">កែប្រែព័ត៌មានហាង</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form>
+                        <div class="row">
+                            <div class="col-6 mb-3"><label class="form-label">ឈ្មោះហាង</label><input type="text"
+                                    class="form-control" value="ហាង ល្អប្រណីត"></div>
+                            <div class="col-6 mb-3"><label class="form-label">Store Handle</label><input type="text"
+                                    class="form-control" value="laor-praniet"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mb-3"><label class="form-label">ប្រភេទទំនិញ</label><input type="text"
+                                    class="form-control" value="គ្រឿងសម្លៀកបំពាក់"></div>
+                            <div class="col-6 mb-3"><label class="form-label">ម៉ោងបើក</label><input type="text"
+                                    class="form-control" value="08:00 AM - 08:00 PM"></div>
+                        </div>
+                        <div class="mb-3"><label class="form-label">ការពិពណ៌នា</label><textarea class="form-control"
+                                rows="3">ហាង ល្អប្រណីត មានលក់សម្លៀកបំពាក់ ហូលផាមួង...</textarea></div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">បោះបង់</button>
+                    <button type="button" class="btn btn-primary text-white" id="saveStoreBtn">រក្សាទុក</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal បន្ថែមអាសយដ្ឋាន -->
+    <div class="modal fade" id="addAddressModal" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">គ្រប់គ្រងអាសយដ្ឋាន</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form>
+                        <div class="row">
+                            <div class="col-6 mb-3"><label class="form-label">ឈ្មោះទីតាំង</label><input type="text"
+                                    class="form-control" value="ឃ្លាំងដើម ភ្នំពេញ"></div>
+                            <div class="col-6 mb-3"><label class="form-label">អ្នកទំនាក់ទំនង</label><input type="text"
+                                    class="form-control" value="ហេង សំណាង"></div>
+                        </div>
+                        <div class="mb-3"><label class="form-label">អាសយដ្ឋានលម្អិត</label><textarea
+                                class="form-control"
+                                rows="2">ផ្ទះលេខ #128, ផ្លូវ 271, សង្កាត់ទឹកថ្លា, ខណ្ឌសែនសុខ, រាជធានីភ្នំពេញ</textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">បោះបង់</button>
+                    <button type="button" class="btn btn-primary text-white"
+                        id="saveAddressBtn">រក្សាទុកអាសយដ្ឋាន</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal ភ្ជាប់ធនាគារ -->
+    <div class="modal fade" id="addBankModal" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">ភ្ជាប់គណនីធនាគារ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form>
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label class="form-label">ជ្រើសរើសធនាគារ</label>
+                                <select class="form-select">
+                                    <option>ABA Bank</option>
+                                    <option>ACLEDA Bank</option>
+                                </select>
+                            </div>
+                            <div class="col-6 mb-3"><label class="form-label">លេខគណនី</label><input type="text"
+                                    class="form-control" value="000 123 456"></div>
+                        </div>
+                        <div class="mb-3"><label class="form-label">ឈ្មោះម្ចាស់គណនី</label><input type="text"
+                                class="form-control bg-light" value="HENG SOMNANG" readonly></div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">បោះបង់</button>
+                    <button type="button" class="btn btn-primary text-white" id="saveBankBtn">រក្សាទុកគណនី</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal ផ្លាស់ប្តូរពាក្យសម្ងាត់ -->
+    <div class="modal fade" id="changePasswordModal" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">ផ្លាស់ប្តូរពាក្យសម្ងាត់</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form>
+                        <div class="mb-3"><label class="form-label">ពាក្យសម្ងាត់ចាស់</label><input type="password"
+                                class="form-control"></div>
+                        <div class="mb-3"><label class="form-label">ពាក្យសម្ងាត់ថ្មី</label><input type="password"
+                                class="form-control"></div>
+                        <div class="mb-3"><label class="form-label">បញ្ជាក់ពាក្យសម្ងាត់ថ្មី</label><input
+                                type="password" class="form-control"></div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">បោះបង់</button>
+                    <button type="button" class="btn btn-primary text-white"
+                        id="savePasswordBtn">ប្តូរពាក្យសម្ងាត់</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal ចាកចេញ (Logout) -->
+    <div class="modal fade" id="logout" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content text-center p-3">
+                <div class="modal-body">
+                    <i class="bi bi-exclamation-octagon-fill text-danger fs-1 mb-2"></i>
+                    <h6 class="fw-bold">តើអ្នកពិតជាចង់ចាកចេញមែនទេ?</h6>
+                </div>
+                <div class="modal-footer border-0 justify-content-center gap-2">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">បោះបង់</button>
+                    <a href="seller_login.html" class="btn btn-danger btn-sm">ចាកចេញ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- toast for editting seller profile info.. -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+        <div id="editAlert" class="toast align-items-center text-white bg-dark border-0 shadow" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body d-flex align-items-center gap-2">
+                    <i class="bi bi-info-circle-fill text-success"></i>
+                    <span id="toast-message">ការកែប្រែព័ត៌មានផ្ទាល់ខ្លួនបានជោគជ័យ!</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap 5 Bundle JS with Popper -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS Business Rules File -->
+    <script src="../assets/js/seller_dashboard.js"></script>
+    <script>
+        const toastEl = document.getElementById("editAlert");
+        const toastMsg = document.getElementById("toast-message");
+
+        function showNotification(message) {
+            if (toastMsg) toastMsg.innerText = message;
+            const bsToast = new bootstrap.Toast(toastEl);
+            bsToast.show();
+        }
+
+        function setupModalTrigger(btnId, modalId, message) {
+            const btn = document.getElementById(btnId);
+            btn?.addEventListener("click", () => {
+                const modalEl = document.getElementById(modalId);
+                const modal = bootstrap.Modal.getInstance(modalEl);
+                if (modal) modal.hide();
+                setTimeout(() => {
+                    showNotification(message);
+                }, 300);
+            });
+        }
+
+        // ភ្ជាប់រាល់ការចុចប៊ូតុងរក្សាទុកក្នុង Modals ទាំងអស់ទៅកាន់ Toast ជូនដំណឹង
+        setupModalTrigger("alertBtn", "editProfile", "ការកែប្រែព័ត៌មានផ្ទាល់ខ្លួនបានជោគជ័យ!");
+        setupModalTrigger("saveStoreBtn", "editStoreModal", "ការកែប្រែព័ត៌មានហាងបានជោគជ័យ!");
+        setupModalTrigger("saveAddressBtn", "addAddressModal", "រក្សាទុកអាសយដ្ឋានបានជោគជ័យ!");
+        setupModalTrigger("saveBankBtn", "addBankModal", "ភ្ជាប់គណនីធនាគារបានជោគជ័យ!");
+        setupModalTrigger("savePasswordBtn", "changePasswordModal", "ផ្លាស់ប្តូរពាក្យសម្ងាត់បានជោគជ័យ!");
+    </script>
+</body>
+
+</html>
