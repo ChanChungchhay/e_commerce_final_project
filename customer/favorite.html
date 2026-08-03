@@ -34,7 +34,7 @@
     </div>
     <nav class="nav pt-2 shadow position-sticky top-0 z-3 bg-white">
         <div class="container mb-0 d-flex justify-content-between align-items-center ">
-            <a href="#" class="navbar-brand"><img src="../assets/img/logo/img-logo.jpg" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
+            <a href="#" class="navbar-brand"><img src="/assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
             <ul class="navbar-nav d-flex gap-1 flex-row d-lg-block d-none d-lg-flex">
                 <li class="nav-item"><a class="nav-link active" href="./home.html">ទំព័រដើម</a></li>
                 <li class="nav-item"><a class="nav-link "  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ប្រភេទទំនិញ<i class="fa-solid fa-angle-down" style="color: var(--color-gray);"></i></a>
@@ -67,12 +67,16 @@
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px;">4</span>
                 </a>
                 <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 <img src="../assets/img/logo/profile.jpg" class="img-fluid object-fit-cover rounded-circle " style="width: 35px;" alt="">
-                 <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="./profile.html">ប្រវត្តិរូប</a></li>
-                        <li><a class="dropdown-item" href="#">privacy</a></li>
-                        <li><a class="dropdown-item" href="#">Dark mode</a></li>
-                        <li><a class="dropdown-item active" href="../index.html">ចាកចេញ</a></li>
+                 <img src="../assets/img/profile_customer/img-2.jpg" class="img-fluid object-fit-cover rounded-circle " style="width: 35px;" alt="">
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./profile.html"><i class="fa-solid fa-user fs-5 bg-danger-subtle p-1 me-3 rounded-circle" style="color:white;width: 30px;height: 30px;"></i>ប្រវត្តិរូប</a></li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center gap-2" href="#" role="button" id="themeToggle">
+                                <i class="fa-solid fa-moon text-warning bg-danger-subtle p-1 d-flex justify-content-center align-items-center rounded-circle" style="width: 30px;height: 30px;" id="themeIcon"></i>
+                                <span id="themeText">Dark Mode</span>
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item active" href="../index.html"><i class="fa-solid fa-right-from-bracket fs-5 bg-danger-subtle p-1 me-3 rounded-circle" style="color:red;width: 30px;height: 30px;"></i>ចាកចេញ</a></li>
                         <li><a class="dropdown-item" href="#"></a></li>
                     </ul>
                 </a>
@@ -110,12 +114,13 @@
         </div>
     </div>
     
-    <section class="sect-1 py-4">
+    <section class="sect-1 pb-5">
+        <div class="head-tittle fs-1 py-5 fw-bold text-bg-light mb-2 text-success text-center">ចូលចិត្ត</div>
         <div class="container">
             <div class="row g-3">
                 <div class="col-12">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <div class="fs-3 fw-bold text-success text-center">ចូលចិត្ត</div>
+                    <div class="d-flex justify-content-end align-items-center mb-3">
+                        <!-- <div class="fs-3 fw-bold text-success text-center">ចូលចិត្ត</div> -->
                         <button type="button" id="movealltostock"
                             class="btn btn-success">ផ្លាស់ទីផលិតផលទាំងអស់ទៅក្នុងកន្ត្រកទំនិញ</button>
                     </div>
@@ -123,7 +128,7 @@
                         <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-9 col-12 d-flex">
                             <div class="card product-card w-100 h-100 d-flex flex-column">
                                 <div class="card-img rounded-bottom-0 position-relative overflow-hidden d-flex justify-content-center align-items-center bg-light" style="height: 160px;">
-                                    <img src="../assets/img/payment/watch.png" class="img-fluid" style="max-height: 100%;max-width: 100%;object-fit: contain;"
+                                    <img src="../assets/img/product/zinvo-1.webp" class="img-fluid" style="max-height: 100%;max-width: 100%;object-fit: contain;"
                                         alt="">
                                     <button type="button"
                                         class="status bg-primary rounded-pill px-2 text-white border-0"
@@ -161,7 +166,7 @@
                         <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-9 col-12 d-flex">
                             <div class="card product-card w-100 h-100 d-flex flex-column">
                                 <div class="card-img rounded-bottom-0 position-relative overflow-hidden d-flex justify-content-center align-items-center bg-light" style="height: 160px;">
-                                    <img src="../assets/img/payment/hair.png" class="img-fluid" style="max-height: 100%;max-width: 100%;object-fit: contain;"
+                                    <img src="../assets/img/product/hair-machin.png" class="img-fluid" style="max-height: 100%;max-width: 100%;object-fit: contain;"
                                         alt="">
                                     <button type="button"
                                         class="status bg-danger rounded-pill px-2 text-white border-0"
@@ -198,7 +203,7 @@
                         <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-9 col-12 d-flex">
                             <div class="card product-card w-100 h-100 d-flex flex-column">
                                 <div class="card-img rounded-bottom-0 position-relative overflow-hidden d-flex justify-content-center align-items-center bg-light" style="height: 160px;">
-                                    <img src="../assets/img/payment/book.png" class="img-fluid" style="max-height: 100%;max-width: 100%;object-fit: contain;"
+                                    <img src="../assets/img/product/book.png" class="img-fluid" style="max-height: 100%;max-width: 100%;object-fit: contain;"
                                         alt="">
                                     <button type="button"
                                         class="status bg-secondary rounded-pill px-2 text-white border-0"
@@ -238,7 +243,7 @@
                          <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-9 col-12 d-flex">
                             <div class="card product-card w-100 h-100 d-flex flex-column">
                                 <div class="card-img rounded-bottom-0 position-relative overflow-hidden d-flex justify-content-center align-items-center bg-light" style="height: 160px;">
-                                    <img src="../assets/img/payment/perfum-oil.png" class="img-fluid" style="max-height: 100%;max-width: 100%;object-fit: contain;"
+                                    <img src="../assets/img/product/perfum-oil.png" class="img-fluid" style="max-height: 100%;max-width: 100%;object-fit: contain;"
                                         alt="">
                                     <button type="button"
                                         class="status bg-danger rounded-pill px-2 text-white border-0"
@@ -505,6 +510,39 @@
         };
         NexisApp.init();
     </script>
+    <!-- ============ dark mode =========== -->
+    <script>
+  (function () {
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+
+    function applyTheme(theme) {
+      root.setAttribute('data-bs-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        themeText.textContent = 'Light Mode';
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        themeText.textContent = 'Dark Mode';
+      }
+    }
+
+    // Apply saved preference on load
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+
+    themeToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const current = root.getAttribute('data-bs-theme') || 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  })();
+</script>
 </body>
 
 </html>

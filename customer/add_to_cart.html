@@ -35,7 +35,7 @@
     </div>
     <nav class="nav pt-2 shadow position-sticky top-0 z-3 bg-white">
         <div class="container mb-0 d-flex justify-content-between align-items-center ">
-            <a href="#" class="navbar-brand"><img src="../assets/img/logo/img-logo.jpg" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
+            <a href="#" class="navbar-brand"><img src="/assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
             <ul class="navbar-nav d-flex gap-1 flex-row d-lg-block d-none d-lg-flex">
                 <li class="nav-item"><a class="nav-link active" href="#">ទំព័រដើម</a></li>
                 <li class="nav-item"><a class="nav-link "  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ប្រភេទទំនិញ<i class="fa-solid fa-angle-down" style="color: var(--color-gray);"></i></a>
@@ -68,12 +68,16 @@
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px;">4</span>
                 </a>
                 <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 <img src="../assets/img/logo/profile.jpg" class="img-fluid object-fit-cover rounded-circle " style="width: 35px;" alt="">
-                 <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="./profile.html">ប្រវត្តិរូប</a></li>
-                        <li><a class="dropdown-item" href="#">privacy</a></li>
-                        <li><a class="dropdown-item" href="#">Dark mode</a></li>
-                        <li><a class="dropdown-item active" href="../index.html">ចាកចេញ</a></li>
+                 <img src="../assets/img/profile_customer/img-2.jpg" class="img-fluid object-fit-cover rounded-circle " style="width: 35px;" alt="">
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./profile.html"><i class="fa-solid fa-user fs-5 bg-danger-subtle p-1 me-3 rounded-circle" style="color:white;width: 30px;height: 30px;"></i>ប្រវត្តិរូប</a></li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center gap-2" href="#" role="button" id="themeToggle">
+                                <i class="fa-solid fa-moon text-warning bg-danger-subtle p-1 d-flex justify-content-center align-items-center rounded-circle" style="width: 30px;height: 30px;" id="themeIcon"></i>
+                                <span id="themeText">Dark Mode</span>
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item active" href="../index.html"><i class="fa-solid fa-right-from-bracket fs-5 bg-danger-subtle p-1 me-3 rounded-circle" style="color:red;width: 30px;height: 30px;"></i>ចាកចេញ</a></li>
                         <li><a class="dropdown-item" href="#"></a></li>
                     </ul>
                 </a>
@@ -137,7 +141,7 @@
                                     <tr class="d-flex justify-content-center align-items-center h-35 py-3">
                                         <td class="td d-flex justify-content-center align-items-center"
                                             style="width: 12%;">
-                                            <img src="../assets/img/payment/perfum-oil.png"
+                                            <img src="../assets/img/product/perfum-oil.png"
                                                 class="img-fluid object-fit-cover rounded-2"
                                                 style="width: 60px; height: 70px;" alt="">
                                         </td>
@@ -158,7 +162,7 @@
                                                 </button>
                                                 <input type="text" id="quantity-input-1"
                                                     aria-describedby="helper-text-explanation"
-                                                    class=" border-0 h-10 text-center w-100  " value="1" placeholder="0"
+                                                    class="bg-transparent h-10 text-center w-100  " value="1" placeholder="0"
                                                     required />
                                                 <button type="button" id="increment-button"
                                                     data-qty-increment="quantity-input-1" class="h-10">
@@ -181,7 +185,7 @@
                                     <tr class="d-flex justify-content-center align-items-center h-30 py-3">
                                         <td class="td d-flex justify-content-center align-items-center"
                                             style="width: 12%;">
-                                            <img src="../assets/img/payment/skincare.png"
+                                            <img src="../assets/img/product/skincare.png"
                                                 class="img-fluid object-fit-cover rounded-2"
                                                 style="width: 60px;height: 70px;" alt="">
                                         </td>
@@ -202,7 +206,7 @@
                                                 </button>
                                                 <input type="text" id="quantity-input-2"
                                                     aria-describedby="helper-text-explanation"
-                                                    class=" border-0 h-10 text-center w-100  " value="1" placeholder="0"
+                                                    class="bg-transparent h-10 text-center w-100  " value="1" placeholder="0"
                                                     required />
                                                 <button type="button" id="increment-button"
                                                     data-qty-increment="quantity-input-2" class="h-10">
@@ -226,7 +230,7 @@
                                         class="d-flex justify-content-center align-items-center h-30 py-3 border-bottom-0">
                                         <td class="td d-flex justify-content-center align-items-center"
                                             style="width: 12%;">
-                                            <img src="../assets/img/payment/sport_shose.png"
+                                            <img src="../assets/img/product/sport_shose.png"
                                                 class="img-fluid object-fit-cover rounded-2"
                                                 style="width: 60px;height: 70px;" alt="">
                                         </td>
@@ -247,7 +251,7 @@
                                                 </button>
                                                 <input type="text" id="quantity-input-3"
                                                     aria-describedby="helper-text-explanation"
-                                                    class=" border-0 h-10 text-center w-100  " value="1" placeholder="0"
+                                                    class="bg-transparent h-10 text-center w-100  " value="1" placeholder="0"
                                                     required />
                                                 <button type="button" id="increment-button"
                                                     data-qty-increment="quantity-input-3" class="h-10">
@@ -271,7 +275,7 @@
                                         class="d-flex justify-content-center align-items-center h-30 py-3 border-bottom-0">
                                         <td class="td d-flex justify-content-center align-items-center"
                                             style="width: 12%;">
-                                            <img src="../assets/img/payment/zinvo.png"
+                                            <img src="../assets/img/product/zinvo.png"
                                                 class="img-fluid object-fit-cover rounded-2"
                                                 style="width: 60px;height: 70px;" alt="">
                                         </td>
@@ -292,7 +296,7 @@
                                                 </button>
                                                 <input type="text" id="quantity-input-4"
                                                     aria-describedby="helper-text-explanation"
-                                                    class=" border-0 h-10 text-center w-100  " value="1" placeholder="0"
+                                                    class="bg-transparent h-10 text-center w-100  " value="1" placeholder="0"
                                                     required />
                                                 <button type="button" id="increment-button"
                                                     data-qty-increment="quantity-input-4" class="h-10">
@@ -444,7 +448,7 @@
                 <div class="modal-body pt-2">
                     <form id="customerInfoForm" novalidate>
                         <div class="mb-3">
-                            <label class="form-label fw-bold" for="cust-name">ឈ្មោះពេញ <span
+                            <label class="tt form-label fw-bold" for="cust-name">ឈ្មោះពេញ <span
                                     class="text-danger">*</span></label>
                             <input type="text" class="form-control cust-input" id="cust-name"
                                 placeholder="បញ្ចូលឈ្មោះរបស់អ្នក" required>
@@ -452,14 +456,14 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label class="form-label fw-bold" for="cust-phone">លេខទូរស័ព្ទ <span
+                                <label class="tt form-label fw-bold" for="cust-phone">លេខទូរស័ព្ទ <span
                                         class="text-danger">*</span></label>
                                 <input type="tel" class="form-control cust-input" id="cust-phone"
                                     placeholder="0XX XXX XXX" required>
                                 <div class="invalid-feedback">សូមបញ្ចូលលេខទូរស័ព្ទឲ្យត្រឹមត្រូវ។</div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label class="form-label fw-bold" for="cust-address">អាស័យដ្ឋាន <span
+                                <label class="tt form-label fw-bold" for="cust-address">អាស័យដ្ឋាន <span
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control cust-input" id="cust-address"
                                     placeholder="ភូមិ សង្កាត់ ខណ្ឌ/ស្រុក ខេត្ត/ក្រុង" required>
@@ -467,7 +471,7 @@
                             </div>
                         </div>
 
-                        <label class="form-label fw-bold d-block mt-2">ជ្រើសរើសមធ្យោបាយទូទាត់ <span
+                        <label class="tt form-label fw-bold d-block mt-2">ជ្រើសរើសមធ្យោបាយទូទាត់ <span
                                 class="text-danger">*</span></label>
                         <div class="row g-2 pay-method-group" id="pay-method-group">
                             <div class="col-6 col-md-3">
@@ -521,7 +525,7 @@
                             <div class="text-muted" style="font-size:13px;">បើកកម្មវិធីធនាគាររបស់អ្នក ស្កេន QR ខាងលើ
                                 ដើម្បីទូទាត់ចំនួន <b id="qr-pay-amount"></b></div>
                             <div class="mt-2" id="qr-countdown-box">
-                                <span class="text-muted" style="font-size:13px;"><i
+                                <span class=" text-muted" style="font-size:13px;"><i
                                         class="fa-regular fa-clock me-1"></i>QR មានសុពលភាពក្នុងរយៈពេល</span>
                                 <span class="fw-bold" id="qr-countdown"
                                     style="color:#0f9bb0;font-size:15px;">05:00</span>
@@ -570,7 +574,7 @@
                                     <div class="invalid-feedback">CVC មិនត្រឹមត្រូវ។</div>
                                 </div>
                             </div>
-                            <div class="text-muted mt-2" style="font-size:12px;"><i
+                            <div class="in text-muted mt-2" style="font-size:12px;"><i
                                     class="fa-solid fa-lock me-1"></i>ព័ត៌មានកាតរបស់អ្នកត្រូវបានការពារ
                                 និងមិនរក្សាទុកជាអចិន្ត្រៃយ៍ទេ។</div>
                         </div>
@@ -604,11 +608,11 @@
                             style="width: 200px; margin: auto; border-radius: 8px;">
                         <div class="fw-bold mt-3 text-dark" style="font-size: 16px;" id="modal-bank-scan-label">ស្កេន QR
                             ដើម្បីទូទាត់ប្រាក់</div>
-                        <div class="text-muted mt-1" style="font-size: 13px;">ចំនួនទឹកប្រាក់ត្រូវទូទាត់៖ <b
+                        <div class="tit text-muted mt-1" style="font-size: 13px;">ចំនួនទឹកប្រាក់ត្រូវទូទាត់៖ <b
                                 class="text-danger" id="modal-bank-amount">$0.00</b></div>
 
                         <div class="mt-3" id="modal-bank-countdown-box">
-                            <span class="text-muted" style="font-size: 12px;"><i class="fa-regular fa-clock me-1"></i>QR
+                            <span class="qr text-muted" style="font-size: 12px;"><i class="fa-regular fa-clock me-1"></i>QR
                                 មានសុពលភាពក្នុងរយៈពេល</span>
                             <span class="fw-bold d-block" id="modal-bank-countdown"
                                 style="color:#0f9bb0; font-size:18px;">05:00</span>
@@ -753,6 +757,39 @@
         };
         NexisApp.init();
     </script>
+    <!-- ============ dark mode =========== -->
+    <script>
+  (function () {
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+
+    function applyTheme(theme) {
+      root.setAttribute('data-bs-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        themeText.textContent = 'Light Mode';
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        themeText.textContent = 'Dark Mode';
+      }
+    }
+
+    // Apply saved preference on load
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+
+    themeToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const current = root.getAttribute('data-bs-theme') || 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  })();
+</script>
 
 </body>
 
