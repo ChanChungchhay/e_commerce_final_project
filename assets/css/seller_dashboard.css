@@ -415,7 +415,6 @@ body {
 
 .dropdown-header-custom {
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 1);
     border-bottom: 1px solid var(--border-color);
 }
 

@@ -43,32 +43,34 @@
                     <div class="card border-0 shadow-lg">
                         <div class="card-body">
                             <h2 class="text-center login-title fw-bold bazaar">បង្កើតគណនី</h2>
-                            <div class="mb-4">
+                            <div class="mb-3">
                                 <span>បង្កើតគណនីអាជីវករ?</span>
                                 <a href="seller_register.html" class="link bazaar">ចុចទីនេះ</a>
 
                             </div>
-                            <form action="login.html" method="GET" class="needs-validation" novalidate>
+                            <form action="./customer/home.html" method="GET" class="needs-validation" novalidate>
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
-                                        <div class="mb-4">
-                                            <input type="text" class="form-control" placeholder="បំពេញនាមត្រកូល"
+                                        <div class="mb-3 form-floating input-container">
+                                            <input type="text" class="form-control" id="floatingFistname" placeholder="បំពេញនាមត្រកូល"
                                                 required>
+                                            <label for="floatingFirstname">បំពេញនាមត្រកូល</label>
                                             <div class="invalid-feedback">សូមបំពេញនាមត្រកូល</div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
-                                        <div class="mb-4">
-                                            <input type="text" class="form-control" placeholder="បំពេញនាមខ្លួន"
+                                        <div class="mb-3 form-floating input-container">
+                                            <input type="text" class="form-control" id="floatingLastname" placeholder="បំពេញនាមខ្លួន"
                                                 required>
+                                            <label for="floatingLastname">បំពេញនាមខ្លួន</label>
                                             <div class="invalid-feedback">សូមបំពេញនាមខ្លួន</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <p class="fw-bold">ភេទ*</p>
+                                    <p class="fw-bold">ភេទ <span class="text-danger">*</span></p>
                                     <div class="col-6">
-                                        <div class="form-check mb-4 p-0">
+                                        <div class="form-check mb-3 p-0">
                                             <label
                                                 class="form-control d-flex justify-content-between align-items-center py-2"
                                                 for="male">
@@ -90,8 +92,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mb-4 input-container">
-                                    <input type="email" class="form-control input" placeholder="បំពេញអុីម៉ែល" required>
+                                <div class="mb-3 form-floating input-container">
+                                    <input type="email" class="form-control input" id="floatingEmail" placeholder="បំពេញអុីម៉ែល" required>
+                                    <label for="floatingEmail">បំពេញអុីម៉ែល</label>
                                     <div class="invalid-feedback">សូមបំពេញអុីម៉ែល</div>
                                 </div>
                                 <div class="row">
