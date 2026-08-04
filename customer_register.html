@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Register</title>
+    <link rel="shortcut icon" href="/assets/img/logo/img-logo.png">
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/css/customer_register.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
@@ -42,70 +43,85 @@
                     <div class="card border-0 shadow-lg">
                         <div class="card-body">
                             <h2 class="text-center login-title fw-bold bazaar">បង្កើតគណនី</h2>
-                            <form action="login.html" method="GET" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <span>បង្កើតគណនីអាជីវករ?</span>
+                                <a href="seller_register.html" class="link bazaar">ចុចទីនេះ</a>
+
+                            </div>
+                            <form action="./customer/home.html" method="GET" class="needs-validation" novalidate>
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
-                                        <div class="mb-4">
-                                            <input type="text" class="form-control" placeholder="បំពេញនាមត្រកូល"
+                                        <div class="mb-3 form-floating input-container">
+                                            <input type="text" class="form-control" id="floatingFistname" placeholder="បំពេញនាមត្រកូល"
                                                 required>
+                                            <label for="floatingFirstname">បំពេញនាមត្រកូល</label>
                                             <div class="invalid-feedback">សូមបំពេញនាមត្រកូល</div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
-                                        <div class="mb-4">
-                                            <input type="text" class="form-control" placeholder="បំពេញនាមខ្លួន"
+                                        <div class="mb-3 form-floating input-container">
+                                            <input type="text" class="form-control" id="floatingLastname" placeholder="បំពេញនាមខ្លួន"
                                                 required>
+                                            <label for="floatingLastname">បំពេញនាមខ្លួន</label>
                                             <div class="invalid-feedback">សូមបំពេញនាមខ្លួន</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <p class="fw-bold">ភេទ*</p>
+                                    <p class="fw-bold">ភេទ <span class="text-danger">*</span></p>
                                     <div class="col-6">
-                                        <div class="form-check mb-4 p-0">
-                                            <label class="form-control d-flex justify-content-between align-items-center py-2" for="male">
+                                        <div class="form-check mb-3 p-0">
+                                            <label
+                                                class="form-control d-flex justify-content-between align-items-center py-2"
+                                                for="male">
                                                 <span class="form-check-label">ប្រុស</span>
-                                                <input type="radio" class="form-check-input m-0" name="gender" id="male" checked>
+                                                <input type="radio" class="form-check-input m-0" name="gender" id="male"
+                                                    checked>
                                             </label>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-check p-0">
-                                            <label class="form-control d-flex justify-content-between align-items-center py-2" for="female">
+                                            <label
+                                                class="form-control d-flex justify-content-between align-items-center py-2"
+                                                for="female">
                                                 <span class="form-check-label">ស្រី</span>
-                                                <input type="radio" class="form-check-input m-0" name="gender" id="female">
+                                                <input type="radio" class="form-check-input m-0" name="gender"
+                                                    id="female">
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mb-4 input-container">
-                                    <input type="email" class="form-control input" placeholder="បំពេញអុីម៉ែល"
-                                        required>
+                                <div class="mb-3 form-floating input-container">
+                                    <input type="email" class="form-control input" id="floatingEmail" placeholder="បំពេញអុីម៉ែល" required>
+                                    <label for="floatingEmail">បំពេញអុីម៉ែល</label>
                                     <div class="invalid-feedback">សូមបំពេញអុីម៉ែល</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
                                         <div class="form-floating mb-4 input-container">
-                                    <input type="password" class="form-control input" id="floatingPassword" placeholder="បំពេញពាក្យសម្ងាត់"
-                                        required>
-                                    <i class="bi bi-eye-slash eye-icon"></i>
-                                    <label for="floatingPassword">បំពេញពាក្យសម្ងាត់</label>
-                                    <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
-                                </div>
+                                            <input type="password" class="form-control input" id="floatingPassword"
+                                                placeholder="បំពេញពាក្យសម្ងាត់" required>
+                                            <i class="bi bi-eye-slash eye-icon"></i>
+                                            <label for="floatingPassword">បំពេញពាក្យសម្ងាត់</label>
+                                            <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
+                                        </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <div class="form-floating mb-4 input-container">
-                                    <input type="password" class="form-control input" id="confirmPassword" placeholder="បំពេញពាក្យសម្ងាត់"
-                                        required> 
-                                    <i class="bi bi-eye-slash eye-icon"></i>
-                                    <label for="confirmPassword">ផ្ទៀងផ្ទាត់ពាក្យសម្ងាត់</label>
-                                    <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
-                                </div></div>
+                                            <input type="password" class="form-control input" id="confirmPassword"
+                                                placeholder="បំពេញពាក្យសម្ងាត់" required>
+                                            <i class="bi bi-eye-slash eye-icon"></i>
+                                            <label for="confirmPassword">ផ្ទៀងផ្ទាត់ពាក្យសម្ងាត់</label>
+                                            <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <div>
                                         <input type="checkbox" class="form-check-input border-dark" id="remember">
-                                        <label class="ms-1 small" for="remember">ខ្ញុំបានអាននិងយល់ព្រមលើ <a href="#" class="text-decoration-none">គោលការណ៍ឯកជនភាព</a></label>
+                                        <label class="ms-1 small" for="remember">ខ្ញុំបានអាននិងយល់ព្រមលើ <a href="#"
+                                                class="text-decoration-none">គោលការណ៍ឯកជនភាព</a></label>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-login w-100 mb-3">បង្កើតគណនី</button>

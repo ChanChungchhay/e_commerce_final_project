@@ -56,13 +56,9 @@ body {
     background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--border-color);
+    background: var(--text-muted);
     border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover {
-    background: var(--text-muted);
-}
-
 /* Typography Utilities */
 .text-xs { font-size: 0.75rem !important; }
 .text-xxs { font-size: 0.65rem !important; }
@@ -323,7 +319,6 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(11, 94, 52, 0.08);
 }
-/* ប៊ូតុងចម្បងពណ៌បៃតងប្រណីត ចាំងស្រមោលពណ៌មាស */
 .btn-primary {
     background-color: var(--logo-color);
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -420,7 +415,6 @@ body {
 
 .dropdown-header-custom {
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 1);
     border-bottom: 1px solid var(--border-color);
 }
 

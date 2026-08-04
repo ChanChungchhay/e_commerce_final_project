@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ផ្ទាំងគ្រប់គ្រង</title>
+    <link rel="shortcut icon" href="/assets/img/logo/img-logo.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,14 +74,19 @@
                             <span class="menu-text">សារផ្ញើ</span>
                         </a>
                     </li>
+                    <li class="menu-item" data-page="messages">
+                            <a href="seller_profiles.html" class="menu-link">
+                            <i class="bi bi-person-fill"></i>
+                            <span class="menu-text">ប្រវត្តិរូប</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <div class="sidebar-footer">
-                <button
-                    class="btn btn-outline-success w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
-                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <i class="bi bi-box-arrow-left"></i> ត្រឡប់ទៅទំព័រដើម
+                <button type="button"
+                    class="btn btn-success w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
+                    <a href="seller-profile.html" class="text-white text-decoration-none"><i class="bi bi-chevron-double-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
                 </button>
                 <button
                     class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
@@ -129,8 +135,8 @@
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
                                 aria-labelledby="messageDropdown">
                                 <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-0">Recent Messages</h6>
-                                    <a href="seller_messages.html" class="small text-primary text-decoration-none">មើលការផ្ញើសារ</a>
+                                    <h6 class="mb-0 text-muted">ការជូនដំណឹងថ្មីៗ</h6>
+                                    <a href="seller_messages.html" class="small text-success text-decoration-none">មើលការផ្ញើសារ</a>
                                 </div>
                                 <div class="dropdown-list-container">
                                     <!-- Message List Items -->
@@ -142,7 +148,7 @@
                                                 <span class="user-name">Sarah Jenkins</span>
                                                 <span class="timestamp">2m ago</span>
                                             </div>
-                                            <p class="preview-text">សួស្តី សំណាង
+                                            <p class="preview-text text-wrap">សួស្តី សំណាង
                                                 តើការធានាផលិតផលមានរួមបញ្ចូលក្នុងតម្លៃដើមដែរឬទេ?</p>
                                         </div>
                                     </a>
@@ -154,11 +160,11 @@
                                                 <span class="user-name">Marcus Vance</span>
                                                 <span class="timestamp">1h ago</span>
                                             </div>
-                                            <p class="preview-text">សូមជួយបញ្ជាក់ផងថា
+                                            <p class="preview-text text-wrap">សូមជួយបញ្ជាក់ផងថា
                                                 តើអ្នកអាចដឹកជញ្ជូនទំនិញទាំងនេះមកកាន់ឃ្លាំងរបស់យើងបានដែរឬទេ?</p>
                                         </div>
                                     </a>
-                                    <a href="#"
+                                    <a href="seller_messages.html"
                                         class="dropdown-list-item d-flex gap-3 text-center py-2 text-primary fw-medium justify-content-center">
                                         View all messages
                                     </a>
@@ -441,7 +447,7 @@
                                         </div>
                                         <div class="stats-body mt-3">
                                             <h6 class="text-muted fw-semibold small text-uppercase tracking-wider">
-                                                អតិថិជនសរុប</h6>
+                                                សរុប</h6>
                                             <h3 class="mb-1 stats-counter" data-target="182">182</h3>
                                             <div class="stats-trend-container mt-2">
                                                 <div class="sparkline-placeholder">
@@ -983,7 +989,7 @@
                                         </div>
                                         <!-- VIP 2 -->
                                         <div class="d-flex align-items-center gap-3 py-3">
-                                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                            <img src="../assets/img/seller_images/forgot_pw.png"
                                                 class="avatar-sm rounded-circle" alt="VIP 2">
                                             <div class="flex-grow-1">
                                                 <h6 class="mb-0 text-sm-start fw-semibold">Chan Dara</h6>
