@@ -44,35 +44,39 @@
                         <div class="card-body">
                             <h2 class="text-center login-title fw-bold bazaar">បង្កើតគណនីអ្នកលក់</h2>
                             <p class="text-center">ចូលរួមជាមួយ Khmer Bazzar និងចាប់ផ្តើមលក់ទំនិញក្នុងស្រុក</p>
-                            <form action="login.html" method="GET" class="needs-validation" novalidate>
+                            <form action="./seller_dashboard/seller_dashboard.html" method="GET" class="needs-validation" novalidate>
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
-                                        <div class="mb-4">
-                                            <input type="text" class="form-control" placeholder="បំពេញនាមត្រកូល"
+                                        <div class="mb-4 form-floating input-container">
+                                            <input type="text" class="form-control" id="floatingFirstname" placeholder="បំពេញនាមត្រកូល"
                                                 required>
+                                            <label for="floatingFirstname">បំពេញនាមត្រកូល</label>
                                             <div class="invalid-feedback">សូមបំពេញនាមត្រកូល</div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6 mb-4">
-                                        <div>
-                                            <input type="text" class="form-control" placeholder="បំពេញនាមខ្លួន"
+                                        <div class="form-floating input-container">
+                                            <input type="text" class="form-control" placeholder="បំពេញនាមខ្លួន" id="floatingLastname"
                                                 required>
+                                            <label for="floatingLastname">បំពេញនាមខ្លួន</label>
                                             <div class="invalid-feedback">សូមបំពេញនាមខ្លួន</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
-                                        <div class="mb-4">
-                                            <input type="text" class="form-control" placeholder="បំពេញលេខទូរសព្ទ​"
+                                        <div class="mb-4 form-floating input-container">
+                                            <input type="text" class="form-control" id="phoneNumber" placeholder="បំពេញលេខទូរសព្ទ​"
                                                 required>
+                                            <label for="phoneNumber">បំពេញលេខទូរសព្ទ</label>
                                             <div class="invalid-feedback">សូមបំពេញលេខទូរសព្ទ​</div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6 mb-4">
-                                        <div>
-                                            <input type="text" class="form-control" placeholder="បំពេញឈ្មោះហាង"
+                                        <div class="form-floating input-container">
+                                            <input type="text" class="form-control" id="shopName" placeholder="បំពេញឈ្មោះហាង"
                                                 required>
+                                            <label for="shopName">បំពេញឈ្មោះហាង</label>
                                             <div class="invalid-feedback">សូមបំពេញឈ្មោះហាង</div>
                                         </div>
                                     </div>
@@ -175,31 +179,34 @@
                                     <textarea class="form-control" rows="3" placeholder="បំពេញអាសយដ្ឋានលម្អិត"
                                         required></textarea>
                                 </div>
-                                <div class="mb-4 input-container">
-                                    <input type="email" class="form-control input" placeholder="បំពេញអុីម៉ែល" required>
+                                <div class="mb-4 input-container form-floating">
+                                    <input type="email" class="form-control input" id="email" placeholder="បំពេញអុីម៉ែល" required>
+                                    <label for="email">បំពេញអុីម៉ែល</label>
                                     <div class="invalid-feedback">សូមបំពេញអុីម៉ែល</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
-                                        <div class="mb-4 input-container">
-                                            <input type="password" class="form-control input"
+                                        <div class="mb-4 input-container form-floating">
+                                            <input type="password" class="form-control input" id="password"
                                                 placeholder="បំពេញពាក្យសម្ងាត់" required>
                                             <i class="bi bi-eye-slash eye-icon"></i>
+                                            <label for="password">បំពេញពាក្យសម្ងាត់</label>
                                             <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-6">
-                                        <div class="mb-4 input-container">
-                                            <input type="password" class="form-control input"
+                                        <div class="mb-4 input-container form-floating">
+                                            <input type="password" class="form-control input" id="confirmPassword"
                                                 placeholder="បំពេញពាក្យសម្ងាត់" required>
                                             <i class="bi bi-eye-slash eye-icon"></i>
+                                            <label for="confirmPassword">ផ្ទៀងផ្ទាត់ពាក្យសម្ងាត់</label>
                                             <div class="invalid-feedback">សូមបំពេញពាក្យសម្ងាត់</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <div>
-                                        <input type="checkbox" class="form-check-input border-dark" id="remember">
+                                        <input type="checkbox" class="form-check-input border-dark" id="remember" required>
                                         <label class="ms-1 small" for="remember">ខ្ញុំបានអាននិងយល់ព្រមលើ <a href="#"
                                                 class="text-decoration-none text-success">គោលការណ៍ឯកជនភាព</a></label>
                                     </div>
