@@ -97,7 +97,9 @@ a{
 }
 .nav .nav-link:hover{
     background-color: var(--color-green) !important;
+    color: white !important;
 }
+ 
 .nav .nav-link:focus{
     background-color: var(--color-green);
     transition: .3s ;
@@ -175,10 +177,10 @@ a{
     background-color: var(--color-gray);
    color: white !important;
 }
-.footer img{
-    width: 100px;
+.footer .payment img{
+    width: 120px;
     height: 50px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /* xs */
