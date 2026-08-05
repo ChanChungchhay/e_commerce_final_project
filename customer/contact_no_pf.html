@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact_No_Pf</title>
+    <link rel="stylesheet" href="../assets/css/about_us.css">
+    <link rel="stylesheet" href="../assets/css/contact_No_Pf.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/customer.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="header py-2 br-s bg-success">
+        <div class="container d-flex justify-content-between  align-items-center ">
+            <div class="head-link d-flex gap-3 ">
+                <a class=" body-link text-light" href="#"><i class="fa-regular fa-envelope me-1 fs-6"
+                        style="color: rgb(255, 255, 255);"></i>contact@example.com</a>
+                <a class=" body-link text-light" href="#"><i class="fa-solid fa-mobile-screen me-1 fs-6"
+                        style="color: rgb(255, 255, 255);"></i> +885 096300600</a>
+            </div>
+             <button type="button" class="head-icon d-flex gap-3 d-md-block d-none border-0 bg-transparent ">
+                <a href="#"><i class="fa-brands fa-twitter  fs-6  text-light"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook fs-6  text-light"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram fs-6  text-light"></i></a>
+                <a href="#"><i class="fa-brands fa-invision fs-6  text-light"></i></a>
+            </button>
+        </div>
+    </div>
+    <nav class="nav pt-2 shadow position-sticky top-0 z-3 bg-white">
+        <div class="container mb-0 d-flex justify-content-between align-items-center ">
+            <a href="#" class="navbar-brand"><img src="/assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
+            <ul class="navbar-nav d-flex gap-1 flex-row d-lg-block d-none d-lg-flex">
+                <li class="nav-item"><a class="nav-link " href="./home.html">ទំព័រដើម</a></li>
+                <li class="nav-item"><a class="nav-link "  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ប្រភេទទំនិញ<i class="fa-solid fa-angle-down" style="color: var(--color-gray);"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/customer/product.html">សម្លៀកបំពាក់</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">គ្រឿងសម្អាង</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">ផលិតផលសិប្បកម្មខ្មែរ</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">អាហារ និងគ្រឿងទេស</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">សម្ភារៈកីឡា</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">សៀវភៅ និងសម្ភារៈសិក្សា</a></li>
+                        <li><a class="dropdown-item" href="/customer/product.html">គ្រឿងអេឡិចត្រូនិក</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link " href="../customer/product.html">ផលិតផល</a></li>
+                <li class="nav-item"><a class="nav-link " href="/customer/discount.html">បញ្ចុះតម្លៃ</a></li>
+                <li class="nav-item"><a class="nav-link " href="../customer/about_us.html">អំពីយើង</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../customer/contact.html">ទំនាក់ទំនង</a></li>
+            </ul>
+            <div class="d-lg-block d-none">
+                <a href="/login.html" class="btn border shadow">Login</a>
+                <a href="/register.html" class="btn border shadow">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======offcanvas========== -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 350px;">
+        <div class="offcanvas-header">
+            <img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt="">
+            <button type="button" class="btn-close shadow-none " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav d-flex gap-3 justify-content-center align-items-center flex-column gap-1">
+                <li class="nav-item"><a class="nav-link shadow " href="./home.html">ទំព័រដើម</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ប្រភេទទំនិញ<i class="fa-solid fa-angle-down" style="color: var(--color-gray);"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./product.html">សម្លៀកបំពាក់</a></li>
+                        <li><a class="dropdown-item" href="./product.html">គ្រឿងសម្អាង</a></li>
+                        <li><a class="dropdown-item" href="./product.html">ផលិតផលសិប្បកម្មខ្មែរ</a></li>
+                        <li><a class="dropdown-item" href="./product.html">អាហារ និងគ្រឿងទេស</a></li>
+                        <li><a class="dropdown-item" href="./product.html">សម្ភារៈកីឡា</a></li>
+                        <li><a class="dropdown-item" href="./product.html">សៀវភៅ និងសម្ភារៈសិក្សា</a></li>
+                        <li><a class="dropdown-item" href="./product.html">គ្រឿងអេឡិចត្រូនិក</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link shadow " href="./product.html">ផលិតផល</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="./discount.html">បញ្ចុះតម្លៃ</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="./about_us.html">អំពីយើង</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="./contact.html">ទំនាក់ទំនង</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero contact-hero">
+        <div class="hero-blob b1"></div>
+        <div class="hero-blob b2"></div>
+        <div class="wrap">
+            <div class="contact-hero-center">
+                <span class="eyebrow">ទំនាក់ទំនង</span>
+                <h1>តោះនិយាយគ្នា <span class="accent-underline">ជាមួយពួកយើង</span></h1>
+                <p class="lead">
+                    មានសំណួរអំពីការកម្មង់ ចង់ក្លាយជាអ្នកលក់ ឬគ្រាន់តែចង់ស្គាល់ពួកយើងបន្ថែម?
+                    សរសេរសារមកកាន់ពួកយើង ក្រុមការងារ khmerbazaar រង់ចាំឆ្លើយតបអ្នកជានិច្ច។
+                </p>
+                <div class="trust-chips">
+                    <span class="chip"><i class="bi bi-lightning-charge-fill"></i>ឆ្លើយតបក្នុងរយៈពេល ២៤ម៉ោង</span>
+                    <span class="chip"><i class="bi bi-headset"></i>គាំទ្រ ៧ថ្ងៃ/សប្តាហ៍</span>
+                    <span class="chip"><i class="bi bi-geo-alt-fill"></i>ភ្នំពេញ, កម្ពុជា</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wrap weave-band">
+        <svg class="weave" viewBox="0 0 1200 34" preserveAspectRatio="none">
+            <path
+                d="M0 17 Q 30 0, 60 17 T 120 17 T 180 17 T 240 17 T 300 17 T 360 17 T 420 17 T 480 17 T 540 17 T 600 17 T 660 17 T 720 17 T 780 17 T 840 17 T 900 17 T 960 17 T 1020 17 T 1080 17 T 1140 17 T 1200 17"
+                stroke="currentColor" stroke-width="2" fill="none" />
+        </svg>
+    </div>
+
+    <!-- MAP + CONTACT PANEL -->
+    <section class="contact-section">
+        <div class="wrap">
+
+            <!-- MAP -->
+            <div class="map-frame reveal">
+                <!--
+                    TODO(user): replace this placeholder <div class="map-pin-note"> block
+                    with your real Google Maps embed, e.g.:
+                    <iframe src="YOUR_GOOGLE_MAPS_EMBED_LINK" allowfullscreen loading="lazy"></iframe>
+                    The .map-frame wrapper already provides the rounded corners + border,
+                    so an <iframe> dropped inside it (width:100%; height:100%; border:0;)
+                    will automatically match the site style.
+                -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.715820595126!2d104.88768527452709!3d11.572218344012507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109519e706d9cdf%3A0xb0bf13884e6cd05f!2sANT%20Technology%20Training%20Center!5e0!3m2!1sen!2skh!4v1784188155100!5m2!1sen!2skh"
+                    width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+
+            <!-- CONTACT PANEL -->
+            <div class="contact-panel reveal">
+                <div class="contact-panel-grid">
+
+                    <!-- FORM -->
+                    <form class="contact-form" id="contactForm">
+                        <h2>ផ្ញើសារមកកាន់យើង</h2>
+                        <p class="form-sub">បំពេញព័ត៌មានខាងក្រោម ក្រុមការងារយើងនឹងទាក់ទងអ្នកវិញឆាប់ៗនេះ</p>
+
+                        <div class="field-row">
+                            <div class="field-group">
+                                <label for="lastName">នាមត្រកូល</label>
+                                <input type="text" id="lastName" placeholder="បញ្ចូលនាមត្រកូល" required>
+                            </div>
+                            <div class="field-group">
+                                <label for="firstName">នាមខ្លួន</label>
+                                <input type="text" id="firstName" placeholder="បញ្ចូលនាមខ្លួន" required>
+                            </div>
+                        </div>
+
+                        <div class="field-row">
+                            <div class="field-group">
+                                <label for="email">អ៊ីមែល</label>
+                                <input type="email" id="email" placeholder="example@email.com" required>
+                            </div>
+                            <div class="field-group">
+                                <label for="phone">លេខទូរស័ព្ទ</label>
+                                <input type="tel" id="phone" placeholder="0XX XXX XXX" required>
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="message">សារ</label>
+                            <textarea id="message" rows="4" placeholder="សរសេររឿងដែលអ្នកចង់ប្រាប់យើង..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary text-light">
+                            <i class="bi bi-send-fill"></i> ផ្ញើសារ
+                        </button>
+                    </form>
+
+                    <!-- CONTACT INFO -->
+                    <div class="contact-info">
+                        <h3>ទំនាក់ទំនងមកកាន់ពួកយើង</h3>
+                        <p class="info-sub">ជ្រើសរើសមធ្យោបាយណាដែលងាយស្រួលបំផុតសម្រាប់អ្នក</p>
+
+                        <div class="info-grid">
+                            <a href="tel:+85598278939" class="info-card">
+                                <div class="info-icon"><i class="bi bi-telephone-fill"></i></div>
+                                <div class="info-label">ទូរស័ព្ទ</div>
+                                <div class="info-value">098 278 939</div>
+                            </a>
+                            <a href="#" class="info-card">
+                                <div class="info-icon"><i class="bi bi-facebook"></i></div>
+                                <div class="info-label">Facebook</div>
+                                <div class="info-value">khmerbazaar</div>
+                            </a>
+                            <a href="#" class="info-card">
+                                <div class="info-icon"><i class="bi bi-telegram"></i></div>
+                                <div class="info-label">Telegram</div>
+                                <div class="info-value">@khmerbazaar</div>
+                            </a>
+                            <a href="mailto:hello@khmerbazaar.com" class="info-card">
+                                <div class="info-icon"><i class="bi bi-envelope-fill"></i></div>
+                                <div class="info-label">Email</div>
+                                <div class="info-value">hello@khmerbazaar.com</div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROMO BANNER -->
+    <section class="section" style="padding-top:0;">
+        <div class="wrap">
+            <div class="promo-banner reveal">
+                <div class="promo-blob p1"></div>
+                <div class="promo-blob p2"></div>
+                <svg class="promo-weave" viewBox="0 0 1200 20" preserveAspectRatio="none">
+                    <path
+                        d="M0 10 Q 30 0, 60 10 T 120 10 T 180 10 T 240 10 T 300 10 T 360 10 T 420 10 T 480 10 T 540 10 T 600 10 T 660 10 T 720 10 T 780 10 T 840 10 T 900 10 T 960 10 T 1020 10 T 1080 10 T 1140 10 T 1200 10"
+                        stroke="currentColor" stroke-width="2" fill="none" />
+                </svg>
+                <div class="promo-banner-inner">
+                    <span class="kicker">នៅតែមានសំណួរ?</span>
+                    <h2>ក្រុមការងារយើងរង់ចាំជួយអ្នកគ្រប់ពេលវេលា</h2>
+                    <p>
+                        មិនចាំបាច់ស្ទាក់ស្ទើរទេ ទូរស័ព្ទ ឬផ្ញើសារមកយើងផ្ទាល់
+                        ក្រុមការងារ khmerbazaar នឹងឆ្លើយតបអ្នកយ៉ាងឆាប់រហ័ស។
+                    </p>
+                    <div class="promo-ctas">
+                        <a href="tel:+85598278939" class="btn btn-primary"><i class="bi bi-telephone-fill"></i> ហៅទូរស័ព្ទឥឡូវនេះ</a>
+                        <a href="mailto:hello@khmerbazaar.com" class="btn btn-ghost text-light"><i class="bi bi-envelope-fill"></i> ផ្ញើអ៊ីមែល</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section class="footer pt-4 " style="background-color: var(--footer-bg);">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" class="navbar-brand"><img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
+                            <div class="tittie text-white">ផ្សារអនឡាញដែលជួយប្រជាជនកម្ពុជាទិញ និងលក់ផលិតផលដើម្បីបង្កើនចំណូល និងគាំទ្រអាជីវកម្មក្នុងស្រុក។</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="d-flex">
+                            <div class="card-body ">
+                                <div class=" tittle fw-bold">Quick Links</div>
+                                <ul class=" list-unstyled mt-3">
+                                    <li><a class="link" href="#">ទំព័រដើម</a></li>
+                                    <li><a class="link" href="#">រភេទទំនិញ</a></li>
+                                    <li><a class="link" href="#">ផលិតផល</a></li>
+                                    <li><a class="link" href="#">បញ្ចុះតម្លៃ</a></li>
+                                    <li><a class="link" href="#">អំពីយើង</a></li>
+                                    <li><a class="link" href="#">ទំនាក់ទំនង</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-body" >
+                                <div class=" tittle fw-bold">Customer Service</div>
+                                <ul class=" list-unstyled mt-3">
+                                    <li><a class="link" href="#">តាមដានការបញ្ជាទិញ</a></li>
+                                    <li><a class="link" href="#">ការដឹកជញ្ជូន</a></li>
+                                    <li><a class="link" href="#">លក្ខខណ្ឌប្រើប្រាស់</a></li>
+                                    <li><a class="link" href="#">គោលការណ៍ឯកជនភាព</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class=" tittle fw-bold">Contact Us</div>
+                            <div class="d-flex flex-column mt-3">
+                                <a href="#" class="link"><i class="fa-solid fa-location-dot text-secondary"></i>Steung mean chey , Phnom Penh City</a>
+                                <a href="#" class="link"><i class="fa-solid fa-phone text-secondary"></i>+855 12 345 678</a>
+                                <a href="#" class="link"><i class="fa-solid fa-envelope text-secondary"></i>support@khmerbazaar.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card">
+                            <div class="card-body" >
+                                <div class=" tittle fw-bold">Follow Us</div>
+                                <ul class="d-flex gap-2 list-unstyled mt-3">
+                                    <li><a class="icon bg-primary" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a class="icon bg-info" href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                                    <li><a class="icon bg-danger" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a class="icon bg-danger" href="#"><i class="fa-brands fa-youtube" ></i></a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card">
+                            <div class="card-body" >
+                                <div class=" tittle fw-bold">Payment Menthods</div>
+                                <ul class="d-flex justify-content-start align-items-center gap-2 list-unstyled mt-3 flex-wrap">
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/ABA.webp" class="img-fluid object-fit-cover " alt=""></a></li>
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/acleda.jpg" class="img-fluid object-fit-cover" alt=""></a></li>
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/visa.png" class="img-fluid object-fit-cover" alt=""></a></li>
+                                    <li><a class="payment" href="#"><img src="../assets/img/payment/wing.png" class="img-fluid object-fit-cover" alt=""></a></li>
+                                    <div class="payment bg-success  rounded-2 text-nowrap d-flex justify-content-center align-items-center text-white" style="height: 50px;width: 120px;">Cash on Delivery</div>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-2 bg-primary-subtle">© 2026 Khmer Bazaar. All Rights Reserved.</div>
+    </section>
+     <button class="btn btn-primary scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+         <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="../assets/js/contact.js"></script>
+    <script>
+        const NexisApp = {
+            init() {
+            this.initScrollToTop();
+        },
+        initScrollToTop() {
+            const topBtn = document.getElementById('scrollTopBtn');
+            if (!topBtn) return;
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    topBtn.classList.add('visible');
+                } else {
+                    topBtn.classList.remove('visible');
+                }
+            });
+
+            topBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        },
+        };
+        NexisApp.init();
+    </script>
+    <!-- ============ dark mode =========== -->
+    <script>
+  (function () {
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+
+    function applyTheme(theme) {
+      root.setAttribute('data-bs-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        themeText.textContent = 'Light Mode';
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        themeText.textContent = 'Dark Mode';
+      }
+    }
+
+    // Apply saved preference on load
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+
+    themeToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const current = root.getAttribute('data-bs-theme') || 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  })();
+</script>
+</body>
+
+</html>
