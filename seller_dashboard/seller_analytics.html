@@ -87,7 +87,8 @@
                     <a href="../customer/home.html" class="text-white text-decoration-none"><i class="bi bi-chevron-double-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
                 </button>
                 <button
-                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
+                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
+                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i class="bi bi-box-arrow-left"></i> ចាកចេញ
                 </button>
             </div>
@@ -219,10 +220,10 @@
                         <div class="dropdown">
                             <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
                                 id="profileDropdow" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                                <img src="../assets/img/seller_images/my_pic.jpg"
                                     class="avatar-sm rounded-circle" alt="User Avatar">
                                 <div class="user-info">
-                                    <h6 class="profile-name d-none d-lg-inline-block">ហេង សំណាង</h6>
+                                    <h6 class="profile-name d-none d-lg-inline-block">ចាន់ ជុងឆាយ</h6>
                                     <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
                                 </div>
                                 <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
@@ -555,6 +556,25 @@
                     <span id="toast-message">ប្រតិបត្តិការទទួលបានជោគជ័យ!</span>
                 </div>
                 <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-body p-4 text-center">
+                    <i class="bi bi-exclamation-octagon-fill text-danger mb-3" style="font-size: 3rem;"></i>
+                    <h5 class="fw-bold">តើអ្នកពិតជាចង់ចាកចេញពីប្រព័ន្ធមែនទេ?</h5>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">បោះបង់</button>
+                    <button type="button" class="btn btn-primary" id="logoutBtn" data-bs-target="#staticBackdrop1"><a
+                            href="../login.html" class="text-white text-decoration-none">បាទ/ចាស
+                            យល់ព្រម</a></button>
+                </div>
             </div>
         </div>
     </div>

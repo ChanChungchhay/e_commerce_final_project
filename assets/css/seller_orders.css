@@ -81,7 +81,8 @@
 }
 
 .stepper-step.active .step-icon {
-    background: var(--primary-gradient);
+    /* background: var(--primary-gradient); */
+    background-color: green;
     border-color: transparent;
     color: #ffffff;
     box-shadow: 0 0 0 5px rgba(79, 70, 229, 0.15);
@@ -116,7 +117,7 @@
    PREMIUM INVOICE STYLING
    ========================================================================== */
 .premium-invoice-card {
-    background-color: var(--premium-bg-light);
+    /* background-color: var(--premium-bg-light); */
     border: 1px solid var(--premium-border);
     border-radius: 12px;
     padding: 24px;
