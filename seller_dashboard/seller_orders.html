@@ -134,8 +134,8 @@
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
                                 aria-labelledby="messageDropdown">
                                 <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-0">Recent Messages</h6>
-                                    <a href="seller_messages.html" class="small text-primary text-decoration-none">មើលការផ្ញើសារ</a>
+                                    <h6 class="mb-0 text-muted small">ការជូនដំណឹងថ្មីៗ</h6>
+                                    <a href="seller_messages.html" class="small text-success text-decoration-none">មើលការផ្ញើសារ</a>
                                 </div>
                                 <div class="dropdown-list-container">
                                     <!-- Message List Items -->
@@ -147,7 +147,7 @@
                                                 <span class="user-name">Sarah Jenkins</span>
                                                 <span class="timestamp">2m ago</span>
                                             </div>
-                                            <p class="preview-text">សួស្តី សំណាង
+                                            <p class="preview-text text-wrap">សួស្តី សំណាង
                                                 តើការធានាផលិតផលមានរួមបញ្ចូលក្នុងតម្លៃដើមដែរឬទេ?</p>
                                         </div>
                                     </a>
@@ -159,13 +159,13 @@
                                                 <span class="user-name">Marcus Vance</span>
                                                 <span class="timestamp">1h ago</span>
                                             </div>
-                                            <p class="preview-text">សូមជួយបញ្ជាក់ផងថា
+                                            <p class="preview-text text-wrap">សូមជួយបញ្ជាក់ផងថា
                                                 តើអ្នកអាចដឹកជញ្ជូនទំនិញទាំងនេះមកកាន់ឃ្លាំងរបស់យើងបានដែរឬទេ?</p>
                                         </div>
                                     </a>
-                                    <a href="#"
-                                        class="dropdown-list-item d-flex gap-3 text-center py-2 text-primary fw-medium justify-content-center">
-                                        View all messages
+                                    <a href="seller_messages.html"
+                                        class="dropdown-list-item d-flex gap-3 text-center py-2 text-success fw-medium justify-content-center small">
+                                        មើលការផ្ញើសារទាំងអស់
                                     </a>
                                 </div>
                             </div>
@@ -230,10 +230,10 @@
                         <div class="dropdown">
                             <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
                                 id="profileDropdow" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100&h=100"
+                                <img src="../assets/img/seller_images/my_pic.jpg"
                                     class="avatar-sm rounded-circle" alt="User Avatar">
                                 <div class="user-info">
-                                    <h6 class="profile-name d-none d-lg-inline-block">ហេង សំណាង</h6>
+                                    <h6 class="profile-name d-none d-lg-inline-block">ចាន់ ជុងឆាយ</h6>
                                     <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
                                 </div>
                                 <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
@@ -522,9 +522,9 @@
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
             <div class="modal-content border-0 shadow-lg">
-                <div class="modal-header bg-gradient-primary text-white border-0 py-3">
+                <div class="modal-header  text-muted border-1 py-3">
                     <h5 class="modal-title fw-bold" id="orderDetailModalLabel">លម្អិតការបញ្ជាទិញ និង វិក្កយបត្រ</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">
@@ -535,7 +535,7 @@
                         <div class="stepper-line"></div>
                         <div class="stepper-step active" id="step-pending">
                             <div class="step-icon"><i class="bi bi-file-earmark-text"></i></div>
-                            <span class="small fw-semibold mt-1 d-block">ទទួលបានការកុម្មង់</span>
+                            <span class="small fw-semibold mt-1 d-block">ទទួលបានការបញ្ជាទិញ</span>
                         </div>
                         <div class="stepper-step active" id="step-processing">
                             <div class="step-icon"><i class="bi bi-box-seam"></i></div>
@@ -563,7 +563,7 @@
                                     </div>
                                     <div class="text-end">
                                         <div class="invoice-id-badge font-monospace" id="invoice-id">#ORD-9832</div>
-                                        <div class="text-xxs text-muted mt-1" id="invoice-date">កាលបរិច្ឆេទ: 12-Oct-2026
+                                        <div class="text-xxs text-muted mt-1" id="invoice-date">កាលបរិច្ឆេទ: 12-Agu-2026
                                         </div>
                                     </div>
                                 </div>
@@ -575,21 +575,21 @@
                                     <table class="table table-borderless table-sm mb-0 small">
                                         <tbody>
                                             <tr>
-                                                <td class="text-muted py-1" style="width: 28%;"><i
-                                                        class="bi bi-person-fill text-primary"></i> ឈ្មោះអតិថិជន:</td>
-                                                <td class="fw-bold py-1 text-dark" id="invoice-customer-name">សុខ ជា
+                                                <td class="text-muted py-1" style="width: 40%;"><i
+                                                        class="bi bi-person-fill text-primary text-nowrap"></i> ឈ្មោះអតិថិជន:</td>
+                                                <td class="fw-bold py-1 text-mute" id="invoice-customer-name">សុខ ជា
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="text-muted py-1"><i
                                                         class="bi bi-telephone-fill text-primary"></i> លេខទូរស័ព្ទ:</td>
-                                                <td class="fw-semibold py-1 text-dark" id="invoice-customer-phone">092
+                                                <td class="fw-semibold py-1 text-muted" id="invoice-customer-phone">092
                                                     112 233</td>
                                             </tr>
                                             <tr>
                                                 <td class="text-muted py-1"><i
                                                         class="bi bi-geo-alt-fill text-primary"></i> អាសយដ្ឋាន:</td>
-                                                <td class="py-1 text-dark text-wrap-address"
+                                                <td class="py-1 text-muted text-wrap-address"
                                                     id="invoice-customer-address">ផ្ទះលេខ ១២ ផ្លូវ ៣១០ សង្កាត់បឹងកេងកង
                                                     ភ្នំពេញ</td>
                                             </tr>
@@ -598,7 +598,7 @@
                                 </div>
 
                                 <!-- Items List Table -->
-                                <div class="invoice-items-table-wrapper mb-3">
+                                <div class="invoice-items-table-wrapper mb-3" style="overflow: auto;">
                                     <table class="table table-sm align-middle small mb-0">
                                         <thead>
                                             <tr>
@@ -610,35 +610,42 @@
                                         </thead>
                                         <tbody id="invoice-items-body">
                                             <tr>
-                                                <td class="ps-2 fw-semibold text-dark">កាសស្តាប់ត្រចៀក UltraBass
+                                                <td class="ps-2 fw-semibold text-muted text-nowrap">កាសស្តាប់ត្រចៀក UltraBass
                                                     Wireless</td>
-                                                <td class="text-center">1</td>
-                                                <td class="text-end">$129.00</td>
-                                                <td class="text-end pe-2 fw-semibold text-dark">$129.00</td>
+                                                <td class="text-center text-muted">1</td>
+                                                <td class="text-end text-muted">$129.00</td>
+                                                <td class="text-end pe-2 fw-semibold text-muted">$129.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ps-2 fw-semibold text-muted text-nowrap">កាសស្តាប់ត្រចៀក UltraBass
+                                                    Wireless</td>
+                                                <td class="text-center text-muted">1</td>
+                                                <td class="text-end text-muted">$129.00</td>
+                                                <td class="text-end pe-2 fw-semibold text-muted">$129.00</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
 
                                 <!-- Price Summary Block Table -->
-                                <div class="invoice-summary-table ms-auto" style="max-width: 280px;">
+                                <div class="invoice-summary-table mx-auto" style="max-width: 280px;">
                                     <table class="table table-borderless table-sm mb-0 small">
                                         <tbody>
                                             <tr>
-                                                <td class="text-end text-muted">សរុបរង (Subtotal):</td>
-                                                <td class="text-end fw-semibold text-dark font-monospace"
+                                                <td class="text-start text-muted">សរុបរង (Subtotal):</td>
+                                                <td class="text-end fw-semibold text-muted font-monospace"
                                                     id="invoice-subtotal">$129.00</td>
                                             </tr>
                                             <tr>
-                                                <td class="text-end text-muted">សេវាដឹកជញ្ជូន (Shipping):</td>
-                                                <td class="text-end fw-semibold text-dark font-monospace"
-                                                    id="invoice-shipping-fee">$2.00</td>
+                                                <td class="text-start text-muted text-nowrap">សេវាដឹកជញ្ជូន (Shipping):</td>
+                                                <td class="text-end fw-semibold text-muted font-monospace"
+                                                    id="invoice-shipping-fee" style="font-family: 'Battambang' !important;">ឥតគិតថ្លៃ</td>
                                             </tr>
                                             <tr class="border-top-highlight">
-                                                <td class="text-end fw-bold text-primary pt-2">តម្លៃត្រូវទូទាត់ (Total):
+                                                <td class="text-start fw-bold text-muted pt-2">តម្លៃត្រូវទូទាត់ (Total):
                                                 </td>
-                                                <td class="text-end fw-bold text-primary font-monospace fs-6 pt-2"
-                                                    id="invoice-grandtotal">$131.00</td>
+                                                <td class="text-end fw-bold text-muted font-monospace fs-6 pt-2"
+                                                    id="invoice-grandtotal">$129.00</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -656,13 +663,13 @@
 
                         <!-- Right Control Panel Area -->
                         <div class="col-12 col-md-5">
-                            <h6 class="fw-bold mb-3"><i class="bi bi-sliders text-primary"></i> កែប្រែស្ថានភាពការកុម្មង់
+                            <h6 class="fw-bold mb-3"><i class="bi bi-sliders text-primary"></i> កែប្រែស្ថានភាពការបញ្ជាទិញ
                             </h6>
 
                             <div class="mb-3">
                                 <label
                                     class="form-label small fw-bold text-uppercase text-muted">ស្ថានភាពបច្ចុប្បន្ន</label>
-                                <div class="p-3 border rounded-3 bg-light d-flex align-items-center gap-2">
+                                <div class="p-3 border border-2 rounded-3 d-flex align-items-center gap-2">
                                     <span class="status-marker shipping" id="modal-current-status-marker"></span>
                                     <strong id="modal-current-status-text" class="text-sm">កំពុងដឹកជញ្ជូន</strong>
                                 </div>
@@ -708,6 +715,25 @@
                 </div>
                 <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
                     aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-body p-4 text-center">
+                    <i class="bi bi-exclamation-octagon-fill text-danger mb-3" style="font-size: 3rem;"></i>
+                    <h5 class="fw-bold">តើអ្នកពិតជាចង់ចាកចេញពីប្រព័ន្ធមែនទេ?</h5>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">បោះបង់</button>
+                    <button type="button" class="btn btn-primary" id="logoutBtn" data-bs-target="#staticBackdrop1"><a
+                            href="../login.html" class="text-white text-decoration-none">បាទ/ចាស
+                            យល់ព្រម</a></button>
+                </div>
             </div>
         </div>
     </div>
