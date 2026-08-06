@@ -120,11 +120,14 @@
 
 
 .form-check-input{
-    border-radius: 50% !important;
     border: 1px solid black;
 }
 .form-check-input:hover, .form-check-label:hover{
     cursor: pointer;
+}
+.form-check-input:focus{
+    border: 1px solid #007a08;
+    box-shadow: none;
 }
 .form-check-input:checked{
     background-color: #007a08 !important;

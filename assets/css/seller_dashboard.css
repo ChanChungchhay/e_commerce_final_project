@@ -56,7 +56,7 @@ body {
     background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--text-muted);
+    background-color: #01ae0dc4;
     border-radius: 10px;
 }
 /* Typography Utilities */
