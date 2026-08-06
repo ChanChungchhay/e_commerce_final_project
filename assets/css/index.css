@@ -72,8 +72,8 @@ a{
 /* ================section hero-banneer=============== */
 .hero-banner .card{
     border-radius: 10px;
-    /* overflow: hidden !important; */
-    border: none !important;
+    overflow: hidden;
+    border: none;
 }
 
 /* =======count number======== */
@@ -93,12 +93,20 @@ a{
   vertical-align: middle;
 }
 .hero-banner .card-1{
-    width: 100%;
-    position: relative !important;
-    img{
-    border-radius: 10px;
-    }
+    width:100%;
+    height:250px;
+    position:relative;
+    overflow:hidden;
+    border-radius:10px;
 }
+
+.hero-banner .card-1 img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:10px;
+}
+
 .hero-banner .btn:nth-child(2):hover    {
     background-color: var(--btn-hover-color) !important;
     color: var(--color-white) !important;
