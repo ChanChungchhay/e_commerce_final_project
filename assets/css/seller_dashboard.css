@@ -382,8 +382,8 @@ body {
 }
 
 .avatar-sm {
-    width: 45px;
-    height: 45px;
+    width: 45px !important;
+    height: 45px !important;
     object-fit: cover;
     border: 2px solid var(--icon-sidebar-hover);
 }

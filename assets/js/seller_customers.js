@@ -4,13 +4,11 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    // Mock Customer Database (ជម្រើសទិន្នន័យអតិថិជនខ្មែរ)
     let customersData = [
         {
             id: 'CUST-01',
-            name: 'មាស ធីតា',
-            email: 'thida.meas@gmail.com',
+            name: 'Nan Kanha',
+            email: 'kanhanan@gmail.com',
             phone: '092 112 233',
             address: 'ផ្ទះលេខ ១២ ផ្លូវ ៣១០ សង្កាត់បឹងកេងកងទី១ ភ្នំពេញ',
             tier: 'vip',
@@ -28,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'CUST-02',
             name: 'ចាន់ ដារ៉ា',
-            email: 'dara.chan@gmail.com',
+            email: 'darachan@gmail.com',
             phone: '010 556 778',
             address: 'បុរីវិមានភ្នំពេញ ផ្លូវជាតិលេខ៥ សង្កាត់ច្រាំងចំរេះ ភ្នំពេញ',
             tier: 'vip',
@@ -45,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'CUST-03',
             name: 'ជា សុខា',
-            email: 'sokha.cheas@gmail.com',
+            email: 'sokhacheas@gmail.com',
             phone: '097 789 123',
             address: 'ភូមិ១ សង្កាត់៣ ក្រុងព្រះសីហនុ ខេត្តព្រះសីហនុ',
             tier: 'regular',
@@ -62,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'CUST-04',
             name: 'អ៊ុំ ស្រីនី',
-            email: 'sreyny.oum@gmail.com',
+            email: 'sreynyoum@gmail.com',
             phone: '088 123 456',
             address: 'ភូមិស្វាយប៉ាក សង្កាត់ស្វាយប៉ាក ខណ្ឌឫស្សីកែវ ភ្នំពេញ',
             tier: 'new',
@@ -170,10 +168,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 tr.innerHTML = `
                     <td>
                         <div class="d-flex align-items-center gap-2">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=60&h=60" class="avatar-sm rounded-circle" alt="${cust.name}">
+                            <img src="../assets/img/pic_team/customer-1.jpg" class="avatar-sm rounded-circle text-nowrap" alt="${cust.name}">
                             <div>
-                                <div class="fw-bold">${cust.name}</div>
-                                <span class="text-xs text-muted font-monospace">${cust.id}</span>
+                                <div class="fw-bold text-nowrap">${cust.name}</div>
+                                <span class="text-xs text-muted font-monospace text-nowrap">${cust.id}</span>
                             </div>
                         </div>
                     </td>
@@ -182,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="text-xs text-muted">${cust.email}</span>
                     </td>
                     <td>
-                        <span class="tier-badge tier-${cust.tier}">${this.getTierLabelKhmer(cust.tier)}</span>
+                        <span class="tier-badge tier-${cust.tier} text-nowrap">${this.getTierLabelKhmer(cust.tier)}</span>
                     </td>
                     <td class="fw-bold text-center">${cust.ordersCount} ដង</td>
                     <td class="fw-bold text-primary">$${cust.totalSpent.toFixed(2)}</td>
@@ -192,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             ${cust.status === 'active' ? 'សកម្ម' : 'អសកម្ម'}
                         </span>
                     </td>
-                    <td class="text-muted text-xs">${cust.joinedDate}</td>
+                    <td class="text-muted text-xs text-nowrap">${cust.joinedDate}</td>
                     <td class="text-end">
                         <button class="btn btn-icon-sm view-profile-btn" data-id="${cust.id}" data-bs-toggle="tooltip" title="មើលព័ត៌មានលម្អិត">
                             <i class="bi bi-person-lines-fill"></i>
@@ -235,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
             detailCustBadge.className = `customer-badge-label bg-${currentSelectedCustomer.tier === 'vip' ? 'warning' : 'primary'}`;
 
             // Large avatar customization
-            detailCustAvatar.src = 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150';
+            detailCustAvatar.src = '../assets/img/pic_team/customer-1.jpg';
             if (currentSelectedCustomer.id === 'CUST-02') detailCustAvatar.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150';
             if (currentSelectedCustomer.id === 'CUST-03') detailCustAvatar.src = 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150';
             if (currentSelectedCustomer.id === 'CUST-04') detailCustAvatar.src = 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150';
