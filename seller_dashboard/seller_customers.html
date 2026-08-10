@@ -1,6 +1,7 @@
 <!-- START OF FILE seller_customers.html -->
 <!DOCTYPE html>
 <html lang="km" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +22,7 @@
     <!-- Customers Specific Style -->
     <link rel="stylesheet" href="../assets/css/seller_customers.css">
 </head>
+
 <body>
     <!-- Application Layout Wrapper -->
     <div class="dashboard-wrapper">
@@ -33,9 +35,10 @@
                     </div>
                     <span class="brand-name text-success">Khmer <span class="text-bazaar">Bazzar</span>.</span>
                 </div>
-                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close"
+                    aria-label="Close"></button>
             </div>
-            
+
             <div class="sidebar-menu-wrapper">
                 <ul class="sidebar-menu">
                     <li class="menu-item" data-page="dashboard">
@@ -75,7 +78,7 @@
                         </a>
                     </li>
                     <li class="menu-item" data-page="messages">
-                            <a href="seller_profiles.html" class="menu-link">
+                        <a href="seller_profiles.html" class="menu-link">
                             <i class="bi bi-person-fill"></i>
                             <span class="menu-text">ប្រវត្តិរូប</span>
                         </a>
@@ -86,7 +89,8 @@
             <div class="sidebar-footer">
                 <button type="button"
                     class="btn btn-primary py-2 w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
-                    <a href="../customer/home.html" class="text-white text-decoration-none"><i class="bi bi-chevron-double-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
+                    <a href="../customer/home.html" class="text-white text-decoration-none"><i
+                            class="bi bi-chevron-double-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
                 </button>
                 <button
                     class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
@@ -107,7 +111,8 @@
                         </button>
                         <div class="search-bar-wrapper">
                             <i class="bi bi-search search-icon"></i>
-                            <input type="text" class="form-control" id="customer-quick-search" placeholder="ស្វែងរកតាមឈ្មោះ លេខទូរស័ព្ទ ឬអ៊ីមែល...">
+                            <input type="text" class="form-control" id="customer-quick-search"
+                                placeholder="ស្វែងរកតាមឈ្មោះ លេខទូរស័ព្ទ ឬអ៊ីមែល...">
                         </div>
                     </div>
 
@@ -131,7 +136,8 @@
                                 aria-labelledby="messageDropdown">
                                 <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
                                     <h6 class="mb-0 small">ការជូនដំណឹងថ្មីៗ</h6>
-                                    <a href="seller_messages.html" class="small text-success text-decoration-none">មើលការផ្ញើសារ</a>
+                                    <a href="seller_messages.html"
+                                        class="small text-success text-decoration-none">មើលការផ្ញើសារ</a>
                                 </div>
                                 <div class="dropdown-list-container">
                                     <!-- Message List Items -->
@@ -180,20 +186,23 @@
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
                                 aria-labelledby="notifDropdown">
                                 <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-0">Notifications</h6>
-                                    <a href="#" class="small text-primary">Mark all read</a>
+                                    <h6 class="mb-0 text-muted">ការជូនដំណឹង</h6>
+                                    <a href="#"
+                                        class="small text-success text-decoration-none">សម្គាល់ថាបានអានទាំងអស់</a>
                                 </div>
                                 <div class="dropdown-list-container" id="notifications-container">
                                     <!-- Dynamically/Statically Handled -->
-                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
-                                        <div class="icon-avatar text-success"><i
-                                                class="bi bi-check-circle-fill"></i></div>
+                                    <a href="#" class="dropdown-list-item d-flex gap-3 align-items-center">
+                                        <div class="icon-avatar text-success"><i class="bi bi-check-circle-fill"></i>
+                                        </div>
                                         <div class="flex-grow-1">
                                             <div class="item-title-row d-flex justify-content-between">
-                                                <span class="notif-title">Order #8832 Dispatched</span>
+                                                <span class="notif-title small">ការបញ្ជាទិញ #8832
+                                                    ត្រូវបានដឹកជញ្ជូន</span>
                                                 <span class="timestamp">Just now</span>
                                             </div>
-                                            <p class="preview-text">Shipped to Seattle Warehouse Hub.</p>
+                                            <p class="preview-text">ការបញ្ជាទិញត្រូវបានផ្ញើទៅមជ្ឈមណ្ឌលដឹកជញ្ជូនភ្នំពេញ។
+                                            </p>
                                         </div>
                                     </a>
                                     <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
@@ -201,21 +210,20 @@
                                                 class="bi bi-exclamation-triangle-fill"></i></div>
                                         <div class="flex-grow-1">
                                             <div class="item-title-row d-flex justify-content-between">
-                                                <span class="notif-title">Low Stock: Wireless Earbuds</span>
+                                                <span class="notif-title small">ស្តុកទំនិញជិតអស់</span>
                                                 <span class="timestamp">12m ago</span>
                                             </div>
-                                            <p class="preview-text">Only 3 items remaining in stock.</p>
+                                            <p class="preview-text">នៅសល់តែ ៣ មុខប៉ុណ្ណោះ សូមបំពេញស្តុក។</p>
                                         </div>
                                     </a>
                                     <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
-                                        <div class="icon-avatar text-primary"><i
-                                                class="bi bi-cash-stack"></i></div>
+                                        <div class="icon-avatar text-primary"><i class="bi bi-cash-stack"></i></div>
                                         <div class="flex-grow-1">
                                             <div class="item-title-row d-flex justify-content-between">
-                                                <span class="notif-title">Payment Received</span>
+                                                <span class="notif-title">ទទួលបានការទូទាត់</span>
                                                 <span class="timestamp">1h ago</span>
                                             </div>
-                                            <p class="preview-text">Payout of $12,450.00 processed successfully.</p>
+                                            <p class="preview-text">ការទូទាត់ប្រាក់ត្រូវបានដំណើរការដោយជោគជ័យ។</p>
                                         </div>
                                     </a>
                                 </div>
@@ -226,8 +234,8 @@
                         <div class="dropdown">
                             <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
                                 id="profileDropdow" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../assets/img/seller_images/my_pic.jpg"
-                                    class="avatar-sm rounded-circle" alt="User Avatar">
+                                <img src="../assets/img/seller_images/my_pic.jpg" class="avatar-sm rounded-circle"
+                                    alt="User Avatar">
                                 <div class="user-info">
                                     <h6 class="profile-name d-none d-lg-inline-block">ចាន់ ជុងឆាយ</h6>
                                     <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
@@ -254,12 +262,14 @@
             <!-- Main Content Area -->
             <main class="content-wrapper">
                 <div class="container-fluid px-4 py-4">
-                    
+
                     <!-- Title Header -->
                     <div class="row align-items-center mb-4 gy-3">
                         <div class="col-md-6 col-12">
-                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">បញ្ជីគ្រប់គ្រងព័ត៌មានអតិថិជន</h1>
-                            <p class="text-muted fs-5 mb-0">គ្រប់គ្រងទំនាក់ទំនង តាមដានចំណាយ និងប្រវត្តិនៃការទិញទំនិញរបស់អតិថិជន</p>
+                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">បញ្ជីគ្រប់គ្រងព័ត៌មានអតិថិជន
+                            </h1>
+                            <p class="text-muted fs-5 mb-0">គ្រប់គ្រងទំនាក់ទំនង តាមដានចំណាយ
+                                និងប្រវត្តិនៃការទិញទំនិញរបស់អតិថិជន</p>
                         </div>
                     </div>
 
@@ -317,7 +327,8 @@
                                 </div>
                                 <div class="stats-body mt-3">
                                     <h6 class="text-muted small text-uppercase tracking-wider">ចំណាយមធ្យម (LTV)</h6>
-                                    <h3 class="mb-0">$<span class="stats-counter" id="metric-avg-spent" data-target="15">00</span></h3>
+                                    <h3 class="mb-0">$<span class="stats-counter" id="metric-avg-spent"
+                                            data-target="15">00</span></h3>
                                 </div>
                             </div>
                         </div>
@@ -328,11 +339,14 @@
                         <div class="card-body py-3">
                             <div class="row g-3 align-items-center">
                                 <div class="col-12 col-md-4">
-                                    <label class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្វែងរកអតិថិជន</label>
-                                    <input type="text" class="form-control text-xs" id="filter-customer-search" placeholder="ស្វែងរកតាមឈ្មោះ លេខទូរស័ព្ទ ឬអ៊ីមែល...">
+                                    <label
+                                        class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្វែងរកអតិថិជន</label>
+                                    <input type="text" class="form-control text-xs" id="filter-customer-search"
+                                        placeholder="ស្វែងរកតាមឈ្មោះ លេខទូរស័ព្ទ ឬអ៊ីមែល...">
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-3">
-                                    <label class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ប្រភេទអតិថិជន</label>
+                                    <label
+                                        class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ប្រភេទអតិថិជន</label>
                                     <select class="form-select text-xs" id="filter-vip-type">
                                         <option value="all">ទាំងអស់</option>
                                         <option value="vip">អតិថិជន VIP</option>
@@ -341,7 +355,8 @@
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-3">
-                                    <label class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្ថានភាព</label>
+                                    <label
+                                        class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្ថានភាព</label>
                                     <select class="form-select text-xs" id="filter-customer-status">
                                         <option value="all">ទាំងអស់</option>
                                         <option value="active">សកម្ម (Active)</option>
@@ -349,7 +364,9 @@
                                     </select>
                                 </div>
                                 <div class="col-12 col-md-2 d-flex align-items-end h-100 mt-auto">
-                                    <button class="btn btn-outline-custom w-100 d-flex justify-content-center align-items-center gap-2" id="btn-reset-customer-filters">
+                                    <button
+                                        class="btn btn-outline-custom w-100 d-flex justify-content-center align-items-center gap-2"
+                                        id="btn-reset-customer-filters">
                                         <i class="bi bi-arrow-counterclockwise"></i> កំណត់ឡើងវិញ
                                     </button>
                                 </div>
@@ -361,21 +378,21 @@
                     <div class="dashboard-card">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <div>
-                                <h5 class="mb-0 card-title">មូលដ្ឋានទិន្នន័យអតិថិជន</h5>
+                                <h5 class="mb-0 card-title">ទិន្នន័យអតិថិជន</h5>
                                 <span class="text-muted text-xs">គ្រប់គ្រង និងស្វែងយល់ពីតម្រូវការរបស់អតិថិជន</span>
                             </div>
                         </div>
                         <div class="card-body p-0">
-                            
+
                             <div class="table-responsive" id="customers-table-wrapper">
                                 <table class="table table-hover align-middle mb-0">
                                     <thead>
                                         <tr>
                                             <th>អតិថិជន</th>
                                             <th>ទំនាក់ទំនង</th>
-                                            <th>ប្រភេទសមាជិក</th>
-                                            <th>ចំនួនបញ្ជាទិញ</th>
-                                            <th>ចំណាយសរុប</th>
+                                            <th class="text-nowrap">ប្រភេទសមាជិក</th>
+                                            <th class="text-nowrap">ចំនួនបញ្ជាទិញ</th>
+                                            <th class="text-nowrap">ចំណាយសរុប</th>
                                             <th>ស្ថានភាព</th>
                                             <th>ថ្ងៃចុះឈ្មោះ</th>
                                             <th class="text-end">សកម្មភាព</th>
@@ -396,14 +413,17 @@
 
                             <!-- Pagination Footer -->
                             <div class="px-4 py-3 d-flex align-items-center justify-content-between border-top">
-                                <span class="text-xs text-muted" id="customer-pagination-text">កំពុងបង្ហាញ 0 ក្នុងចំណោម 0 អតិថិជន</span>
+                                <span class="text-xs text-muted" id="customer-pagination-text">កំពុងបង្ហាញ 0 ក្នុងចំណោម
+                                    0 អតិថិជន</span>
                                 <nav aria-label="Page navigation">
                                     <ul class="pagination pagination-sm mb-0">
-                                        <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#"><i
+                                                    class="bi bi-chevron-left"></i></a></li>
                                         <li class="page-item active"><a class="page-link" href="#">1</a></li>
                                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                                         <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i
+                                                    class="bi bi-chevron-right"></i></a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -422,55 +442,68 @@
     </button>
 
     <!-- Customer Profile dossier Details Modal -->
-    <div class="modal fade" id="customerDetailModal" tabindex="-1" aria-labelledby="customerDetailModalLabel" aria-hidden="true">
+    <div class="modal fade" id="customerDetailModal" tabindex="-1" aria-labelledby="customerDetailModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
             <div class="modal-content border-0 shadow-lg">
                 <div class="modal-header bg-gradient-primary text-white border-0 py-3">
-                    <h5 class="modal-title fw-bold" id="customerDetailModalLabel">កម្រងព័ត៌មានអតិថិជន និង ប្រវត្តិបញ្ជាទិញ</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title fw-bold" id="customerDetailModalLabel">កម្រងព័ត៌មានអតិថិជន និង
+                        ប្រវត្តិបញ្ជាទិញ</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">
-                    
+
                     <div class="row g-4">
                         <!-- Left Panel: Profile Detail, Spend Overview, Notes -->
                         <div class="col-12 col-md-5 border-end-md">
                             <div class="text-center pb-3 border-bottom mb-3">
                                 <div class="position-relative d-inline-block">
-                                    <img src="" class="customer-large-avatar rounded-circle mb-2" id="detail-cust-avatar" alt="Customer Avatar">
+                                    <img src="" class="customer-large-avatar rounded-circle mb-2"
+                                        id="detail-cust-avatar" alt="Customer Avatar">
                                     <span class="customer-badge-label" id="detail-cust-badge">VIP</span>
                                 </div>
                                 <h5 class="fw-bold mb-1" id="detail-cust-name">មាស ធីតា</h5>
-                                <span class="text-xs text-muted font-monospace" id="detail-cust-joined">សមាជិកតាំងពី: 12-មករា-2025</span>
+                                <span class="text-xs text-muted font-monospace" id="detail-cust-joined">សមាជិកតាំងពី:
+                                    12-មករា-2025</span>
                             </div>
 
                             <h6 class="text-xs fw-bold text-uppercase text-muted mb-2">ព័ត៌មានទំនាក់ទំនង</h6>
                             <ul class="list-unstyled text-sm mb-4">
-                                <li class="mb-2"><i class="bi bi-telephone text-muted me-2"></i> <span id="detail-cust-phone">092 112 233</span></li>
-                                <li class="mb-2"><i class="bi bi-envelope text-muted me-2"></i> <span id="detail-cust-email">thida.meas@gmail.com</span></li>
-                                <li class="mb-2"><i class="bi bi-geo-alt text-muted me-2"></i> <span id="detail-cust-address" class="text-xs">ផ្លូវ ៣១០ ភ្នំពេញ</span></li>
+                                <li class="mb-2"><i class="bi bi-telephone text-muted me-2"></i> <span
+                                        id="detail-cust-phone">092 112 233</span></li>
+                                <li class="mb-2"><i class="bi bi-envelope text-muted me-2"></i> <span
+                                        id="detail-cust-email">thida.meas@gmail.com</span></li>
+                                <li class="mb-2"><i class="bi bi-geo-alt text-muted me-2"></i> <span
+                                        id="detail-cust-address" class="text-xs">ផ្លូវ ៣១០ ភ្នំពេញ</span></li>
                             </ul>
 
-                            <h6 class="text-xs fw-bold text-uppercase text-muted mb-2">ការវិភាគចំណាយ (Lifetime analytics)</h6>
+                            <h6 class="text-xs fw-bold text-uppercase text-muted mb-2">ការវិភាគចំណាយ (Lifetime
+                                analytics)</h6>
                             <div class="row g-2 mb-4 text-center">
                                 <div class="col-6">
                                     <div class="p-2 border rounded-3 bg-light-theme-darker">
                                         <span class="text-xxs text-muted d-block">ទិញសរុប</span>
-                                        <strong class="text-sm text-primary" id="detail-cust-orders-count">12 ដង</strong>
+                                        <strong class="text-sm text-primary" id="detail-cust-orders-count">12
+                                            ដង</strong>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="p-2 border rounded-3 bg-light-theme-darker">
                                         <span class="text-xxs text-muted d-block">ចំណាយសរុប</span>
-                                        <strong class="text-sm text-success" id="detail-cust-total-spent">$450.00</strong>
+                                        <strong class="text-sm text-success"
+                                            id="detail-cust-total-spent">$450.00</strong>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="mb-3">
-                                <label for="cust-internal-note" class="form-label text-xs fw-bold text-uppercase text-muted">កំណត់ចំណាំផ្ទៃក្នុងរបស់ហាង</label>
-                                <textarea class="form-control text-xs" id="cust-internal-note" rows="3" placeholder="ឧ. អតិថិជននេះចូលចិត្តការវេចខ្ចប់ប្រអប់ស្អាតៗ និងឆ្លើយតបរហ័ស..."></textarea>
+                                <label for="cust-internal-note"
+                                    class="form-label text-xs fw-bold text-uppercase text-muted">កំណត់ចំណាំផ្ទៃក្នុងរបស់ហាង</label>
+                                <textarea class="form-control text-xs" id="cust-internal-note" rows="3"
+                                    placeholder="ឧ. អតិថិជននេះចូលចិត្តការវេចខ្ចប់ប្រអប់ស្អាតៗ និងឆ្លើយតបរហ័ស..."></textarea>
                             </div>
-                            
+
                             <button class="btn btn-sm btn-primary w-100 text-white" id="btn-save-customer-note">
                                 <i class="bi bi-save"></i> រក្សាទុកកំណត់ចំណាំ
                             </button>
@@ -479,7 +512,7 @@
                         <!-- Right Panel: Order History Table -->
                         <div class="col-12 col-md-7">
                             <h6 class="fw-bold mb-3"><i class="bi bi-clock-history"></i> ប្រវត្តិនៃការបញ្ជាទិញថ្មីៗ</h6>
-                            
+
                             <div class="table-responsive" style="max-height: 380px; overflow-y: auto;">
                                 <table class="table table-sm table-hover align-middle border text-xs">
                                     <thead class="bg-light sticky-top">
@@ -505,13 +538,15 @@
 
     <!-- System Event Toast Container -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
-        <div id="actionToast" class="toast align-items-center text-white bg-dark border-0 shadow" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="actionToast" class="toast align-items-center text-white bg-dark border-0 shadow" role="alert"
+            aria-live="assertive" aria-atomic="true">
             <div class="d-flex">
                 <div class="toast-body d-flex align-items-center gap-2">
                     <i class="bi bi-info-circle"></i>
                     <span id="toast-message">ប្រតិបត្តិការទទួលបានជោគជ័យ!</span>
                 </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
             </div>
         </div>
     </div>
@@ -542,4 +577,5 @@
     <!-- Customers Page specific JavaScript controller -->
     <script src="../assets/js/seller_customers.js"></script>
 </body>
+
 </html>

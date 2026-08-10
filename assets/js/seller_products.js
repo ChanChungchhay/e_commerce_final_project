@@ -4,43 +4,39 @@ document.addEventListener('DOMContentLoaded', () => {
     let productInventory = [
         {
             id: 1,
-            sku: 'SKU-9832',
-            name: 'កាសស្តាប់ត្រចៀក UltraBass Wireless',
+            name: 'នាឡិកា Zinvo Zealous Aura',
             category: 'គ្រឿងអេឡិចត្រូនិក',
-            price: 129.00,
+            price: 285.00,
             stock: 45,
             threshold: 10,
-            image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=300'
+            image: '../assets/img/product/zinvo-1.webp'
         },
         {
             id: 2,
-            sku: 'SKU-9831',
-            name: 'នាឡិកាឆ្លាតវៃ Active Fit Pro Watch',
-            category: 'ឧបករណ៍ឆ្លាតវៃ',
-            price: 199.00,
-            stock: 3,
+            name: 'នាឡិកា ZINVO x JUMBO VD ROSE',
+            category: 'គ្រឿងអេឡិចត្រូនិក',
+            price: 500.00,
+            stock: 20,
             threshold: 5,
-            image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=300'
+            image: '../assets/img/product/zinvo.png'
         },
         {
             id: 3,
-            sku: 'SKU-9830',
-            name: 'កាបូបលុយស្បែកស្តើង Slim Leather Wallet',
-            category: 'គ្រឿងបន្លាស់',
-            price: 49.00,
+            name: 'Asus Gaming Laptop',
+            category: 'គ្រឿងអេឡិចត្រូនិក',
+            price: 776.00,
             stock: 0,
             threshold: 5,
-            image: 'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&q=80&w=300'
+            image: '../assets/img/product/computer.png'
         },
         {
             id: 4,
-            sku: 'SKU-9829',
-            name: 'ថូផ្កាពណ៌កញ្ចក់ Nordic Glass Vase',
-            category: 'សម្ភារៈក្នុងផ្ទះ',
-            price: 89.00,
+            name: 'ម៉ាស៊ីនសម្ងួតសក់',
+            category: 'គ្រឿងអេឡិចត្រូនិក',
+            price: 3.00,
             stock: 12,
             threshold: 3,
-            image: 'https://images.unsplash.com/photo-1581781870027-04212e231e96?auto=format&fit=crop&q=80&w=300'
+            image: '../assets/img/product/hair-machin.png'
         }
     ];
 
@@ -143,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <thead>
                         <tr>
                             <th>រូបភាព</th>
-                            <th>ឈ្មោះផលិតផល / កូដ SKU</th>
+                            <th>ឈ្មោះផលិតផល</th>
                             <th>ប្រភេទ</th>
                             <th>តម្លៃរាយ</th>
                             <th>ចំនួនស្តុក</th>
@@ -165,13 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </td>
                     <td>
-                        <div class="fw-semibold">${item.name}</div>
-                        <span class="text-xs text-muted font-monospace">${item.sku}</span>
+                        <div class="fw-semibold text-nowrap">${item.name}</div>
                     </td>
-                    <td><span class="text-muted text-sm">${item.category}</span></td>
+                    <td><span class="text-muted text-sm text-nowrap">${item.category}</span></td>
                     <td class="fw-bold">$${item.price.toFixed(2)}</td>
-                    <td class="fw-semibold">${item.stock} គ្រឿង</td>
-                    <td>${this.getStockStatusBadge(item.stock, item.threshold)}</td>
+                    <td class="fw-semibold text-nowrap">${item.stock} គ្រឿង</td>
+                    <td class="text-nowrap">${this.getStockStatusBadge(item.stock, item.threshold)}</td>
                     <td class="text-end">
                         <div class="d-flex justify-content-end gap-1">
                             <button class="btn btn-icon-sm edit-product-btn" data-id="${item.id}" data-bs-toggle="tooltip" title="កែសម្រួល"><i class="bi bi-pencil-square"></i></button>
@@ -197,7 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             <img src="${item.image || 'https://via.placeholder.com/100'}" class="grid-product-img" alt="${item.name}">
                         </div>
                         <div class="card-body p-3">
-                            <span class="text-xs text-muted d-block mb-1 font-monospace">${item.sku}</span>
                             <h6 class="fw-bold text-sm text-truncate mb-1">${item.name}</h6>
                             <span class="badge bg-light-theme-darker text-muted mb-3" style="font-size: 11px;">${item.category}</span>
                             
