@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ផ្ទាំងគ្រប់គ្រង</title>
-    <link rel="shortcut icon" href="/assets/img/logo/img-logo.png">
+    <link rel="shortcut icon" href="../assets/img/logo/img-logo.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,667 +23,714 @@
 <body>
     <!-- Application Layout -->
     <div class="dashboard-wrapper">
-        <!-- Left Sidebar -->
-        <aside id="sidebar" class="sidebar">
-            <div class="sidebar-header">
-                <div class="brand-logo">
-                    <div class="logo-icon">
-                        <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img" alt="">
+        <div class="row g-3">
+            <div class="col-2">
+                <!-- Left Sidebar -->
+                <aside class="sidebar offcanvas offcanvas-start" tabindex="-1" id="sellerSidebar"
+                    aria-labelledby="sellerSidebarLabel" style="z-index: 2000;">
+                    <div class="sidebar-header">
+                        <div class="brand-logo">
+                            <div class="logo-icon">
+                                <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img" alt="">
+                            </div>
+                            <span class="brand-name text-success">Khmer <span class="text-bazaar">Bazzar</span>.</span>
+                        </div>
+                        <button type="button" class="btn-close btn-close-black d-xl-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
                     </div>
-                    <span class="brand-name text-success">Khmer <span class="text-bazaar">Bazzar</span>.</span>
-                </div>
-                <button type="button" class="btn-close btn-close-black d-lg-none" id="sidebar-close"
-                    aria-label="Close"></button>
-            </div>
+                    <div class="sidebar-menu-wrapper">
+                        <ul class="sidebar-menu">
+                            <li class="menu-item active" data-page="dashboard">
+                                <a href="seller_dashboard.html" class="menu-link">
+                                    <i class="bi bi-grid-1x2-fill"></i>
+                                    <span>ផ្ទាំងគ្រប់គ្រង</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="products">
+                                <a href="seller_products.html" class="menu-link">
+                                    <i class="bi bi-box-seam-fill"></i>
+                                    <span class="menu-text">ផលិតផល</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="orders">
+                                <a href="seller_orders.html" class="menu-link">
+                                    <i class="bi bi-cart-fill"></i>
+                                    <span class="menu-text">ការបញ្ជាទិញ</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="customers">
+                                <a href="seller_customers.html" class="menu-link">
+                                    <i class="bi bi-people-fill"></i>
+                                    <span class="menu-text">អតិថិជន</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="analytics">
+                                <a href="seller_analytics.html" class="menu-link">
+                                    <i class="bi bi-bar-chart-line-fill"></i>
+                                    <span class="menu-text">វិភាគទិន្នន័យ</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="messages">
+                                <a href="seller_messages.html" class="menu-link">
+                                    <i class="bi bi-chat-left-dots-fill"></i>
+                                    <span class="menu-text">សារផ្ញើ</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="messages">
+                                <a href="seller_profiles.html" class="menu-link">
+                                    <i class="bi bi-person-fill"></i>
+                                    <span class="menu-text">ប្រវត្តិរូប</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-            <div class="sidebar-menu-wrapper">
-                <ul class="sidebar-menu">
-                    <li class="menu-item active" data-page="dashboard">
-                        <a href="#" class="menu-link">
-                            <i class="bi bi-grid-1x2-fill"></i>
-                            <span>ផ្ទាំងគ្រប់គ្រង</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="products">
-                        <a href="seller_products.html" class="menu-link">
-                            <i class="bi bi-box-seam-fill"></i>
-                            <span class="menu-text">ផលិតផល</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="orders">
-                        <a href="seller_orders.html" class="menu-link">
-                            <i class="bi bi-cart-fill"></i>
-                            <span class="menu-text">ការបញ្ជាទិញ</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="customers">
-                        <a href="seller_customers.html" class="menu-link">
-                            <i class="bi bi-people-fill"></i>
-                            <span class="menu-text">អតិថិជន</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="analytics">
-                        <a href="seller_analytics.html" class="menu-link">
-                            <i class="bi bi-bar-chart-line-fill"></i>
-                            <span class="menu-text">វិភាគទិន្នន័យ</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="messages">
-                        <a href="seller_messages.html" class="menu-link">
-                            <i class="bi bi-chat-left-dots-fill"></i>
-                            <span class="menu-text">សារផ្ញើ</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="messages">
-                        <a href="seller_profiles.html" class="menu-link">
-                            <i class="bi bi-person-fill"></i>
-                            <span class="menu-text">ប្រវត្តិរូប</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sidebar-footer">
-                <button type="button"
-                    class="btn btn-primary py-2 w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
-                    <a href="seller-profile.html" class="text-white text-decoration-none"><i
-                            class="bi bi-chevron-double-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
-                </button>
-                <button
-                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
-                    data-bs-toggle="modal" data-bs-target="#logout">
-                    <i class="bi bi-box-arrow-left"></i> ចាកចេញ
-                </button>
-            </div>
-        </aside>
-
-        <!-- Right Side Main Interface Wrap -->
-        <div class="main-container">
-
-            <!-- Top Header Navigation -->
-            <header class="top-navbar rounded-5 mx-4">
-                <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
-
-                    <!-- Left Toggle & Global Search -->
-                    <div class="d-flex align-items-center gap-3">
-                        <button class="btn btn-icon d-lg-none" id="sidebar-toggle" aria-label="Toggle Sidebar">
-                            <i class="bi bi-list fs-4"></i>
+                    <div class="sidebar-footer">
+                        <button type="button"
+                            class="btn btn-primary py-2 w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
+                            <a href="seller-profile.html" class="text-white text-decoration-none"><i
+                                    class="bi bi-chevron-double-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
                         </button>
-                        <div class="search-bar-wrapper">
-                            <i class="bi bi-search search-icon"></i>
-                            <input type="text" class="form-control " id="global-search"
-                                placeholder="ស្វែងរកការបញ្ជាទិញ ទំនិញ ឬអតិថិជន...">
-                        </div>
-                    </div>
-
-                    <!-- Right Controls Menu -->
-                    <div class="d-flex align-items-center gap-2 gap-md-3">
-                        <!-- Light/Dark Mode Switcher -->
-                        <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
-                            <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                        <button
+                            class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
+                            data-bs-toggle="modal" data-bs-target="#logout">
+                            <i class="bi bi-box-arrow-left"></i> ចាកចេញ
                         </button>
-
-                        <!-- Messages Dropdown -->
-                        <div class="dropdown">
-                            <button class="btn btn-icon position-relative" type="button" id="messageDropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-chat-left-dots"></i>
-                                <span
-                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-warning border border-2 border-white">
-                                    3
-                                </span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
-                                aria-labelledby="messageDropdown">
-                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-0 text-muted">ការជូនដំណឹងថ្មីៗ</h6>
-                                    <a href="seller_messages.html"
-                                        class="small text-success text-decoration-none">មើលការផ្ញើសារ</a>
-                                </div>
-                                <div class="dropdown-list-container">
-                                    <!-- Message List Items -->
-                                    <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
-                                            class="avatar-sm rounded-circle" alt="User Image">
-                                        <div>
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="user-name">Sarah Jenkins</span>
-                                                <span class="timestamp">2m ago</span>
-                                            </div>
-                                            <p class="preview-text text-wrap">សួស្តី សំណាង
-                                                តើការធានាផលិតផលមានរួមបញ្ចូលក្នុងតម្លៃដើមដែរឬទេ?</p>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
-                                            class="avatar-sm rounded-circle" alt="User Image">
-                                        <div>
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="user-name">Marcus Vance</span>
-                                                <span class="timestamp">1h ago</span>
-                                            </div>
-                                            <p class="preview-text text-wrap">សូមជួយបញ្ជាក់ផងថា
-                                                តើអ្នកអាចដឹកជញ្ជូនទំនិញទាំងនេះមកកាន់ឃ្លាំងរបស់យើងបានដែរឬទេ?</p>
-                                        </div>
-                                    </a>
-                                    <a href="seller_messages.html"
-                                        class="dropdown-list-item d-flex gap-3 text-center py-2 text-primary fw-medium justify-content-center text-success small">
-                                        មើលការផ្ញើសារទាំងអស់
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Notification Dropdown -->
-                        <div class="dropdown">
-                            <button class="btn btn-icon position-relative" type="button" id="notifDropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-bell"></i>
-                                <span
-                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
-                                    5
-                                </span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
-                                aria-labelledby="notifDropdown">
-                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-0 text-muted">ការជូនដំណឹង</h6>
-                                    <a href="#" class="small text-success text-decoration-none">សម្គាល់ថាបានអានទាំងអស់</a>
-                                </div>
-                                <div class="dropdown-list-container" id="notifications-container">
-                                    <!-- Dynamically/Statically Handled -->
-                                    <a href="#" class="dropdown-list-item d-flex gap-3 align-items-center">
-                                        <div class="icon-avatar text-success"><i class="bi bi-check-circle-fill"></i>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="notif-title small">ការបញ្ជាទិញ #8832 ត្រូវបានដឹកជញ្ជូន</span>
-                                                <span class="timestamp">Just now</span>
-                                            </div>
-                                            <p class="preview-text">ការបញ្ជាទិញត្រូវបានផ្ញើទៅមជ្ឈមណ្ឌលដឹកជញ្ជូនភ្នំពេញ។</p>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
-                                        <div class="icon-avatar text-danger"><i
-                                                class="bi bi-exclamation-triangle-fill"></i></div>
-                                        <div class="flex-grow-1">
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="notif-title small">ស្តុកទំនិញជិតអស់</span>
-                                                <span class="timestamp">12m ago</span>
-                                            </div>
-                                            <p class="preview-text">នៅសល់តែ ៣ មុខប៉ុណ្ណោះ សូមបំពេញស្តុក។</p>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
-                                        <div class="icon-avatar text-primary"><i class="bi bi-cash-stack"></i></div>
-                                        <div class="flex-grow-1">
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="notif-title">ទទួលបានការទូទាត់</span>
-                                                <span class="timestamp">1h ago</span>
-                                            </div>
-                                            <p class="preview-text">ការទូទាត់ប្រាក់ត្រូវបានដំណើរការដោយជោគជ័យ។</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header-divider h-100"></div>
-                        <!-- Mini profile info -->
-                        <div class="dropdown">
-                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
-                                id="profileDropdow" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../assets/img/seller_images/my_pic.jpg"
-                                    class="avatar-sm rounded-circle" alt="User Avatar">
-                                <div class="user-info">
-                                    <h6 class="profile-name d-none d-lg-inline-block">ចាន់ ជុងឆាយ</h6>
-                                    <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
-                                </div>
-                                <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="seller_profiles.html"><i
-                                            class="bi bi-person-fill text-success"></i> កម្រងព័ត៌មាន</a></li>
-                                <!-- <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i
-                                            class="bi bi-shield-lock-fill"></i> Security settings</a></li>
-                                <li> -->
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item text-danger d-flex align-items-center gap-2" href="../login.html"><i
-                                            class="bi bi-box-arrow-right"></i> ចាកចេញ</a></li>
-                            </ul>
-                        </div>
-
                     </div>
-                </div>
-            </header>
+                </aside>
+            </div>
+            <div class="col-12 col-xl-10">
+                <div>
+                    <!-- Top Header Navigation -->
+                    <header class="top-navbar rounded-5 mx-4">
+                        <div class="d-flex align-items-center justify-content-between h-100 px-4">
 
-            <!-- Main Content Scroll Area -->
-            <main class="content-wrapper">
-                <div class="container-fluid px-4 py-4">
+                            <!-- Left Toggle & Global Search -->
+                            <div class="d-flex align-items-center gap-3">
+                                <button
+                                    class="btn btn-icon d-block d-xl-none d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-toggle="offcanvas" data-bs-target="#sellerSidebar"
+                                    aria-controls="sellerSidebar" aria-label="Toggle Sidebar">
+                                    <i class="bi bi-list fs-4"></i>
+                                </button>
+                                <div class="search-bar-wrapper d-none d-md-block">
+                                    <i class="bi bi-search search-icon"></i>
+                                    <input type="text" class="form-control " id="global-search"
+                                        placeholder="ស្វែងរកការបញ្ជាទិញ ទំនិញ ឬអតិថិជន...">
+                                </div>
+                            </div>
 
-                    <!-- Dashboard Greetings and Quick Action Menu -->
-                    <div class="row align-items-center mb-4 gy-3">
-                        <div class="col-md-6 col-12">
-                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">សូមស្វាគមន៍ ជុងឆាយ</h1>
-                            <p class="text-muted fs-5 mb-0">នេះជាទិន្នន័យសំខាន់ៗក្នុងហាងរបស់អ្នក</p>
+                            <!-- Right Controls Menu -->
+                            <div class="d-flex align-items-center gap-2 gap-md-3">
+                                <!-- Light/Dark Mode Switcher -->
+                                <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
+                                    <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                                </button>
+
+                                <!-- Messages Dropdown -->
+                                <div class="dropdown">
+                                    <button class="btn btn-icon position-relative" type="button" id="messageDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-chat-left-dots"></i>
+                                        <span
+                                            class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-warning border border-2 border-white">
+                                            3
+                                        </span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                        aria-labelledby="messageDropdown">
+                                        <div
+                                            class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                            <h6 class="mb-0 text-muted">ការជូនដំណឹងថ្មីៗ</h6>
+                                            <a href="seller_messages.html"
+                                                class="small text-success text-decoration-none">មើលការផ្ញើសារ</a>
+                                        </div>
+                                        <div class="dropdown-list-container">
+                                            <!-- Message List Items -->
+                                            <a href="#" class="dropdown-list-item d-flex gap-3">
+                                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                                    class="avatar-sm rounded-circle" alt="User Image">
+                                                <div>
+                                                    <div class="item-title-row d-flex justify-content-between">
+                                                        <span class="user-name">Sarah Jenkins</span>
+                                                        <span class="timestamp">2m ago</span>
+                                                    </div>
+                                                    <p class="preview-text text-wrap">សួស្តី សំណាង
+                                                        តើការធានាផលិតផលមានរួមបញ្ចូលក្នុងតម្លៃដើមដែរឬទេ?</p>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-list-item d-flex gap-3">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                                    class="avatar-sm rounded-circle" alt="User Image">
+                                                <div>
+                                                    <div class="item-title-row d-flex justify-content-between">
+                                                        <span class="user-name">Marcus Vance</span>
+                                                        <span class="timestamp">1h ago</span>
+                                                    </div>
+                                                    <p class="preview-text text-wrap">សូមជួយបញ្ជាក់ផងថា
+                                                        តើអ្នកអាចដឹកជញ្ជូនទំនិញទាំងនេះមកកាន់ឃ្លាំងរបស់យើងបានដែរឬទេ?</p>
+                                                </div>
+                                            </a>
+                                            <a href="seller_messages.html"
+                                                class="dropdown-list-item d-flex gap-3 text-center py-2 text-primary fw-medium justify-content-center text-success small">
+                                                មើលការផ្ញើសារទាំងអស់
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Notification Dropdown -->
+                                <div class="dropdown">
+                                    <button class="btn btn-icon position-relative" type="button" id="notifDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-bell"></i>
+                                        <span
+                                            class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
+                                            5
+                                        </span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                        aria-labelledby="notifDropdown">
+                                        <div
+                                            class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                            <h6 class="mb-0 text-muted">ការជូនដំណឹង</h6>
+                                            <a href="#"
+                                                class="small text-success text-decoration-none">សម្គាល់ថាបានអានទាំងអស់</a>
+                                        </div>
+                                        <div class="dropdown-list-container" id="notifications-container">
+                                            <!-- Dynamically/Statically Handled -->
+                                            <a href="#" class="dropdown-list-item d-flex gap-3 align-items-center">
+                                                <div class="icon-avatar text-success"><i
+                                                        class="bi bi-check-circle-fill"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="item-title-row d-flex justify-content-between">
+                                                        <span class="notif-title small">ការបញ្ជាទិញ #8832
+                                                            ត្រូវបានដឹកជញ្ជូន</span>
+                                                        <span class="timestamp">Just now</span>
+                                                    </div>
+                                                    <p class="preview-text">
+                                                        ការបញ្ជាទិញត្រូវបានផ្ញើទៅមជ្ឈមណ្ឌលដឹកជញ្ជូនភ្នំពេញ។
+                                                    </p>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                                <div class="icon-avatar text-danger"><i
+                                                        class="bi bi-exclamation-triangle-fill"></i></div>
+                                                <div class="flex-grow-1">
+                                                    <div class="item-title-row d-flex justify-content-between">
+                                                        <span class="notif-title small">ស្តុកទំនិញជិតអស់</span>
+                                                        <span class="timestamp">12m ago</span>
+                                                    </div>
+                                                    <p class="preview-text">នៅសល់តែ ៣ មុខប៉ុណ្ណោះ សូមបំពេញស្តុក។</p>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                                <div class="icon-avatar text-primary"><i class="bi bi-cash-stack"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="item-title-row d-flex justify-content-between">
+                                                        <span class="notif-title">ទទួលបានការទូទាត់</span>
+                                                        <span class="timestamp">1h ago</span>
+                                                    </div>
+                                                    <p class="preview-text">ការទូទាត់ប្រាក់ត្រូវបានដំណើរការដោយជោគជ័យ។
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header-divider h-100"></div>
+                                <!-- Mini profile info -->
+                                <div class="dropdown">
+                                    <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
+                                        id="profileDropdow" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="../assets/img/seller_images/my_pic.jpg"
+                                            class="avatar-sm rounded-circle" alt="User Avatar">
+                                        <div class="user-info">
+                                            <h6 class="profile-name d-none d-lg-inline-block">ចាន់ ជុងឆាយ</h6>
+                                            <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង
+                                                ល្អប្រណីត</p>
+                                        </div>
+                                        <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                        <li><a class="dropdown-item d-flex align-items-center gap-2 small"
+                                                href="seller_profiles.html"><i
+                                                    class="bi bi-person-fill text-success"></i>
+                                                កម្រងព័ត៌មាន</a></li>
+                                        <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item text-danger d-flex align-items-center gap-2 small"
+                                                href="../login.html"><i class="bi bi-box-arrow-right"></i> ចាកចេញ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Layout Division Grid (8 Columns for main dashboard, 4 for the utility side metrics panel) -->
-                    <div class="row g-4 justify-content-center">
-
-                        <!-- Left Layout (Main content charts and lists) -->
-                        <div class="col-xl-12 col-xxl-9 col-12 d-flex flex-column row-gap-4">
-
-                            <!-- Stat Cards Carousel Grid -->
-                            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
-
-                                <!-- Card 1 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="stats-card">
-                                        <div class="stats-header d-flex justify-content-between align-items-start">
-                                            <div class="icon-wrap bg-light-success text-white">
-                                                <i class="bi bi-currency-dollar icon"></i>
-                                            </div>
-                                            <span
-                                                class="badge bg-light-success text-white d-flex align-items-center gap-1">
-                                                <i class="bi bi-arrow-up-right"></i> 14.2%
-                                            </span>
-                                        </div>
-                                        <div class="stats-body mt-3">
-                                            <h6 class="text-muted fw-semibold small text-uppercase tracking-wider">
-                                                ប្រាក់ចំណូលសរុប</h6>
-                                            <h3 class="mb-1 stats-counter" data-target="1528">$152,8</h3>
-                                            <div class="stats-trend-container mt-2">
-                                                <div class="sparkline-placeholder">
-                                                    <!-- Simplified CSS Pure-drawn sparkline -->
-                                                    <div class="css-sparkline">
-                                                        <span style="height: 40%"></span>
-                                                        <span style="height: 60%"></span>
-                                                        <span style="height: 50%"></span>
-                                                        <span style="height: 75%"></span>
-                                                        <span style="height: 90%"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 2 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="stats-card">
-                                        <div class="stats-header d-flex justify-content-between align-items-start">
-                                            <div class="icon-wrap bg-light-warning text-white">
-                                                <i class="bi bi-wallet-fill icon"></i>
-                                            </div>
-                                            <span
-                                                class="badge bg-light-warning text-white d-flex align-items-center gap-1">
-                                                <i class="bi bi-arrow-up-right"></i> 8.4%
-                                            </span>
-                                        </div>
-                                        <div class="stats-body mt-3">
-                                            <h6 class="text-muted fw-semibold small text-uppercase tracking-wider">
-                                                ប្រាក់ចំណូលថ្ងៃនេះ</h6>
-                                            <h3 class="mb-1 stats-counter" data-target="324">$3,24</h3>
-                                            <div class="stats-trend-container mt-2">
-                                                <div class="sparkline-placeholder">
-                                                    <div class="css-sparkline variant-box">
-                                                        <span style="height: 20%"></span>
-                                                        <span style="height: 40%"></span>
-                                                        <span style="height: 60%"></span>
-                                                        <span style="height: 30%"></span>
-                                                        <span style="height: 80%"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 3 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="stats-card">
-                                        <div class="stats-header d-flex justify-content-between align-items-start">
-                                            <div class="icon-wrap bg-light-success text-white">
-                                                <i class="bi bi-cart-check-fill icon"></i>
-                                            </div>
-                                            <span
-                                                class="badge bg-light-danger text-danger d-flex align-items-center gap-1">
-                                                <i class="bi bi-arrow-down-left"></i> 2.1%
-                                            </span>
-                                        </div>
-                                        <div class="stats-body mt-3">
-                                            <h6 class="text-muted fw-semibold small text-uppercase tracking-wider">
-                                                ការបញ្ជាទិញសរុប</h6>
-                                            <h3 class="mb-1 stats-counter" data-target="158">1,58</h3>
-                                            <div class="stats-trend-container mt-2">
-                                                <div class="sparkline-placeholder">
-                                                    <div class="css-sparkline">
-                                                        <span style="height: 80%"></span>
-                                                        <span style="height: 70%"></span>
-                                                        <span style="height: 50%"></span>
-                                                        <span style="height: 60%"></span>
-                                                        <span style="height: 40%"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card 4 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="stats-card">
-                                        <div class="stats-header d-flex justify-content-between align-items-start">
-                                            <div class="icon-wrap bg-light-success text-white">
-                                                <i class="bi bi-box-seam-fill icon"></i>
-                                            </div>
-                                            <span
-                                                class="badge bg-light-success text-white d-flex align-items-center gap-1">
-                                                <i class="bi bi-arrow-up-right"></i> +12
-                                            </span>
-                                        </div>
-                                        <div class="stats-body mt-3">
-                                            <h6 class="text-muted fw-semibold small text-uppercase tracking-wider">
-                                                ទំនិញសរុប</h6>
-                                            <h3 class="mb-1 stats-counter" data-target="20">12</h3>
-                                            <div class="stats-trend-container mt-2">
-                                                <div class="sparkline-placeholder">
-                                                    <div class="css-sparkline">
-                                                        <span style="height: 30%"></span>
-                                                        <span style="height: 45%"></span>
-                                                        <span style="height: 60%"></span>
-                                                        <span style="height: 55%"></span>
-                                                        <span style="height: 70%"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 5 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="stats-card">
-                                        <div class="stats-header d-flex justify-content-between align-items-start">
-                                            <div class="icon-wrap bg-light-warning text-white">
-                                                <i class="bi bi-people-fill icon"></i>
-                                            </div>
-                                            <span
-                                                class="badge bg-light-warning text-white d-flex align-items-center gap-1">
-                                                <i class="bi bi-arrow-up-right"></i> 18.2%
-                                            </span>
-                                        </div>
-                                        <div class="stats-body mt-3">
-                                            <h6 class="text-muted fw-semibold small text-uppercase tracking-wider">
-                                                សរុប</h6>
-                                            <h3 class="mb-1 stats-counter" data-target="182">182</h3>
-                                            <div class="stats-trend-container mt-2">
-                                                <div class="sparkline-placeholder">
-                                                    <div class="css-sparkline variant-box">
-                                                        <span style="height: 40%"></span>
-                                                        <span style="height: 50%"></span>
-                                                        <span style="height: 70%"></span>
-                                                        <span style="height: 65%"></span>
-                                                        <span style="height: 85%"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card 6 -->
-                                <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                                    <div class="stats-card">
-                                        <div class="stats-header d-flex justify-content-between align-items-start">
-                                            <div class="icon-wrap bg-light-warning text-white">
-                                                <i class="bi bi-star-fill icon"></i>
-                                            </div>
-                                            <span
-                                                class="badge bg-light-warning text-white d-flex align-items-center gap-1">
-                                                <i class="bi bi-star"></i> Perfect
-                                            </span>
-                                        </div>
-                                        <div class="stats-body mt-3">
-                                            <h6 class="text-muted fw-semibold small text-uppercase tracking-wider">
-                                                ការវាយតម្លៃជាមធ្យម</h6>
-                                            <h3 class="mb-1"><span class="stats-counter" data-target="4.8">4.8</span>/5
-                                            </h3>
-                                            <div class="stats-trend-container mt-2">
-                                                <div class="sparkline-placeholder">
-                                                    <div class="css-sparkline variant-box">
-                                                        <span style="height: 80%"></span>
-                                                        <span style="height: 90%"></span>
-                                                        <span style="height: 85%"></span>
-                                                        <span style="height: 95%"></span>
-                                                        <span style="height: 100%"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- Sales Analytics Custom Chart Wrapper -->
-                            <div class="dashboard-card">
-                                <div
-                                    class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
-                                    <div>
-                                        <h5 class="mb-0 card-title">របាយការណ៍នៃការលក់</h5>
-                                        <span class="text-muted small">ការវាស់វែងប្រាក់ចំណូលជាក់ស្តែង
-                                            ទល់នឹងបរិមាណប្រតិបត្តិការទំនិញ</span>
-                                    </div>
-
-                                    <!-- Period Tabs Toggle and Dropdowns -->
-                                    <div class="d-flex align-items-center gap-2">
-                                        <ul class="nav nav-pills" id="analytics-tabs" role="tablist">
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="weekly-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#weekly-pane" type="button"
-                                                    role="tab">ប្រចាំថ្ងៃ</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="monthly-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#monthly-pane" type="button"
-                                                    role="tab">ប្រចាំខែ</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="yearly-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#yearly-pane" type="button"
-                                                    role="tab">ប្រចាំឆ្នាំ</button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="tab-content" id="analytics-tabs-content">
-
-                                        <!-- Weekly Chart Panel -->
-                                        <div class="tab-pane fade show active" id="weekly-pane" role="tabpanel">
-                                            <div class="chart-container py-3">
-                                                <!-- Pure CSS Chart Graph Visualization Grid -->
-                                                <div class="css-bar-chart">
-                                                    <div class="chart-y-axis">
-                                                        <span>10k</span>
-                                                        <span>8k</span>
-                                                        <span>6k</span>
-                                                        <span>4k</span>
-                                                        <span>2k</span>
-                                                        <span>0</span>
-                                                    </div>
-                                                    <div class="chart-bars-wrap">
-                                                        <div class="bar-col">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 60%;"
-                                                                    data-bs-toggle="tooltip" title="Revenue: $6,000">
-                                                                </div>
-                                                                <div class="bar bar-orders" style="height: 40%;"
-                                                                    data-bs-toggle="tooltip" title="Orders: 400"></div>
-                                                            </div>
-                                                            <span class="bar-label">ចន្ទ</span>
-                                                        </div>
-                                                        <div class="bar-col">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 75%;"
-                                                                    data-bs-toggle="tooltip" title="Revenue: $7,500">
-                                                                </div>
-                                                                <div class="bar bar-orders" style="height: 55%;"
-                                                                    data-bs-toggle="tooltip" title="Orders: 550"></div>
-                                                            </div>
-                                                            <span class="bar-label">អង្គារ</span>
-                                                        </div>
-                                                        <div class="bar-col">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 90%;"
-                                                                    data-bs-toggle="tooltip" title="Revenue: $9,000">
-                                                                </div>
-                                                                <div class="bar bar-orders" style="height: 70%;"
-                                                                    data-bs-toggle="tooltip" title="Orders: 700"></div>
-                                                            </div>
-                                                            <span class="bar-label">ពុធ</span>
-                                                        </div>
-                                                        <div class="bar-col">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 45%;"
-                                                                    data-bs-toggle="tooltip" title="Revenue: $4,500">
-                                                                </div>
-                                                                <div class="bar bar-orders" style="height: 35%;"
-                                                                    data-bs-toggle="tooltip" title="Orders: 350"></div>
-                                                            </div>
-                                                            <span class="bar-label">ព្រហស្បត្តិ៍</span>
-                                                        </div>
-                                                        <div class="bar-col">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 80%;"
-                                                                    data-bs-toggle="tooltip" title="Revenue: $8,000">
-                                                                </div>
-                                                                <div class="bar bar-orders" style="height: 65%;"
-                                                                    data-bs-toggle="tooltip" title="Orders: 650"></div>
-                                                            </div>
-                                                            <span class="bar-label">សុក្រ</span>
-                                                        </div>
-                                                        <div class="bar-col">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 95%;"
-                                                                    data-bs-toggle="tooltip" title="Revenue: $9,500">
-                                                                </div>
-                                                                <div class="bar bar-orders" style="height: 85%;"
-                                                                    data-bs-toggle="tooltip" title="Orders: 850"></div>
-                                                            </div>
-                                                            <span class="bar-label">សៅរ៍</span>
-                                                        </div>
-                                                        <div class="bar-col">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 100%;"
-                                                                    data-bs-toggle="tooltip" title="Revenue: $10,000">
-                                                                </div>
-                                                                <div class="bar bar-orders" style="height: 90%;"
-                                                                    data-bs-toggle="tooltip" title="Orders: 900"></div>
-                                                            </div>
-                                                            <span class="bar-label">អាទិត្យ</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="chart-legends d-flex justify-content-center gap-4 mt-3">
-                                                    <span class="legend-item"><span
-                                                            class="legend-color bg-primary"></span> ចំណូល</span>
-                                                    <span class="legend-item"><span
-                                                            class="legend-color bg-secondary"></span>
-                                                        ចំនួនការបញ្ជាទិញ</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Monthly Chart Panel -->
-                                        <div class="tab-pane fade" id="monthly-pane" role="tabpanel">
-                                            <div class="chart-container py-3">
-                                                <div class="css-bar-chart">
-                                                    <div class="chart-y-axis">
-                                                        <span>100k</span>
-                                                        <span>80k</span>
-                                                        <span>60k</span>
-                                                        <span>40k</span>
-                                                        <span>20k</span>
-                                                        <span>0</span>
-                                                    </div>
-                                                    <div class="chart-bars-wrap">
-                                                        <div class="bar-col">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 70%;"></div>
-                                                                <div class="bar bar-orders" style="height: 40%;"></div>
-                                                            </div>
-                                                            <span class="bar-label">មករា~មីនា</span>
-                                                        </div>
-                                                        <div class="bar-col">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 85%;"></div>
-                                                                <div class="bar bar-orders" style="height: 65%;"></div>
-                                                            </div>
-                                                            <span class="bar-label">មេសា~មិថុនា</span>
-                                                        </div>
-                                                        <div class="bar-col">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 55%;"></div>
-                                                                <div class="bar bar-orders" style="height: 35%;"></div>
-                                                            </div>
-                                                            <span class="bar-label">កក្កដា~កញ្ញា</span>
-                                                        </div>
-                                                        <div class="bar-col">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 95%;"></div>
-                                                                <div class="bar bar-orders" style="height: 80%;"></div>
-                                                            </div>
-                                                            <span class="bar-label">តុលា~ធ្នូ</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Yearly Chart Panel -->
-                                        <div class="tab-pane fade" id="yearly-pane" role="tabpanel">
-                                            <div class="chart-container py-3">
-                                                <div class="css-bar-chart">
-                                                    <div class="chart-y-axis">
-                                                        <span>500k</span>
-                                                        <span>400k</span>
-                                                        <span>300k</span>
-                                                        <span>200k</span>
-                                                        <span>100k</span>
-                                                        <span>0</span>
-                                                    </div>
-                                                    <div class="chart-bars-wrap justify-content-around">
-                                                        <div class="bar-col" style="flex: 0 0 100px;">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 75%;"></div>
-                                                                <div class="bar bar-orders" style="height: 50%;"></div>
-                                                            </div>
-                                                            <span class="bar-label">ឆ្នាំមុន</span>
-                                                        </div>
-                                                        <div class="bar-col" style="flex: 0 0 100px;">
-                                                            <div class="bar-group">
-                                                                <div class="bar bar-revenue" style="height: 95%;"></div>
-                                                                <div class="bar bar-orders" style="height: 75%;"></div>
-                                                            </div>
-                                                            <span class="bar-label">ឆ្នាំនេះ</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
+                    </header>
+                    <!-- Main Content Scroll Area -->
+                    <main class="content-wrapper">
+                        <div class="px-4 py-4">
+                            <!-- Dashboard Greetings and Quick Action Menu -->
+                            <div class="row align-items-center mb-4 gy-3">
+                                <div class="col-md-6 col-12">
+                                    <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">សូមស្វាគមន៍ ជុងឆាយ
+                                    </h1>
+                                    <p class="text-muted fs-5 mb-0">នេះជាទិន្នន័យសំខាន់ៗក្នុងហាងរបស់អ្នក</p>
                                 </div>
                             </div>
+                            <!-- Layout Division Grid (8 Columns for main dashboard, 4 for the utility side metrics panel) -->
+                            <div class="row g-3 justify-content-center">
+                                <!-- Left Layout (Main content charts and lists) -->
+                                <div class="col-12 col-xl-12 col-xxl-9">
+                                    <!-- Stat Cards Carousel Grid -->
+                                    <div class="row g-3">
+                                        <!-- Card 1 -->
+                                        <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+                                            <div class="stats-card">
+                                                <div
+                                                    class="stats-header d-flex justify-content-between align-items-start">
+                                                    <div class="icon-wrap bg-light-success text-white">
+                                                        <i class="bi bi-currency-dollar icon"></i>
+                                                    </div>
+                                                    <span
+                                                        class="badge bg-light-success text-white d-flex align-items-center gap-1">
+                                                        <i class="bi bi-arrow-up-right"></i> 14.2%
+                                                    </span>
+                                                </div>
+                                                <div class="stats-body mt-3">
+                                                    <h6
+                                                        class="text-muted fw-semibold small text-uppercase tracking-wider">
+                                                        ប្រាក់ចំណូលសរុប</h6>
+                                                    <h3 class="mb-1 stats-counter" data-target="1528">$152,8</h3>
+                                                    <div class="stats-trend-container mt-2">
+                                                        <div class="sparkline-placeholder">
+                                                            <!-- Simplified CSS Pure-drawn sparkline -->
+                                                            <div class="css-sparkline">
+                                                                <span style="height: 40%"></span>
+                                                                <span style="height: 60%"></span>
+                                                                <span style="height: 50%"></span>
+                                                                <span style="height: 75%"></span>
+                                                                <span style="height: 90%"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Card 2 -->
+                                        <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+                                            <div class="stats-card">
+                                                <div
+                                                    class="stats-header d-flex justify-content-between align-items-start">
+                                                    <div class="icon-wrap bg-light-warning text-white">
+                                                        <i class="bi bi-wallet-fill icon"></i>
+                                                    </div>
+                                                    <span
+                                                        class="badge bg-light-warning text-white d-flex align-items-center gap-1">
+                                                        <i class="bi bi-arrow-up-right"></i> 8.4%
+                                                    </span>
+                                                </div>
+                                                <div class="stats-body mt-3">
+                                                    <h6
+                                                        class="text-muted fw-semibold small text-uppercase tracking-wider">
+                                                        ប្រាក់ចំណូលថ្ងៃនេះ</h6>
+                                                    <h3 class="mb-1 stats-counter" data-target="324">$3,24</h3>
+                                                    <div class="stats-trend-container mt-2">
+                                                        <div class="sparkline-placeholder">
+                                                            <div class="css-sparkline variant-box">
+                                                                <span style="height: 20%"></span>
+                                                                <span style="height: 40%"></span>
+                                                                <span style="height: 60%"></span>
+                                                                <span style="height: 30%"></span>
+                                                                <span style="height: 80%"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Card 3 -->
+                                        <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+                                            <div class="stats-card">
+                                                <div
+                                                    class="stats-header d-flex justify-content-between align-items-start">
+                                                    <div class="icon-wrap bg-light-success text-white">
+                                                        <i class="bi bi-cart-check-fill icon"></i>
+                                                    </div>
+                                                    <span
+                                                        class="badge bg-light-danger text-danger d-flex align-items-center gap-1">
+                                                        <i class="bi bi-arrow-down-left"></i> 2.1%
+                                                    </span>
+                                                </div>
+                                                <div class="stats-body mt-3">
+                                                    <h6
+                                                        class="text-muted fw-semibold small text-uppercase tracking-wider">
+                                                        ការបញ្ជាទិញសរុប</h6>
+                                                    <h3 class="mb-1 stats-counter" data-target="158">1,58</h3>
+                                                    <div class="stats-trend-container mt-2">
+                                                        <div class="sparkline-placeholder">
+                                                            <div class="css-sparkline">
+                                                                <span style="height: 80%"></span>
+                                                                <span style="height: 70%"></span>
+                                                                <span style="height: 50%"></span>
+                                                                <span style="height: 60%"></span>
+                                                                <span style="height: 40%"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Card 4 -->
+                                        <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+                                            <div class="stats-card">
+                                                <div
+                                                    class="stats-header d-flex justify-content-between align-items-start">
+                                                    <div class="icon-wrap bg-light-success text-white">
+                                                        <i class="bi bi-box-seam-fill icon"></i>
+                                                    </div>
+                                                    <span
+                                                        class="badge bg-light-success text-white d-flex align-items-center gap-1">
+                                                        <i class="bi bi-arrow-up-right"></i> +12
+                                                    </span>
+                                                </div>
+                                                <div class="stats-body mt-3">
+                                                    <h6
+                                                        class="text-muted fw-semibold small text-uppercase tracking-wider">
+                                                        ទំនិញសរុប</h6>
+                                                    <h3 class="mb-1 stats-counter" data-target="20">12</h3>
+                                                    <div class="stats-trend-container mt-2">
+                                                        <div class="sparkline-placeholder">
+                                                            <div class="css-sparkline">
+                                                                <span style="height: 30%"></span>
+                                                                <span style="height: 45%"></span>
+                                                                <span style="height: 60%"></span>
+                                                                <span style="height: 55%"></span>
+                                                                <span style="height: 70%"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Card 5 -->
+                                        <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+                                            <div class="stats-card">
+                                                <div
+                                                    class="stats-header d-flex justify-content-between align-items-start">
+                                                    <div class="icon-wrap bg-light-warning text-white">
+                                                        <i class="bi bi-people-fill icon"></i>
+                                                    </div>
+                                                    <span
+                                                        class="badge bg-light-warning text-white d-flex align-items-center gap-1">
+                                                        <i class="bi bi-arrow-up-right"></i> 18.2%
+                                                    </span>
+                                                </div>
+                                                <div class="stats-body mt-3">
+                                                    <h6
+                                                        class="text-muted fw-semibold small text-uppercase tracking-wider">
+                                                        សរុប</h6>
+                                                    <h3 class="mb-1 stats-counter" data-target="182">182</h3>
+                                                    <div class="stats-trend-container mt-2">
+                                                        <div class="sparkline-placeholder">
+                                                            <div class="css-sparkline variant-box">
+                                                                <span style="height: 40%"></span>
+                                                                <span style="height: 50%"></span>
+                                                                <span style="height: 70%"></span>
+                                                                <span style="height: 65%"></span>
+                                                                <span style="height: 85%"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Card 6 -->
+                                        <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+                                            <div class="stats-card">
+                                                <div
+                                                    class="stats-header d-flex justify-content-between align-items-start">
+                                                    <div class="icon-wrap bg-light-warning text-white">
+                                                        <i class="bi bi-star-fill icon"></i>
+                                                    </div>
+                                                    <span
+                                                        class="badge bg-light-warning text-white d-flex align-items-center gap-1">
+                                                        <i class="bi bi-star"></i> Perfect
+                                                    </span>
+                                                </div>
+                                                <div class="stats-body mt-3">
+                                                    <h6
+                                                        class="text-muted fw-semibold small text-uppercase tracking-wider">
+                                                        ការវាយតម្លៃជាមធ្យម</h6>
+                                                    <h3 class="mb-1"><span class="stats-counter"
+                                                            data-target="4.8">4.8</span>/5
+                                                    </h3>
+                                                    <div class="stats-trend-container mt-2">
+                                                        <div class="sparkline-placeholder">
+                                                            <div class="css-sparkline variant-box">
+                                                                <span style="height: 80%"></span>
+                                                                <span style="height: 90%"></span>
+                                                                <span style="height: 85%"></span>
+                                                                <span style="height: 95%"></span>
+                                                                <span style="height: 100%"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <!-- Row layout holding Recent Orders and Top Selling Products -->
-                            <div class="row g-4 ">
+                                    <!-- Sales Analytics Custom Chart Wrapper -->
+                                    <div class="dashboard-card mt-4">
+                                        <div
+                                            class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                            <div>
+                                                <h5 class="mb-0 card-title">របាយការណ៍នៃការលក់</h5>
+                                                <span class="text-muted small">ការវាស់វែងប្រាក់ចំណូលជាក់ស្តែង
+                                                    ទល់នឹងបរិមាណប្រតិបត្តិការទំនិញ</span>
+                                            </div>
 
-                                <!-- Recent Orders Table Column -->
-                                <div class="col-xl-12 col-12">
-                                    <div class="dashboard-card h-100">
+                                            <!-- Period Tabs Toggle and Dropdowns -->
+                                            <div class="d-flex align-items-center gap-2">
+                                                <ul class="nav nav-pills" id="analytics-tabs" role="tablist">
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link active" id="weekly-tab"
+                                                            data-bs-toggle="pill" data-bs-target="#weekly-pane"
+                                                            type="button" role="tab">ប្រចាំថ្ងៃ</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="monthly-tab" data-bs-toggle="pill"
+                                                            data-bs-target="#monthly-pane" type="button"
+                                                            role="tab">ប្រចាំខែ</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="yearly-tab" data-bs-toggle="pill"
+                                                            data-bs-target="#yearly-pane" type="button"
+                                                            role="tab">ប្រចាំឆ្នាំ</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tab-content" id="analytics-tabs-content">
+
+                                                <!-- Weekly Chart Panel -->
+                                                <div class="tab-pane fade show active" id="weekly-pane" role="tabpanel">
+                                                    <div class="chart-container py-3">
+                                                        <!-- Pure CSS Chart Graph Visualization Grid -->
+                                                        <div class="css-bar-chart">
+                                                            <div class="chart-y-axis">
+                                                                <span>10k</span>
+                                                                <span>8k</span>
+                                                                <span>6k</span>
+                                                                <span>4k</span>
+                                                                <span>2k</span>
+                                                                <span>0</span>
+                                                            </div>
+                                                            <div class="chart-bars-wrap">
+                                                                <div class="bar-col">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 60%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Revenue: $6,000">
+                                                                        </div>
+                                                                        <div class="bar bar-orders" style="height: 40%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Orders: 400"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">ចន្ទ</span>
+                                                                </div>
+                                                                <div class="bar-col">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 75%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Revenue: $7,500">
+                                                                        </div>
+                                                                        <div class="bar bar-orders" style="height: 55%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Orders: 550"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">អង្គារ</span>
+                                                                </div>
+                                                                <div class="bar-col">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 90%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Revenue: $9,000">
+                                                                        </div>
+                                                                        <div class="bar bar-orders" style="height: 70%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Orders: 700"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">ពុធ</span>
+                                                                </div>
+                                                                <div class="bar-col">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 45%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Revenue: $4,500">
+                                                                        </div>
+                                                                        <div class="bar bar-orders" style="height: 35%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Orders: 350"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">ព្រហស្បត្តិ៍</span>
+                                                                </div>
+                                                                <div class="bar-col">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 80%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Revenue: $8,000">
+                                                                        </div>
+                                                                        <div class="bar bar-orders" style="height: 65%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Orders: 650"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">សុក្រ</span>
+                                                                </div>
+                                                                <div class="bar-col">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 95%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Revenue: $9,500">
+                                                                        </div>
+                                                                        <div class="bar bar-orders" style="height: 85%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Orders: 850"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">សៅរ៍</span>
+                                                                </div>
+                                                                <div class="bar-col">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 100%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Revenue: $10,000">
+                                                                        </div>
+                                                                        <div class="bar bar-orders" style="height: 90%;"
+                                                                            data-bs-toggle="tooltip"
+                                                                            title="Orders: 900"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">អាទិត្យ</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="chart-legends d-flex justify-content-center gap-4 mt-3">
+                                                            <span class="legend-item"><span
+                                                                    class="legend-color bg-primary"></span> ចំណូល</span>
+                                                            <span class="legend-item"><span
+                                                                    class="legend-color bg-secondary"></span>
+                                                                ចំនួនការបញ្ជាទិញ</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Monthly Chart Panel -->
+                                                <div class="tab-pane fade" id="monthly-pane" role="tabpanel">
+                                                    <div class="chart-container py-3">
+                                                        <div class="css-bar-chart">
+                                                            <div class="chart-y-axis">
+                                                                <span>100k</span>
+                                                                <span>80k</span>
+                                                                <span>60k</span>
+                                                                <span>40k</span>
+                                                                <span>20k</span>
+                                                                <span>0</span>
+                                                            </div>
+                                                            <div class="chart-bars-wrap">
+                                                                <div class="bar-col">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 70%;"></div>
+                                                                        <div class="bar bar-orders"
+                                                                            style="height: 40%;"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">មករា~មីនា</span>
+                                                                </div>
+                                                                <div class="bar-col">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 85%;"></div>
+                                                                        <div class="bar bar-orders"
+                                                                            style="height: 65%;"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">មេសា~មិថុនា</span>
+                                                                </div>
+                                                                <div class="bar-col">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 55%;"></div>
+                                                                        <div class="bar bar-orders"
+                                                                            style="height: 35%;"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">កក្កដា~កញ្ញា</span>
+                                                                </div>
+                                                                <div class="bar-col">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 95%;"></div>
+                                                                        <div class="bar bar-orders"
+                                                                            style="height: 80%;"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">តុលា~ធ្នូ</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Yearly Chart Panel -->
+                                                <div class="tab-pane fade" id="yearly-pane" role="tabpanel">
+                                                    <div class="chart-container py-3">
+                                                        <div class="css-bar-chart">
+                                                            <div class="chart-y-axis">
+                                                                <span>500k</span>
+                                                                <span>400k</span>
+                                                                <span>300k</span>
+                                                                <span>200k</span>
+                                                                <span>100k</span>
+                                                                <span>0</span>
+                                                            </div>
+                                                            <div class="chart-bars-wrap justify-content-around">
+                                                                <div class="bar-col" style="flex: 0 0 100px;">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 75%;"></div>
+                                                                        <div class="bar bar-orders"
+                                                                            style="height: 50%;"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">ឆ្នាំមុន</span>
+                                                                </div>
+                                                                <div class="bar-col" style="flex: 0 0 100px;">
+                                                                    <div class="bar-group">
+                                                                        <div class="bar bar-revenue"
+                                                                            style="height: 95%;"></div>
+                                                                        <div class="bar bar-orders"
+                                                                            style="height: 75%;"></div>
+                                                                    </div>
+                                                                    <span class="bar-label">ឆ្នាំនេះ</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="dashboard-card mt-4">
                                         <div class="card-header d-flex justify-content-between align-items-center">
                                             <div>
                                                 <h5 class="mb-0 card-title">ការបញ្ជាទិញថ្មីៗ</h5>
@@ -720,7 +767,8 @@
                                                             <th class="text-center">ចំនួន</th>
                                                             <th>តម្លៃ</th>
                                                             <th>ស្ថានភាពបច្ចុប្បន្ន</th>
-                                                            <th style="text-wrap: nowrap;">វិធីសាស្ត្របង់ប្រាក់</th>
+                                                            <th style="text-wrap: nowrap;">វិធីសាស្ត្របង់ប្រាក់
+                                                            </th>
                                                             <th class="text-center">សកម្មភាព</th>
                                                         </tr>
                                                     </thead>
@@ -816,7 +864,7 @@
                                                             <td><span
                                                                     class="status-badge status-cancelled">Cancelled</span>
                                                             </td>
-                                                            <td><span class="fw-semibold"><i
+                                                            <td class="text-nowrap"><span class="fw-semibold"><i
                                                                         class="bi bi-credit-card-2-front"></i>
                                                                     Mastercard</span></td>
                                                             <td>
@@ -840,7 +888,8 @@
                                                 <nav aria-label="Orders Page Navigation">
                                                     <ul class="pagination pagination-sm mb-0">
                                                         <li class="page-item disabled"><a class="page-link" href="#"><i
-                                                                    class="bi bi-chevron-left"></i></a></li>
+                                                                    class="bi bi-chevron-left"></i></a>
+                                                        </li>
                                                         <li class="page-item active"><a class="page-link" href="#">1</a>
                                                         </li>
                                                         <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -853,342 +902,331 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Right Panel Sidebar (Detailed Target Metrics and Customer Reviews) -->
+                                <div class="col-xl-12 col-xxl-3 d-flex flex-column gap-4">
+                                    <!-- Sales Target Circular Progress Card -->
+                                    <div class="dashboard-card text-center p-4">
+                                        <h5 class="mb-1 card-title text-start">គោលដៅថ្ងៃនេះ</h5>
+                                        <p class="text-muted small text-start mb-4">ការប្រៀបធៀបលទ្ធផលប្រចាំថ្ងៃ</p>
 
-
-
-                            </div>
-
-
-
-                            <!-- Row Layout: Operations timeline, Calendar & Interactive JavaScript Todo list -->
-                            <div class="row g-4 mb-4">
-
-
-
-
-
-                            </div>
-
-                        </div>
-
-                        <!-- Right Panel Sidebar (Detailed Target Metrics and Customer Reviews) -->
-                        <div class="col-xl-12 col-xxl-3 col-12 d-flex flex-column gap-4">
-
-                            <!-- Sales Target Circular Progress Card -->
-                            <div class="dashboard-card text-center p-4">
-                                <h5 class="mb-1 card-title text-start">គោលដៅថ្ងៃនេះ</h5>
-                                <p class="text-muted small text-start mb-4">ការប្រៀបធៀបលទ្ធផលប្រចាំថ្ងៃ</p>
-
-                                <div class="circular-progress-wrap mx-auto">
-                                    <svg class="progress-circle" viewBox="0 0 100 100">
-                                        <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
-                                        <circle class="circle-progress" cx="50" cy="50" r="45"
-                                            id="progress-circle-indicator"></circle>
-                                    </svg>
-                                    <div class="progress-inner-content">
-                                        <h3 class="mb-0 fw-extrabold text-gradient-primary">78%</h3>
-                                    </div>
-                                </div>
-
-                                <div class="mt-4 pt-3 border-top">
-                                    <div class="row g-2">
-                                        <div class="col-6 border-end">
-                                            <span class="small text-muted d-block">ការលក់បច្ចុប្បន្ន</span>
-                                            <span class="fw-bold text-sm text-dark">$240.00</span>
-                                        </div>
-                                        <div class="col-6">
-                                            <span class="small text-muted d-block">គោលដៅប្រចាំថ្ងៃ</span>
-                                            <span class="fw-bold text-sm text-dark">$400.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Top Customers Side Widget List -->
-                            <div class="dashboard-card pad-right">
-                                <div class="card-header">
-                                    <h5 class="mb-0 card-title">អតិថិជនក្នុងហាង</h5>
-                                    <span
-                                        class="text-muted small">អតិថិជនដែលបានចំណាយទឹកប្រាក់ច្រើនសម្រាប់ការបញ្ជាទិញទំនិញ</span>
-                                </div>
-                                <div class="card-body p-0">
-                                    <div class="px-3 py-1">
-                                        <!-- VIP 1 -->
-                                        <div class="d-flex align-items-center gap-3 py-3 border-bottom">
-                                            <img src="../assets/img/pic_team/customer-1.jpg"
-                                                class="avatar-sm rounded-circle" alt="VIP 1">
-                                            <div class="flex-grow-1">
-                                                <h6 class="mb-0 text-sm-start fw-semibold">Nan Kanha</h6>
-                                                <span class="text-sm-start text-muted">kanhanan@gmail.com</span>
-                                            </div>
-                                            <div class="fw-semibold text-muted">$450</div>
-                                        </div>
-                                        <!-- VIP 2 -->
-                                        <div class="d-flex align-items-center gap-3 py-3">
-                                            <img src="../assets/img/seller_images/forgot_pw.png"
-                                                class="avatar-sm rounded-circle" alt="VIP 2">
-                                            <div class="flex-grow-1">
-                                                <h6 class="mb-0 text-sm-start fw-semibold">Chan Dara</h6>
-                                                <span class="text-sm-start text-muted">darachan@gmail.com</span>
-                                            </div>
-                                            <span class="fw-semibold text-sm-start text-muted">$340</span>
-                                        </div>
-                                        <!-- VIP 3 -->
-                                        <div class="d-flex align-items-center gap-3 py-3 border-bottom">
-                                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
-                                                class="avatar-sm rounded-circle" alt="VIP 1">
-                                            <div class="flex-grow-1">
-                                                <h6 class="mb-0 text-sm-start fw-semibold">Meas Thida</h6>
-                                                <span class="text-sm-start text-muted">thidameas@gmail.com</span>
-                                            </div>
-                                            <span class="fw-semibold text-sm-start text-muted">$450</span>
-                                        </div>
-                                        <!-- VIP 4 -->
-                                        <div class="d-flex align-items-center gap-3 py-3 border-bottom">
-                                            <img src="../assets/img/seller_images/forgot_pw.png"
-                                                class="avatar-sm rounded-circle" alt="VIP 1">
-                                            <div class="flex-grow-1">
-                                                <h6 class="mb-0 text-sm-start fw-semibold">Meas Thida</h6>
-                                                <span class="text-sm-start text-muted">thidameas@gmail.com</span>
-                                            </div>
-                                            <span class="fw-semibold text-sm-start text-muted">$450</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Recent Customer Reviews Feed -->
-                            <div class="dashboard-card">
-                                <div class="card-header">
-                                    <h5 class="mb-0 card-title">មតិយោបល់ថ្មីៗ</h5>
-                                    <span class="text-muted text-insights">ទិន្នន័យមតិយោបល់ដែលបានប្រមូលផ្តុំ</span>
-                                </div>
-                                <div class="card-body d-flex flex-column gap-3">
-
-                                    <!-- Review Item 1 -->
-                                    <div class="review-bubble p-3 border rounded-3 bg-light-theme-darker">
-                                        <div class="d-flex align-items-center justify-content-between mb-2">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="../assets/img/pic_team/customer-1.jpg"
-                                                    class="avatar-xs rounded-circle" alt="Reviewer">
-                                                <span class="fw-semibold text-sm-start">Nan Kanha</span>
-                                            </div>
-                                            <div class="text-warning text-xxs">
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
+                                        <div class="circular-progress-wrap mx-auto">
+                                            <svg class="progress-circle" viewBox="0 0 100 100">
+                                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                                <circle class="circle-progress" cx="50" cy="50" r="45"
+                                                    id="progress-circle-indicator"></circle>
+                                            </svg>
+                                            <div class="progress-inner-content">
+                                                <h3 class="mb-0 fw-extrabold text-gradient-primary">78%</h3>
                                             </div>
                                         </div>
-                                        <p class="text-insights text-muted mb-0">"The audio range on these UltraBass
-                                            headphones is stunning. Incredible seller support!"</p>
-                                    </div>
 
-                                    <!-- Review Item 2 -->
-                                    <div class="review-bubble p-3 border rounded-3 bg-light-theme-darker">
-                                        <div class="d-flex align-items-center justify-content-between mb-2">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
-                                                    class="avatar-xs rounded-circle" alt="Reviewer">
-                                                <span class="fw-semibold text-sm-start">Chan Dara</span>
-                                            </div>
-                                            <div class="text-warning text-xxs">
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star"></i>
-                                            </div>
-                                        </div>
-                                        <p class="text-insights text-muted mb-0">"Extremely quick delivery, but the
-                                            outer retail box was a bit squashed. The watch is beautiful!"</p>
-                                    </div>
-                                    <!-- Review Item 3 -->
-                                    <div class="review-bubble p-3 border rounded-3 bg-light-theme-darker">
-                                        <div class="d-flex align-items-center justify-content-between mb-2">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
-                                                    class="avatar-xs rounded-circle" alt="Reviewer">
-                                                <span class="fw-semibold text-sm-start">Meas Thida</span>
-                                            </div>
-                                            <div class="text-warning text-xxs">
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                        <p class="text-insights text-muted mb-0">"The audio range on these UltraBass
-                                            headphones is stunning. Incredible seller support!"</p>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- Row Layout: Stock Warnings, Latest Customers, Activities -->
-                        <div class="row row-gap-xl-0 row-gap-4 mt-4">
-                            <!-- Top Selling Products Card Column -->
-                            <div class="col-xl-4 col-12">
-                                <div class="dashboard-card h-100">
-                                    <div class="card-header">
-                                        <h5 class="mb-0 card-title">ទំនិញលក់ដាច់បំផុត</h5>
-                                        <span class="text-muted small">ទំនិញពេញនិយមបំផុត</span>
-                                    </div>
-                                    <div class="card-body d-flex flex-column gap-3">
-
-                                        <!-- Top Product 1 -->
-                                        <div class="top-product-item">
-                                            <div class="d-flex align-items-center gap-3">
-                                                <div class="product-mini-thumb">
-                                                    <img src="../assets/img/product/zinvo-1.webp"
-                                                        alt="Product 1">
+                                        <div class="mt-4 pt-3 border-top">
+                                            <div class="row g-2">
+                                                <div class="col-6 border-end">
+                                                    <span class="small text-muted d-block">ការលក់បច្ចុប្បន្ន</span>
+                                                    <span class="fw-bold text-sm text-dark">$240.00</span>
                                                 </div>
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mb-0 text-sm fw-semibold">Zinvo Zealous Aura</h6>
-                                                    <span class="small text-muted">Electronics | បានលក់: 20</span>
-                                                </div>
-                                                <div class="text-end">
-                                                    <span class="fw-bold d-block text-sm">$285</span>
-                                                    <span
-                                                        class="badge bg-light-success text-white d-flex align-items-center">ការវាយតម្លៃ៖
-                                                        4.9</span>
+                                                <div class="col-6">
+                                                    <span class="small text-muted d-block">គោលដៅប្រចាំថ្ងៃ</span>
+                                                    <span class="fw-bold text-sm text-dark">$400.00</span>
                                                 </div>
                                             </div>
-                                            <div class="progress progress-xs mt-2" style="height: 6px;">
-                                                <div class="progress-bar bg-success" role="progressbar"
-                                                    style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-                                                    aria-valuemax="100"></div>
-                                            </div>
                                         </div>
-
-                                        <!-- Top Product 2 -->
-                                        <div class="top-product-item">
-                                            <div class="d-flex align-items-center gap-3">
-                                                <div class="product-mini-thumb">
-                                                    <img src="../assets/img/product/hair-machin.png"
-                                                        alt="Product 2">
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mb-0 text-sm fw-semibold">ម៉ាស៊ីនសម្ងួតសក់</h6>
-                                                    <span class="text-xs text-muted">Smart Wearables | បានលក់: 12</span>
-                                                </div>
-                                                <div class="text-end">
-                                                    <span class="fw-bold d-block text-sm">$3</span>
-                                                    <span class="badge bg-light-success text-white">ការវាយតម្លៃ៖
-                                                        4.8</span>
-                                                </div>
-                                            </div>
-                                            <div class="progress progress-xs mt-2" style="height: 6px;">
-                                                <div class="progress-bar bg-warning" role="progressbar"
-                                                    style="width: 65%" aria-valuenow="65" aria-valuemin="0"
-                                                    aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Top Product 3 -->
-                                        <div class="top-product-item">
-                                            <div class="d-flex align-items-center gap-3">
-                                                <div class="product-mini-thumb">
-                                                    <img src="../assets/img/product/computer.png"
-                                                        alt="Product 3">
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <h6 class="mb-0 text-sm fw-semibold">Asus Gaming Laptop</h6>
-                                                    <span class="text-xs text-muted">Accessories | បានលក់: 20</span>
-                                                </div>
-                                                <div class="text-end">
-                                                    <span class="fw-bold d-block text-sm">$779</span>
-                                                    <span class="badge bg-light-success text-white">ការវាយតម្លៃ៖
-                                                        4.7</span>
-                                                </div>
-                                            </div>
-                                            <div class="progress progress-xs mt-2" style="height: 6px;">
-                                                <div class="progress-bar bg-secondary" role="progressbar"
-                                                    style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                    aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-
                                     </div>
-                                </div>
-                            </div>
-                            <!-- Latest Customers & Spend Tracking -->
-                            <div class="col-xl-4 col-12">
-                                <div class="dashboard-card h-100">
-                                    <div class="card-header">
-                                        <h5 class="mb-0 card-title">អតិថិជនថ្មីៗ</h5>
-                                        <span class="text-muted small">អតិថិជនដែលទើបចុះឈ្មោះថ្មី</span>
-                                    </div>
-                                    <div class="card-body p-0">
-                                        <ul class="list-group list-group-flush">
 
-                                            <li
-                                                class="list-group-item d-flex justify-content-between align-items-center px-4 py-3 border-0">
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100"
-                                                        class="avatar-sm rounded-circle" alt="Cust 1">
-                                                    <div>
-                                                        <h6 class="mb-0 text-sm fw-semibold">Jenny Wilson</h6>
-                                                        <span class="text-xs text-muted">jenny.w@example.com</span>
+                                    <!-- Top Customers Side Widget List -->
+                                    <div class="dashboard-card pad-right">
+                                        <div class="card-header">
+                                            <h5 class="mb-0 card-title">អតិថិជនក្នុងហាង</h5>
+                                            <span
+                                                class="text-muted small">អតិថិជនដែលបានចំណាយទឹកប្រាក់ច្រើនសម្រាប់ការបញ្ជាទិញទំនិញ</span>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <div class="px-3 py-1">
+                                                <!-- VIP 1 -->
+                                                <div class="d-flex align-items-center gap-3 py-3 border-bottom">
+                                                    <img src="../assets/img/pic_team/customer-1.jpg"
+                                                        class="avatar-sm rounded-circle" alt="VIP 1">
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-0 text-sm-start fw-semibold">Nan Kanha</h6>
+                                                        <span class="text-sm-start text-muted">kanhanan@gmail.com</span>
+                                                    </div>
+                                                    <div class="fw-semibold text-muted">$450</div>
+                                                </div>
+                                                <!-- VIP 2 -->
+                                                <div class="d-flex align-items-center gap-3 py-3">
+                                                    <img src="../assets/img/seller_images/forgot_pw.png"
+                                                        class="avatar-sm rounded-circle" alt="VIP 2">
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-0 text-sm-start fw-semibold">Chan Dara</h6>
+                                                        <span class="text-sm-start text-muted">darachan@gmail.com</span>
+                                                    </div>
+                                                    <span class="fw-semibold text-sm-start text-muted">$340</span>
+                                                </div>
+                                                <!-- VIP 3 -->
+                                                <div class="d-flex align-items-center gap-3 py-3 border-bottom">
+                                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                                        class="avatar-sm rounded-circle" alt="VIP 1">
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-0 text-sm-start fw-semibold">Meas Thida</h6>
+                                                        <span
+                                                            class="text-sm-start text-muted">thidameas@gmail.com</span>
+                                                    </div>
+                                                    <span class="fw-semibold text-sm-start text-muted">$450</span>
+                                                </div>
+                                                <!-- VIP 4 -->
+                                                <div class="d-flex align-items-center gap-3 py-3 border-bottom">
+                                                    <img src="../assets/img/seller_images/forgot_pw.png"
+                                                        class="avatar-sm rounded-circle" alt="VIP 1">
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-0 text-sm-start fw-semibold">Meas Thida</h6>
+                                                        <span
+                                                            class="text-sm-start text-muted">thidameas@gmail.com</span>
+                                                    </div>
+                                                    <span class="fw-semibold text-sm-start text-muted">$450</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Recent Customer Reviews Feed -->
+                                    <div class="dashboard-card">
+                                        <div class="card-header">
+                                            <h5 class="mb-0 card-title">មតិយោបល់ថ្មីៗ</h5>
+                                            <span
+                                                class="text-muted text-insights">ទិន្នន័យមតិយោបល់ដែលបានប្រមូលផ្តុំ</span>
+                                        </div>
+                                        <div class="card-body d-flex flex-column gap-3">
+
+                                            <!-- Review Item 1 -->
+                                            <div class="review-bubble p-3 border rounded-3 bg-light-theme-darker">
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="../assets/img/pic_team/customer-1.jpg"
+                                                            class="avatar-xs rounded-circle" alt="Reviewer">
+                                                        <span class="fw-semibold text-sm-start">Nan Kanha</span>
+                                                    </div>
+                                                    <div class="text-warning text-xxs">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
                                                     </div>
                                                 </div>
-                                                <div class="text-end">
-                                                    <span class="fw-semibold text-sm d-block">បានចំណាយ $56</span>
-                                                    <span class="badge bg-light-success text-white fw-medium">10
-                                                        Orders</span>
-                                                </div>
-                                            </li>
+                                                <p class="text-insights text-muted mb-0">
+                                                    អ្នកលក់មានទំនួលខុសត្រូវខ្ពស់គួរជាទីពេញចិត្ត
+                                                    ផ្តល់នូវទំនុកចិត្តដល់អតិថិជន
+                                                    ចំណែកឯទំនិញមានគុណភាព និងមានតម្លៃសមរម្យ និងមានស្តង់ដារច្បាស់លាស់។</p>
+                                            </div>
 
-                                            <li
-                                                class="list-group-item d-flex justify-content-between align-items-center px-4 py-3 border-0">
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
-                                                        class="avatar-sm rounded-circle" alt="Cust 2">
-                                                    <div>
-                                                        <h6 class="mb-0 text-sm fw-semibold">Robert Fox</h6>
-                                                        <span class="text-xs text-muted">robert.fox@example.com</span>
+                                            <!-- Review Item 2 -->
+                                            <div class="review-bubble p-3 border rounded-3 bg-light-theme-darker">
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                                            class="avatar-xs rounded-circle" alt="Reviewer">
+                                                        <span class="fw-semibold text-sm-start">Chan Dara</span>
+                                                    </div>
+                                                    <div class="text-warning text-xxs">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star"></i>
                                                     </div>
                                                 </div>
-                                                <div class="text-end">
-                                                    <span class="fw-semibold text-sm d-block">បានចំណាយ $36</span>
-                                                    <span class="badge bg-light-success text-white fw-medium">4
-                                                        Orders</span>
+                                                <p class="text-insights text-muted mb-0">ការដឹកជញ្ជូនលឿនរហ័ស
+                                                    និងមានសុវត្ថិភាព។​
+                                                    ការវេចខ្ចប់ទំនិញបានល្អប្រសើរ និងត្រឹមត្រូវ ខ្ញុំពេញចិត្ត។</p>
+                                            </div>
+                                            <!-- Review Item 3 -->
+                                            <div class="review-bubble p-3 border rounded-3 bg-light-theme-darker">
+                                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                                            class="avatar-xs rounded-circle" alt="Reviewer">
+                                                        <span class="fw-semibold text-sm-start">Meas Thida</span>
+                                                    </div>
+                                                    <div class="text-warning text-xxs">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                    </div>
                                                 </div>
-                                            </li>
+                                                <p class="text-insights text-muted mb-0">ទំនិញចេញពីហាងរបស់ ប្អូន ជុងឆាយ
+                                                    ពិតជាមានគុណភាពខ្ពស់ អ្នកលក់រួសរាយ មានក្រមសីលធម៌ ចំណែកឯតម្លៃវិញសមរម្យ
+                                                    បងពេញចិត្ត។</p>
+                                            </div>
 
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Interactive Todo List & Calendar Column -->
-                            <div class="col-xl-4 col-12 d-flex flex-column gap-4">
-                                <!-- Simple Monthly Calendar Wrapper -->
-                                <div class="dashboard-card">
-                                    <div class="card-header d-flex justify-content-between align-items-center">
-                                        <h5 class="mb-0 card-title">ប្រតិទិន</h5>
-                                        <span class="text-xs fw-semibold text-success" id="calendar-month-label">October
-                                            2026</span>
-                                    </div>
-                                    <div class="card-body p-3">
-                                        <div class="calendar-grid" id="calendar-grid">
-                                            <!-- Dynamic Calendar injected here by script -->
+
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
+                            <!-- Row Layout: Stock Warnings, Latest Customers, Activities -->
+                            <div class="row row-gap-xl-0 row-gap-4 mt-4">
+                                <!-- Top Selling Products Card Column -->
+                                <div class="col-xl-4 col-12">
+                                    <div class="dashboard-card h-100">
+                                        <div class="card-header">
+                                            <h5 class="mb-0 card-title">ទំនិញលក់ដាច់បំផុត</h5>
+                                            <span class="text-muted small">ទំនិញពេញនិយមបំផុត</span>
+                                        </div>
+                                        <div class="card-body d-flex flex-column gap-3">
 
+                                            <!-- Top Product 1 -->
+                                            <div class="top-product-item">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="product-mini-thumb">
+                                                        <img src="../assets/img/product/zinvo-1.webp" alt="Product 1">
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-0 text-sm fw-semibold">Zinvo Zealous Aura</h6>
+                                                        <span class="small text-muted">Electronics | បានលក់:
+                                                            20</span>
+                                                    </div>
+                                                    <div class="text-end">
+                                                        <span class="fw-bold d-block text-sm">$285</span>
+                                                        <span
+                                                            class="badge bg-light-success text-white d-flex align-items-center">ការវាយតម្លៃ៖
+                                                            4.9</span>
+                                                    </div>
+                                                </div>
+                                                <div class="progress progress-xs mt-2" style="height: 6px;">
+                                                    <div class="progress-bar bg-success" role="progressbar"
+                                                        style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
 
+                                            <!-- Top Product 2 -->
+                                            <div class="top-product-item">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="product-mini-thumb">
+                                                        <img src="../assets/img/product/hair-machin.png"
+                                                            alt="Product 2">
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-0 text-sm fw-semibold">ម៉ាស៊ីនសម្ងួតសក់</h6>
+                                                        <span class="text-xs text-muted">Smart Wearables | បានលក់:
+                                                            12</span>
+                                                    </div>
+                                                    <div class="text-end">
+                                                        <span class="fw-bold d-block text-sm">$3</span>
+                                                        <span class="badge bg-light-success text-white">ការវាយតម្លៃ៖
+                                                            4.8</span>
+                                                    </div>
+                                                </div>
+                                                <div class="progress progress-xs mt-2" style="height: 6px;">
+                                                    <div class="progress-bar bg-warning" role="progressbar"
+                                                        style="width: 65%" aria-valuenow="65" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Top Product 3 -->
+                                            <div class="top-product-item">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="product-mini-thumb">
+                                                        <img src="../assets/img/product/computer.png" alt="Product 3">
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-0 text-sm fw-semibold">Asus Gaming Laptop</h6>
+                                                        <span class="text-xs text-muted">Accessories | បានលក់:
+                                                            20</span>
+                                                    </div>
+                                                    <div class="text-end">
+                                                        <span class="fw-bold d-block text-sm">$779</span>
+                                                        <span class="badge bg-light-success text-white">ការវាយតម្លៃ៖
+                                                            4.7</span>
+                                                    </div>
+                                                </div>
+                                                <div class="progress progress-xs mt-2" style="height: 6px;">
+                                                    <div class="progress-bar bg-secondary" role="progressbar"
+                                                        style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Latest Customers & Spend Tracking -->
+                                <div class="col-xl-4 col-12">
+                                    <div class="dashboard-card h-100">
+                                        <div class="card-header">
+                                            <h5 class="mb-0 card-title">អតិថិជនថ្មីៗ</h5>
+                                            <span class="text-muted small">អតិថិជនដែលទើបចុះឈ្មោះថ្មី</span>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <ul class="list-group list-group-flush">
+
+                                                <li
+                                                    class="list-group-item bg-transparent d-flex justify-content-between align-items-center px-4 py-3 border-0">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100"
+                                                            class="avatar-sm rounded-circle" alt="Cust 1">
+                                                        <div>
+                                                            <h6 class="mb-0 text-sm fw-semibold">Jenny Wilson</h6>
+                                                            <span class="text-xs text-muted">jenny.w@example.com</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-end">
+                                                        <span class="fw-semibold text-sm d-block">បានចំណាយ
+                                                            $56</span>
+                                                        <span class="badge bg-light-success text-white fw-medium">10
+                                                            Orders</span>
+                                                    </div>
+                                                </li>
+
+                                                <li
+                                                    class="list-group-item bg-transparent d-flex justify-content-between align-items-center px-4 py-3 border-0">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                                            class="avatar-sm rounded-circle" alt="Cust 2">
+                                                        <div>
+                                                            <h6 class="mb-0 text-sm fw-semibold">Robert Fox</h6>
+                                                            <span
+                                                                class="text-xs text-muted">robert.fox@example.com</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-end">
+                                                        <span class="fw-semibold text-sm d-block">បានចំណាយ
+                                                            $36</span>
+                                                        <span class="badge bg-light-success text-white fw-medium">4
+                                                            Orders</span>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Interactive Todo List & Calendar Column -->
+                                <div class="col-xl-4 col-12 d-flex flex-column gap-4">
+                                    <!-- Simple Monthly Calendar Wrapper -->
+                                    <div class="dashboard-card">
+                                        <div class="card-header d-flex justify-content-between align-items-center">
+                                            <h5 class="mb-0 card-title">ប្រតិទិន</h5>
+                                            <span class="text-xs fw-semibold text-success"
+                                                id="calendar-month-label">October
+                                                2026</span>
+                                        </div>
+                                        <div class="card-body p-3">
+                                            <div class="calendar-grid" id="calendar-grid">
+                                                <!-- Dynamic Calendar injected here by script -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                    </div>
-
+                    </main>
                 </div>
-            </main>
+            </div>
         </div>
     </div>
     <button class="btn btn-primary scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">

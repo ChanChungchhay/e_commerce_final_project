@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>សារផ្ញើអតិថិជន | Khmer Bazaar Seller Center</title>
-    <link rel="shortcut icon" href="../assets/img/seller_images/img-logo-no-title.png">
+    <link rel="shortcut icon" href="../assets/img/logo/img-logo.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
@@ -24,370 +26,469 @@
 <body>
 
     <div class="dashboard-wrapper">
-        <!-- Sidebar Navigation -->
-        <aside id="sidebar" class="sidebar">
-            <div class="sidebar-header">
-                <div class="brand-logo">
-                    <div class="logo-icon">
-                        <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img" alt="Logo">
-                    </div>
-                    <span class="brand-name text-success">Khmer <span class="text-bazaar">Bazzar</span>.</span>
-                </div>
-                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close" aria-label="Close"></button>
-            </div>
-
-            <div class="sidebar-menu-wrapper">
-                <ul class="sidebar-menu">
-                    <li class="menu-item" data-page="dashboard">
-                        <a href="seller_dashboard.html" class="menu-link">
-                            <i class="bi bi-grid-1x2-fill"></i>
-                            <span class="menu-text">ផ្ទាំងគ្រប់គ្រង</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="products">
-                        <a href="seller_products.html" class="menu-link">
-                            <i class="bi bi-box-seam-fill"></i>
-                            <span class="menu-text">ផលិតផល</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="orders">
-                        <a href="seller_orders.html" class="menu-link">
-                            <i class="bi bi-cart-fill"></i>
-                            <span class="menu-text">ការបញ្ជាទិញ</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="customers">
-                        <a href="seller_customers.html" class="menu-link">
-                            <i class="bi bi-people-fill"></i>
-                            <span class="menu-text">អតិថិជន</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="analytics">
-                        <a href="seller_analytics.html" class="menu-link">
-                            <i class="bi bi-bar-chart-line-fill"></i>
-                            <span class="menu-text">វិភាគទិន្នន័យ</span>
-                        </a>
-                    </li>
-                    <li class="menu-item active" data-page="messages">
-                        <a href="seller_messages.html" class="menu-link">
-                            <i class="bi bi-chat-left-dots-fill"></i>
-                            <span class="menu-text">សារផ្ញើ</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="profiles">
-                        <a href="seller_profiles.html" class="menu-link">
-                            <i class="bi bi-person-fill"></i>
-                            <span class="menu-text">ប្រវត្តិរូប</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sidebar-footer">
-                <button type="button" class="btn btn-primary py-2 w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
-                    <a href="../customer/home.html" class="text-white text-decoration-none"><i class="bi bi-chevron-double-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
-                </button>
-                <button
-                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
-                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <i class="bi bi-box-arrow-left"></i> ចាកចេញ
-                </button>
-            </div>
-        </aside>
-
-        <!-- Right Side Main Content Area -->
-        <div class="main-container">
-            <!-- Top Navbar -->
-            <header class="top-navbar rounded-5 mx-4">
-                <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
-                    <div class="d-flex align-items-center gap-3">
-                        <button class="btn btn-icon d-lg-none" id="sidebar-toggle" aria-label="Toggle Sidebar">
-                            <i class="bi bi-list fs-4"></i>
-                        </button>
+        <div class="row g-3">
+            <div class="col-2">
+                <aside class="sidebar offcanvas offcanvas-start" tabindex="-1" id="sellerSidebar"
+                    aria-labelledby="sellerSidebarLabel" style="z-index: 2000;">
+                    <div class="sidebar-header">
+                        <div class="brand-logo">
+                            <div class="logo-icon">
+                                <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img"
+                                    alt="Logo">
+                            </div>
+                            <span class="brand-name text-success">Khmer <span class="text-bazaar">Bazzar</span>.</span>
+                        </div>
+                        <button type="button" class="btn-close btn-close-black d-xl-none" id="sidebar-close"
+                            aria-label="Close"></button>
                     </div>
 
-                    <div class="d-flex align-items-center gap-2 gap-md-3">
-                        <!-- Light/Dark Mode Switcher -->
-                        <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
-                            <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
-                        </button>
+                    <div class="sidebar-menu-wrapper">
+                        <ul class="sidebar-menu">
+                            <li class="menu-item" data-page="dashboard">
+                                <a href="seller_dashboard.html" class="menu-link">
+                                    <i class="bi bi-grid-1x2-fill"></i>
+                                    <span class="menu-text">ផ្ទាំងគ្រប់គ្រង</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="products">
+                                <a href="seller_products.html" class="menu-link">
+                                    <i class="bi bi-box-seam-fill"></i>
+                                    <span class="menu-text">ផលិតផល</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="orders">
+                                <a href="seller_orders.html" class="menu-link">
+                                    <i class="bi bi-cart-fill"></i>
+                                    <span class="menu-text">ការបញ្ជាទិញ</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="customers">
+                                <a href="seller_customers.html" class="menu-link">
+                                    <i class="bi bi-people-fill"></i>
+                                    <span class="menu-text">អតិថិជន</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="analytics">
+                                <a href="seller_analytics.html" class="menu-link">
+                                    <i class="bi bi-bar-chart-line-fill"></i>
+                                    <span class="menu-text">វិភាគទិន្នន័យ</span>
+                                </a>
+                            </li>
+                            <li class="menu-item active" data-page="messages">
+                                <a href="seller_messages.html" class="menu-link">
+                                    <i class="bi bi-chat-left-dots-fill"></i>
+                                    <span class="menu-text">សារផ្ញើ</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="profiles">
+                                <a href="seller_profiles.html" class="menu-link">
+                                    <i class="bi bi-person-fill"></i>
+                                    <span class="menu-text">ប្រវត្តិរូប</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                        <!-- Messages Dropdown -->
-                        <div class="dropdown">
-                            <button class="btn btn-icon position-relative" type="button" id="messageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-chat-left-dots"></i>
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark border border-2 border-white text-white">
-                                    3
-                                </span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large" aria-labelledby="messageDropdown">
-                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-0 fw-bold">សារទទួលបានថ្មីៗ</h6>
-                                    <a href="seller_messages.html" class="small text-success text-decoration-none">មើលទាំងអស់</a>
+                    <div class="sidebar-footer">
+                        <button type="button"
+                            class="btn btn-primary py-2 w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
+                            <a href="../customer/home.html" class="text-white text-decoration-none"><i
+                                    class="bi bi-chevron-double-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
+                        </button>
+                        <button
+                            class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <i class="bi bi-box-arrow-left"></i> ចាកចេញ
+                        </button>
+                    </div>
+                </aside>
+            </div>
+            <div class="col-12 col-xl-10">
+                <!-- Right Side Main Content Area -->
+                <div>
+                    <!-- Top Navbar -->
+                    <header class="top-navbar rounded-5 mx-4">
+                        <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <button
+                                    class="btn btn-icon d-block d-xl-none d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-toggle="offcanvas" data-bs-target="#sellerSidebar"
+                                    aria-controls="sellerSidebar" aria-label="Toggle Sidebar">
+                                    <i class="bi bi-list fs-4"></i>
+                                </button>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 gap-md-3">
+                                <!-- Light/Dark Mode Switcher -->
+                                <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
+                                    <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                                </button>
+
+                                <!-- Messages Dropdown -->
+                                <div class="dropdown">
+                                    <button class="btn btn-icon position-relative" type="button" id="messageDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-chat-left-dots"></i>
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark border border-2 border-white text-white">
+                                            3
+                                        </span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                        aria-labelledby="messageDropdown">
+                                        <div
+                                            class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                            <h6 class="mb-0 fw-bold">សារទទួលបានថ្មីៗ</h6>
+                                            <a href="seller_messages.html"
+                                                class="small text-success text-decoration-none">មើលទាំងអស់</a>
+                                        </div>
+                                        <div class="dropdown-list-container">
+                                            <a href="#" class="dropdown-list-item d-flex gap-3">
+                                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                                    class="avatar-sm rounded-circle" alt="User">
+                                                <div>
+                                                    <div class="item-title-row d-flex justify-content-between">
+                                                        <span class="user-name text-muted">មាស ធីតា</span>
+                                                        <span class="timestamp">2m ago</span>
+                                                    </div>
+                                                    <p class="preview-text text-muted">សួស្តីបង តើកាស UltraBass
+                                                        នេះមានស្តុកទេ?
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="dropdown-list-container">
-                                    <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar-sm rounded-circle" alt="User">
-                                        <div>
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="user-name text-muted">មាស ធីតា</span>
-                                                <span class="timestamp">2m ago</span>
+
+                                <!-- Notification Dropdown -->
+                                <div class="dropdown">
+                                    <button class="btn btn-icon position-relative" type="button" id="notifDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-bell"></i>
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
+                                            5
+                                        </span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                        aria-labelledby="notifDropdown">
+                                        <div
+                                            class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                            <h6 class="mb-0 fw-bold">ការជូនដំណឹង</h6>
+                                            <a href="#" class="small text-success text-decoration-none">អានទាំងអស់</a>
+                                        </div>
+                                        <div class="dropdown-list-container">
+                                            <a href="#" class="dropdown-list-item d-flex gap-3 align-items-center">
+                                                <div class="icon-avatar text-success"><i
+                                                        class="bi bi-check-circle-fill"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <span class="notif-title fw-bold text-sm">បានបញ្ជូនកញ្ចប់
+                                                        #ODR-8832</span>
+                                                    <p class="preview-text">បានដឹកជញ្ជូនទៅកាន់ឃ្លាំងភ្នំពេញ។</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="header-divider h-100"></div>
+
+                                <!-- Mini profile info -->
+                                <div class="dropdown">
+                                    <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
+                                        id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="../assets/img/seller_images/my_pic.jpg"
+                                            class="avatar-sm rounded-circle" alt="User Avatar">
+                                        <div class="user-info">
+                                            <h6 class="profile-name d-none d-lg-inline-block fw-bold">ចាន់ ជុងឆាយ</h6>
+                                            <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង
+                                                ល្អប្រណីត</p>
+                                        </div>
+                                        <i class="bi bi-chevron-down d-none d-lg-inline-block text-muted small"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                        <li><a class="dropdown-item d-flex align-items-center gap-2 small"
+                                                href="seller_profiles.html"><i
+                                                    class="bi bi-person-fill text-success"></i>
+                                                កម្រងព័ត៌មាន</a></li>
+                                        <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item text-danger d-flex align-items-center gap-2 small"
+                                                href="../login.html"><i class="bi bi-box-arrow-right"></i> ចាកចេញ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Main Chat Workspace Layout -->
+                    <main class="content-wrapper p-4">
+                        <div class="container-fluid p-0">
+
+                            <div class="row align-items-center mb-3 gy-2">
+                                <div class="col-12">
+                                    <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">សារសន្ទនាជាមួយអតិថិជន
+                                        💬</h1>
+                                    <p class="text-muted fs-5 mb-0">ឆ្លើយតបសំណួរអតិថិជនរហ័ស ដើម្បីបង្កើនការលក់
+                                        និងទំនុកចិត្ត</p>
+                                </div>
+                            </div>
+
+                            <!-- Chat Box Main Container Card -->
+                            <div class=" dashboard-card d-flex flex-row overflow-hidden shadow-sm">
+                                <div class="row g-5">
+                                    <div class="d-none d-xl-block col-xl-3">
+                                        <!-- 1. LEFT SIDEBAR: Conversations List -->
+                                        <div class="chat-sidebar">
+                                            <div class="message-header p-3">
+                                                <h5 class="fw-bold mb-3">ការសន្ទនា (Messages)</h5>
+                                                <div class="search-bar-wrapper w-100">
+                                                    <i class="bi bi-search search-icon"></i>
+                                                    <input type="text" class="form-control" id="chat-search"
+                                                        placeholder="ស្វែងរកឈ្មោះអតិថិជន...">
+                                                </div>
                                             </div>
-                                            <p class="preview-text text-muted">សួស្តីបង តើកាស UltraBass នេះមានស្តុកទេ?</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Notification Dropdown -->
-                        <div class="dropdown">
-                            <button class="btn btn-icon position-relative" type="button" id="notifDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-bell"></i>
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
-                                    5
-                                </span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large" aria-labelledby="notifDropdown">
-                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-0 fw-bold">ការជូនដំណឹង</h6>
-                                    <a href="#" class="small text-success text-decoration-none">អានទាំងអស់</a>
-                                </div>
-                                <div class="dropdown-list-container">
-                                    <a href="#" class="dropdown-list-item d-flex gap-3 align-items-center">
-                                        <div class="icon-avatar text-success"><i class="bi bi-check-circle-fill"></i></div>
-                                        <div class="flex-grow-1">
-                                            <span class="notif-title fw-bold text-sm">បានបញ្ជូនកញ្ចប់ #ODR-8832</span>
-                                            <p class="preview-text">បានដឹកជញ្ជូនទៅកាន់ឃ្លាំងភ្នំពេញ។</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                                            <!-- Filter Tabs -->
+                                            <div
+                                                class="message-status d-flex align-items-center justify-content-between">
+                                                <a class="link-message active" href="#">ទាំងអស់</a>
+                                                <a class="link-message" href="#">មិនទាន់អាន <span
+                                                        class="badge-unread bg-danger text-white ms-1">3</span></a>
+                                                <a class="link-message" href="#">VIP <i
+                                                        class="bi bi-star-fill text-warning ms-1"></i></a>
+                                            </div>
 
-                        <div class="header-divider h-100"></div>
+                                            <!-- Chat Customers Stream List -->
+                                            <div class="overflow-y-auto flex-grow-1">
 
-                        <!-- Mini profile info -->
-                        <div class="dropdown">
-                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../assets/img/seller_images/my_pic.jpg" class="avatar-sm rounded-circle" alt="User Avatar">
-                                <div class="user-info">
-                                    <h6 class="profile-name d-none d-lg-inline-block fw-bold">ចាន់ ជុងឆាយ</h6>
-                                    <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
-                                </div>
-                                <i class="bi bi-chevron-down d-none d-lg-inline-block text-muted small"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" aria-labelledby="profileDropdown">
-                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="seller_profiles.html"><i class="bi bi-person-fill text-success"></i> កែប្រែគណនី</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item text-danger d-flex align-items-center gap-2" href="#"><i class="bi bi-box-arrow-right"></i> ចាកចេញ</a></li>
-                            </ul>
-                        </div>
+                                                <!-- Customer Item 1 (Active Chat) -->
+                                                <a class="message-item active" href="#">
+                                                    <div class="message-avatar">
+                                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                                            class="avatar rounded-circle" alt="Meas Thida">
+                                                        <span class="status-dot status-online"></span>
+                                                    </div>
+                                                    <div class="message-content">
+                                                        <div
+                                                            class="d-flex justify-content-between align-items-center mb-1">
+                                                            <span class="chat-name-title text-muted">មាស ធីតា</span>
+                                                            <span class="text-xxs text-muted">២នាទីមុន</span>
+                                                        </div>
+                                                        <span class="chat-text-preview fw-semibold text-muted">តើនាឡិកា
+                                                            Zinvo
+                                                            Zealous Aura នេះមានសេវាដឹកដល់សៀមរាបដែរទេបង?</span>
+                                                    </div>
+                                                </a>
 
-                    </div>
-                </div>
-            </header>
+                                                <!-- Customer Item 2 -->
+                                                <a class="message-item" href="#">
+                                                    <div class="message-avatar">
+                                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                                            class="avatar rounded-circle" alt="Chan Dara">
+                                                        <span class="status-dot status-offline"></span>
+                                                    </div>
+                                                    <div class="message-content">
+                                                        <div
+                                                            class="d-flex justify-content-between align-items-center mb-1">
+                                                            <span class="chat-name-title">ចាន់ ដារ៉ា</span>
+                                                            <span class="text-xxs text-muted">១ម៉ោងមុន</span>
+                                                        </div>
+                                                        <span class="chat-text-preview">ខ្ញុំបានវាយប្រាក់តាម ABA
+                                                            រួចហើយបង
+                                                            សូមជួយឆែកមើលផង</span>
+                                                    </div>
+                                                </a>
 
-            <!-- Main Chat Workspace Layout -->
-            <main class="content-wrapper p-4">
-                <div class="container-fluid p-0">
+                                                <!-- Customer Item 3 -->
+                                                <a class="message-item" href="#">
+                                                    <div class="message-avatar">
+                                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100"
+                                                            class="avatar rounded-circle" alt="Sok Sophea">
+                                                        <span class="status-dot status-online"></span>
+                                                    </div>
+                                                    <div class="message-content">
+                                                        <div
+                                                            class="d-flex justify-content-between align-items-center mb-1">
+                                                            <span class="chat-name-title">សុខ សុភា</span>
+                                                            <span class="text-xxs text-muted">១ថ្ងៃមុន</span>
+                                                        </div>
+                                                        <span class="chat-text-preview">ទទួលបាននាឡិការួចរាល់ហើយ
+                                                            ស្អាតខ្លាំងណាស់បង!</span>
+                                                    </div>
+                                                </a>
 
-                    <div class="row align-items-center mb-3 gy-2">
-                        <div class="col-12">
-                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">សារសន្ទនាជាមួយអតិថិជន 💬</h1>
-                            <p class="text-muted fs-5 mb-0">ឆ្លើយតបសំណួរអតិថិជនរហ័ស ដើម្បីបង្កើនការលក់ និងទំនុកចិត្ត</p>
-                        </div>
-                    </div>
-
-                    <!-- Chat Box Main Container Card -->
-                    <div class="dashboard-card d-flex flex-row overflow-hidden shadow-sm" style="height: calc(100vh - 210px); min-height: 520px;">
-                        
-                        <!-- 1. LEFT SIDEBAR: Conversations List -->
-                        <div class="chat-sidebar">
-                            <div class="message-header p-3">
-                                <h5 class="fw-bold mb-3">ការសន្ទនា (Messages)</h5>
-                                <div class="search-bar-wrapper w-100">
-                                    <i class="bi bi-search search-icon"></i>
-                                    <input type="text" class="form-control" id="chat-search" placeholder="ស្វែងរកឈ្មោះអតិថិជន...">
-                                </div>
-                            </div>
-
-                            <!-- Filter Tabs -->
-                            <div class="message-status d-flex align-items-center justify-content-between">
-                                <a class="link-message active" href="#">ទាំងអស់</a>
-                                <a class="link-message" href="#">មិនទាន់អាន <span class="badge-unread bg-danger text-white ms-1">3</span></a>
-                                <a class="link-message" href="#">VIP <i class="bi bi-star-fill text-warning ms-1"></i></a>
-                            </div>
-
-                            <!-- Chat Customers Stream List -->
-                            <div class="overflow-y-auto flex-grow-1">
-                                
-                                <!-- Customer Item 1 (Active Chat) -->
-                                <a class="message-item active" href="#">
-                                    <div class="message-avatar">
-                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="Meas Thida">
-                                        <span class="status-dot status-online"></span>
-                                    </div>
-                                    <div class="message-content">
-                                        <div class="d-flex justify-content-between align-items-center mb-1">
-                                            <span class="chat-name-title text-muted">មាស ធីតា</span>
-                                            <span class="text-xxs text-muted">២នាទីមុន</span>
-                                        </div>
-                                        <span class="chat-text-preview fw-semibold text-muted">តើនាឡិកា Zinvo Zealous Aura នេះមានសេវាដឹកដល់សៀមរាបដែរទេបង?</span>
-                                    </div>
-                                </a>
-
-                                <!-- Customer Item 2 -->
-                                <a class="message-item" href="#">
-                                    <div class="message-avatar">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="Chan Dara">
-                                        <span class="status-dot status-offline"></span>
-                                    </div>
-                                    <div class="message-content">
-                                        <div class="d-flex justify-content-between align-items-center mb-1">
-                                            <span class="chat-name-title">ចាន់ ដារ៉ា</span>
-                                            <span class="text-xxs text-muted">១ម៉ោងមុន</span>
-                                        </div>
-                                        <span class="chat-text-preview">ខ្ញុំបានវាយប្រាក់តាម ABA រួចហើយបង សូមជួយឆែកមើលផង</span>
-                                    </div>
-                                </a>
-
-                                <!-- Customer Item 3 -->
-                                <a class="message-item" href="#">
-                                    <div class="message-avatar">
-                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="Sok Sophea">
-                                        <span class="status-dot status-online"></span>
-                                    </div>
-                                    <div class="message-content">
-                                        <div class="d-flex justify-content-between align-items-center mb-1">
-                                            <span class="chat-name-title">សុខ សុភា</span>
-                                            <span class="text-xxs text-muted">១ថ្ងៃមុន</span>
-                                        </div>
-                                        <span class="chat-text-preview">ទទួលបាននាឡិការួចរាល់ហើយ ស្អាតខ្លាំងណាស់បង!</span>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-
-                        <!-- 2. RIGHT CHAT WORKSPACE CONTAINER -->
-                        <div class="chat-container">
-                            <div class="chat-main">
-                                
-                                <!-- Active Chat User Header -->
-                                <div class="chat-header">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="message-avatar">
-                                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle" alt="Meas Thida">
-                                            <span class="status-dot status-online"></span>
-                                        </div>
-                                        <div>
-                                            <h6 class="fw-bold text-muted mb-0">មាស ធីតា </h6>
-                                            <span class="text-xs text-success"><i class="bi bi-circle-fill me-1" style="font-size: 8px;"></i> កំពុងអនឡាញ (Online)</span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button class="chat-header-btn" title="ការហៅទូរស័ព្ទ"><i class="bi bi-telephone"></i></button>
-                                        <button class="chat-header-btn" title="ព័ត៌មានអតិថិជន"><i class="bi bi-info-circle"></i></button>
-                                        <button class="chat-header-btn" title="ជម្រើសបន្ថែម"><i class="bi bi-three-dots-vertical"></i></button>
-                                    </div>
-                                </div>
+                                    <div class="col-12 col-xl-9">
+                                        <!-- 2. RIGHT CHAT WORKSPACE CONTAINER -->
+                                        <div class="chat-container">
+                                            <div class="chat-main">
 
-                                <!-- Chat Stream Messages Body -->
-                                <div class="chat-body">
-                                    
-                                    <div class="chat-body-date">
-                                        <div class="chat-line"></div>
-                                        <div class="chat-date">ថ្ងៃនេះ (Today)</div>
-                                        <div class="chat-line"></div>
-                                    </div>
-
-                                    <!-- Customer Message -->
-                                    <div class="chat-message">
-                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle align-self-end" style="width: 32px; height: 32px;" alt="User">
-                                        <div>
-                                            <div class="chat-bubble-incoming">
-                                                <!-- Referenced Product Card -->
-                                                <div class="chat-product-card">
-                                                    <img src="../assets/img/product/zinvo-1.webp" alt="Product">
-                                                    <div>
-                                                        <h6 class="mb-0 fw-bold text-xs text-dark">នាឡិកា Zinvo Zealous Aura</h6>
-                                                        <span class="text-xs text-success fw-bold">$285.00</span>
+                                                <!-- Active Chat User Header -->
+                                                <div class="chat-header">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <div class="message-avatar">
+                                                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                                                class="avatar rounded-circle" alt="Meas Thida">
+                                                            <span class="status-dot status-online"></span>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="fw-bold text-muted mb-0">មាស ធីតា </h6>
+                                                            <span class="text-xs text-success"><i
+                                                                    class="bi bi-circle-fill me-1"
+                                                                    style="font-size: 8px;"></i> កំពុងអនឡាញ
+                                                                (Online)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <button class="chat-header-btn" title="ការហៅទូរស័ព្ទ"><i
+                                                                class="bi bi-telephone"></i></button>
+                                                        <button class="chat-header-btn" title="ព័ត៌មានអតិថិជន"><i
+                                                                class="bi bi-info-circle"></i></button>
+                                                        <button class="chat-header-btn" title="ជម្រើសបន្ថែម"><i
+                                                                class="bi bi-three-dots-vertical"></i></button>
                                                     </div>
                                                 </div>
-                                                សួស្តីបង! តើនាឡិកា Zinvo Zealous Aura នេះនៅមានក្នុងស្តុកដែរទេបង?
+
+                                                <!-- Chat Stream Messages Body -->
+                                                <div class="chat-body">
+
+                                                    <div class="chat-body-date">
+                                                        <div class="chat-line"></div>
+                                                        <div class="chat-date">ថ្ងៃនេះ (Today)</div>
+                                                        <div class="chat-line"></div>
+                                                    </div>
+
+                                                    <!-- Customer Message -->
+                                                    <div class="chat-message">
+                                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                                            class="avatar rounded-circle align-self-end"
+                                                            style="width: 32px; height: 32px;" alt="User">
+                                                        <div>
+                                                            <div class="chat-bubble-incoming">
+                                                                <!-- Referenced Product Card -->
+                                                                <div class="chat-product-card">
+                                                                    <img src="../assets/img/product/zinvo-1.webp"
+                                                                        alt="Product">
+                                                                    <div>
+                                                                        <h6 class="mb-0 fw-bold text-xs text-dark">
+                                                                            នាឡិកា Zinvo
+                                                                            Zealous Aura</h6>
+                                                                        <span
+                                                                            class="text-xs text-success fw-bold">$285.00</span>
+                                                                    </div>
+                                                                </div>
+                                                                សួស្តីបង! តើនាឡិកា Zinvo Zealous Aura
+                                                                នេះនៅមានក្នុងស្តុកដែរទេបង?
+                                                            </div>
+                                                            <span class="chat-time">០៩:៣០ ព្រឹក</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Seller Response -->
+                                                    <div class="chat-message seller-side">
+                                                        <div>
+                                                            <div class="chat-bubble-outgoing">
+                                                                សួស្តីបង ធីតា! នាឡិកា Zinvo Zealous Aura
+                                                                នៅមានក្នុងស្តុកស្រាប់បង។ ជាផលិតផលសុទ្ធ 100%
+                                                                មានការធានារយៈពេល
+                                                                ១ឆ្នាំពេញជូនបង!
+                                                            </div>
+                                                            <span class="seller-chat-time"><i
+                                                                    class="bi bi-check2-all text-primary me-1"></i>
+                                                                បានអាន ០៩:៣១
+                                                                ព្រឹក</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Customer Message -->
+                                                    <div class="chat-message">
+                                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                                            class="avatar rounded-circle align-self-end"
+                                                            style="width: 32px; height: 32px;" alt="User">
+                                                        <div>
+                                                            <div class="chat-bubble-incoming">
+                                                                តើមានសេវាដឹកដល់សៀមរាបដែរទេបង?
+                                                                ហើយរយៈពេលប៉ុន្មានថ្ងៃបានដល់បង?
+                                                            </div>
+                                                            <span class="chat-time">០៩:៣២ ព្រឹក</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Seller Response -->
+                                                    <div class="chat-message seller-side">
+                                                        <div>
+                                                            <div class="chat-bubble-outgoing">
+                                                                មានបង! ខាងហាងយើងខ្ញុំមានសេវាដឹកជញ្ជូនលឿនទាន់ចិត្តទៅ
+                                                                ២៤ខេត្តក្រុង
+                                                                តាមរយៈដៃគូ J&T និង Vet Express។ ផ្ញើថ្ងៃនេះ
+                                                                ស្អែកដល់ដៃបងនៅសៀមរាបតែម្តង!
+                                                            </div>
+                                                            <span class="seller-chat-time"><i
+                                                                    class="bi bi-check2-all text-primary me-1"></i>
+                                                                បានអាន ០៩:៣៣
+                                                                ព្រឹក</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Customer Message -->
+                                                    <div class="chat-message">
+                                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                                            class="avatar rounded-circle align-self-end"
+                                                            style="width: 32px; height: 32px;" alt="User">
+                                                        <div>
+                                                            <div class="chat-bubble-incoming">
+                                                                ល្អខ្លាំងណាស់បង! អញ្ចឹងខ្ញុំសុំយក ១គ្រឿង។
+                                                                សូមផ្ញើលេខគណនីធនាគារ
+                                                                ABA មកបង ដើម្បីខ្ញុំបាញ់លុយជូន។
+                                                            </div>
+                                                            <span class="chat-time">០៩:៣៥ ព្រឹក</span>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <!-- Chat Input Footer Area -->
+                                                <div class="chat-footer">
+                                                    <div class="chat-input-wrapper">
+                                                        <button class="chat-input-btn" title="ភ្ជាប់ឯកសារ"><i
+                                                                class="bi bi-paperclip fs-5"></i></button>
+                                                        <button class="chat-input-btn" title="ផ្ញើរូបភាព"><i
+                                                                class="bi bi-image fs-5"></i></button>
+
+                                                        <div class="chat-input-field">
+                                                            <textarea id="messageInput" rows="1"
+                                                                placeholder="សរសេរសារឆ្លើយតបនៅទីនេះ..."></textarea>
+                                                        </div>
+
+                                                        <button class="chat-input-btn" title="រូបភាពអារម្មណ៍"><i
+                                                                class="bi bi-emoji-smile fs-5"></i></button>
+                                                        <button class="send-message-btn" title="ផ្ញើសារ"><i
+                                                                class="bi bi-send-fill fs-6"></i></button>
+                                                    </div>
+                                                </div>
+
                                             </div>
-                                            <span class="chat-time">០៩:៣០ ព្រឹក</span>
                                         </div>
                                     </div>
-
-                                    <!-- Seller Response -->
-                                    <div class="chat-message seller-side">
-                                        <div>
-                                            <div class="chat-bubble-outgoing">
-                                                សួស្តីបង ធីតា! នាឡិកា Zinvo Zealous Aura នៅមានក្នុងស្តុកស្រាប់បង។ ជាផលិតផលសុទ្ធ 100% មានការធានារយៈពេល ១ឆ្នាំពេញជូនបង!
-                                            </div>
-                                            <span class="seller-chat-time"><i class="bi bi-check2-all text-primary me-1"></i> បានអាន ០៩:៣១ ព្រឹក</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Customer Message -->
-                                    <div class="chat-message">
-                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle align-self-end" style="width: 32px; height: 32px;" alt="User">
-                                        <div>
-                                            <div class="chat-bubble-incoming">
-                                                តើមានសេវាដឹកដល់សៀមរាបដែរទេបង? ហើយរយៈពេលប៉ុន្មានថ្ងៃបានដល់បង?
-                                            </div>
-                                            <span class="chat-time">០៩:៣២ ព្រឹក</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Seller Response -->
-                                    <div class="chat-message seller-side">
-                                        <div>
-                                            <div class="chat-bubble-outgoing">
-                                                មានបង! ខាងហាងយើងខ្ញុំមានសេវាដឹកជញ្ជូនលឿនទាន់ចិត្តទៅ ២៤ខេត្តក្រុង តាមរយៈដៃគូ J&T និង Vet Express។ ផ្ញើថ្ងៃនេះ ស្អែកដល់ដៃបងនៅសៀមរាបតែម្តង!
-                                            </div>
-                                            <span class="seller-chat-time"><i class="bi bi-check2-all text-primary me-1"></i> បានអាន ០៩:៣៣ ព្រឹក</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Customer Message -->
-                                    <div class="chat-message">
-                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100" class="avatar rounded-circle align-self-end" style="width: 32px; height: 32px;" alt="User">
-                                        <div>
-                                            <div class="chat-bubble-incoming">
-                                                ល្អខ្លាំងណាស់បង! អញ្ចឹងខ្ញុំសុំយក ១គ្រឿង។ សូមផ្ញើលេខគណនីធនាគារ ABA មកបង ដើម្បីខ្ញុំបាញ់លុយជូន។
-                                            </div>
-                                            <span class="chat-time">០៩:៣៥ ព្រឹក</span>
-                                        </div>
-                                    </div>
-
                                 </div>
 
-                                <!-- Chat Input Footer Area -->
-                                <div class="chat-footer">
-                                    <div class="chat-input-wrapper">
-                                        <button class="chat-input-btn" title="ភ្ជាប់ឯកសារ"><i class="bi bi-paperclip fs-5"></i></button>
-                                        <button class="chat-input-btn" title="ផ្ញើរូបភាព"><i class="bi bi-image fs-5"></i></button>
-                                        
-                                        <div class="chat-input-field">
-                                            <textarea id="messageInput" rows="1" placeholder="សរសេរសារឆ្លើយតបទៅកាន់អតិថិជនទីនេះ..."></textarea>
-                                        </div>
 
-                                        <button class="chat-input-btn" title="រូបភាពអារម្មណ៍"><i class="bi bi-emoji-smile fs-5"></i></button>
-                                        <button class="send-message-btn" title="ផ្ញើសារ"><i class="bi bi-send-fill fs-6"></i></button>
-                                    </div>
-                                </div>
+
+
 
                             </div>
-                        </div>
 
-                    </div>
+                        </div>
+                    </main>
 
                 </div>
-            </main>
-
+            </div>
         </div>
     </div>
 
@@ -399,13 +500,14 @@
                     <i class="bi bi-info-circle-fill text-warning" style="font-size: 3rem;"></i>
                     <h5 class="fw-bold mt-3 text-dark">ព័ត៌មានប្រព័ន្ធ</h5>
                     <p class="text-xs text-muted mb-4">មុខងារនេះមិនទាន់ត្រូវបានដំឡើងដំណើរការឡើយ។</p>
-                    <button type="button" class="btn btn-success w-100 py-2 text-white text-xs fw-bold" data-bs-dismiss="modal">យល់ព្រម</button>
+                    <button type="button" class="btn btn-success w-100 py-2 text-white text-xs fw-bold"
+                        data-bs-dismiss="modal">យល់ព្រម</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- modal -->
-     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm">
             <div class="modal-content">
@@ -432,8 +534,8 @@
     <script>
         // Auto-expand textarea on typing
         const tx = document.getElementById('messageInput');
-        if(tx) {
-            tx.addEventListener("input", function() {
+        if (tx) {
+            tx.addEventListener("input", function () {
                 this.style.height = "auto";
                 this.style.height = (this.scrollHeight) + "px";
             });

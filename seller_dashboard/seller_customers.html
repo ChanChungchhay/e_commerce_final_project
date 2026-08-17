@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>គ្រប់គ្រងអតិថិជន - Khmer Bazaar</title>
-    <link rel="shortcut icon" href="/assets/img/logo/img-logo.png">
+    <link rel="shortcut icon" href="../assets/img/logo/img-logo.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,413 +26,438 @@
 <body>
     <!-- Application Layout Wrapper -->
     <div class="dashboard-wrapper">
-        <!-- Left Sidebar -->
-        <aside id="sidebar" class="sidebar">
-            <div class="sidebar-header">
-                <div class="brand-logo">
-                    <div class="logo-icon">
-                        <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img" alt="Logo">
+        <div class="row g-3">
+            <div class="col-2">
+                <!-- Left Sidebar -->
+                <aside class="sidebar offcanvas offcanvas-start" tabindex="-1" id="sellerSidebar"
+                    aria-labelledby="sellerSidebarLabel" style="z-index: 2000;">
+                    <div class="sidebar-header">
+                        <div class="brand-logo">
+                            <div class="logo-icon">
+                                <img src="../assets/img/seller_images/img-logo-no-title.png" class="logo-img"
+                                    alt="Logo">
+                            </div>
+                            <span class="brand-name text-success">Khmer <span class="text-bazaar">Bazzar</span>.</span>
+                        </div>
+                        <button type="button" class="btn-close btn-close-black d-xl-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
                     </div>
-                    <span class="brand-name text-success">Khmer <span class="text-bazaar">Bazzar</span>.</span>
-                </div>
-                <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebar-close"
-                    aria-label="Close"></button>
-            </div>
 
-            <div class="sidebar-menu-wrapper">
-                <ul class="sidebar-menu">
-                    <li class="menu-item" data-page="dashboard">
-                        <a href="seller_dashboard.html" class="menu-link">
-                            <i class="bi bi-grid-1x2-fill"></i>
-                            <span class="menu-text">ផ្ទាំងគ្រប់គ្រង</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="products">
-                        <a href="seller_products.html" class="menu-link">
-                            <i class="bi bi-box-seam-fill"></i>
-                            <span class="menu-text">ផលិតផល</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="orders">
-                        <a href="seller_orders.html" class="menu-link">
-                            <i class="bi bi-cart-fill"></i>
-                            <span class="menu-text">ការបញ្ជាទិញ</span>
-                        </a>
-                    </li>
-                    <li class="menu-item active" data-page="customers">
-                        <a href="seller_customers.html" class="menu-link">
-                            <i class="bi bi-people-fill"></i>
-                            <span class="menu-text">អតិថិជន</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="analytics">
-                        <a href="seller_analytics.html" class="menu-link">
-                            <i class="bi bi-bar-chart-line-fill"></i>
-                            <span class="menu-text">វិភាគទិន្នន័យ</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="messages">
-                        <a href="seller_messages.html" class="menu-link">
-                            <i class="bi bi-chat-left-dots-fill"></i>
-                            <span class="menu-text">សារផ្ញើ</span>
-                        </a>
-                    </li>
-                    <li class="menu-item" data-page="messages">
-                        <a href="seller_profiles.html" class="menu-link">
-                            <i class="bi bi-person-fill"></i>
-                            <span class="menu-text">ប្រវត្តិរូប</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                    <div class="sidebar-menu-wrapper">
+                        <ul class="sidebar-menu">
+                            <li class="menu-item" data-page="dashboard">
+                                <a href="seller_dashboard.html" class="menu-link">
+                                    <i class="bi bi-grid-1x2-fill"></i>
+                                    <span class="menu-text">ផ្ទាំងគ្រប់គ្រង</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="products">
+                                <a href="seller_products.html" class="menu-link">
+                                    <i class="bi bi-box-seam-fill"></i>
+                                    <span class="menu-text">ផលិតផល</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="orders">
+                                <a href="seller_orders.html" class="menu-link">
+                                    <i class="bi bi-cart-fill"></i>
+                                    <span class="menu-text">ការបញ្ជាទិញ</span>
+                                </a>
+                            </li>
+                            <li class="menu-item active" data-page="customers">
+                                <a href="seller_customers.html" class="menu-link">
+                                    <i class="bi bi-people-fill"></i>
+                                    <span class="menu-text">អតិថិជន</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="analytics">
+                                <a href="seller_analytics.html" class="menu-link">
+                                    <i class="bi bi-bar-chart-line-fill"></i>
+                                    <span class="menu-text">វិភាគទិន្នន័យ</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="messages">
+                                <a href="seller_messages.html" class="menu-link">
+                                    <i class="bi bi-chat-left-dots-fill"></i>
+                                    <span class="menu-text">សារផ្ញើ</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" data-page="messages">
+                                <a href="seller_profiles.html" class="menu-link">
+                                    <i class="bi bi-person-fill"></i>
+                                    <span class="menu-text">ប្រវត្តិរូប</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-            <div class="sidebar-footer">
-                <button type="button"
-                    class="btn btn-primary py-2 w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
-                    <a href="../customer/home.html" class="text-white text-decoration-none"><i
-                            class="bi bi-chevron-double-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
-                </button>
-                <button
-                    class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
-                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <i class="bi bi-box-arrow-left"></i> ចាកចេញ
-                </button>
-            </div>
-        </aside>
-
-        <!-- Right Side Main Content Area -->
-        <div class="main-container">
-            <!-- Top Navbar -->
-            <header class="top-navbar rounded-5 mx-4">
-                <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
-                    <div class="d-flex align-items-center gap-3">
-                        <button class="btn btn-icon d-lg-none" id="sidebar-toggle" aria-label="Toggle Sidebar">
-                            <i class="bi bi-list fs-4"></i>
+                    <div class="sidebar-footer">
+                        <button type="button"
+                            class="btn btn-primary py-2 w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2">
+                            <a href="../customer/home.html" class="text-white text-decoration-none"><i
+                                    class="bi bi-chevron-double-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
                         </button>
-                        <div class="search-bar-wrapper">
-                            <i class="bi bi-search search-icon"></i>
-                            <input type="text" class="form-control" id="customer-quick-search"
-                                placeholder="ស្វែងរកតាមឈ្មោះ លេខទូរស័ព្ទ ឬអ៊ីមែល...">
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center gap-2 gap-md-3">
-                        <!-- Light/Dark Mode Switcher -->
-                        <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
-                            <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                        <button
+                            class="btn btn-outline-danger w-100 btn-logout mt-3 d-flex align-items-center justify-content-center gap-2"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <i class="bi bi-box-arrow-left"></i> ចាកចេញ
                         </button>
-
-                        <!-- Messages Dropdown -->
-                        <div class="dropdown">
-                            <button class="btn btn-icon position-relative" type="button" id="messageDropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-chat-left-dots"></i>
-                                <span
-                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-warning border border-2 border-white">
-                                    3
-                                </span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
-                                aria-labelledby="messageDropdown">
-                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-0 small">ការជូនដំណឹងថ្មីៗ</h6>
-                                    <a href="seller_messages.html"
-                                        class="small text-success text-decoration-none">មើលការផ្ញើសារ</a>
-                                </div>
-                                <div class="dropdown-list-container">
-                                    <!-- Message List Items -->
-                                    <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
-                                            class="avatar-sm rounded-circle" alt="User Image">
-                                        <div>
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="user-name">Sarah Jenkins</span>
-                                                <span class="timestamp">2m ago</span>
-                                            </div>
-                                            <p class="preview-text text-wrap">សួស្តី សំណាង
-                                                តើការធានាផលិតផលមានរួមបញ្ចូលក្នុងតម្លៃដើមដែរឬទេ?</p>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="dropdown-list-item d-flex gap-3">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
-                                            class="avatar-sm rounded-circle" alt="User Image">
-                                        <div>
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="user-name">Marcus Vance</span>
-                                                <span class="timestamp">1h ago</span>
-                                            </div>
-                                            <p class="preview-text text-wrap">សូមជួយបញ្ជាក់ផងថា
-                                                តើអ្នកអាចដឹកជញ្ជូនទំនិញទាំងនេះមកកាន់ឃ្លាំងរបស់យើងបានដែរឬទេ?</p>
-                                        </div>
-                                    </a>
-                                    <a href="seller_messages.html"
-                                        class="dropdown-list-item d-flex gap-3 text-center py-2 text-success fw-medium justify-content-center small">
-                                        មើលការផ្ញើសារទាំងអស់
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Notification Dropdown -->
-                        <div class="dropdown">
-                            <button class="btn btn-icon position-relative" type="button" id="notifDropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-bell"></i>
-                                <span
-                                    class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
-                                    5
-                                </span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
-                                aria-labelledby="notifDropdown">
-                                <div class="dropdown-header-custom d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-0 text-muted">ការជូនដំណឹង</h6>
-                                    <a href="#"
-                                        class="small text-success text-decoration-none">សម្គាល់ថាបានអានទាំងអស់</a>
-                                </div>
-                                <div class="dropdown-list-container" id="notifications-container">
-                                    <!-- Dynamically/Statically Handled -->
-                                    <a href="#" class="dropdown-list-item d-flex gap-3 align-items-center">
-                                        <div class="icon-avatar text-success"><i class="bi bi-check-circle-fill"></i>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="notif-title small">ការបញ្ជាទិញ #8832
-                                                    ត្រូវបានដឹកជញ្ជូន</span>
-                                                <span class="timestamp">Just now</span>
-                                            </div>
-                                            <p class="preview-text">ការបញ្ជាទិញត្រូវបានផ្ញើទៅមជ្ឈមណ្ឌលដឹកជញ្ជូនភ្នំពេញ។
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
-                                        <div class="icon-avatar text-danger"><i
-                                                class="bi bi-exclamation-triangle-fill"></i></div>
-                                        <div class="flex-grow-1">
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="notif-title small">ស្តុកទំនិញជិតអស់</span>
-                                                <span class="timestamp">12m ago</span>
-                                            </div>
-                                            <p class="preview-text">នៅសល់តែ ៣ មុខប៉ុណ្ណោះ សូមបំពេញស្តុក។</p>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
-                                        <div class="icon-avatar text-primary"><i class="bi bi-cash-stack"></i></div>
-                                        <div class="flex-grow-1">
-                                            <div class="item-title-row d-flex justify-content-between">
-                                                <span class="notif-title">ទទួលបានការទូទាត់</span>
-                                                <span class="timestamp">1h ago</span>
-                                            </div>
-                                            <p class="preview-text">ការទូទាត់ប្រាក់ត្រូវបានដំណើរការដោយជោគជ័យ។</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header-divider h-100"></div>
-                        <!-- Mini profile info -->
-                        <div class="dropdown">
-                            <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
-                                id="profileDropdow" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../assets/img/seller_images/my_pic.jpg" class="avatar-sm rounded-circle"
-                                    alt="User Avatar">
-                                <div class="user-info">
-                                    <h6 class="profile-name d-none d-lg-inline-block">ចាន់ ជុងឆាយ</h6>
-                                    <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង ល្អប្រណីត</p>
-                                </div>
-                                <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i
-                                            class="bi bi-person-fill"></i> Profile settings</a></li>
-                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i
-                                            class="bi bi-shield-lock-fill"></i> Security settings</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item text-danger d-flex align-items-center gap-2" href="#"><i
-                                            class="bi bi-box-arrow-right"></i> Sign out</a></li>
-                            </ul>
-                        </div>
-
                     </div>
-                </div>
-            </header>
-
-            <!-- Main Content Area -->
-            <main class="content-wrapper">
-                <div class="container-fluid px-4 py-4">
-
-                    <!-- Title Header -->
-                    <div class="row align-items-center mb-4 gy-3">
-                        <div class="col-md-6 col-12">
-                            <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">បញ្ជីគ្រប់គ្រងព័ត៌មានអតិថិជន
-                            </h1>
-                            <p class="text-muted fs-5 mb-0">គ្រប់គ្រងទំនាក់ទំនង តាមដានចំណាយ
-                                និងប្រវត្តិនៃការទិញទំនិញរបស់អតិថិជន</p>
-                        </div>
-                    </div>
-
-                    <!-- Customer Statistics Grid -->
-                    <div class="row g-3 mb-4">
-                        <div class="col-12 col-sm-6 col-xl-3">
-                            <div class="stats-card">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div class="icon-wrap bg-light-success text-white">
-                                        <i class="bi bi-people"></i>
-                                    </div>
-                                    <span class="badge bg-light-success text-white fw-medium">+8 នាក់ខែនេះ</span>
-                                </div>
-                                <div class="stats-body mt-3">
-                                    <h6 class="text-muted small text-uppercase tracking-wider">អតិថិជនសរុប</h6>
-                                    <h3 class="mb-0 stats-counter" id="metric-total-customers" data-target="32">00</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-3">
-                            <div class="stats-card">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div class="icon-wrap bg-light-warning text-white">
-                                        <i class="bi bi-gem"></i>
-                                    </div>
-                                    <span class="badge bg-light-warning text-white fw-medium">សមាជិក VIP</span>
-                                </div>
-                                <div class="stats-body mt-3">
-                                    <h6 class="text-muted small text-uppercase tracking-wider">អតិថិជន VIP</h6>
-                                    <h3 class="mb-0 stats-counter" id="metric-vip-customers" data-target="24">00</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-3">
-                            <div class="stats-card">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div class="icon-wrap bg-light-success text-white">
-                                        <i class="bi bi-person-check"></i>
-                                    </div>
-                                    <span class="badge bg-light-success text-white fw-medium">សកម្មខ្លាំង</span>
-                                </div>
-                                <div class="stats-body mt-3">
-                                    <h6 class="text-muted small text-uppercase tracking-wider">សកម្មក្នុងខែនេះ</h6>
-                                    <h3 class="mb-0 stats-counter" id="metric-active-customers" data-target="45">00</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-3">
-                            <div class="stats-card">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div class="icon-wrap bg-light-warning text-white">
-                                        <i class="bi bi-graph-up"></i>
-                                    </div>
-                                    <span class="badge bg-light-warning text-white fw-medium">ជាមធ្យម / ម្នាក់</span>
-                                </div>
-                                <div class="stats-body mt-3">
-                                    <h6 class="text-muted small text-uppercase tracking-wider">ចំណាយមធ្យម (LTV)</h6>
-                                    <h3 class="mb-0">$<span class="stats-counter" id="metric-avg-spent"
-                                            data-target="15">00</span></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Filters Control Area -->
-                    <div class="dashboard-card mb-4">
-                        <div class="card-body py-3">
-                            <div class="row g-3 align-items-center">
-                                <div class="col-12 col-md-4">
-                                    <label
-                                        class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្វែងរកអតិថិជន</label>
-                                    <input type="text" class="form-control text-xs" id="filter-customer-search"
+                </aside>
+            </div>
+            <div class="col-12 col-xl-10">
+                <div>
+                    <header class="top-navbar rounded-5 mx-4">
+                        <div class="container-fluid d-flex align-items-center justify-content-between h-100 px-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <button
+                                    class="btn btn-icon d-block d-xl-none d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-toggle="offcanvas" data-bs-target="#sellerSidebar"
+                                    aria-controls="sellerSidebar" aria-label="Toggle Sidebar">
+                                    <i class="bi bi-list fs-4"></i>
+                                </button>
+                                <div class="search-bar-wrapper d-none d-md-block">
+                                    <i class="bi bi-search search-icon"></i>
+                                    <input type="text" class="form-control" id="customer-quick-search"
                                         placeholder="ស្វែងរកតាមឈ្មោះ លេខទូរស័ព្ទ ឬអ៊ីមែល...">
                                 </div>
-                                <div class="col-12 col-sm-6 col-md-3">
-                                    <label
-                                        class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ប្រភេទអតិថិជន</label>
-                                    <select class="form-select text-xs" id="filter-vip-type">
-                                        <option value="all">ទាំងអស់</option>
-                                        <option value="vip">អតិថិជន VIP</option>
-                                        <option value="regular">អតិថិជនទូទៅ (Regular)</option>
-                                        <option value="new">អតិថិជនថ្មី (New)</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-3">
-                                    <label
-                                        class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្ថានភាព</label>
-                                    <select class="form-select text-xs" id="filter-customer-status">
-                                        <option value="all">ទាំងអស់</option>
-                                        <option value="active">សកម្ម (Active)</option>
-                                        <option value="inactive">អសកម្ម (Inactive)</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-md-2 d-flex align-items-end h-100 mt-auto">
-                                    <button
-                                        class="btn btn-outline-custom w-100 d-flex justify-content-center align-items-center gap-2"
-                                        id="btn-reset-customer-filters">
-                                        <i class="bi bi-arrow-counterclockwise"></i> កំណត់ឡើងវិញ
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2 gap-md-3">
+                                <!-- Light/Dark Mode Switcher -->
+                                <button class="btn btn-icon" id="theme-toggle" aria-label="Toggle Theme">
+                                    <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                                </button>
+
+                                <!-- Messages Dropdown -->
+                                <div class="dropdown">
+                                    <button class="btn btn-icon position-relative" type="button" id="messageDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-chat-left-dots"></i>
+                                        <span
+                                            class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-warning border border-2 border-white">
+                                            3
+                                        </span>
                                     </button>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                        aria-labelledby="messageDropdown">
+                                        <div
+                                            class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                            <h6 class="mb-0 small">ការជូនដំណឹងថ្មីៗ</h6>
+                                            <a href="seller_messages.html"
+                                                class="small text-success text-decoration-none">មើលការផ្ញើសារ</a>
+                                        </div>
+                                        <div class="dropdown-list-container">
+                                            <!-- Message List Items -->
+                                            <a href="#" class="dropdown-list-item d-flex gap-3">
+                                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100"
+                                                    class="avatar-sm rounded-circle" alt="User Image">
+                                                <div>
+                                                    <div class="item-title-row d-flex justify-content-between">
+                                                        <span class="user-name">Sarah Jenkins</span>
+                                                        <span class="timestamp">2m ago</span>
+                                                    </div>
+                                                    <p class="preview-text text-wrap">សួស្តី សំណាង
+                                                        តើការធានាផលិតផលមានរួមបញ្ចូលក្នុងតម្លៃដើមដែរឬទេ?</p>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-list-item d-flex gap-3">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                                    class="avatar-sm rounded-circle" alt="User Image">
+                                                <div>
+                                                    <div class="item-title-row d-flex justify-content-between">
+                                                        <span class="user-name">Marcus Vance</span>
+                                                        <span class="timestamp">1h ago</span>
+                                                    </div>
+                                                    <p class="preview-text text-wrap">សូមជួយបញ្ជាក់ផងថា
+                                                        តើអ្នកអាចដឹកជញ្ជូនទំនិញទាំងនេះមកកាន់ឃ្លាំងរបស់យើងបានដែរឬទេ?</p>
+                                                </div>
+                                            </a>
+                                            <a href="seller_messages.html"
+                                                class="dropdown-list-item d-flex gap-3 text-center py-2 text-success fw-medium justify-content-center small">
+                                                មើលការផ្ញើសារទាំងអស់
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Notification Dropdown -->
+                                <div class="dropdown">
+                                    <button class="btn btn-icon position-relative" type="button" id="notifDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-bell"></i>
+                                        <span
+                                            class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger border border-2 border-white">
+                                            5
+                                        </span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-large"
+                                        aria-labelledby="notifDropdown">
+                                        <div
+                                            class="dropdown-header-custom d-flex justify-content-between align-items-center">
+                                            <h6 class="mb-0 text-muted">ការជូនដំណឹង</h6>
+                                            <a href="#"
+                                                class="small text-success text-decoration-none">សម្គាល់ថាបានអានទាំងអស់</a>
+                                        </div>
+                                        <div class="dropdown-list-container" id="notifications-container">
+                                            <!-- Dynamically/Statically Handled -->
+                                            <a href="#" class="dropdown-list-item d-flex gap-3 align-items-center">
+                                                <div class="icon-avatar text-success"><i
+                                                        class="bi bi-check-circle-fill"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="item-title-row d-flex justify-content-between">
+                                                        <span class="notif-title small">ការបញ្ជាទិញ #8832
+                                                            ត្រូវបានដឹកជញ្ជូន</span>
+                                                        <span class="timestamp">Just now</span>
+                                                    </div>
+                                                    <p class="preview-text">
+                                                        ការបញ្ជាទិញត្រូវបានផ្ញើទៅមជ្ឈមណ្ឌលដឹកជញ្ជូនភ្នំពេញ។
+                                                    </p>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                                <div class="icon-avatar text-danger"><i
+                                                        class="bi bi-exclamation-triangle-fill"></i></div>
+                                                <div class="flex-grow-1">
+                                                    <div class="item-title-row d-flex justify-content-between">
+                                                        <span class="notif-title small">ស្តុកទំនិញជិតអស់</span>
+                                                        <span class="timestamp">12m ago</span>
+                                                    </div>
+                                                    <p class="preview-text">នៅសល់តែ ៣ មុខប៉ុណ្ណោះ សូមបំពេញស្តុក។</p>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-list-item d-flex align-items-center gap-3">
+                                                <div class="icon-avatar text-primary"><i class="bi bi-cash-stack"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="item-title-row d-flex justify-content-between">
+                                                        <span class="notif-title">ទទួលបានការទូទាត់</span>
+                                                        <span class="timestamp">1h ago</span>
+                                                    </div>
+                                                    <p class="preview-text">ការទូទាត់ប្រាក់ត្រូវបានដំណើរការដោយជោគជ័យ។
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header-divider h-100"></div>
+                                <!-- Mini profile info -->
+                                <div class="dropdown">
+                                    <button class="btn btn-profile d-flex align-items-center gap-2 p-1" type="button"
+                                        id="profileDropdow" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="../assets/img/seller_images/my_pic.jpg"
+                                            class="avatar-sm rounded-circle" alt="User Avatar">
+                                        <div class="user-info">
+                                            <h6 class="profile-name d-none d-lg-inline-block">ចាន់ ជុងឆាយ</h6>
+                                            <p class="small d-none d-lg-block mb-0" style="font-size: 13px;">ហាង
+                                                ល្អប្រណីត</p>
+                                        </div>
+                                        <i class="bi bi-chevron-down d-none d-lg-inline-block"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                        <li><a class="dropdown-item d-flex align-items-center gap-2 small"
+                                                href="seller_profiles.html"><i
+                                                    class="bi bi-person-fill text-success"></i>
+                                                កម្រងព័ត៌មាន</a></li>
+                                        <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item text-danger d-flex align-items-center gap-2 small"
+                                                href="../login.html"><i class="bi bi-box-arrow-right"></i> ចាកចេញ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Main Content Area -->
+                    <main class="content-wrapper">
+                        <div class="container-fluid px-4 py-4">
+
+                            <!-- Title Header -->
+                            <div class="row align-items-center mb-4 gy-3">
+                                <div class="col-md-6 col-12">
+                                    <h1 class="welcome-heading mb-1 text-gradient-primary fw-bold">
+                                        បញ្ជីគ្រប់គ្រងព័ត៌មានអតិថិជន
+                                    </h1>
+                                    <p class="text-muted fs-5 mb-0">គ្រប់គ្រងទំនាក់ទំនង តាមដានចំណាយ
+                                        និងប្រវត្តិនៃការទិញទំនិញរបស់អតិថិជន</p>
                                 </div>
                             </div>
+
+                            <!-- Customer Statistics Grid -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-12 col-sm-6 col-xl-3">
+                                    <div class="stats-card">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="icon-wrap bg-light-success text-white">
+                                                <i class="bi bi-people"></i>
+                                            </div>
+                                            <span class="badge bg-light-success text-white fw-medium">+8
+                                                នាក់ខែនេះ</span>
+                                        </div>
+                                        <div class="stats-body mt-3">
+                                            <h6 class="text-muted small text-uppercase tracking-wider">អតិថិជនសរុប</h6>
+                                            <h3 class="mb-0 stats-counter" id="metric-total-customers" data-target="32">
+                                                00</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-3">
+                                    <div class="stats-card">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="icon-wrap bg-light-warning text-white">
+                                                <i class="bi bi-gem"></i>
+                                            </div>
+                                            <span class="badge bg-light-warning text-white fw-medium">សមាជិក VIP</span>
+                                        </div>
+                                        <div class="stats-body mt-3">
+                                            <h6 class="text-muted small text-uppercase tracking-wider">អតិថិជន VIP</h6>
+                                            <h3 class="mb-0 stats-counter" id="metric-vip-customers" data-target="24">00
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-3">
+                                    <div class="stats-card">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="icon-wrap bg-light-success text-white">
+                                                <i class="bi bi-person-check"></i>
+                                            </div>
+                                            <span class="badge bg-light-success text-white fw-medium">សកម្មខ្លាំង</span>
+                                        </div>
+                                        <div class="stats-body mt-3">
+                                            <h6 class="text-muted small text-uppercase tracking-wider">សកម្មក្នុងខែនេះ
+                                            </h6>
+                                            <h3 class="mb-0 stats-counter" id="metric-active-customers"
+                                                data-target="45">00</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-xl-3">
+                                    <div class="stats-card">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="icon-wrap bg-light-warning text-white">
+                                                <i class="bi bi-graph-up"></i>
+                                            </div>
+                                            <span class="badge bg-light-warning text-white fw-medium">ជាមធ្យម /
+                                                ម្នាក់</span>
+                                        </div>
+                                        <div class="stats-body mt-3">
+                                            <h6 class="text-muted small text-uppercase tracking-wider">ចំណាយមធ្យម (LTV)
+                                            </h6>
+                                            <h3 class="mb-0">$<span class="stats-counter" id="metric-avg-spent"
+                                                    data-target="15">00</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Filters Control Area -->
+                            <div class="dashboard-card mb-4">
+                                <div class="card-body py-3">
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-12 col-md-4">
+                                            <label
+                                                class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្វែងរកអតិថិជន</label>
+                                            <input type="text" class="form-control text-xs" id="filter-customer-search"
+                                                placeholder="ស្វែងរកតាមឈ្មោះ លេខទូរស័ព្ទ ឬអ៊ីមែល...">
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-3">
+                                            <label
+                                                class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ប្រភេទអតិថិជន</label>
+                                            <select class="form-select text-xs" id="filter-vip-type">
+                                                <option value="all">ទាំងអស់</option>
+                                                <option value="vip">អតិថិជន VIP</option>
+                                                <option value="regular">អតិថិជនទូទៅ (Regular)</option>
+                                                <option value="new">អតិថិជនថ្មី (New)</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-3">
+                                            <label
+                                                class="form-label text-xs fw-bold text-muted text-uppercase mb-1">ស្ថានភាព</label>
+                                            <select class="form-select text-xs text-nowrap" id="filter-customer-status">
+                                                <option value="all">ទាំងអស់</option>
+                                                <option value="active">សកម្ម (Active)</option>
+                                                <option value="inactive">អសកម្ម (Inactive)</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-md-2 d-flex align-items-end h-100 mt-auto">
+                                            <button
+                                                class="btn btn-outline-custom w-100 d-flex justify-content-center align-items-center gap-2"
+                                                id="btn-reset-customer-filters">
+                                                <i class="bi bi-arrow-counterclockwise"></i> កំណត់ឡើងវិញ
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Customers Table Card -->
+                            <div class="dashboard-card">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-0 card-title">ទិន្នន័យអតិថិជន</h5>
+                                        <span class="text-muted text-xs">គ្រប់គ្រង
+                                            និងស្វែងយល់ពីតម្រូវការរបស់អតិថិជន</span>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+
+                                    <div class="table-responsive" id="customers-table-wrapper">
+                                        <table class="table table-hover align-middle mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>អតិថិជន</th>
+                                                    <th>ទំនាក់ទំនង</th>
+                                                    <th class="text-nowrap">ប្រភេទសមាជិក</th>
+                                                    <th class="text-nowrap">ចំនួនបញ្ជាទិញ</th>
+                                                    <th class="text-nowrap">ចំណាយសរុប</th>
+                                                    <th>ស្ថានភាព</th>
+                                                    <th>ថ្ងៃចុះឈ្មោះ</th>
+                                                    <th class="text-end">សកម្មភាព</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="customers-list-rows">
+                                                <!-- Javascript renders initial customer rows here dynamically -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <!-- Empty Customers State -->
+                                    <div class="text-center py-5 d-none" id="customers-empty-state">
+                                        <i class="bi bi-people-mute text-muted" style="font-size: 3rem;"></i>
+                                        <h5 class="mt-3">រកមិនឃើញអតិថិជនដែលអ្នកចង់ស្វែងរកទេ</h5>
+                                        <p class="text-muted text-sm">សូមព្យាយាមស្វែងរកជាមួយទិន្នន័យផ្សេងទៀត។</p>
+                                    </div>
+
+                                    <!-- Pagination Footer -->
+                                    <div class="px-4 py-3 d-flex align-items-center justify-content-between border-top">
+                                        <span class="text-xs text-muted" id="customer-pagination-text">កំពុងបង្ហាញ 0
+                                            ក្នុងចំណោម
+                                            0 អតិថិជន</span>
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination pagination-sm mb-0">
+                                                <li class="page-item disabled"><a class="page-link" href="#"><i
+                                                            class="bi bi-chevron-left"></i></a></li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#"><i
+                                                            class="bi bi-chevron-right"></i></a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </div>
-                    </div>
-
-                    <!-- Customers Table Card -->
-                    <div class="dashboard-card">
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <div>
-                                <h5 class="mb-0 card-title">ទិន្នន័យអតិថិជន</h5>
-                                <span class="text-muted text-xs">គ្រប់គ្រង និងស្វែងយល់ពីតម្រូវការរបស់អតិថិជន</span>
-                            </div>
-                        </div>
-                        <div class="card-body p-0">
-
-                            <div class="table-responsive" id="customers-table-wrapper">
-                                <table class="table table-hover align-middle mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th>អតិថិជន</th>
-                                            <th>ទំនាក់ទំនង</th>
-                                            <th class="text-nowrap">ប្រភេទសមាជិក</th>
-                                            <th class="text-nowrap">ចំនួនបញ្ជាទិញ</th>
-                                            <th class="text-nowrap">ចំណាយសរុប</th>
-                                            <th>ស្ថានភាព</th>
-                                            <th>ថ្ងៃចុះឈ្មោះ</th>
-                                            <th class="text-end">សកម្មភាព</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="customers-list-rows">
-                                        <!-- Javascript renders initial customer rows here dynamically -->
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-- Empty Customers State -->
-                            <div class="text-center py-5 d-none" id="customers-empty-state">
-                                <i class="bi bi-people-mute text-muted" style="font-size: 3rem;"></i>
-                                <h5 class="mt-3">រកមិនឃើញអតិថិជនដែលអ្នកចង់ស្វែងរកទេ</h5>
-                                <p class="text-muted text-sm">សូមព្យាយាមស្វែងរកជាមួយទិន្នន័យផ្សេងទៀត។</p>
-                            </div>
-
-                            <!-- Pagination Footer -->
-                            <div class="px-4 py-3 d-flex align-items-center justify-content-between border-top">
-                                <span class="text-xs text-muted" id="customer-pagination-text">កំពុងបង្ហាញ 0 ក្នុងចំណោម
-                                    0 អតិថិជន</span>
-                                <nav aria-label="Page navigation">
-                                    <ul class="pagination pagination-sm mb-0">
-                                        <li class="page-item disabled"><a class="page-link" href="#"><i
-                                                    class="bi bi-chevron-left"></i></a></li>
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#"><i
-                                                    class="bi bi-chevron-right"></i></a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-
-                        </div>
-                    </div>
-
+                    </main>
                 </div>
-            </main>
+            </div>
         </div>
     </div>
 
