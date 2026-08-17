@@ -11,6 +11,7 @@
 .nav .btn:hover {
   transform: translateY(-2px);
   transition: .3s;
+  color: white !important;
 }
 
 .nav .nav-link:focus {
@@ -23,7 +24,12 @@
 .nav .nav-link:focus .fa-angle-down {
   transform: rotateX(180deg);
   transition: .3s;
+  color: white !important;
 }
+.nav .nav-link:hover .fa-angle-down{
+  color: white !important;
+}
+
 
 /* ========= dark mode =========== */
 [data-bs-theme="dark"] body,

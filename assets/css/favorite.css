@@ -33,20 +33,28 @@ body {
     font-family: "Battambang", system-ui, "Roboto", sans-serif !important;
 }
 /* ======= nav btn ========= */
-.nav .btn:hover{
-    transform: translateY(-2px);
-    transition: .3s;
+.nav .btn:hover {
+  transform: translateY(-2px);
+  transition: .3s;
+  color: white !important;
 }
-.nav .nav-link:focus{
-    background-color: var(--color-green);
-    transition: .3s ;
-    color: var(--color-white) !important;
-    box-shadow: var(--box-shadow);
+
+.nav .nav-link:focus {
+  background-color: var(--color-green);
+  transition: .3s;
+  color: var(--color-white) !important;
+  box-shadow: var(--box-shadow);
 }
-.nav .nav-link:focus .fa-angle-down{
-    transform: rotateX(180deg);
-    transition: .3s;
+
+.nav .nav-link:focus .fa-angle-down {
+  transform: rotateX(180deg);
+  transition: .3s;
+  color: white !important;
 }
+.nav .nav-link:hover .fa-angle-down{
+  color: white !important;
+}
+
 
 
 .banner {
