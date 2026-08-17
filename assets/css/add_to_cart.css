@@ -21,11 +21,12 @@
   --success: #10B981;
   --danger: #EF4444;
   --warning: #F59E0B;
-  --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.04), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
-  --card-shadow-hover: 0 20px 30px -10px rgba(15, 23, 42, 0.12), 0 10px 15px -8px rgba(15, 23, 42, 0.08);
+  --card-shadow: 0 10px 25px -5px #0f172a0a, 0 8px 10px -6px #0f172a0a;
+  --card-shadow-hover: 0 20px 30px -10px #0f172a1f, 0 10px 15px -8px #0f172a14;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-bg: #ffffffd9;
+  --glass-border: #ffffff66;
+  --form-forcus: #12282059;
 
 }
 
@@ -33,26 +34,34 @@ body {
   font-family: "Battambang", system-ui, "Roboto", sans-serif !important;
 }
 /* ======= nav btn ========= */
-.nav .btn:hover{
-    transform: translateY(-2px);
-    transition: .3s;
+.nav .btn:hover {
+  transform: translateY(-2px);
+  transition: .3s;
+  color: white !important;
 }
-.nav .nav-link:focus{
-    background-color: var(--color-green);
-    transition: .3s ;
-    color: var(--color-white) !important;
-    box-shadow: var(--box-shadow);
+
+.nav .nav-link:focus {
+  background-color: var(--color-green);
+  transition: .3s;
+  color: var(--color-white) !important;
+  box-shadow: var(--box-shadow);
 }
-.nav .nav-link:focus .fa-angle-down{
-    transform: rotateX(180deg);
-    transition: .3s;
+
+.nav .nav-link:focus .fa-angle-down {
+  transform: rotateX(180deg);
+  transition: .3s;
+  color: white !important;
 }
+.nav .nav-link:hover .fa-angle-down{
+  color: white !important;
+}
+
 
 .sect-1 .card-cart {
   border-radius: 10px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0.1px 0.1px 5px rgba(128, 128, 128, 0.188);
+  box-shadow: 0.1px 0.1px 5px #80808030;
 
 }
 
@@ -265,6 +274,7 @@ body {
 #customerFormContent {
   border-radius: 16px;
   box-shadow: var(--card-shadow-hover);
+  box-shadow:0 30px 60px -30px #12282059 !important;
 }
 
 #customerInfoForm .form-label {
@@ -273,7 +283,7 @@ body {
 }
 
 #customerInfoForm .form-control {
-  border: 1.5px solid var(--border-color);
+  border: 1.5px solid var(--form-forcus);
   border-radius: 10px;
   padding: 10px 14px;
   font-size: 14px;
@@ -281,8 +291,9 @@ body {
 }
 
 #customerInfoForm .form-control:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.18);
+  border-color: #2F9E6E !important;
+  background-color: #F3FBF7 !important;
+  box-shadow: 0 0 0 4px rgba(47, 158, 110, 0.18), 0 2px 8px -2px rgba(47, 158, 110, 0.25) !important;
 }
 
 #customerInfoForm .form-control.is-invalid {
@@ -324,19 +335,19 @@ body {
 }
 
 .pay-method-card:hover {
-  border-color: var(--accent);
+  border-color: var(--form-forcus);
   transform: translateY(-2px);
 }
 
 .pay-method-input:checked+.pay-method-card {
-  border-color: var(--accent);
-  background-color: rgba(197, 168, 128, 0.12);
+  border-color: #94A3B8;
+  background-color: #F1F5F9;
   color: var(--dark);
-  box-shadow: 0 4px 10px -4px rgba(197, 168, 128, 0.4);
+  box-shadow: 0 4px 10px -4px rgba(100, 116, 139, 0.25);
 }
 
 .pay-method-input:checked+.pay-method-card i {
-  color: var(--accent-hover);
+  color: #475569;
 }
 
 .pay-method-input {
