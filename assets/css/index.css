@@ -453,3 +453,8 @@ a{
         background-color: red !important;
         color: white;
     }
+.modal .payment img{
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+}
