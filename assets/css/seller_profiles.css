@@ -6,6 +6,7 @@
     width: 100%;
     height: 350px;
     border-radius: 20px;
+    overflow: hidden;
 }
 .sec-img-cover .change-cover-img-btn{
     position: absolute;

@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td class="fw-bold text-primary">$${cust.totalSpent.toFixed(2)}</td>
                     <td>
                         <span class="text-xs fw-semibold">
-                            <span class="status-dot ${cust.status}"></span>
+                            <span class="status-dot ${cust.status} text-nowrap"></span>
                             ${cust.status === 'active' ? 'សកម្ម' : 'អសកម្ម'}
                         </span>
                     </td>
