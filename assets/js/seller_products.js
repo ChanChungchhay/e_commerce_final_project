@@ -37,6 +37,15 @@ document.addEventListener('DOMContentLoaded', () => {
             stock: 12,
             threshold: 3,
             image: '../assets/img/product/hair-machin.png'
+        },
+        {
+            id: 5,
+            name: 'ស្បែកជើងកីឡា',
+            category: 'សម្ភារៈកីឡា',
+            price: 50.00,
+            stock: 12,
+            threshold: 3,
+            image: '../assets/img/product/sport_shose.png'
         }
     ];
 
