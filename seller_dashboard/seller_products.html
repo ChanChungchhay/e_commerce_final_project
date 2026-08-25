@@ -393,6 +393,7 @@
                                                 <option value="ឧបករណ៍ឆ្លាតវៃ">ឧបករណ៍ឆ្លាតវៃ</option>
                                                 <option value="គ្រឿងបន្លាស់">គ្រឿងបន្លាស់</option>
                                                 <option value="សម្ភារៈក្នុងផ្ទះ">សម្ភារៈក្នុងផ្ទះ</option>
+                                                <option value="សម្ភារៈក្នុងផ្ទះ">សម្ភារៈកីឡា</option>
                                             </select>
                                         </div>
                                         <div class="col-12 col-sm-6 col-md-3">
@@ -427,8 +428,7 @@
                                     </div>
                                     <div class="d-flex align-items-center gap-2">
                                         <button class="btn btn-icon btn-sm active" id="view-list"
-                                            data-bs-toggle="tooltip" title="ទិដ្ឋភាពបញ្ជី"><i
-                                                class="bi bi-list-task"></i></button>
+                                            data-bs-toggle="tooltip"><i class="bi bi-list-task"></i></button>
                                         <button class="btn btn-icon btn-sm" id="view-grid" data-bs-toggle="tooltip"
                                             title="ទិដ្ឋភាពប្រអប់"><i class="bi bi-grid-3x3-gap"></i></button>
                                     </div>
@@ -530,8 +530,8 @@
                                         <img src="" class="img-preview w-100 h-100 object-fit-cover rounded-3"
                                             id="product-img-preview" alt="Preview">
                                         <button type="button"
-                                            class="btn btn-sm btn-danger btn-remove-img position-absolute top-2 end-2"><i
-                                                class="bi bi-trash"></i></button>
+                                            class="btn btn-sm btn-danger btn-remove-img position-absolute top-2"
+                                            style="right: 2px;"><i class="bi bi-trash"></i></button>
                                     </div>
                                 </div>
                                 <input type="hidden" id="product-img-base64">
@@ -545,7 +545,7 @@
                                             class="form-label small fw-bold text-uppercase">ឈ្មោះផលិតផល <span
                                                 class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="productName"
-                                            placeholder="ឧ. កាសស្តាប់ត្រចៀក UltraBass" required>
+                                            placeholder="បំពេញឈ្មោះផលិតផល" required>
                                         <div class="invalid-feedback">សូមបំពេញឈ្មោះផលិតផលឱ្យបានត្រឹមត្រូវ។</div>
                                     </div>
                                     <div class="col-12 col-sm-6">
@@ -554,6 +554,7 @@
                                                 class="text-danger">*</span></label>
                                         <select class="form-select" id="productCategory" required>
                                             <option value="" selected disabled>ជ្រើសរើសប្រភេទ</option>
+                                            <option value="ផលិតផលសិប្បកម្មខ្មែរ">ផលិតផលសិប្បកម្មខ្មែរ</option>
                                             <option value="គ្រឿងអេឡិចត្រូនិក">គ្រឿងអេឡិចត្រូនិក</option>
                                             <option value="ឧបករណ៍ឆ្លាតវៃ">ឧបករណ៍ឆ្លាតវៃ</option>
                                             <option value="គ្រឿងបន្លាស់">គ្រឿងបន្លាស់</option>
@@ -563,11 +564,11 @@
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="productSKU"
-                                            class="form-label small fw-bold text-uppercase">លេខកូដសម្គាល់ (SKU) <span
+                                            class="form-label small fw-bold text-uppercase">លេខកូដសម្គាល់<span
                                                 class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="productSKU"
-                                            placeholder="ឧ. SKU-1002" required>
-                                        <div class="invalid-feedback">សូមបំពេញកូដ SKU ផលិតផល។</div>
+                                        <input type="number" class="form-control" id="productSKU"
+                                            placeholder="វាយលេខសម្គាល់" required>
+                                        <div class="invalid-feedback">សូមបំពេញកូដផលិតផល។</div>
                                     </div>
                                 </div>
                             </div>
@@ -679,7 +680,7 @@
                         <div class="mb-3">
                             <label for="couponCode" class="form-label fw-bold text-uppercase">លេខកូដបញ្ចុះតម្លៃ</label>
                             <input type="text" class="form-control font-monospace" id="couponCode"
-                                placeholder="e.g. FLASH30" required>
+                                placeholder="បំពេញកូដ" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label fw-bold text-uppercase d-block">ប្រភេទនៃការបញ្ចុះតម្លៃ</label>
@@ -696,9 +697,9 @@
                         </div>
                         <div class="mb-3">
                             <label for="discountValue"
-                                class="form-label fw-bold text-uppercase">បញ្ចូលចំនួនទឹកប្រាក់នៃការបញ្ចុះតម្លៃ</label>
-                            <input type="number" class="form-control" id="discountValue" placeholder="e.g. 30" min="0"
-                                required>
+                                class="form-label fw-bold text-uppercase">បញ្ចូលចំនួនទឹកប្រាក់នៃការបញ្ចុះតម្លៃ($)</label>
+                            <input type="number" class="form-control" id="discountValue" placeholder="ចំនួនទឹកប្រាក់"
+                                min="0" required>
                         </div>
                     </form>
                 </div>
@@ -731,6 +732,17 @@
     <script src="../assets/js/seller_dashboard.js"></script>
     <!-- Product Page Controller Logic -->
     <script src="../assets/js/seller_products.js"></script>
+    <script>
+        const toastTrigger = document.getElementById('liveToastBtn');
+        const toastLiveExample = document.getElementById('liveToast');
+
+        if (toastTrigger) {
+            toastTrigger.addEventListener('click', () => {
+                const toast = new bootstrap.Toast(toastLiveExample);
+                toast.show();
+            });
+        }
+    </script>
 
 </body>
 
