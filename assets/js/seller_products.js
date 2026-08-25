@@ -76,9 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnRemoveImg = document.querySelector('.btn-remove-img');
     const base64ImgInput = document.getElementById('product-img-base64');
     const btnOpenAddModal = document.getElementById('btn-open-add-modal');
-    // Creating Coupon success
-    const btn = document.getElementById("liveToastBtn");
-    const toast = document.getElementById("liveToast");
 
     
 
@@ -280,17 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.renderProducts();
             });
 
-            // function create coupon
-            btn.addEventListener("click", () => {
-                const bsToast = new bootstrap.Toast(toast);
-                // បិទ Modal
-                bootstrap.Modal.getInstance(document.getElementById("createDiscountModal")).hide();
-
-                // រង់ចាំ Modal បិទសិន
-                setTimeout(() => {
-                    bsToast.show();
-                }, 1000);
-            });
+            
 
             // Image Upload Event Handlers
             imgFileInput.addEventListener('change', (e) => {
@@ -454,7 +441,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         
     };
-
     // Initialize Page Execution
     ProductsController.init();
 });

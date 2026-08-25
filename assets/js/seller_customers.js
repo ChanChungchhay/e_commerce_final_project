@@ -12,15 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
             phone: '092 112 233',
             address: 'ផ្ទះលេខ ១២ ផ្លូវ ៣១០ សង្កាត់បឹងកេងកងទី១ ភ្នំពេញ',
             tier: 'vip',
-            ordersCount: 15,
+            ordersCount: 3,
             totalSpent: 1240.00,
             status: 'active',
             joinedDate: '12-មករា-2025',
             notes: 'អតិថិជនម្នាក់នេះចូលចិត្តការវេចខ្ចប់ប្រអប់ស្អាតៗ និងចូលចិត្តកក់ទំនិញទុកមុន។',
             history: [
-                { orderId: 'ORD-9832', date: '12-Oct-2026', amount: 129.00, status: 'shipping' },
-                { orderId: 'ORD-9512', date: '10-Sep-2026', amount: 250.00, status: 'completed' },
-                { orderId: 'ORD-9401', date: '01-Aug-2026', amount: 861.00, status: 'completed' }
+                { orderId: 'ORD-9832', date: '12-Jun-2026', amount: 129.00, status: 'shipping' },
+                { orderId: 'ORD-9512', date: '10-May-2026', amount: 250.00, status: 'completed' },
+                { orderId: 'ORD-9401', date: '01-Aug-2025', amount: 861.00, status: 'completed' }
             ]
         },
         {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ordersCount: 1,
             totalSpent: 45.00,
             status: 'active',
-            joinedDate: '01-តុលា-2026',
+            joinedDate: '01-តុលា-2025',
             notes: 'អតិថិជនទើបចុះឈ្មោះថ្មី។',
             history: [
                 { orderId: 'ORD-9801', date: '01-Oct-2026', amount: 45.00, status: 'completed' }
@@ -259,8 +259,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     };
 
                     tr.innerHTML = `
-                        <td class="fw-bold text-primary font-monospace">${hist.orderId}</td>
-                        <td>${hist.date}</td>
+                        <td class="fw-bold text-primary text-nowrap">${hist.orderId}</td>
+                        <td class= "text-nowrap">${hist.date}</td>
                         <td class="fw-bold">$${hist.amount.toFixed(2)}</td>
                         <td>
                             <span class="status-badge status-${hist.status}" style="font-size: 10px; padding: 2px 6px;">

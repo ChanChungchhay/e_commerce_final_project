@@ -1,19 +1,5 @@
-/**
- * START OF FILE seller_orders.js
- * Nexis Orders Management Controller Console (Minimal Static Version)
- */
 document.addEventListener('DOMContentLoaded', () => {
-
-    const btnPrintInvoice = document.getElementById('btn-print-invoice');
     const btnSaveOrderStatus = document.getElementById('btn-save-order-status');
-
-    // ដំណើរការប៊ូតុងបោះពុម្ភវិក្កយបត្រ
-    if (btnPrintInvoice) {
-        btnPrintInvoice.addEventListener('click', () => {
-            window.print();
-        });
-    }
-
     // ដំណើរការបង្ហាញការជូនដំណឹង (Toast) ពេលចុចរក្សាទុកស្ថានភាព
     if (btnSaveOrderStatus) {
         btnSaveOrderStatus.addEventListener('click', () => {
