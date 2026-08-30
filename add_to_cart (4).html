@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add_To_Cart</title>
+    <link rel="stylesheet" href="../assets/css/add_to_cart.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/customer.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/img/logo/img-logo.png">
+</head>
+
+<body>
+    <div class="header py-2 br-s bg-success">
+        <div class="container d-flex justify-content-between  align-items-center ">
+            <div class="head-link d-flex gap-3 ">
+                <a class=" body-link text-light" href="#"><i class="fa-regular fa-envelope me-1 fs-6"
+                        style="color: rgb(255, 255, 255);"></i>contact@example.com</a>
+                <a class=" body-link text-light" href="#"><i class="fa-solid fa-mobile-screen me-1 fs-6"
+                        style="color: rgb(255, 255, 255);"></i> +885 096300600</a>
+            </div>
+            <button type="button" class="head-icon d-flex gap-3 d-md-block d-none border-0 bg-transparent ">
+                <a href="#"><i class="fa-brands fa-twitter  fs-6  text-light"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook fs-6  text-light"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram fs-6  text-light"></i></a>
+                <a href="#"><i class="fa-brands fa-invision fs-6  text-light"></i></a>
+            </button>
+        </div>
+    </div>
+    <nav class="nav pt-2 shadow position-sticky top-0 z-3 bg-white">
+        <div class="container mb-0 d-flex justify-content-between align-items-center ">
+            <a href="./home.html" class="navbar-brand"><img src="../assets/img/logo/img-logo.png"
+                    class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
+            <ul class="navbar-nav d-flex gap-1 flex-row d-lg-block d-none d-lg-flex">
+                <li class="nav-item"><a class="nav-link active" href="#">ទំព័រដើម</a></li>
+                <li class="nav-item"><a class="nav-link " href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">ប្រភេទទំនិញ<i class="fa-solid fa-angle-down"
+                            style="color: var(--color-gray);"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="product.html">សម្លៀកបំពាក់</a></li>
+                        <li><a class="dropdown-item" href="product.html">គ្រឿងសម្អាង</a></li>
+                        <li><a class="dropdown-item" href="product.html">ផលិតផលសិប្បកម្មខ្មែរ</a></li>
+                        <li><a class="dropdown-item" href="product.html">អាហារ និងគ្រឿងទេស</a></li>
+                        <li><a class="dropdown-item" href="product.html">សម្ភារៈកីឡា</a></li>
+                        <li><a class="dropdown-item" href="product.html">សៀវភៅ និងសម្ភារៈសិក្សា</a></li>
+                        <li><a class="dropdown-item" href="product.html">គ្រឿងអេឡិចត្រូនិក</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link " href="../customer/product.html">ផលិតផល</a></li>
+                <li class="nav-item"><a class="nav-link " href="../customer/discount.html">បញ្ចុះតម្លៃ</a></li>
+                <li class="nav-item"><a class="nav-link " href="./about_us.html">អំពីយើង</a></li>
+                <li class="nav-item"><a class="nav-link " href="./contact.html">ទំនាក់ទំនង</a></li>
+            </ul>
+            <div class="d-flex gap-2">
+                <a href="../customer/shop.html"
+                    class="btn border shadow rounded-circle bg-transparent d-flex justify-content-center align-items-center position-relative"
+                    style="width: 35px;height: 35px;">
+                    <i class="fa-solid fa-store text-primary"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        style="font-size: 10px;">2</span>
+                </a>
+                <a href="../customer/favorite.html"
+                    class="btn border shadow rounded-circle bg-transparent d-flex justify-content-center align-items-center position-relative"
+                    style="width: 35px;height: 35px;">
+                    <i class="fa-regular fa-heart text-danger"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        style="font-size: 10px;">3</span>
+                </a>
+                <a href="../customer/add_to_cart.html"
+                    class="btn border shadow rounded-circle bg-transparent d-flex justify-content-center align-items-center position-relative"
+                    style="width: 35px;height: 35px;">
+                    <i class="fa-solid fa-cart-shopping text-success"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        style="font-size: 10px;">4</span>
+                </a>
+                <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../assets/img/profile_customer/customer.jpg"
+                        class="img-fluid object-fit-cover rounded-circle " style="width: 35px;" alt="">
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./profile.html"><i
+                                    class="fa-solid fa-user fs-5 bg-danger-subtle p-1 me-3 rounded-circle"
+                                    style="color:white;width: 30px;height: 30px;"></i>ប្រវត្តិរូប</a></li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center gap-2" href="#" role="button"
+                                id="themeToggle">
+                                <i class="fa-solid fa-moon text-warning bg-danger-subtle p-1 d-flex justify-content-center align-items-center rounded-circle"
+                                    style="width: 30px;height: 30px;" id="themeIcon"></i>
+                                <span id="themeText">Dark Mode</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item active" href="#" data-bs-toggle="modal"
+                                data-bs-target="#logoutModal">
+                                <i class="fa-solid fa-right-from-bracket fs-5 bg-danger-subtle p-1 me-3 rounded-circle"
+                                    style="color:red;width: 30px;height: 30px;"></i>
+                                ចាកចេញ
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"></a></li>
+                    </ul>
+                </a>
+                <button type="button"
+                    class="btn border shadow d-lg-none d-block  d-flex justify-content-center align-items-center"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"
+                    style="width: 35px;height: 35px;"><i class="fa-solid fa-bars"></i></button>
+
+            </div>
+        </div>
+    </nav>
+    <div class="head-tittle fs-1 py-5 fw-bold text-bg-light mb-2 text-success text-center">កន្រ្តកទំនិញ</div>
+
+    <!-- ======offcanvas========== -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"
+        style="width: 350px;">
+        <div class="offcanvas-header">
+            <img src="../assets/img/logo/img-logo.png" class="object-fit-cover img-fluid text-center"
+                style="width: 110px;" alt="">
+            <button type="button" class="btn-close shadow-none " data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav d-flex gap-3 justify-content-center align-items-center flex-column gap-1">
+                <li class="nav-item"><a class="nav-link shadow " href="./home.html">ទំព័រដើម</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">ប្រភេទទំនិញ<i class="fa-solid fa-angle-down"
+                            style="color: var(--color-gray);"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./product.html">សម្លៀកបំពាក់</a></li>
+                        <li><a class="dropdown-item" href="./product.html">គ្រឿងសម្អាង</a></li>
+                        <li><a class="dropdown-item" href="./product.html">ផលិតផលសិប្បកម្មខ្មែរ</a></li>
+                        <li><a class="dropdown-item" href="./product.html">អាហារ និងគ្រឿងទេស</a></li>
+                        <li><a class="dropdown-item" href="./product.html">សម្ភារៈកីឡា</a></li>
+                        <li><a class="dropdown-item" href="./product.html">សៀវភៅ និងសម្ភារៈសិក្សា</a></li>
+                        <li><a class="dropdown-item" href="./product.html">គ្រឿងអេឡិចត្រូនិក</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link shadow " href="./product.html">ផលិតផល</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="./discount.html">បញ្ចុះតម្លៃ</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="./about_us.html">អំពីយើង</a></li>
+                <li class="nav-item"><a class="nav-link shadow " href="./contact.html">ទំនាក់ទំនង</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="sect-1 py-4 ">
+        <div class="container">
+            <div class="row g-3 py-4">
+                <div class="col-lg-8 col-12 ">
+                    <div class="card-cart px-3 ">
+                        <!-- ======= scroll-table======== -->
+                        <div class="table-scroll " style="overflow-x: auto;">
+                            <table class="table table-bordered w-100 py-4 text-nowrap" rules="rows"
+                                style="min-width: 600px;">
+                                <thead class="">
+                                    <tr class="d-flex justify-content-center align-items-center "
+                                        style="height: 60px;border-top: none;">
+                                        <th class="th " style="width: 12%;">ទំនិញ (Product)</th>
+                                        <th class="th text-center" style="width: 18%; white-space: normal;">ឈ្មោះផលិតផល
+                                            (Product Name)</th>
+                                        <th class="th text-center">តម្លៃឯកតា (Price)</th>
+                                        <th class="th text-center">ចំនួន (Qty)</th>
+                                        <th class="th text-center">តម្លៃសរុប (Total)</th>
+                                        <th class="th text-center" style="width: 10%;">សកម្មភាព</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tboby">
+                                    <!-- lek 1 -->
+                                    <tr class="d-flex justify-content-center align-items-center h-35 py-3">
+                                        <td class="td d-flex justify-content-center align-items-center"
+                                            style="width: 12%;">
+                                            <img src="../assets/img/product/zinvo-1.webp"
+                                                class="img-fluid object-fit-cover rounded-2"
+                                                style="width: 60px; height: 70px;" alt="">
+                                        </td>
+                                        <td class="td d-flex align-items-center"
+                                            style="width: 18%; white-space: normal;">
+                                            <div class="product-name-cell">ទឹកអប់</div>
+                                        </td>
+                                        <td class="td d-flex justify-content-center align-items-center">
+                                            285$
+                                        </td>
+                                        <td class="td d-flex justify-content-center align-items-center">
+                                            <div class="qty flex items-center border border-success  rounded-2 ">
+                                                <button type="button" id="decrement-button"
+                                                    data-qty-decrement="quantity-input-1" class=" h-10">
+                                                    <div
+                                                        class="btn-subtract w-10 h-10 d-flex justify-content-center align-items-center">
+                                                        -</div>
+                                                </button>
+                                                <input type="text" id="quantity-input-1"
+                                                    aria-describedby="helper-text-explanation"
+                                                    class="bg-transparent h-10 text-center w-100  " value="1"
+                                                    placeholder="0" required />
+                                                <button type="button" id="increment-button"
+                                                    data-qty-increment="quantity-input-1" class="h-10">
+                                                    <div
+                                                        class="btn-plus w-10 h-10 d-flex justify-content-center align-items-center">
+                                                        +</div>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td class="td fw-bold d-flex justify-content-center align-items-center">
+                                            $18.50
+                                        </td>
+                                        <td class="td d-flex justify-content-center align-items-center fs-5 "
+                                            style="width: 10%;">
+                                            <i class="fa-solid fa-trash-can btn-delete "
+                                                style="color: rgba(93, 87, 87, 0.434);"></i>
+                                        </td>
+                                    </tr>
+                                    <!-- lek 2 -->
+                                    <tr class="d-flex justify-content-center align-items-center h-30 py-3">
+                                        <td class="td d-flex justify-content-center align-items-center"
+                                            style="width: 12%;">
+                                            <img src="../assets/img/product/skincare.png"
+                                                class="img-fluid object-fit-cover rounded-2"
+                                                style="width: 60px;height: 70px;" alt="">
+                                        </td>
+                                        <td class="td d-flex align-items-center"
+                                            style="width: 18%; white-space: normal;">
+                                            <div class="product-name-cell">សេរ៉ូមលាបមុខ</div>
+                                        </td>
+                                        <td class="td d-flex justify-content-center align-items-center">
+                                            10.00$
+                                        </td>
+                                        <td class="td d-flex justify-content-center align-items-center">
+                                            <div class="qty flex items-center border border-success  rounded-2 ">
+                                                <button type="button" id="decrement-button"
+                                                    data-qty-decrement="quantity-input-2" class=" h-10">
+                                                    <div
+                                                        class="btn-subtract w-10 h-10 d-flex justify-content-center align-items-center">
+                                                        -</div>
+                                                </button>
+                                                <input type="text" id="quantity-input-2"
+                                                    aria-describedby="helper-text-explanation"
+                                                    class="bg-transparent h-10 text-center w-100  " value="1"
+                                                    placeholder="0" required />
+                                                <button type="button" id="increment-button"
+                                                    data-qty-increment="quantity-input-2" class="h-10">
+                                                    <div
+                                                        class="btn-plus w-10 h-10 d-flex justify-content-center align-items-center">
+                                                        +</div>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td class="td fw-bold d-flex justify-content-center align-items-center ">
+                                            $18.50
+                                        </td>
+                                        <td class="td d-flex justify-content-center align-items-center fs-5"
+                                            style="width: 10%;">
+                                            <i class="fa-solid fa-trash-can btn-delete"
+                                                style="color: rgba(93, 87, 87, 0.434);"></i>
+                                        </td>
+                                    </tr>
+                                    <!-- lek 3 -->
+                                    <tr
+                                        class="d-flex justify-content-center align-items-center h-30 py-3 border-bottom-0">
+                                        <td class="td d-flex justify-content-center align-items-center"
+                                            style="width: 12%;">
+                                            <img src="../assets/img/product/sport_shose.png"
+                                                class="img-fluid object-fit-cover rounded-2"
+                                                style="width: 60px;height: 70px;" alt="">
+                                        </td>
+                                        <td class="td d-flex align-items-center"
+                                            style="width: 18%; white-space: normal;">
+                                            <div class="product-name-cell">ស្បែកជេីងប៉ាតា</div>
+                                        </td>
+                                        <td class="td d-flex justify-content-center align-items-center">
+                                            15.50$
+                                        </td>
+                                        <td class="td d-flex justify-content-center align-items-center">
+                                            <div class="qty flex items-center border border-success  rounded-2 ">
+                                                <button type="button" id="decrement-button"
+                                                    data-qty-decrement="quantity-input-3" class=" h-10">
+                                                    <div
+                                                        class="btn-subtract w-10 h-10 d-flex justify-content-center align-items-center">
+                                                        -</div>
+                                                </button>
+                                                <input type="text" id="quantity-input-3"
+                                                    aria-describedby="helper-text-explanation"
+                                                    class="bg-transparent h-10 text-center w-100  " value="1"
+                                                    placeholder="0" required />
+                                                <button type="button" id="increment-button"
+                                                    data-qty-increment="quantity-input-3" class="h-10">
+                                                    <div
+                                                        class="btn-plus w-10 h-10 d-flex justify-content-center align-items-center">
+                                                        +</div>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td class="td fw-bold d-flex justify-content-center align-items-center ">
+                                            $18.50
+                                        </td>
+                                        <td class="td d-flex justify-content-center align-items-center fs-5 "
+                                            style="width: 10%;">
+                                            <i class="fa-solid fa-trash-can btn-delete"
+                                                style="color: rgba(93, 87, 87, 0.434);"></i>
+                                        </td>
+                                    </tr>
+                                    <!-- lek 4 -->
+                                    <tr
+                                        class="d-flex justify-content-center align-items-center h-30 py-3 border-bottom-0">
+                                        <td class="td d-flex justify-content-center align-items-center"
+                                            style="width: 12%;">
+                                            <img src="../assets/img/product/zinvo.png"
+                                                class="img-fluid object-fit-cover rounded-2"
+                                                style="width: 60px;height: 70px;" alt="">
+                                        </td>
+                                        <td class="td d-flex align-items-center"
+                                            style="width: 18%; white-space: normal;">
+                                            <div class="product-name-cell">នាឡិកាដៃ</div>
+                                        </td>
+                                        <td class="td d-flex justify-content-center align-items-center">
+                                            100.00$
+                                        </td>
+                                        <td class="td d-flex justify-content-center align-items-center">
+                                            <div class="qty flex items-center border border-success  rounded-2 ">
+                                                <button type="button" id="decrement-button"
+                                                    data-qty-decrement="quantity-input-4" class=" h-10">
+                                                    <div
+                                                        class="btn-subtract w-10 h-10 d-flex justify-content-center align-items-center">
+                                                        -</div>
+                                                </button>
+                                                <input type="text" id="quantity-input-4"
+                                                    aria-describedby="helper-text-explanation"
+                                                    class="bg-transparent h-10 text-center w-100  " value="1"
+                                                    placeholder="0" required />
+                                                <button type="button" id="increment-button"
+                                                    data-qty-increment="quantity-input-4" class="h-10">
+                                                    <div
+                                                        class="btn-plus w-10 h-10 d-flex justify-content-center align-items-center">
+                                                        +</div>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td class="td fw-bold d-flex justify-content-center align-items-center ">
+                                            $18.50
+                                        </td>
+                                        <td class="td d-flex justify-content-center align-items-center fs-5 "
+                                            style="width: 10%;">
+                                            <i class="fa-solid fa-trash-can btn-delete"
+                                                style="color: rgba(93, 87, 87, 0.434);"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="card-cart px-3 py-3">
+                        <div
+                            class="card-header text-center w-100 h-10 mt-4 pb-2 border-bottom h5 fw-bold d-flex justify-content-start align-items-end bor">
+                            សេចក្តីសង្ខេបការទិញ</div>
+                        <div class="d-flex justify-content-between py-4">
+                            <div class="">តម្លៃទំនិញសរុប</div>
+                            <div class="" id="sub-total">$65.40</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-3 flex-wrap gap-2">
+                            <div class="fw-bold" style="font-size:14px;">ទីតាំងដឹកជញ្ជូន</div>
+                            <div class="d-flex gap-3">
+                                <div class="form-check m-0">
+                                    <input class="form-check-input" type="radio" name="deliveryLocation" id="loc-pp"
+                                        value="pp" checked>
+                                    <label class="form-check-label" for="loc-pp" style="font-size:13px;">ភ្នំពេញ
+                                        ($1)</label>
+                                </div>
+                                <div class="form-check m-0">
+                                    <input class="form-check-input" type="radio" name="deliveryLocation"
+                                        id="loc-province" value="province">
+                                    <label class="form-check-label" for="loc-province" style="font-size:13px;">តាមខេត្ត
+                                        ($2)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between py-4">
+                            <div class="">សេវាដឹកជញ្ជូន</div>
+                            <div class="" id="delivery-fee">Free</div>
+                            <!-- <div class="">* ឥតគិតថ្លៃសម្រាប់ការទិញចាប់ពី $50 ឡើងទៅ</div> -->
+                        </div>
+                        <div class="" style="border-bottom: 2px dashed #756e6e50; ">* ឥតគិតថ្លៃសម្រាប់ការទិញចាប់ពី $50
+                            ឡើងទៅ (បើមិនដល់ $50 គិត $1 សម្រាប់ភ្នំពេញ ឬ $2 សម្រាប់ខេត្ត)</div>
+                        <div class="d-flex justify-content-between py-4">
+                            <div class=" fs-4 fw-bold">តម្លៃសរុបចុងក្រោយ</div>
+                            <div class="fw-bold text-warning-emphasis fs-4" id="grand-total">$65.40</div>
+                        </div>
+                        <div id="btn-invoice"
+                            class="btn-pay  bg-success text-white w-100 py-3 fw-bold rounded-2 text-center"><i
+                                class="fa-solid fa-file-invoice-dollar me-2"
+                                style="color: rgb(255, 255, 255);"></i>ទូទាត់ប្រាក់
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- =========== Invoice Modal (វិកាយប័ណ្ណ) =========== -->
+    <div class="modal fade" id="invoiceModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="border-radius: 16px;">
+                <div class="modal-header border-0 pb-0">
+                    <div class="w-100 text-center">
+                        <i class="fa-solid fa-circle-check fa-2x mb-2" style="color:#10B981;"></i>
+                        <h4 class="fw-bold mb-0">វិក្កយបត្រ (Invoice)</h4>
+                        <div class="text-muted" style="font-size:13px;" id="invoice-meta"></div>
+                    </div>
+                    <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="invoice-customer-box" id="invoice-customer" style="display:none;">
+                        <div class="invoice-customer-col">
+                            <div class="invoice-customer-label"><i class="fa-solid fa-user me-1"></i>អតិថិជន</div>
+                            <div class="fw-bold" id="invoice-cust-name"></div>
+                            <div class="text-muted" style="font-size:13px;" id="invoice-cust-phone"></div>
+                            <div class="text-muted" style="font-size:13px;" id="invoice-cust-address"></div>
+                            <div class="text-muted" style="font-size:13px;" id="invoice-cust-location"></div>
+                        </div>
+                        <div class="invoice-customer-col text-md-end">
+                            <div class="invoice-customer-label"><i
+                                    class="fa-solid fa-credit-card me-1"></i>មធ្យោបាយទូទាត់</div>
+                            <div class="fw-bold text-success" id="invoice-cust-pay"></div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-middle text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>ទំនិញ</th>
+                                    <th class="text-center">តម្លៃឯកតា</th>
+                                    <th class="text-center">ចំនួន</th>
+                                    <th class="text-end">តម្លៃសរុប</th>
+                                </tr>
+                            </thead>
+                            <tbody id="invoice-items"></tbody>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-between pt-2">
+                        <div>តម្លៃទំនិញសរុប</div>
+                        <div id="invoice-subtotal"></div>
+                    </div>
+                    <div class="d-flex justify-content-between py-2" style="border-bottom: 2px dashed #756e6e50;">
+                        <div>សេវាដឹកជញ្ជូន</div>
+                        <div id="invoice-delivery">Free</div>
+                    </div>
+                    <div class="d-flex justify-content-between pt-3">
+                        <div class="fs-5 fw-bold">តម្លៃសរុបចុងក្រោយ</div>
+                        <div class="fs-5 fw-bold text-warning-emphasis" id="invoice-total"></div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">បិទ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Customer Info + Payment Modal =========== -->
+    <div class="modal fade" id="customerFormModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" id="customerFormContent">
+                <div class="modal-header border-0 pb-0">
+                    <div class="w-100 text-center">
+                        <i class="fa-solid fa-truck-fast fa-2x mb-2" style="color:var(--accent);"></i>
+                        <h4 class="fw-bold mb-0">ព័ត៌មានទូទាត់ប្រាក់</h4>
+                        <div class="text-muted" style="font-size:13px;">សូមបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបញ្ជាទិញ
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                    <form id="customerInfoForm" novalidate>
+                        <div class="mb-3">
+                            <label class="tt form-label fw-bold" for="cust-name">ឈ្មោះពេញ <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control cust-input" id="cust-name"
+                                placeholder="បញ្ចូលឈ្មោះរបស់អ្នក" required>
+                            <div class="invalid-feedback">សូមបញ្ចូលឈ្មោះ។</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="tt form-label fw-bold" for="cust-phone">លេខទូរស័ព្ទ <span
+                                        class="text-danger">*</span></label>
+                                <input type="tel" class="form-control cust-input" id="cust-phone"
+                                    placeholder="0XX XXX XXX" required>
+                                <div class="invalid-feedback">សូមបញ្ចូលលេខទូរស័ព្ទឲ្យត្រឹមត្រូវ។</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="tt form-label fw-bold" for="cust-address">អាស័យដ្ឋាន <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control cust-input" id="cust-address"
+                                    placeholder="ភូមិ សង្កាត់ ខណ្ឌ/ស្រុក ខេត្ត/ក្រុង" required>
+                                <div class="invalid-feedback">សូមបញ្ចូលអាសយដ្ឋាន។</div>
+                            </div>
+                        </div>
+
+                        <label class="tt form-label fw-bold d-block mt-2">ជ្រើសរើសមធ្យោបាយទូទាត់ <span
+                                class="text-danger">*</span></label>
+                        <div class="row g-2 pay-method-group" id="pay-method-group">
+                            <div class="col-6 col-md-3">
+                                <input type="radio" class="btn-check pay-method-input" name="payMethod" id="pay-aba"
+                                    value="ABA Pay" autocomplete="off">
+                                <label class="pay-method-card w-100" for="pay-aba">
+                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                    <span>ABA Pay</span>
+                                </label>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <input type="radio" class="btn-check pay-method-input" name="payMethod" id="pay-acleda"
+                                    value="ACLEDA XPay" autocomplete="off">
+                                <label class="pay-method-card w-100" for="pay-acleda">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                    <span>ACLEDA Pay</span>
+                                </label>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <input type="radio" class="btn-check pay-method-input" name="payMethod" id="pay-wing"
+                                    value="Wing Bank" autocomplete="off">
+                                <label class="pay-method-card w-100" for="pay-wing">
+                                    <i class="fa-solid fa-wallet"></i>
+                                    <span>Wing Bank</span>
+                                </label>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <input type="radio" class="btn-check pay-method-input" name="payMethod" id="pay-visa"
+                                    value="Visa Card" autocomplete="off">
+                                <label class="pay-method-card w-100" for="pay-visa">
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                    <span>Visa Card</span>
+                                </label>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <input type="radio" class="btn-check pay-method-input" name="payMethod" id="pay-other"
+                                    value="ផ្សេងទៀត (សាច់ប្រាក់)" autocomplete="off">
+                                <label class="pay-method-card w-100" for="pay-other">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                    <span>ផ្សេងទៀត</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="text-danger mt-1" style="font-size:13px;display:none;" id="pay-method-error">
+                            សូមជ្រើសរើសមធ្យោបាយទូទាត់មួយ។</div>
+
+                        <!-- ===== QR Payment Section (ABA Pay / ACLEDA XPay / Wing Bank) ===== -->
+                        <div id="qr-payment-section" class="qr-pay-box mt-3" style="display:none;">
+                            <img src="../assets/img/payment/QR.jpg" alt="QR Payment" class="qr-pay-img m-auto"
+                                id="qr-pay-img">
+                            <div class="fw-bold mt-2" id="qr-pay-label">ស្កេន QR ដើម្បីទូទាត់ប្រាក់</div>
+                            <div class="text-muted" style="font-size:13px;">បើកកម្មវិធីធនាគាររបស់អ្នក ស្កេន QR ខាងលើ
+                                ដើម្បីទូទាត់ចំនួន <b id="qr-pay-amount"></b></div>
+                            <div class="mt-2" id="qr-countdown-box">
+                                <span class=" text-muted" style="font-size:13px;"><i
+                                        class="fa-regular fa-clock me-1"></i>QR មានសុពលភាពក្នុងរយៈពេល</span>
+                                <span class="fw-bold" id="qr-countdown"
+                                    style="color:#0f9bb0;font-size:15px;">05:00</span>
+                            </div>
+                            <div class="mt-2" id="qr-expired-box" style="display:none;">
+                                <div class="fw-bold text-danger" style="font-size:13px;">
+                                    <i class="fa-solid fa-triangle-exclamation me-1"></i>QR Code នេះបានផុតកំណត់ហើយ
+                                </div>
+                                <button type="button" class="btn btn-sm btn-outline-secondary mt-2" id="btn-qr-refresh">
+                                    <i class="fa-solid fa-rotate-right me-1"></i>ស្កេនម្តងទៀត
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ===== Visa Card Section ===== -->
+                        <div id="visa-card-section" class="visa-pay-box mt-3" style="display:none;">
+                            <label class="form-label fw-bold" for="visa-name">ឈ្មោះលើកាត <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control cust-input" id="visa-name"
+                                placeholder="NAME ON CARD">
+                            <div class="invalid-feedback">សូមបញ្ចូលឈ្មោះលើកាត។</div>
+
+                            <label class="form-label fw-bold mt-2" for="visa-number">លេខកាត <span
+                                    class="text-danger">*</span></label>
+                            <div class="position-relative">
+                                <input type="text" class="form-control cust-input" id="visa-number"
+                                    placeholder="1234 5678 9012 3456" maxlength="19">
+                                <i class="fa-brands fa-cc-visa"
+                                    style="position:absolute; right:14px; top:9px; font-size:22px; color:#1a1f71;"></i>
+                            </div>
+                            <div class="invalid-feedback">សូមបញ្ចូលលេខកាតឲ្យត្រឹមត្រូវ (១៦ខ្ទង់)។</div>
+
+                            <div class="row">
+                                <div class="col-6 mt-2">
+                                    <label class="form-label fw-bold" for="visa-expiry">ថ្ងៃផុតកំណត់ <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control cust-input" id="visa-expiry"
+                                        placeholder="MM/YY" maxlength="5">
+                                    <div class="invalid-feedback">MM/YY មិនត្រឹមត្រូវ។</div>
+                                </div>
+                                <div class="col-6 mt-2">
+                                    <label class="form-label fw-bold" for="visa-cvv">CVC <span
+                                            class="text-danger">*</span></label>
+                                    <input type="password" class="form-control cust-input" id="visa-cvv"
+                                        placeholder="***" maxlength="4">
+                                    <div class="invalid-feedback">CVC មិនត្រឹមត្រូវ។</div>
+                                </div>
+                            </div>
+                            <div class="in text-muted mt-2" style="font-size:12px;"><i
+                                    class="fa-solid fa-lock me-1"></i>ព័ត៌មានកាតរបស់អ្នកត្រូវបានការពារ
+                                និងមិនរក្សាទុកជាអចិន្ត្រៃយ៍ទេ។</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">បោះបង់</button>
+                    <button type="button" class="btn btn-pay-confirm" id="btn-submit-payment">
+                        <i class="fa-solid fa-lock me-1"></i>បញ្ជាក់ការទូទាត់</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =========== ABA QR Modal (លោតដាច់ដោយឡែក) =========== -->
+    <div class="modal fade" id="bankQrModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 380px;">
+            <div class="modal-content" style="border-radius: 16px; border: none;">
+                <div class="modal-header border-0 pb-0 justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0 text-center">
+                    <div class="mb-3">
+                        <h5 class="fw-bold" id="modal-bank-title" style="color: #0f9bb0;">
+                            <i class="fa-solid fa-mobile-screen-button me-2"></i><span>BANK PAY</span>
+                        </h5>
+                    </div>
+
+                    <div class="qr-pay-box m-auto"
+                        style="border: 1px dashed #0f9bb0; background: #f4fbfc; border-radius: 12px; padding: 18px;">
+                        <img src="../assets/img/payment/QR.jpg" alt="QR Payment" id="modal-bank-qr-img"
+                            style="width: 200px; margin: auto; border-radius: 8px;">
+                        <div class="fw-bold mt-3 text-dark" style="font-size: 16px;" id="modal-bank-scan-label">ស្កេន QR
+                            ដើម្បីទូទាត់ប្រាក់</div>
+                        <div class="tit text-muted mt-1" style="font-size: 13px;">ចំនួនទឹកប្រាក់ត្រូវទូទាត់៖ <b
+                                class="text-danger" id="modal-bank-amount">$0.00</b></div>
+
+                        <div class="mt-3" id="modal-bank-countdown-box">
+                            <span class="qr text-muted" style="font-size: 12px;"><i
+                                    class="fa-regular fa-clock me-1"></i>QR
+                                មានសុពលភាពក្នុងរយៈពេល</span>
+                            <span class="fw-bold d-block" id="modal-bank-countdown"
+                                style="color:#0f9bb0; font-size:18px;">05:00</span>
+                        </div>
+
+                        <div class="mt-3" id="modal-bank-expired-box" style="display:none;">
+                            <div class="fw-bold text-danger" style="font-size: 13px;">
+                                <i class="fa-solid fa-triangle-exclamation me-1"></i>QR Code នេះបានផុតកំណត់ហើយ
+                            </div>
+                            <button type="button" class="btn btn-sm btn-outline-secondary mt-2"
+                                id="btn-modal-bank-refresh">
+                                <i class="fa-solid fa-rotate-right me-1"></i>បង្កើត QR ឡើងវិញ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-primary w-100 py-2 fw-bold" id="btn-bank-paid"
+                        style="background-color: #0f9bb0; border: none; border-radius: 8px;">
+                        ខ្ញុំបានទូទាត់ប្រាក់រួចរាល់ (Paid)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="footer pt-4 " style="background-color: var(--footer-bg);">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" class="navbar-brand"><img src="../assets/img/logo/img-logo.png"
+                                    class="object-fit-cover img-fluid text-center" style="width: 110px;" alt=""></a>
+                            <div class="tittie text-white">ផ្សារអនឡាញដែលជួយប្រជាជនកម្ពុជាទិញ
+                                និងលក់ផលិតផលដើម្បីបង្កើនចំណូល និងគាំទ្រអាជីវកម្មក្នុងស្រុក។</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="d-flex">
+                            <div class="card-body ">
+                                <div class=" tittle fw-bold">Quick Links</div>
+                                <ul class=" list-unstyled mt-3">
+                                    <li><a class="link" href="./home.html">ទំព័រដើម</a></li>
+                                    <li><a class="link" href="./product.html">រភេទទំនិញ</a></li>
+                                    <li><a class="link" href="./product.html">ផលិតផល</a></li>
+                                    <li><a class="link" href="./product.html">បញ្ចុះតម្លៃ</a></li>
+                                    <li><a class="link" href="./about_us.html">អំពីយើង</a></li>
+                                    <li><a class="link" href="./contact.html">ទំនាក់ទំនង</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class=" tittle fw-bold">Customer Service</div>
+                                <ul class=" list-unstyled mt-3">
+                                    <li><a class="link" href="#">តាមដានការបញ្ជាទិញ</a></li>
+                                    <li><a class="link" href="#">ការដឹកជញ្ជូន</a></li>
+                                    <li><a class="link" href="#">លក្ខខណ្ឌប្រើប្រាស់</a></li>
+                                    <li><a class="link" href="#">គោលការណ៍ឯកជនភាព</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class=" tittle fw-bold">Contact Us</div>
+                            <div class="d-flex flex-column mt-3">
+                                <a href="#" class="link"><i class="fa-solid fa-location-dot text-secondary"></i>Steung
+                                    mean chey , Phnom Penh City</a>
+                                <a href="#" class="link"><i class="fa-solid fa-phone text-secondary"></i>+855 12 345
+                                    678</a>
+                                <a href="#" class="link"><i
+                                        class="fa-solid fa-envelope text-secondary"></i>support@khmerbazaar.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class=" tittle fw-bold">Follow Us</div>
+                            <ul class="d-flex gap-2 list-unstyled mt-3">
+                                <li><a class="icon bg-primary" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                <li><a class="icon bg-info" href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                                <li><a class="icon bg-danger" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a class="icon bg-danger" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class=" tittle fw-bold">Payment Menthods</div>
+                            <ul
+                                class="d-flex justify-content-start align-items-center gap-2 list-unstyled mt-3 flex-wrap">
+                                <li><a class="payment" href="#"><img src="../assets/img/payment/ABA.webp"
+                                            class="img-fluid object-fit-cover " alt=""></a></li>
+                                <li><a class="payment" href="#"><img src="../assets/img/payment/acleda.jpg"
+                                            class="img-fluid object-fit-cover" alt=""></a></li>
+                                <li><a class="payment" href="#"><img src="../assets/img/payment/visa.png"
+                                            class="img-fluid object-fit-cover" alt=""></a></li>
+                                <li><a class="payment" href="#"><img src="../assets/img/payment/wing.png"
+                                            class="img-fluid object-fit-cover" alt=""></a></li>
+                                <div class="payment bg-success  rounded-2 text-nowrap d-flex justify-content-center align-items-center text-white"
+                                    style="height: 50px;width: 120px;">Cash on Delivery</div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-2 bg-primary-subtle">© 2026 Khmer Bazaar. All Rights Reserved.</div>
+    </section>
+    <button class="btn btn-primary scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">
+                        <i class="fa-solid fa-circle-exclamation text-danger me-2"></i>
+                        បញ្ជាក់ការចាកចេញ
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body text-center">
+                    <i class="fa-solid fa-right-from-bracket text-danger" style="font-size:60px;"></i>
+
+                    <h5 class="mt-3">តើអ្នកពិតជាចង់ចាកចេញមែនទេ?</h5>
+                    <p class="text-muted">
+                        អ្នកនឹងត្រូវចូលគណនីម្ដងទៀតដើម្បីប្រើប្រាស់ប្រព័ន្ធ។
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        បោះបង់
+                    </button>
+
+                    <a href="../index.html" class="btn btn-danger">
+                        <i class="fa-solid fa-right-from-bracket me-1"></i>
+                        ចាកចេញ
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
+    <script src="../assets/js/add_to_cart.js"></script>
+    <script>
+        const NexisApp = {
+            init() {
+                this.initScrollToTop();
+            },
+            initScrollToTop() {
+                const topBtn = document.getElementById('scrollTopBtn');
+                if (!topBtn) return;
+
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        topBtn.classList.add('visible');
+                    } else {
+                        topBtn.classList.remove('visible');
+                    }
+                });
+
+                topBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            },
+        };
+        NexisApp.init();
+    </script>
+    <!-- ============ dark mode =========== -->
+    <script>
+        (function () {
+            const root = document.documentElement;
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const themeText = document.getElementById('themeText');
+
+            function applyTheme(theme) {
+                root.setAttribute('data-bs-theme', theme);
+                localStorage.setItem('theme', theme);
+                if (theme === 'dark') {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    themeText.textContent = 'Light Mode';
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    themeText.textContent = 'Dark Mode';
+                }
+            }
+
+            // Apply saved preference on load
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            applyTheme(savedTheme);
+
+            themeToggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                const current = root.getAttribute('data-bs-theme') || 'light';
+                applyTheme(current === 'dark' ? 'light' : 'dark');
+            });
+        })();
+    </script>
+    <script>
+        // ========== logout ===========
+        function logout() {
+            // Clear login data
+            localStorage.clear();
+            sessionStorage.clear();
+
+            // Redirect to login page
+            window.location.href = "../index.html";
+        }
+    </script>
+
+</body>
+
+</html>
